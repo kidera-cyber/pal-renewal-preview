@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>【叩き台】私たちの役割｜株式会社PAL</title>
+<meta name="description" content="物流に関わる経営、現場、人、データ、システム、設備、輸送、パートナー企業。PALは、それぞれの間にある分断をつなぎ、構想を現場で実行できる仕組みへと変えていきます。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/common.css">
+<style>
+  /* v1.3 リデザイン：上段=見出し+短説明+関係図／下段=課題→PALの役割→変化 の3カラム */
+  .approach-head{max-width:900px;margin:0 auto 40px;text-align:center}
+  .approach-head p{font-size:16px;line-height:2;color:var(--text);margin:0 0 12px}
+  .approach-head p.approach-head__note{font-size:13px;color:var(--text-mute);line-height:1.9}
+  /* 8要素関係図（PALが間に立つ表現） */
+  .connect-diagram{background:#F8FAFC;border:1px solid var(--border);border-radius:16px;padding:36px 28px;margin:0 0 48px}
+  .connect-diagram__title{text-align:center;font-size:14px;font-weight:800;color:var(--navy);margin:0 0 4px;letter-spacing:.02em}
+  .connect-diagram__lead{text-align:center;font-size:13px;color:var(--text-mute);margin:0 0 24px;line-height:1.8}
+  .connect-diagram__ring{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;max-width:820px;margin:0 auto}
+  .connect-side{display:flex;flex-direction:column;gap:10px}
+  .connect-side__item{background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px 16px;text-align:center;font-size:14px;font-weight:700;color:var(--navy);box-shadow:var(--shadow-sm);position:relative}
+  .connect-side__item::after{content:"";position:absolute;top:50%;width:24px;height:1px;background:#CBD5E1}
+  .connect-side--left .connect-side__item::after{right:-24px}
+  .connect-side--right .connect-side__item::after{left:-24px}
+  .connect-hub{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;border-radius:14px;padding:22px 20px;text-align:center;min-width:130px;box-shadow:0 6px 20px rgba(15,23,42,.15)}
+  .connect-hub__lbl{font-family:var(--font-en);font-size:10.5px;font-weight:800;color:#F87171;letter-spacing:.14em;margin:0 0 6px}
+  .connect-hub__name{font-size:20px;font-weight:800;margin:0 0 6px;color:#fff}
+  .connect-hub__desc{font-size:11.5px;color:rgba(255,255,255,.85);margin:0;line-height:1.6}
+  /* 3カラム：課題 → PALの役割 → 変化 */
+  .flow3{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:20px;align-items:stretch}
+  .flow3__col{background:#fff;border-radius:16px;padding:32px 28px;display:flex;flex-direction:column}
+  .flow3__col--before{background:#F1F5F9;border:1px solid #CBD5E1}
+  .flow3__col--pal{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;box-shadow:0 12px 32px rgba(15,23,42,.18);position:relative}
+  .flow3__col--pal::before,.flow3__col--pal::after{content:"";position:absolute;top:50%;width:16px;height:16px;transform:translateY(-50%) rotate(45deg);background:inherit}
+  .flow3__col--pal::before{left:-8px;background:var(--navy)}
+  .flow3__col--pal::after{right:-8px;background:var(--navy-2);z-index:1}
+  .flow3__col--after{background:#FFF5F5;border:1px solid #FECACA}
+  .flow3__label{font-family:var(--font-en);font-size:11px;font-weight:800;letter-spacing:.14em;margin:0 0 8px}
+  .flow3__col--before .flow3__label{color:#64748B}
+  .flow3__col--pal .flow3__label{color:#F87171}
+  .flow3__col--after .flow3__label{color:var(--red)}
+  .flow3__title{font-size:18px;font-weight:800;margin:0 0 20px;line-height:1.5}
+  .flow3__col--before .flow3__title,.flow3__col--after .flow3__title{color:var(--navy)}
+  .flow3__col--pal .flow3__title{color:#fff;font-size:20px}
+  .flow3__list{list-style:none;padding:0;margin:0;flex-grow:1}
+  .flow3__list li{font-size:14px;line-height:1.7;padding:10px 0 10px 26px;position:relative;border-bottom:1px dashed rgba(148,163,184,.4)}
+  .flow3__list li:last-child{border-bottom:none}
+  .flow3__col--before .flow3__list li{color:#475569}
+  .flow3__col--before .flow3__list li::before{content:"✕";position:absolute;left:4px;top:10px;color:#94A3B8;font-weight:800;font-size:13px}
+  .flow3__col--pal .flow3__list li{color:#fff;border-bottom-color:rgba(255,255,255,.15);font-weight:600}
+  .flow3__col--pal .flow3__list li::before{content:"→";position:absolute;left:0;top:10px;color:#F87171;font-weight:800}
+  .flow3__col--after .flow3__list li{color:var(--navy)}
+  .flow3__col--after .flow3__list li::before{content:"✓";position:absolute;left:2px;top:10px;color:var(--red);font-weight:800;font-size:14px}
+  .flow3__caption{text-align:center;font-size:13px;color:var(--text-mute);margin:28px 0 0}
+  @media (max-width:900px){
+    .connect-diagram__ring{grid-template-columns:1fr;gap:16px}
+    .connect-side__item::after{display:none}
+    .connect-hub{margin:8px 0}
+    .flow3{grid-template-columns:1fr;gap:16px}
+    .flow3__col--pal::before,.flow3__col--pal::after{display:none}
+  }
+  /* v1.3 step-flow：考え方 → 機能・アプローチ → 実行手段 の3ステップ縦フロー */
+  .step-flow{margin:32px 0 12px;display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .step-flow__step{position:relative;padding:0}
+  .step-flow__num{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+  .step-flow__num-badge{width:38px;height:38px;border-radius:50%;background:var(--red);color:#fff;font-family:var(--font-en);font-size:14px;font-weight:900;display:flex;align-items:center;justify-content:center;letter-spacing:.02em;flex-shrink:0}
+  .step-flow__num-label{font-family:var(--font-en);font-size:12px;font-weight:800;color:var(--red);letter-spacing:.14em}
+  .step-flow__num-title{font-size:15px;font-weight:800;color:var(--navy);margin-left:6px}
+  .step-flow__body{margin-left:50px}
+  .step-flow__arrow{margin:16px 0 16px 68px;width:2px;height:32px;background:#CBD5E1;position:relative}
+  .step-flow__arrow::after{content:"";position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid #CBD5E1}
+  /* STEP 1：ネイビー1枚 */
+  .step-card--concept{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;border-radius:14px;padding:24px 28px;box-shadow:0 6px 20px rgba(15,23,42,.15)}
+  .step-card--concept h4{font-size:20px;font-weight:800;color:#fff;margin:0 0 8px}
+  .step-card--concept p{font-size:13.5px;color:rgba(255,255,255,.88);margin:0;line-height:1.85}
+  /* STEP 2：薄ブルーカード×2 */
+  .step-cards-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .step-card--function{background:#EEF6FF;border:1px solid var(--border-blue);border-radius:12px;padding:20px 22px}
+  .step-card--function h4{font-size:16px;font-weight:800;color:var(--navy);margin:0 0 8px}
+  .step-card--function p{font-size:12.5px;color:var(--text);margin:0;line-height:1.75}
+  /* STEP 3：白背景+赤アクセント×2 */
+  .step-card--means{background:#fff;border:2px solid var(--red-soft);border-radius:12px;padding:20px 22px;position:relative}
+  .step-card--means h4{font-size:16px;font-weight:800;color:var(--red);margin:0 0 8px}
+  .step-card--means p{font-size:12.5px;color:var(--text);margin:0 0 12px;line-height:1.75}
+  .step-card__examples{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 10px}
+  .step-card__examples span{background:#FEF2F2;border:1px solid var(--red-soft);border-radius:999px;padding:4px 10px;font-size:11.5px;color:var(--navy);font-weight:600}
+  .step-card__link{font-size:12px;color:var(--red);font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:4px}
+  .step-card__link:hover{text-decoration:underline}
+  .step-summary{background:#F8FAFC;border-radius:12px;padding:20px 24px;margin-top:32px;font-size:13px;line-height:2;color:var(--text)}
+  .step-summary strong{color:var(--navy)}
+  @media(max-width:768px){
+    .step-cards-2{grid-template-columns:1fr}
+    .step-flow__body{margin-left:0}
+    .step-flow__arrow{margin-left:18px}
+  }
+  @media (max-width:900px){.approach-grid{grid-template-columns:1fr}.ba-diagram{grid-template-columns:1fr}.ba-arrow{flex-direction:row;padding:8px 0}.relation-map__cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="review-mode">
+
+<div id="previewBanner">🛠 叩き台（社内レビュー用）／ noindex ／ 本番URLではありません</div>
+
+<div class="review-legend" role="note" aria-label="レビュー用マーキングの凡例">
+  <span class="review-legend__item review-legend__item--changed">今回変更</span>
+  <span class="review-legend__item review-legend__item--added">新規追加</span>
+  <span class="review-legend__item review-legend__item--check">要確認</span>
+  <span class="review-legend__note">※ 本番化は body から <code>review-mode</code> を外すだけ</span>
+</div>
+
+<header class="gheader">
+  <div class="gheader__inner">
+    <a class="gbrand" href="./home.html"><span class="gbrand__mark">PAL</span><span class="gbrand__name">株式会社PAL<small>PAL Co., Ltd.</small></span></a>
+    <nav class="gnav" aria-label="グローバルナビゲーション">
+      <a href="./home.html">ホーム</a>
+      <a href="./role.html" class="is-current">PALを知る</a>
+      <a href="./home.html">サービス</a>
+      <a href="#">物流DX事例</a><a href="#">会社概要</a><a href="#">物流DXコラム</a><a href="#">物流DXお役立ち資料</a>
+      <a href="#" class="gnav-cta">お問い合わせ</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="./home.html">ホーム</a><a href="./role.html">私たちの役割</a><a href="./reason.html">PALの強み</a>
+  <a href="./home.html">サービス</a><a href="./fde.html">FDE（新規）</a>
+  <a href="#" class="gnav-cta">お問い合わせ</a>
+</nav>
+
+<nav class="breadcrumb"><div class="container"><ol>
+  <li><a href="./home.html">ホーム</a></li><li><a href="#">PALについて</a></li><li class="current">私たちの役割</li>
+</ol></div></nav>
+
+<!-- ===== v1.2 FV：新中心コピー「物流の分断をつなぎ、変革を実行へ。」／イネーブラー言葉を FV では強調しない ===== -->
+<section class="phero review-changed">
+  <span class="review-label">今回変更</span>
+  <div class="container phero__inner">
+    <span class="phero__eyebrow">OUR ROLE</span>
+    <h1 class="phero__title">私たちの役割</h1>
+    <p class="phero__sub">物流の分断をつなぎ、変革を実行へ。<br>物流に関わる経営、現場、人、データ、システム、設備、輸送、パートナー企業。<br>PAL は、それぞれの間にある分断をつなぎ、構想を現場で実行できる仕組みへと変えていきます。</p>
+  </div>
+</section>
+
+<!-- ===== v1.2 OUR APPROACH：役割を先に説明し、その後にイネーブラー考え方を自然に登場 ===== -->
+<section class="section section--soft review-added">
+  <span class="review-label review-label--added">新規追加</span>
+  <div class="container">
+    <div class="section__head" style="text-align:left;max-width:none">
+      <span class="section__eyebrow">OUR APPROACH</span>
+      <h2 class="section__title" style="font-size:clamp(24px,3vw,32px)">物流の分断をつなぎ、<br>変革を実行へ。</h2>
+    </div>
+    <!-- 上段：短い説明（中央揃え、視線を落ち着かせる） -->
+    <div class="approach-head">
+      <p>物流に関わる経営、現場、人、データ、システム、設備、輸送、パートナー企業。<br>PAL は、それぞれの間にある分断をつなぎ、構想を現場で実行できる仕組みへ変えていきます。<br>こうした役割を、私たちは「物流イネーブラー」という考え方で整理しています。</p>
+      <p class="approach-head__note">以下では、3PL の限界、分離発注の非効率、LLP／4PL、ロジテックインテグレーター、そして FDE を通じて、PAL が担う役割を説明します。</p>
+    </div>
+
+    <!-- 8 要素の関係図：PAL が間に立つ表現（中央支配型ではない） -->
+    <div class="connect-diagram" aria-label="PAL がつなぐ 8 つの要素">
+      <p class="connect-diagram__title">PAL がつなぐ 8 つの要素</p>
+      <p class="connect-diagram__lead">経営、現場、データ、システム、設備、輸送、パートナー企業。<br>PAL は、それぞれの「つなぎ目」に立ち、整理・調整・実行を支えます。</p>
+      <div class="connect-diagram__ring">
+        <div class="connect-side connect-side--left">
+          <div class="connect-side__item">経営</div>
+          <div class="connect-side__item">現場</div>
+          <div class="connect-side__item">データ</div>
+          <div class="connect-side__item">システム</div>
+        </div>
+        <div class="connect-hub" aria-label="PAL">
+          <p class="connect-hub__lbl">CONNECTS</p>
+          <p class="connect-hub__name">PAL</p>
+          <p class="connect-hub__desc">つなぎ目に立ち<br>整理・調整・実行を支える</p>
+        </div>
+        <div class="connect-side connect-side--right">
+          <div class="connect-side__item">設備</div>
+          <div class="connect-side__item">輸送</div>
+          <div class="connect-side__item">人</div>
+          <div class="connect-side__item">パートナー企業</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 下段 3カラム：課題 → PAL の役割 → 変化 -->
+    <div class="flow3" aria-label="分断された状態から、実行できる仕組みへの変化">
+      <div class="flow3__col flow3__col--before">
+        <p class="flow3__label">BEFORE</p>
+        <h3 class="flow3__title">分断された状態</h3>
+        <ul class="flow3__list">
+          <li>経営と現場の認識がそろわない</li>
+          <li>現場とシステムがつながっていない</li>
+          <li>データを判断に使えない</li>
+          <li>設備が運用に結びつかない</li>
+          <li>関係者が個別に動いてしまう</li>
+        </ul>
+      </div>
+      <div class="flow3__col flow3__col--pal">
+        <p class="flow3__label">PAL'S ROLE</p>
+        <h3 class="flow3__title">PAL の役割</h3>
+        <ul class="flow3__list">
+          <li>翻訳する</li>
+          <li>接続する</li>
+          <li>整理する</li>
+          <li>調整する</li>
+          <li>設計する</li>
+          <li>実行を支える</li>
+        </ul>
+      </div>
+      <div class="flow3__col flow3__col--after">
+        <p class="flow3__label">AFTER</p>
+        <h3 class="flow3__title">実行できる仕組みへ</h3>
+        <ul class="flow3__list">
+          <li>共通の目的が整理されている</li>
+          <li>現場で実行できる形になっている</li>
+          <li>データを判断に使える</li>
+          <li>システムや設備が運用につながる</li>
+          <li>継続的に改善できる</li>
+        </ul>
+      </div>
+    </div>
+    <p class="flow3__caption">PAL は中央ですべてを支配する存在ではなく、間に立って橋渡しをする役割です。</p>
+  </div>
+</section>
+
+<!-- 現行 SEC1：なぜ今、物流DXが避けられないのか -->
+<section class="section">
+  <div class="container container--narrow">
+    <div class="section__head"><h2 class="section__title">なぜ今、物流DX が避けられないのか</h2></div>
+    <p class="prose">2024年問題による労働時間規制、深刻な人手不足、EC市場拡大による少量多頻度配送の常態化。物流を取り巻く環境は大きく変わりました。CLO の選任義務化や Scope3 開示により、経営層が物流データの把握と説明責任を負う時代になっています。</p>
+    <p class="prose">しかし、多くの企業では拠点ごとに物流データが分断されたまま、個別施策が積み上げられ、全体最適化には至っていません。物流DX は、経営を持続可能なものにするために避けられない取り組みです。</p>
+  </div>
+</section>
+
+<!-- 現行 SEC2：物流DXを阻む、業界の構造的限界 -->
+<section class="section section--soft">
+  <div class="container">
+    <div class="section__head"><h2 class="section__title">物流DX を阻む、業界の構造的限界</h2></div>
+    <div class="grid-2">
+      <div class="card card--filled">
+        <p class="card__eyebrow">課題1</p>
+        <h3 class="card__title">3PL だけでは届かない領域</h3>
+        <p class="card__body">1990年代の規制緩和以降、3PL は物流効率化を推進してきました。しかし、その対象は倉庫・輸送領域の現場オペレーションに特化しており、戦略設計や全社横断のデータ整理は範囲外です。結果として拠点ごと・業務単位でデータが分断され、荷主が全体像を把握できず、物流DX の投資判断が難しくなっています。</p>
+      </div>
+      <div class="card card--filled">
+        <p class="card__eyebrow">課題2</p>
+        <h3 class="card__title">分離発注で生まれる「つなぎ目」</h3>
+        <p class="card__body">物流DX のプロセスは、コンサルティング会社（調査・戦略）、SIer（システム）、マテハンメーカー（機器）、3PL（実行）と、4つに分かれて発注されがちです。プロジェクト開始までに通常2年、長ければ5年以上を要し、複数ベンダー間の橋渡しコスト、担当者異動や経営方針変更による頓挫リスクなど、顧客の疲弊を招いています。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 現行 SEC3：LLP/4PL モデル -->
+<section class="section">
+  <div class="container container--narrow">
+    <div class="section__head">
+      <h2 class="section__title">これからの物流DX に必要な<br>「LLP／4PL モデル」とは</h2>
+      <p class="section__lead">物流戦略の企画・設計から、複数ベンダーの橋渡し、実行支援、継続的な運用改善までを、一つの流れとして進める役割です。</p>
+    </div>
+    <div class="grid-2">
+      <div class="card card--filled">
+        <p class="card__eyebrow">3PL</p>
+        <h3 class="card__title">現場「運用」中心</h3>
+        <p class="card__body">オペレーション最適化を主体。倉庫・輸送の特定領域における効率化に強み。</p>
+      </div>
+      <div class="card card--filled">
+        <p class="card__eyebrow">LLP／4PL</p>
+        <h3 class="card__title">プロジェクト全体を俯瞰</h3>
+        <p class="card__body">経営戦略の段階から物流を設計し、複数領域を接続。関係者の認識を整理し、変革を前へ進める役割。</p>
+      </div>
+    </div>
+    <p class="note note--sm" style="margin-top:16px">※ 図解「物流アウトソーシング進化段階（国土交通省定義準拠：1PL → 2PL → 3PL → 4PL／LLP）」は現行サイトの図を踏襲します。</p>
+  </div>
+</section>
+
+<!-- 現行 SEC4：ロジテックインテグレーター -->
+<section class="section section--soft">
+  <div class="container container--narrow">
+    <div class="section__head">
+      <h2 class="section__title">PAL が実践するロジテックインテグレーション</h2>
+      <p class="section__lead">物流に関わる複数の要素を、システムとして捉えて接続するアプローチです。<br>ロボティクス、ハードウェア、ソフトウェア、データ、ファイナンスを横断して連携させ、現場に落とし込みます。</p>
+    </div>
+    <div class="grid-3">
+      <div class="card card--filled"><h4 class="card__title">データの可視化</h4><p class="card__body">現場データを、荷主が確認できる形に整理します。</p></div>
+      <div class="card card--filled"><h4 class="card__title">プロセスの透明化</h4><p class="card__body">何が起きているかを、関係者の間で共有します。</p></div>
+      <div class="card card--filled"><h4 class="card__title">ボトルネックの開示</h4><p class="card__body">課題を隠さず、改善提案とセットで開示します。</p></div>
+    </div>
+    <div class="section__head" style="margin-top:48px">
+      <h3 class="section__title" style="font-size:22px">初期費用ゼロで導入できる仕組み</h3>
+      <p class="section__lead">「Core Zero」により、設備・システム・運用を PAL 側で保有・提供し、業務委託費のみで統合物流環境を利用できます。</p>
+      <a href="https://www.pal-style.co.jp/service/zero/" class="btn btn--ghost">Core Zero を知る</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== v1.4：STEP 表現を撤廃、全体設計 + FDE + 各サービス の連動型3カード横並びに刷新 ===== -->
+<section class="section review-added">
+  <span class="review-label review-label--added">新規追加</span>
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">RELATION</span>
+      <h2 class="section__title">構想・機能・現場実装を、<br>ひとつにつなぐ。</h2>
+      <p class="section__lead">PAL は、物流戦略を描くだけでも、システムや設備を導入するだけでもありません。<br>物流全体を設計する機能と、現場へ落とし込む FDE、課題に応じた各サービスを組み合わせ、構想を実際に動く仕組みへ変えていきます。</p>
+    </div>
+
+    <div class="connect3" aria-label="全体設計 + FDE による現場実装 + 各サービスによる課題解決 の連動">
+      <!-- 1: 全体を設計する -->
+      <div class="connect3__card">
+        <p class="connect3__lbl">FUNCTION</p>
+        <h3 class="connect3__title">全体を設計する</h3>
+        <p class="connect3__desc">物流全体を俯瞰し、進む方向をそろえる。物流戦略、関係者の役割、システム・設備・データの全体像を整理します。</p>
+        <div class="connect3__tags">
+          <span>LLP／4PL</span><span>ロジテックインテグレーター</span>
+        </div>
+      </div>
+
+      <div class="connect3__plus" aria-hidden="true">+</div>
+
+      <!-- 2: 現場へ落とし込む（FDE を少し強調） -->
+      <div class="connect3__card connect3__card--fde">
+        <p class="connect3__lbl">FIELD</p>
+        <h3 class="connect3__title">現場へ落とし込む</h3>
+        <p class="connect3__desc">FDE が、構想と現場の間をつなぐ。現場の実態に合わせて、構想や機能を実行できる形へ変えます。</p>
+        <div class="connect3__tags">
+          <span>現場理解</span><span>課題整理</span><span>要件整理</span><span>関係者調整</span><span>実装</span><span>運用定着</span>
+        </div>
+        <a href="./fde.html" class="connect3__link">FDE の詳細を見る →</a>
+      </div>
+
+      <div class="connect3__plus" aria-hidden="true">+</div>
+
+      <!-- 3: 具体的に解決する -->
+      <div class="connect3__card">
+        <p class="connect3__lbl">SOLUTION</p>
+        <h3 class="connect3__title">具体的に解決する</h3>
+        <p class="connect3__desc">課題に応じたサービスを実装する。データ活用、自動化、輸送、システム連携など、必要な手段を組み合わせます。</p>
+        <div class="connect3__tags">
+          <span>Core First</span><span>DTS</span><span>Core AX</span><span>Core GX</span><span>その他の既存サービス</span>
+        </div>
+        <a href="./home.html" class="connect3__link">サービス一覧を見る →</a>
+      </div>
+    </div>
+
+    <div class="connect3__result" aria-hidden="true">
+      <span class="connect3__result-arrow">↓</span>
+      <p class="connect3__result-band">現場で動き、改善が続く物流へ</p>
+    </div>
+
+    <p class="connect3__summary">この 3 つが連動することで、物流の構想が現場で動き、運用・改善まで続く状態をつくります。<br><small>※ PAL では、この 3 つを組み合わせて役割を果たすことを、社内で「物流イネーブラー」という考え方で整理しています。</small></p>
+  </div>
+
+  <style>
+    /* v1.4：STEP を廃止し、3カード横並び + 中央「+」+ 下部矢印バンド の連動型 */
+    .connect3{display:grid;grid-template-columns:1fr 40px 1.1fr 40px 1fr;gap:12px;align-items:stretch;margin:32px 0 20px}
+    .connect3__card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:26px 24px;display:flex;flex-direction:column;box-shadow:var(--shadow-sm)}
+    .connect3__card--fde{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;box-shadow:0 12px 32px rgba(15,23,42,.18);border:none;transform:scale(1.03)}
+    .connect3__lbl{font-family:var(--font-en);font-size:10.5px;font-weight:800;letter-spacing:.14em;margin:0 0 8px;color:var(--red)}
+    .connect3__card--fde .connect3__lbl{color:#F87171}
+    .connect3__title{font-size:17px;font-weight:800;color:var(--navy);margin:0 0 12px;line-height:1.5}
+    .connect3__card--fde .connect3__title{color:#fff;font-size:19px}
+    .connect3__desc{font-size:13px;line-height:1.85;color:var(--text);margin:0 0 14px;flex-grow:1}
+    .connect3__card--fde .connect3__desc{color:rgba(255,255,255,.88)}
+    .connect3__tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+    .connect3__tags span{background:#F8FAFC;border:1px solid var(--border);border-radius:999px;padding:4px 10px;font-size:11.5px;color:var(--navy);font-weight:600}
+    .connect3__card--fde .connect3__tags span{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:#fff}
+    .connect3__link{font-size:12px;color:var(--red);font-weight:800;text-decoration:none;margin-top:auto}
+    .connect3__card--fde .connect3__link{color:#F87171}
+    .connect3__link:hover{text-decoration:underline}
+    .connect3__plus{display:flex;align-items:center;justify-content:center;color:var(--red);font-family:var(--font-en);font-size:28px;font-weight:900}
+    .connect3__result{text-align:center;margin:8px 0 24px}
+    .connect3__result-arrow{display:block;color:#CBD5E1;font-size:28px;line-height:1;margin-bottom:8px;font-weight:800}
+    .connect3__result-band{background:linear-gradient(90deg,#FEF2F2 0%,#fff 50%,#FEF2F2 100%);border:1px solid var(--red-soft);border-radius:999px;padding:14px 32px;display:inline-block;font-size:15px;font-weight:800;color:var(--navy);margin:0}
+    .connect3__summary{background:#F8FAFC;border-radius:12px;padding:20px 24px;font-size:13px;line-height:2;color:var(--text);text-align:center;margin:0}
+    .connect3__summary small{display:block;margin-top:6px;font-size:11.5px;color:var(--text-mute);line-height:1.8}
+    @media(max-width:900px){
+      .connect3{grid-template-columns:1fr;gap:8px}
+      .connect3__card--fde{transform:none}
+      .connect3__plus{padding:4px 0}
+    }
+  </style>
+</section>
+
+<!-- ===== v1.2 FDE 誘導：サービス宣伝色を弱めて「現場で動かす手段」として ===== -->
+<section class="section section--soft review-added">
+  <span class="review-label review-label--added">新規追加</span>
+  <div class="container container--narrow">
+    <div class="section__head">
+      <span class="section__eyebrow">FIELD IMPLEMENTATION</span>
+      <h2 class="section__title">構想を現場で動かす、FDE</h2>
+      <p class="section__lead">FDE は、物流現場に入り、業務、人、データ、システム、設備の実態を確認し、課題整理から設計、実装、運用、改善、定着までを支援するサービスです。<br>ここまで説明してきた考え方を、実際の現場で動かすための一つの手段として位置づけています。</p>
+      <a href="./fde.html" class="btn btn--red">FDE のサービス詳細を見る</a>
+    </div>
+  </div>
+</section>
+
+<!-- 次のページへ -->
+<section class="section">
+  <div class="container">
+    <div class="section__head"><span class="section__eyebrow">NEXT</span><h2 class="section__title">PALの強み・サービスへ</h2></div>
+    <div class="grid-3">
+      <a class="card" href="./reason.html"><h3 class="card__title">PALの強み</h3><p class="card__body-sm">分断を橋渡しし、変革を前へ進めるために、PAL が持っている 8 つの強みをご紹介します。</p></a>
+      <a class="card" href="./home.html"><h3 class="card__title">サービス一覧</h3><p class="card__body-sm">現行の全サービスと、新規 FDE をご覧いただけます。</p></a>
+      <a class="card" href="./fde.html"><h3 class="card__title">FDE</h3><p class="card__body-sm">構想を現場で動かす、実装・定着支援サービスの詳細です。</p></a>
+    </div>
+  </div>
+</section>
+
+<!-- 実績数値 -->
+<section class="section section--soft">
+  <div class="container">
+    <ul class="stat-list">
+      <li><span class="stat-list__num">150<small>%</small></span><span class="stat-list__lbl">物流センターの生産性向上</span></li>
+      <li><span class="stat-list__num">0<small>円</small></span><span class="stat-list__lbl">初期投資から導入可能</span></li>
+      <li><span class="stat-list__num">30<small>%</small></span><span class="stat-list__lbl">トラック台数削減</span></li>
+      <li><span class="stat-list__num">30<small>%</small></span><span class="stat-list__lbl">作業工数削減</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 最終CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>物流DX の専門家が、無料でご相談をお受けします。</h2>
+    <p class="final-cta__body">法改正対応や DX 推進など、よくある課題から個別のお悩みまで、どんなことでもお気軽にご相談ください。</p>
+    <a href="#" class="btn btn--red btn--lg">お問い合わせ</a>
+  </div>
+</section>
+
+<footer class="gfooter">
+  <div class="gfooter__grid">
+    <div>
+      <p class="gfooter__brand">株式会社PAL（パル）</p>
+      <p class="gfooter__desc">物流をコストから、戦略資産に。</p>
+      <p class="gfooter__tel">TEL 06-6534-8998<br><small>営業時間：平日 9:00-18:00</small></p>
+    </div>
+    <div class="gfooter__col"><h4>PALを知る</h4><ul><li><a href="./role.html">私たちの役割</a></li><li><a href="./reason.html">PALの強み</a></li><li><a href="#">よくあるご質問</a></li><li><a href="#">トップメッセージ</a></li><li><a href="#">ミッション・バリュー</a></li></ul></div>
+    <div class="gfooter__col"><h4>サービス</h4><ul>
+      <li><a href="https://www.pal-style.co.jp/service/logistics-consulting/">物流コンサルティング</a></li>
+      <li><a href="https://lp.pal-style.co.jp/logitec-integration/">ロジテックインテグレーション</a></li>
+      <li><a href="https://www.pal-style.co.jp/service/core-first/">Core First</a></li>
+      <li><a href="https://www.pal-style.co.jp/service/zero/">Core Zero</a></li>
+      <li><a href="https://www.pal-style.co.jp/service/mate/">Core Mate</a></li>
+      <li><a href="https://www.pal-style.co.jp/service/dts/">DTS</a></li>
+      <li><a href="https://lp.pal-style.co.jp/core-gx/index.html">Core GX</a></li>
+      <li><a href="./fde.html">FDE（新規）</a></li>
+    </ul></div>
+    <div class="gfooter__col"><h4>情報</h4><ul><li><a href="#">会社概要</a></li><li><a href="#">物流DX事例</a></li><li><a href="#">物流DXコラム</a></li><li><a href="#">お問い合わせ</a></li></ul></div>
+  </div>
+  <div class="gfooter__bottom">
+    <ul class="gfooter__legal"><li><a href="#">プライバシーポリシー</a></li><li><a href="#">利用規約</a></li><li><a href="#">サイトマップ</a></li></ul>
+    <p>© 2026 PAL Services. All rights reserved. ／ 本ページは社内レビュー用の叩き台です</p>
+  </div>
+</footer>
+
+<script>(function(){var b=document.getElementById('menuToggle'),n=document.getElementById('mobileNav');if(b&&n){b.addEventListener('click',function(){n.classList.toggle('open');document.body.style.overflow=n.classList.contains('open')?'hidden':'';});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');document.body.style.overflow='';});});}})();</script>
+</body>
+</html>

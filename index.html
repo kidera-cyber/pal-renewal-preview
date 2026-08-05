@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<meta name="googlebot" content="noindex, nofollow">
+<title>株式会社PAL コーポレートサイト改修｜社内確認用</title>
+<link rel="stylesheet" href="assets/css/portal.css">
+</head>
+<body>
+
+<header class="portal-header" role="banner">
+  <div class="portal-header__brand">
+    <span class="portal-header__mark">PAL</span>
+    <div class="portal-header__names">
+      <span class="portal-header__title">株式会社PAL コーポレートサイト改修</span>
+      <span class="portal-header__sub">社内レビュー用ポータル</span>
+    </div>
+  </div>
+  <nav class="portal-tabs" role="tablist" aria-label="ページ切替タブ">
+    <button class="portal-tab" role="tab" data-page="home"   aria-selected="true"  aria-controls="previewFrame">ホーム</button>
+    <button class="portal-tab" role="tab" data-page="role"   aria-selected="false" aria-controls="previewFrame">私たちの役割</button>
+    <button class="portal-tab" role="tab" data-page="reason" aria-selected="false" aria-controls="previewFrame">PALの強み</button>
+    <button class="portal-tab" role="tab" data-page="fde"    aria-selected="false" aria-controls="previewFrame">FDE</button>
+  </nav>
+  <div class="portal-header__meta">
+    <span class="portal-current">現在表示中：<strong id="currentPageName">ホーム</strong></span>
+    <a id="openPage" class="portal-open" href="pages/home.html" target="_blank" rel="noopener noreferrer">新しいタブで開く ↗</a>
+  </div>
+</header>
+
+<div class="portal-legend" role="note" aria-label="レビュー用マーキングの凡例">
+  <span class="portal-legend__item portal-legend__item--changed">今回変更</span>
+  <span class="portal-legend__item portal-legend__item--added">新規追加</span>
+  <span class="portal-legend__item portal-legend__item--check">要確認</span>
+  <span class="portal-legend__item portal-legend__item--pending">内容変更予定</span>
+  <span class="portal-legend__note">レビュー用マーキングは各ページ側の <code>body.review-mode</code> により表示。本番化時は各ページから外します。</span>
+</div>
+
+<main class="portal-main">
+  <iframe
+    id="previewFrame"
+    class="preview-frame"
+    src="pages/home.html"
+    title="株式会社PAL コーポレートサイト改修プレビュー"
+    role="tabpanel"
+  ></iframe>
+</main>
+
+<script src="assets/js/portal.js" defer></script>
+</body>
+</html>
