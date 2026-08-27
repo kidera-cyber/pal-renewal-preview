@@ -12,7 +12,7 @@
 <style>
   .fde-do{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
   .fde-do li{background:#fff;border:1px solid var(--border);border-radius:8px;padding:14px 18px;font-size:13.5px;color:var(--text);line-height:1.65;position:relative;padding-left:36px}
-  .fde-do li::before{content:"●";position:absolute;left:14px;top:14px;color:var(--red);font-size:10px}
+  .fde-do li::before{content:"●";position:absolute;left:14px;top:14px;color:var(--red);font-size:12px}
   .fde-target{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
   .fde-target li{background:#F8FAFC;border-left:3px solid var(--red);padding:12px 16px;font-size:13px;color:var(--text);line-height:1.7}
   .fde-flow{display:grid;grid-template-columns:1fr;gap:10px;margin:0}
@@ -26,14 +26,14 @@
   /* v1.3 追加：4カード役割 / 8ステップ横並び / Before-After / 価値2カード / FAQ */
   .fde-roles{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:0}
   .fde-role{background:#fff;border:1px solid var(--border);border-radius:12px;padding:24px 22px;position:relative}
-  .fde-role__num{font-family:var(--font-en);font-size:11px;font-weight:800;color:var(--red);letter-spacing:.14em;margin:0 0 8px}
+  .fde-role__num{font-family:var(--font-en);font-size:12px;font-weight:800;color:var(--red);letter-spacing:.14em;margin:0 0 8px}
   .fde-role__title{font-size:17px;font-weight:800;color:var(--navy);margin:0 0 10px}
   .fde-role__desc{font-size:13px;color:var(--text);line-height:1.8;margin:0}
   .fde-value{display:grid;grid-template-columns:1fr 1fr;gap:16px}
   .fde-value__card{border-radius:14px;padding:28px 30px;position:relative}
   .fde-value__card--translator{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff}
   .fde-value__card--handover{background:linear-gradient(135deg,#FEF2F2 0%,#fff 100%);border:2px solid var(--red-soft)}
-  .fde-value__lbl{font-family:var(--font-en);font-size:11px;font-weight:800;letter-spacing:.14em;margin:0 0 8px}
+  .fde-value__lbl{font-family:var(--font-en);font-size:12px;font-weight:800;letter-spacing:.14em;margin:0 0 8px}
   .fde-value__card--translator .fde-value__lbl{color:#F87171}
   .fde-value__card--handover .fde-value__lbl{color:var(--red)}
   .fde-value__title{font-size:20px;font-weight:800;margin:0 0 12px;line-height:1.5}
@@ -53,7 +53,7 @@
   .fde-ba__col{border-radius:14px;padding:26px 28px}
   .fde-ba__col--before{background:#F1F5F9;border:1px solid #CBD5E1}
   .fde-ba__col--after{background:#FFF5F5;border:1px solid #FECACA}
-  .fde-ba__lbl{font-family:var(--font-en);font-size:11px;font-weight:800;letter-spacing:.14em;margin:0 0 8px}
+  .fde-ba__lbl{font-family:var(--font-en);font-size:12px;font-weight:800;letter-spacing:.14em;margin:0 0 8px}
   .fde-ba__col--before .fde-ba__lbl{color:#64748B}
   .fde-ba__col--after .fde-ba__lbl{color:var(--red)}
   .fde-ba__title{font-size:17px;font-weight:800;color:var(--navy);margin:0 0 16px}
@@ -88,7 +88,7 @@
   .cause-card__title{font-size:18px;font-weight:800;color:var(--navy);margin:0;line-height:1.4}
   .cause-body{display:grid;grid-template-columns:1fr 44px 1fr;gap:14px;align-items:stretch}
   .cause-col{padding:0}
-  .cause-col__lbl{font-family:var(--font-en);font-size:10.5px;font-weight:800;letter-spacing:.12em;margin:0 0 10px;text-transform:uppercase}
+  .cause-col__lbl{font-family:var(--font-en);font-size:12px;font-weight:800;letter-spacing:.12em;margin:0 0 10px;text-transform:uppercase}
   .cause-col--do .cause-col__lbl{color:var(--text-mute)}
   .cause-col--result .cause-col__lbl{color:var(--red)}
   .cause-col__jp{font-size:12px;font-weight:800;color:var(--navy);margin:0 0 12px;letter-spacing:.02em}
@@ -108,6 +108,23 @@
     .cause-arrow{transform:rotate(90deg);height:32px}
   }
 </style>
+
+<!-- ===== FONT-FLOOR v1：ページ内 <style> の 10px〜11.5px 指定を 12px（0.75rem）へ引き上げ。
+     図解ラベルがスマホで実用限界を下回っていたため。既存の他プロパティは変更していない ===== -->
+<!-- ===== FDE-SEO v1 START：本番実装時の確定値（プレビューでは適用しない）
+     URL       : https://www.pal-style.co.jp/service/fde/
+     canonical : <link rel="canonical" href="https://www.pal-style.co.jp/service/fde/">
+     パンくず   : ホーム ／ サービス ／ FDE
+                 ※ BreadcrumbList 構造化データは、現行サイトで AIOSEO の @graph 内と
+                   独立タグの二重出力が確認されている。WordPress 側の出力仕様を確認し、
+                   重複を増やさないこと（新規に手書きで追加しない）
+     FAQPage   : 本ページの FAQ 8問に付与する。ただし上記と同じ理由で、
+                 AIOSEO 側が既に出力していないかを確認してから追加する
+     OGP       : og:title / og:description / og:image / og:url を設定（画像は要用意）
+     公開前     : title から【叩き台】を削除／body から review-mode を削除／
+                 noindex を解除（review-mode の削除とは別作業）／robots.txt 確認／
+                 XML サイトマップと /service/ 一覧・サイトマップページへ登録
+     ===== FDE-SEO v1 END ===== -->
 </head>
 <body class="review-mode">
 
@@ -146,10 +163,11 @@
 <section class="phero review-changed">
   <span class="review-label">今回変更</span>
   <div class="container phero__inner">
+    <!-- ===== FDE-HERO v1 START：直下の定義文が次セクション「FDEとは」と完全に同一だったため、ヒーローはコピーとCTAのみに。定義は次セクションへ一本化。「正式名称要確認」の注記は削除し、正式名称は次セクションの初出でのみ併記 ===== -->
     <span class="phero__eyebrow">SERVICE ／ FDE</span>
-    <span class="review-inline-check">Forward Deployed Engineer：正式名称要確認</span>
     <h1 class="phero__title">現場の判断を、<br>動く仕組みへ。</h1>
-    <p class="phero__sub">FDE は、物流現場の業務と、データ・システム・設備の間に入り、<br>現場の判断や課題を、実行できる仕組みへ変えていく伴走型のサービスです。</p>
+    <p class="phero__sub">構想を、現場で動く仕組みへ変えていく伴走型のサービスです。</p>
+    <!-- ===== FDE-HERO v1 END ===== -->
     <div class="phero__ctas">
       <a href="#" class="btn btn--red">お問い合わせ</a>
       <a href="#" class="btn btn--ghost">資料ダウンロード</a>
@@ -163,7 +181,9 @@
   <div class="container container--narrow">
     <div class="section__head">
       <span class="section__eyebrow">SERVICE OVERVIEW</span>
-      <h2 class="section__title">FDE（Forward Deployed Engineer）とは<span class="review-inline-check">正式名称要確認</span></h2>
+      <!-- ===== FDE-NAME v1 START：正式名称はこの初出でのみ併記し、以降は「FDE」で統一。「正式名称要確認」の注記を削除 ===== -->
+      <h2 class="section__title">FDE（Forward Deployed Engineer）とは</h2>
+      <!-- ===== FDE-NAME v1 END ===== -->
       <p class="section__lead">FDE は、物流現場の業務と、データ・システム・設備の間に入り、<br>現場の判断や課題を、実行できる仕組みへ変えていく伴走型のサービスです。</p>
     </div>
     <p class="prose" style="text-align:center">構想や導入で終わらせず、課題整理から設計、実装、運用、改善、定着までを支援します。</p>
@@ -230,6 +250,17 @@
         <p class="why-fde__value-lbl">VALUE 01 ／ TRANSLATOR</p>
         <h3 class="why-fde__value-title">経営・現場・技術をつなぐ<br>"翻訳者" として機能する</h3>
         <p class="why-fde__value-body">FDE は、経営、現場、情報システム部門、設備会社、システム会社の間に立ちます。<br><strong>現場の暗黙知や判断基準を、データや要件へ変換</strong>し、技術上の制約を現場に分かる言葉で返します。</p>
+        <!-- ===== FDE-STAKEHOLDERS v1 START：旧「RELATION①（現場と関係者の間に入り）」セクションの STAKEHOLDERS 6者をここへ移設。誰と誰の間を翻訳するのかが、翻訳者の説明と同じ場所で読めるようにする ===== -->
+        <p class="why-fde__value-sub">誰と誰の間に立つのか</p>
+        <ul class="why-fde__stakeholders">
+          <li>メーカー／荷主</li>
+          <li>物流センター</li>
+          <li>配送／運送</li>
+          <li>システムベンダー</li>
+          <li>設備ベンダー</li>
+          <li>現場責任者・担当者</li>
+        </ul>
+        <!-- ===== FDE-STAKEHOLDERS v1 END ===== -->
       </div>
       <div class="why-fde__value why-fde__value--handover">
         <p class="why-fde__value-lbl">VALUE 02 ／ HANDOVER</p>
@@ -246,7 +277,7 @@
     /* 1段目：4テーマ課題カード（PC 2x2 / mobile 縦積み） */
     .why-fde__issues{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:32px 0 0}
     .why-fde__issue{background:#fff;border:1px solid var(--border);border-left:4px solid var(--red);border-radius:12px;padding:22px 24px;box-shadow:var(--shadow-sm)}
-    .why-fde__issue-num{font-family:var(--font-en);font-size:11px;font-weight:800;letter-spacing:.14em;color:var(--red);margin:0 0 8px}
+    .why-fde__issue-num{font-family:var(--font-en);font-size:12px;font-weight:800;letter-spacing:.14em;color:var(--red);margin:0 0 8px}
     .why-fde__issue-title{font-size:16px;font-weight:800;color:var(--navy);margin:0 0 12px;line-height:1.5}
     .why-fde__issue-list{list-style:none;padding:0;margin:0}
     .why-fde__issue-list li{font-size:13px;line-height:1.75;padding:6px 0 6px 18px;position:relative;color:var(--text);border-bottom:1px dashed rgba(148,163,184,.3)}
@@ -272,7 +303,7 @@
     .why-fde__value{border-radius:14px;padding:28px 30px;position:relative}
     .why-fde__value--translator{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;box-shadow:0 12px 32px rgba(15,23,42,.18)}
     .why-fde__value--handover{background:linear-gradient(160deg,#FEF2F2 0%,#fff 100%);border:2px solid var(--red-soft)}
-    .why-fde__value-lbl{font-family:var(--font-en);font-size:10.5px;font-weight:800;letter-spacing:.14em;margin:0 0 10px}
+    .why-fde__value-lbl{font-family:var(--font-en);font-size:12px;font-weight:800;letter-spacing:.14em;margin:0 0 10px}
     .why-fde__value--translator .why-fde__value-lbl{color:#F87171}
     .why-fde__value--handover .why-fde__value-lbl{color:var(--red)}
     .why-fde__value-title{font-size:19px;font-weight:800;margin:0 0 14px;line-height:1.5}
@@ -292,109 +323,22 @@
     }
   </style>
 </section>
-<!-- ⑤ 関係者ハブ型（v2.8：内容変更予定マーキングを撤去、通常表示に） -->
-<section class="section section--soft" id="relation-pending">
-  <div class="container">
-    <div class="section__head">
-      <span class="section__eyebrow">RELATION</span>
-      <h2 class="section__title">FDE は、現場と関係者の間に入り、<br>実行を前へ進めます。</h2>
-      <p class="section__lead">物流の実行現場には、メーカーや荷主、物流センター、配送会社、システムベンダー、設備ベンダー、現場責任者など、さまざまな関係者が関わります。<br>FDE は、それぞれの立場や目的、使う言葉の違いを整理し、現場で実行できる形へつなげます。</p>
-    </div>
-
-    <div class="fde-hub" aria-label="関係者 → FDE → 現場で動く状態のハブ型接点図">
-      <div class="fde-hub__col fde-hub__col--stakeholder">
-        <p class="fde-hub__lbl">STAKEHOLDERS</p>
-        <p class="fde-hub__title">関係者</p>
-        <ul class="fde-hub__list">
-          <li>メーカー／荷主</li>
-          <li>物流センター</li>
-          <li>配送／運送</li>
-          <li>システムベンダー</li>
-          <li>設備ベンダー</li>
-          <li>現場責任者・担当者</li>
-        </ul>
-      </div>
-      <div class="fde-hub__arrow" aria-hidden="true">→</div>
-      <div class="fde-hub__col fde-hub__col--center">
-        <p class="fde-hub__lbl fde-hub__lbl--red">FDE</p>
-        <p class="fde-hub__title fde-hub__title--white">現場で動くように、<br>関係者をつなぐ</p>
-        <ul class="fde-hub__list fde-hub__list--white">
-          <li>現場を理解する</li>
-          <li>課題を整理する</li>
-          <li>翻訳する</li>
-          <li>関係者を調整する</li>
-          <li>要件へ落とし込む</li>
-          <li>実装と定着を支える</li>
-        </ul>
-      </div>
-      <div class="fde-hub__arrow" aria-hidden="true">→</div>
-      <div class="fde-hub__col fde-hub__col--result">
-        <p class="fde-hub__lbl fde-hub__lbl--red">RESULT</p>
-        <p class="fde-hub__title">現場で動く<br>状態へ</p>
-        <ul class="fde-hub__list fde-hub__list--check">
-          <li>センターと配送の役割が整理される</li>
-          <li>システムや設備が運用につながる</li>
-          <li>関係者の認識がそろう</li>
-          <li>現場で使えるルールが整う</li>
-          <li>改善が続く状態になる</li>
-        </ul>
-      </div>
-    </div>
-
-    <p class="fde-hub__summary"><strong>FDE は、こうした "つなぎ目" に入ります。</strong><br>現場の実態を理解し、課題を整理し、関係者の認識をそろえ、実装・運用・改善が続く形へ進めます。</p>
-
-    <p style="margin-top:20px;text-align:center"><a href="./role.html" class="btn btn--ghost">「私たちの役割」で上位構想を見る</a></p>
-  </div>
-  <style>
-    /* v2.0 復活：⑤ 関係者ハブ型図解（関係者 → FDE → 現場で動く状態） */
-    .fde-hub{display:grid;grid-template-columns:1fr 40px 1.35fr 40px 1fr;gap:12px;align-items:stretch;margin:32px 0 24px}
-    .fde-hub__col{background:#fff;border:1px solid var(--border);border-radius:14px;padding:26px 24px;display:flex;flex-direction:column;box-shadow:var(--shadow-sm)}
-    .fde-hub__col--stakeholder{background:#F8FAFC;border:1px solid #CBD5E1}
-    .fde-hub__col--center{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;box-shadow:0 12px 32px rgba(15,23,42,.18);border:none;transform:scale(1.02)}
-    .fde-hub__col--result{background:#FFF5F5;border:1px solid #FECACA}
-    .fde-hub__lbl{font-family:var(--font-en);font-size:10.5px;font-weight:800;letter-spacing:.14em;margin:0 0 8px;color:var(--text-mute)}
-    .fde-hub__lbl--red{color:#F87171}
-    .fde-hub__col--result .fde-hub__lbl{color:var(--red)}
-    .fde-hub__title{font-size:16px;font-weight:800;color:var(--navy);margin:0 0 16px;line-height:1.5}
-    .fde-hub__title--white{color:#fff;font-size:18px}
-    .fde-hub__list{list-style:none;padding:0;margin:0;flex-grow:1}
-    .fde-hub__list li{font-size:13px;line-height:1.75;padding:8px 0 8px 20px;position:relative;color:var(--text);border-bottom:1px dashed rgba(148,163,184,.3)}
-    .fde-hub__list li:last-child{border-bottom:none}
-    .fde-hub__list li::before{content:"●";position:absolute;left:2px;top:9px;font-size:8px;color:#94A3B8}
-    .fde-hub__list--white li{color:#fff;border-bottom-color:rgba(255,255,255,.15);font-weight:600}
-    .fde-hub__list--white li::before{content:"→";color:#F87171;font-size:12px;top:8px;font-weight:800}
-    .fde-hub__list--check li{color:var(--navy)}
-    .fde-hub__list--check li::before{content:"✓";color:var(--red);font-weight:800;font-size:13px;top:8px}
-    .fde-hub__arrow{display:flex;align-items:center;justify-content:center;color:var(--red);font-family:var(--font-en);font-size:24px;font-weight:900}
-    .fde-hub__summary{background:#0F172A;color:#fff;border-radius:12px;padding:22px 26px;font-size:13.5px;line-height:2;text-align:center;margin:24px 0 0}
-    .fde-hub__summary strong{color:#F87171}
-    @media(max-width:900px){
-      .fde-hub{grid-template-columns:1fr;gap:8px}
-      .fde-hub__col--center{transform:none}
-      .fde-hub__arrow{transform:rotate(90deg);height:24px;font-size:20px}
-    }
-  </style>
-</section>
-<!-- 4. FDEの支援フロー（8ステップ横並び）v1.3 -->
-<section class="section">
-  <div class="container">
-    <div class="section__head">
-      <span class="section__eyebrow">PROCESS</span>
-      <h2 class="section__title">FDE は、現場でこう動きます</h2>
-      <p class="section__lead">構想やシステム導入だけで終わらせず、現場で使われ、改善が続く状態まで支援します。</p>
-    </div>
-    <div class="fde-steps">
-      <div class="fde-step"><div class="fde-step__num">1</div><p class="fde-step__title">現場を見る</p></div>
-      <div class="fde-step"><div class="fde-step__num">2</div><p class="fde-step__title">話を聞く</p></div>
-      <div class="fde-step"><div class="fde-step__num">3</div><p class="fde-step__title">課題を整理する</p></div>
-      <div class="fde-step"><div class="fde-step__num">4</div><p class="fde-step__title">要件・運用へ落とし込む</p></div>
-      <div class="fde-step"><div class="fde-step__num">5</div><p class="fde-step__title">実装する</p></div>
-      <div class="fde-step"><div class="fde-step__num">6</div><p class="fde-step__title">運用を確認する</p></div>
-      <div class="fde-step"><div class="fde-step__num">7</div><p class="fde-step__title">改善する</p></div>
-      <div class="fde-step"><div class="fde-step__num">8</div><p class="fde-step__title">定着・引き継ぎ</p></div>
-    </div>
-  </div>
-</section>
+<!-- ===== FDE-RELATION1 v1：セクション廃止（情報は削除ではなく移設）
+     救済情報：
+       ・STAKEHOLDERS 関係者6者 → 「なぜ、その場面で FDE が機能するのか。」の VALUE 01「翻訳者」内へ移設済み
+       ・中央 FDE の6動作（現場を理解する／課題を整理する／翻訳する／関係者を調整する／要件へ落とし込む／実装と定着を支える）
+         → 「FDE が行うことと、そこから生まれる変化」の各区分 ACTION へ吸収済み
+       ・RESULT 5項目 → 重複整理のうえ「顧客課題に合わせて、FDE がサービスと運用を組み立てます。」の 04 RESULT へ移設済み
+       ・「私たちの役割」への導線 → 同 04 RESULT 下の CTA として維持
+     復元するには本コメントを削除し、git 履歴 cd01610 時点の当該 section を戻す ===== -->
+<!-- ===== FDE-PROCESS v1：セクション廃止（情報は削除ではなく移設）
+     救済情報：8ステップは矢印だけのSTEP図だったため、「FDE が行うことと、そこから生まれる変化」の
+     各区分見出し直下の STEP ラベルへ吸収済み。対応は以下のとおり。
+       01 現場・業務を理解する   ← 1 現場を見る / 2 話を聞く
+       02 データ・システムを整理する ← 3 課題を整理する
+       03 仕組み・運用を設計する   ← 4 要件・運用へ落とし込む
+       04 関係者と実装・定着を進める ← 5 実装する / 6 運用を確認する / 7 改善する / 8 定着・引き継ぎ
+     復元するには本コメントを削除し、git 履歴 cd01610 時点の当該 section を戻す ===== -->
 
 <!-- ===== v1.4：CHANGE Before/After を廃止、下の統合セクションで「行動→変化」を左右セット表示 ===== -->
 <section class="section">
@@ -412,6 +356,8 @@
           <div class="cause-card__num">01</div>
           <h3 class="cause-card__title">現場・業務を理解する</h3>
         </div>
+        <!-- ===== FDE-STEPS v1：旧 PROCESS 8ステップをここへ吸収 ===== -->
+        <ul class="cause-card__steps"><li><span class="cause-step__n">1</span>現場を見る</li><li><span class="cause-step__n">2</span>話を聞く</li></ul>
         <div class="cause-body">
           <div class="cause-col cause-col--do">
             <p class="cause-col__lbl">ACTION</p>
@@ -443,6 +389,8 @@
           <div class="cause-card__num">02</div>
           <h3 class="cause-card__title">データ・システムを整理する</h3>
         </div>
+        <!-- ===== FDE-STEPS v1：旧 PROCESS 8ステップをここへ吸収 ===== -->
+        <ul class="cause-card__steps"><li><span class="cause-step__n">3</span>課題を整理する</li></ul>
         <div class="cause-body">
           <div class="cause-col cause-col--do">
             <p class="cause-col__lbl">ACTION</p>
@@ -474,6 +422,8 @@
           <div class="cause-card__num">03</div>
           <h3 class="cause-card__title">仕組み・運用を設計する</h3>
         </div>
+        <!-- ===== FDE-STEPS v1：旧 PROCESS 8ステップをここへ吸収 ===== -->
+        <ul class="cause-card__steps"><li><span class="cause-step__n">4</span>要件・運用へ落とし込む</li></ul>
         <div class="cause-body">
           <div class="cause-col cause-col--do">
             <p class="cause-col__lbl">ACTION</p>
@@ -505,6 +455,8 @@
           <div class="cause-card__num">04</div>
           <h3 class="cause-card__title">関係者と実装・定着を進める</h3>
         </div>
+        <!-- ===== FDE-STEPS v1：旧 PROCESS 8ステップをここへ吸収 ===== -->
+        <ul class="cause-card__steps"><li><span class="cause-step__n">5</span>実装する</li><li><span class="cause-step__n">6</span>運用を確認する</li><li><span class="cause-step__n">7</span>改善する</li><li><span class="cause-step__n">8</span>定着・引き継ぎ</li></ul>
         <div class="cause-body">
           <div class="cause-col cause-col--do">
             <p class="cause-col__lbl">ACTION</p>
@@ -521,10 +473,10 @@
             <p class="cause-col__lbl">RESULT</p>
             <p class="cause-col__jp">生まれる変化</p>
             <ul>
+              <!-- ===== FDE-DEDUP v1：「顧客側で改善を回し続けられる」「外部に依存し続けない運用体制が残る」は
+                   新設「FDE の支援が終わったあと、お客さま側に残るもの。」と内容が重複するため、そちらへ集約（削除ではなく移設） ===== -->
               <li>複数ベンダー間の調整コストが下がる</li>
               <li>導入後も改善が止まらない</li>
-              <li>顧客側で改善を回し続けられる</li>
-              <li>外部に依存し続けない運用体制が残る</li>
             </ul>
           </div>
         </div>
@@ -532,8 +484,10 @@
     </div>
 
     <div class="cause-summary">
-      <h3>FDE は、作業を代行するサービスではありません。</h3>
-      <p>現場の実態を理解し、課題を整理し、仕組みに変え、関係者とともに実装する。<br>その一連の働きかけによって、物流変革が現場で動き、改善が続く状態をつくります。</p>
+      <!-- ===== FDE-POSITIVE v1 START：ページ内で唯一の否定形だったため肯定形へ変更 ===== -->
+      <h3>FDE は、現場の実態を理解し、課題を整理し、仕組みに変え、関係者とともに実装します。</h3>
+      <p>その一連の働きかけによって、物流変革が現場で動き、改善が続く状態をつくります。</p>
+      <!-- ===== FDE-POSITIVE v1 END ===== -->
     </div>
   </div>
 </section>
@@ -630,7 +584,7 @@
     .stack4__layer--service{background:#fff;border:1px solid var(--border);box-shadow:var(--shadow-sm)}
     /* L4 結果：薄赤枠 */
     .stack4__layer--field{background:#FFF5F5;border:2px solid var(--red)}
-    .stack4__lbl{font-family:var(--font-en);font-size:10.5px;font-weight:800;letter-spacing:.14em;margin:0 0 8px;color:var(--text-mute)}
+    .stack4__lbl{font-family:var(--font-en);font-size:12px;font-weight:800;letter-spacing:.14em;margin:0 0 8px;color:var(--text-mute)}
     .stack4__lbl--red{color:#F87171}
     .stack4__layer--field .stack4__lbl{color:var(--red)}
     .stack4__title{font-size:17px;font-weight:800;color:var(--navy);margin:0 0 14px;line-height:1.5}
@@ -645,9 +599,9 @@
     /* L3 派生ブロック（2列） */
     .stack4__branches{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
     .stack4__branch{background:#EEF6FF;border:1px solid var(--border-blue);border-radius:12px;padding:16px 18px}
-    .stack4__branch-head{font-family:var(--font-en);font-size:10.5px;font-weight:800;letter-spacing:.1em;color:#0EA5E9;margin:0 0 10px;padding-bottom:8px;border-bottom:1px dashed var(--border-blue)}
+    .stack4__branch-head{font-family:var(--font-en);font-size:12px;font-weight:800;letter-spacing:.1em;color:#0EA5E9;margin:0 0 10px;padding-bottom:8px;border-bottom:1px dashed var(--border-blue)}
     .stack4__branch ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px}
-    .stack4__branch li{background:#fff;border:1px solid var(--border-blue);border-radius:6px;padding:4px 10px;font-size:11.5px;color:var(--navy);font-weight:700}
+    .stack4__branch li{background:#fff;border:1px solid var(--border-blue);border-radius:6px;padding:4px 10px;font-size:12px;color:var(--navy);font-weight:700}
     /* 縦矢印（各層の間） */
     .stack4__arrow{text-align:center;color:var(--red);font-size:22px;font-weight:900;line-height:1;padding:10px 0}
     /* まとめ */
@@ -661,42 +615,93 @@
     }
   </style>
 </section>
+
+<!-- ===== FDE-REMAINS v1 START：「顧客側へ引き継ぐ」の記述が VALUE 02 / 04 RESULT / まとめ文 / FAQ の4箇所に散っていたため、
+     VALUE 02（考え方）と本セクション（支援の結果）の2箇所へ集約。「私たちの役割」と同じ6要素を使うが、
+     FDE 支援の結果としての表現に変えており、文章は共有していない ===== -->
+<section class="section fde-remains-sec">
+  <div class="container container--narrow">
+    <div class="section__head">
+      <span class="section__eyebrow">HANDOVER</span>
+      <h2 class="section__title">FDE の支援が終わったあと、<br>お客さま側に残るもの。</h2>
+      <p class="section__lead">FDE は、現場に入って仕組みをつくることだけを目的にしていません。関与が薄くなったあとに何が残っているかまでを、支援の設計に含めています。</p>
+    </div>
+
+    <div class="remains">
+      <div class="remains__axis">
+        <div class="remains__phase remains__phase--during">
+          <span class="remains__phase-lbl">FDE が現場に入っている間</span>
+          <ul class="remains__acts">
+            <li>現場と業務の実態を確認する</li>
+            <li>関係者の認識をそろえる</li>
+            <li>データと要件を整理する</li>
+            <li>運用に落とし込み、定着させる</li>
+          </ul>
+        </div>
+        <span class="remains__arrow" aria-hidden="true">&rarr;</span>
+        <div class="remains__phase remains__phase--after">
+          <span class="remains__phase-lbl">FDE の関与が薄くなったあと</span>
+          <ul class="remains__stack">
+            <li class="remains__item">
+              <h3 class="remains__item-name">データ</h3>
+              <p class="remains__item-desc">FDE が整理した現場・輸送・設備の実績が、そのまま改善判断に使える状態で残ります。</p>
+            </li>
+            <li class="remains__item">
+              <h3 class="remains__item-name">判断基準</h3>
+              <p class="remains__item-desc">現場の担当者が持っていた勘どころが、誰でも同じように判断できる基準として言語化されます。</p>
+            </li>
+            <li class="remains__item">
+              <h3 class="remains__item-name">運用ルール</h3>
+              <p class="remains__item-desc">実装時に決めた手順が、担当者の異動があっても回り続けるルールとして残ります。</p>
+            </li>
+            <li class="remains__item">
+              <h3 class="remains__item-name">業務ノウハウ</h3>
+              <p class="remains__item-desc">属人化していた作業の理由と背景が、社内で引き継げるドキュメントになります。</p>
+            </li>
+            <li class="remains__item">
+              <h3 class="remains__item-name">改善方法</h3>
+              <p class="remains__item-desc">どのデータを見て次にどこへ手を入れるか、その進め方自体が現場に残ります。</p>
+            </li>
+            <li class="remains__item remains__item--goal">
+              <h3 class="remains__item-name">自社で改善を続けられる体制</h3>
+              <p class="remains__item-desc">上の5つが揃うことで成立する状態です。FDE は、ここまで到達することを一連の設計として担います。</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+<!-- ===== FDE-REMAINS v1 END ===== -->
 <!-- 8. 関連サービス（現行掲載サービスのみ） -->
 <section class="section">
   <div class="container">
     <div class="section__head">
       <span class="section__eyebrow">RELATED SERVICES</span>
+      <!-- ===== FDE-RELSVC v1 START：カード説明が2行になりカード高さが揃わなかったため1行程度へ短縮。掲載対象は現行サービス一覧に掲載中のもののみで変更なし ===== -->
       <h2 class="section__title">FDE と組み合わせて使う、関連サービス</h2>
       <p class="section__lead">FDE は、現行サービスと組み合わせて使うことで効果を発揮します。<br>ここに掲載しているのは、コーポレートサイトのサービス一覧に掲載中のサービスのみです。</p>
     </div>
     <div class="grid-3">
-      <a class="card" href="https://www.pal-style.co.jp/service/logistics-consulting/"><h3 class="card__title">物流コンサルティング</h3><p class="card__body-sm">構想・戦略設計の段階から、FDE の現場実装につなぐ流れをつくります。</p></a>
-      <a class="card" href="https://www.pal-style.co.jp/service/core-first/"><h3 class="card__title">Core First</h3><p class="card__body-sm">データ統合プラットフォーム。FDE が現場で扱う情報の基盤になります。</p></a>
-      <a class="card" href="https://www.pal-style.co.jp/service/dts/"><h3 class="card__title">DTS</h3><p class="card__body-sm">輸送効率化・可視化プラットフォーム。輸送領域の実装で組み合わせます。</p></a>
-      <a class="card" href="https://www.pal-style.co.jp/service/zero/"><h3 class="card__title">Core Zero</h3><p class="card__body-sm">初期投資ゼロで DX を開始するモデル。段階導入の場面で組み合わせます。</p></a>
-      <a class="card" href="https://lp.pal-style.co.jp/logitec-integration/"><h3 class="card__title">ロジテックインテグレーション</h3><p class="card__body-sm">戦略から実行までの統合支援。FDE と重なる領域を、大きな枠で担当します。</p></a>
+      <a class="card" href="https://www.pal-style.co.jp/service/logistics-consulting/"><h3 class="card__title">物流コンサルティング</h3><p class="card__body-sm">構想・戦略設計の段階から、FDE の実装につなぎます。</p></a>
+      <a class="card" href="https://www.pal-style.co.jp/service/core-first/"><h3 class="card__title">Core First</h3><p class="card__body-sm">FDE が現場で扱う情報の基盤となるデータ統合基盤です。</p></a>
+      <a class="card" href="https://www.pal-style.co.jp/service/dts/"><h3 class="card__title">DTS</h3><p class="card__body-sm">輸送領域の実装で組み合わせる可視化プラットフォームです。</p></a>
+      <a class="card" href="https://www.pal-style.co.jp/service/zero/"><h3 class="card__title">Core Zero</h3><p class="card__body-sm">初期投資ゼロで始めるモデル。段階導入の場面で使います。</p></a>
+      <a class="card" href="https://lp.pal-style.co.jp/logitec-integration/"><h3 class="card__title">ロジテックインテグレーション</h3><p class="card__body-sm">戦略から実行までの統合支援。FDE より大きな枠を担います。</p></a>
       <a class="card" href="./home.html"><h3 class="card__title">サービス一覧</h3><p class="card__body-sm">現行の全サービスを一覧でご確認いただけます。</p></a>
     </div>
     <p class="note note--sm" style="margin-top:16px">※ 現在、コーポレートサイトのサービス一覧に掲載されていないサービスは、関連サービスとして掲載していません。</p>
   </div>
 </section>
 
-<!-- ※要確認 事例プレースホルダ -->
-<section class="section section--soft review-check">
-  <span class="review-label review-label--check">要確認</span>
-  <div class="container container--narrow">
-    <div class="section__head">
-      <span class="section__eyebrow">EXAMPLE ／ 仮置き</span>
-      <h2 class="section__title">支援例（※要確認：掲載可否）</h2>
-      <p class="section__lead">FDE の具体的な支援例は、公開可否・匿名化条件を含めて事業部確認後に差し替えます。<br>現時点ではプレースホルダとして掲載しています。</p>
-    </div>
-    <div class="card card--filled">
-      <p class="card__eyebrow">※要確認</p>
-      <h3 class="card__title">支援例（仮）</h3>
-      <p class="card__body">物流DX の構想はあったが、現場実装で停滞していた案件に対し、FDE が現場に入り、業務・データ・システム・設備の実態を把握。ボトルネックを整理し、必要なサービスと組み合わせながら実装・定着を進めました。※本文は仮の記述です。</p>
-    </div>
-  </div>
-</section>
+<!-- ===== FDE-CASE v1 SLOT：支援例セクション挿入位置 =====
+     今回は非掲載。公開可否・匿名化条件が未確定のプレースホルダを本番に出さないため、
+     セクションごと外し、挿入位置のみをここに確保している。
+     実データと公開許可が確認できたら、このコメントの位置に
+     <section class="section section--soft"> … </section> を追加する。
+     固有名を出す場合は【許諾後】／【許諾前】の二段書きで用意する。
+     ===== FDE-CASE v1 SLOT END ===== -->
 
 <!-- FAQ（v1.3 新規追加：SEO向けの詳細説明を FAQ に集約） -->
 <section class="section">
@@ -708,7 +713,9 @@
     <div class="fde-faq">
       <details>
         <summary>FDE はコンサルティングと何が違いますか？</summary>
-        <div class="fde-faq__body">コンサルティングは戦略・構想の設計を主な役割としますが、FDE は<strong>その先にある「現場実装と定着」を担うサービス</strong>です。設計だけで終わらせず、現場に入って要件・運用へ落とし込み、運用が続く状態まで支援します。物流コンサルティングと組み合わせて使うことも可能です。</div>
+        <!-- ===== FDE-FAQ-CONSUL v1 START：関連サービス「物流コンサルティング」の説明と内容が重複していたため、違いの説明だけに絞る ===== -->
+        <div class="fde-faq__body">コンサルティングは戦略・構想の<strong>設計</strong>を主な役割とし、FDE はその先にある<strong>現場実装と定着</strong>を担います。担当する工程が異なるため、組み合わせて使うこともできます。</div>
+        <!-- ===== FDE-FAQ-CONSUL v1 END ===== -->
       </details>
       <details>
         <summary>FDE はシステム開発サービスですか？</summary>
@@ -745,8 +752,10 @@
 <!-- 9. お問い合わせCTA -->
 <section class="final-cta">
   <div class="container">
+    <!-- ===== FDE-CTA v1 START：FAQ「費用や契約形態、開始時期はどうなりますか？」と同じ文だったため書き分け ===== -->
     <h2>「動かなかった構想」を、動かします。</h2>
-    <p class="final-cta__body">FDE の対応可否、契約形態、費用感、開始時期などは、状況に応じて個別にご案内します。<br>まずはお気軽にご相談ください。</p>
+    <p class="final-cta__body">現場のどこで止まっているのか、まだ整理できていない段階でも構いません。<br>状況をお聞かせいただければ、FDE で対応できる範囲からご説明します。</p>
+    <!-- ===== FDE-CTA v1 END ===== -->
     <a href="#" class="btn btn--red btn--lg">お問い合わせ</a>
   </div>
 </section>

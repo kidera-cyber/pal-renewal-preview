@@ -341,3 +341,184 @@ body.review-mode .review-inline-check{
 }
 
 /* ===== v1.2 レビュー用マーキング END ===== */
+
+/* ============================================================
+   ===== RENEWAL-A v1 START =====
+   Priority A 実装分の追加スタイル。
+   既存ルールは書き換えず、ファイル末尾に追記して詳細度・後勝ちで適用する。
+   対象：ホームFDE紹介 / 用語関係整理 / 開示の結論文 / イネーブラー定義 /
+        顧客側に残るもの / 強み4分類 / 最小フォント12px
+   多言語耐性：固定 height・固定 width を使わず min-height と
+        padding + max-width、grid は auto-fit / minmax で構成する。
+   ============================================================ */
+
+/* ---- 1. 最小フォント 12px（0.75rem）フロア ----
+   既存の 10px〜11.5px 指定を、末尾追記で 12px へ引き上げる。
+   #previewBanner は本番で削除されるレビュー用要素のため対象外。 */
+.card__eyebrow,
+.card__badge,
+.card__tags,
+.info-band__eyebrow,
+.cta-block__eyebrow,
+.role-hierarchy__label,
+.enabler__center small,
+.gfooter__bottom,
+.gfooter__legal a,
+.gfooter__tel small,
+.connect3__lbl,
+.connect3__tags span,
+.connect3__summary small,
+.connect3__link{font-size:12px}
+
+/* ---- 2. ホーム：FDE 紹介ブロック ---- */
+.fde-intro__labels{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:8px 0 28px;list-style:none;padding:0}
+.fde-intro__label{background:#fff;border:1px solid var(--border);border-left:3px solid var(--red);border-radius:10px;padding:16px 20px;font-size:14.5px;font-weight:700;color:var(--navy);min-height:60px;display:flex;align-items:center;box-shadow:var(--shadow-sm)}
+
+/* ---- 3. 私たちの役割：用語の関係整理（LLP／4PL セクション末尾） ---- */
+.terms-map{margin:40px 0 0;padding:28px 26px;background:#fff;border:1px solid var(--border);border-radius:14px;box-shadow:var(--shadow-sm)}
+.terms-map__title{font-size:17px;font-weight:800;color:var(--navy);margin:0 0 6px;line-height:1.5}
+.terms-map__lead{font-size:13px;color:var(--text-mute);margin:0 0 22px;line-height:1.85}
+.terms-map__row{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px}
+.terms-map__item{background:var(--bg-soft);border:1px solid var(--border);border-radius:10px;padding:18px 18px 20px;min-height:100%}
+.terms-map__kind{display:inline-block;font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--red);background:#FEF2F2;border-radius:999px;padding:3px 12px;margin-bottom:10px}
+.terms-map__kind--band{background:rgba(255,255,255,.16);color:#fff;flex-shrink:0}
+.terms-map__name{font-size:15px;font-weight:800;color:var(--navy);margin:0 0 8px;line-height:1.5}
+.terms-map__desc{font-size:13px;line-height:1.85;color:var(--text);margin:0}
+.terms-map__band{display:flex;gap:18px;align-items:flex-start;margin-top:14px;padding:20px 22px;border-radius:10px;background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff}
+.terms-map__band .terms-map__name{color:#fff;margin-top:2px}
+.terms-map__band .terms-map__desc{color:rgba(255,255,255,.86)}
+@media(max-width:640px){ .terms-map__band{flex-direction:column;gap:10px} }
+
+/* ---- 4. 私たちの役割：オープン型統合管理の結論文（復元） ---- */
+.open-conclusion{margin:24px 0 0;padding:18px 24px;background:#FEF2F2;border:1px solid var(--red-soft);border-left:3px solid var(--red);border-radius:10px;font-size:15px;font-weight:700;color:var(--navy);line-height:1.9}
+
+/* ---- 5. 私たちの役割：イネーブラー定義 ---- */
+.enabler-def__body{max-width:62em;margin:0 auto}
+.enabler-def__body p{font-size:15.5px;line-height:2.05;color:var(--text);margin:0 0 14px}
+.enabler-def__body p:last-child{margin-bottom:0;font-weight:700;color:var(--navy)}
+
+/* ---- 6. 私たちの役割 / FDE：顧客側に残るもの（時間軸で対比） ---- */
+.remains{margin:44px 0 0;padding:30px 28px;background:var(--bg-soft);border:1px solid var(--border);border-radius:16px}
+.remains__title{font-size:19px;font-weight:800;color:var(--navy);margin:0 0 24px;line-height:1.5;text-align:center}
+.remains__axis{display:grid;grid-template-columns:minmax(0,0.85fr) 44px minmax(0,1.15fr);gap:10px;align-items:start}
+.remains__phase{min-width:0}
+.remains__phase-lbl{display:block;font-size:12px;font-weight:800;letter-spacing:.06em;color:var(--text-mute);border-bottom:1px solid var(--border-dark);padding-bottom:8px;margin-bottom:14px}
+.remains__phase--after .remains__phase-lbl{color:var(--red);border-bottom-color:var(--red-soft)}
+.remains__acts{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.remains__acts li{background:#fff;border:1px dashed var(--border-dark);border-radius:8px;padding:12px 14px;font-size:13px;line-height:1.75;color:var(--text-mute)}
+.remains__arrow{align-self:center;text-align:center;color:var(--red);font-size:26px;font-weight:900;line-height:1;padding-top:40px}
+.remains__stack{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
+.remains__item{background:#fff;border:1px solid var(--border);border-left:3px solid var(--cool-2);border-radius:8px;padding:13px 16px;box-shadow:var(--shadow-sm)}
+.remains__item-name{font-size:14.5px;font-weight:800;color:var(--navy);margin:0 0 4px;line-height:1.5}
+.remains__item-desc{font-size:13px;line-height:1.8;color:var(--text);margin:0}
+.remains__item--goal{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);border:none;border-left:3px solid var(--red);box-shadow:var(--shadow-md)}
+.remains__item--goal .remains__item-name{color:#fff}
+.remains__item--goal .remains__item-desc{color:rgba(255,255,255,.86)}
+@media(max-width:860px){
+  .remains__axis{grid-template-columns:1fr;gap:6px}
+  .remains__arrow{padding:6px 0;transform:rotate(90deg)}
+}
+@media(max-width:520px){
+  .remains{padding:22px 16px}
+  .remains__title{font-size:17px;text-align:left}
+}
+
+/* ---- 7. PALの強み：4分類グルーピング ---- */
+.sgroup{margin:0 0 40px}
+.sgroup__head{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;border-bottom:2px solid var(--navy);padding-bottom:10px;margin-bottom:8px}
+.sgroup__name{font-size:20px;font-weight:800;color:var(--navy);margin:0;line-height:1.4}
+.sgroup__lead{font-size:13.5px;color:var(--text-mute);margin:0;line-height:1.8}
+.sgroup__body{margin-top:18px}
+.sgroup__note{margin:14px 0 0;padding:14px 18px;background:#FEF2F2;border:1px solid var(--red-soft);border-radius:10px;font-size:13.5px;line-height:1.9;color:var(--navy);font-weight:700}
+.smap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:26px 0 0}
+.smap__item{background:#fff;border:1px solid var(--border);border-top:3px solid var(--navy-2);border-radius:12px;padding:18px 20px;box-shadow:var(--shadow-sm)}
+.smap__item--remains{border-top-color:var(--red)}
+.smap__name{font-size:16px;font-weight:800;color:var(--navy);margin:0 0 7px;line-height:1.45}
+.smap__desc{font-size:13px;line-height:1.85;color:var(--text);margin:0 0 10px}
+.smap__src{font-size:12px;font-weight:700;color:var(--text-mute);letter-spacing:.02em;margin:0}
+/* ===== RENEWAL-A v1 END ===== */
+
+/* ============================================================
+   ===== RENEWAL-A-FDE v1 START =====
+   FDEページ統合に伴う追加スタイル（末尾追記・後勝ち）
+   ============================================================ */
+
+/* VALUE 01 内へ移設した関係者6者 */
+.why-fde__value-sub{font-size:12.5px;font-weight:800;letter-spacing:.04em;margin:18px 0 8px;opacity:.75}
+.why-fde__stakeholders{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:7px}
+.why-fde__stakeholders li{border-radius:999px;padding:5px 13px;font-size:12px;font-weight:700;line-height:1.6;background:rgba(255,255,255,.13);border:1px solid rgba(255,255,255,.26);color:#fff}
+.why-fde__value--handover .why-fde__stakeholders li{background:#fff;border-color:var(--border);color:var(--navy)}
+
+/* 旧 PROCESS 8ステップを吸収した STEP ラベル */
+.cause-card__steps{list-style:none;margin:-8px 0 18px;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.cause-card__steps li{display:inline-flex;align-items:center;gap:6px;background:var(--bg-soft);border:1px solid var(--border);border-radius:999px;padding:4px 12px 4px 5px;font-size:12px;font-weight:700;color:var(--navy);line-height:1.6}
+.cause-step__n{display:inline-flex;align-items:center;justify-content:center;min-width:18px;min-height:18px;border-radius:50%;background:var(--red);color:#fff;font-family:var(--font-en);font-size:12px;font-weight:800;line-height:1;padding:2px}
+
+/* FDE「顧客側に残るもの」セクション */
+.fde-remains-sec .remains{margin-top:8px}
+
+/* 最小フォント 12px フロア：ページ内 style で 10〜11.5px を指定していた要素 */
+.cause-col__lbl,.cause-col__jp,
+.stack4__lbl,.stack4__chips li,.stack4__summary,
+.why-fde__issue-lbl,.why-fde__value-lbl,.why-fde__connector-label,
+.fde-role__num,.fde-value__lbl,.fde-ba__lbl,
+.connect-diagram__title,.connect-hub__lbl,.connect-side__item,
+.ba-col__lbl,.role-map__kind{font-size:12px}
+/* ===== RENEWAL-A-FDE v1 END ===== */
+
+/* ============================================================
+   ===== RENEWAL-A-COMPACT v1 START =====
+   スマホ（375px）での縦長を抑えるための余白圧縮。
+   情報は削らず、padding / gap / line-height のみを詰める。
+   ============================================================ */
+.gbrand__name small{font-size:12px}
+#previewBanner code{font-size:12px}
+
+@media (max-width:640px){
+  /* FDE：行うこと→変化 の4カード */
+  .cause-card{padding:18px 16px}
+  .cause-card__head{gap:10px;padding-bottom:12px;margin-bottom:12px}
+  .cause-card__num{width:36px;height:36px;border-radius:10px;font-size:14px}
+  .cause-card__title{font-size:16px}
+  .cause-card__steps{margin:-4px 0 12px;gap:5px}
+  .cause-body{gap:10px}
+  .cause-col ul li{padding-top:5px;padding-bottom:5px;line-height:1.7}
+  .cause-col__lbl{margin-bottom:4px}
+  .cause-grid{gap:12px}
+
+  /* FDE：関連サービス（1行説明に短縮済みのカード） */
+  .card{padding:18px 18px}
+  .card__body-sm{line-height:1.75}
+
+  /* 顧客側に残るもの */
+  .remains{padding:20px 14px}
+  .remains__title{margin-bottom:16px}
+  .remains__acts li{padding:9px 12px;line-height:1.7}
+  .remains__acts{gap:6px}
+  .remains__stack{gap:6px}
+  .remains__item{padding:11px 13px}
+  .remains__item-name{margin-bottom:2px}
+  .remains__item-desc{line-height:1.7}
+  .remains__phase-lbl{padding-bottom:6px;margin-bottom:10px}
+
+  /* WHY FDE：課題カードと独自価値カード */
+  .why-fde__value{padding:20px 18px}
+  .why-fde__stakeholders{gap:5px}
+}
+/* ===== RENEWAL-A-COMPACT v1 END ===== */
+
+/* ---- RENEWAL-A-COMPACT v1（追補）：スマホのセクション余白 ---- */
+@media (max-width:640px){
+  .section{padding-top:44px;padding-bottom:44px}
+  .section__head{margin-bottom:32px}
+  .why-fde__issue{padding:16px 16px}
+  .stack4__layer{padding:18px 16px}
+  .terms-map{padding:20px 16px}
+  .terms-map__row{gap:10px}
+  .fde-intro__labels{gap:10px}
+  .fde-intro__label{padding:13px 16px;min-height:0}
+}
+/* レビュー用バナー内の code は本番で削除される要素のため 12px フロアの対象外 */
+
+/* ---- RENEWAL-A v1（追補）：.smap を container--narrow 幅で4列に収め、カード高さを揃える ---- */
+.smap{grid-template-columns:repeat(auto-fit,minmax(185px,1fr))}
