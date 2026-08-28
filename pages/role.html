@@ -25,9 +25,9 @@
   .connect-side--left .connect-side__item::after{right:-24px}
   .connect-side--right .connect-side__item::after{left:-24px}
   .connect-hub{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;border-radius:14px;padding:22px 20px;text-align:center;min-width:130px;box-shadow:0 6px 20px rgba(15,23,42,.15)}
-  .connect-hub__lbl{font-family:var(--font-en);font-size:12px;font-weight:800;color:#F87171;letter-spacing:.14em;margin:0 0 6px}
+  .connect-hub__lbl{font-family:var(--font-en);font-size:10.5px;font-weight:800;color:#F87171;letter-spacing:.14em;margin:0 0 6px}
   .connect-hub__name{font-size:20px;font-weight:800;margin:0 0 6px;color:#fff}
-  .connect-hub__desc{font-size:12px;color:rgba(255,255,255,.85);margin:0;line-height:1.6}
+  .connect-hub__desc{font-size:11.5px;color:rgba(255,255,255,.85);margin:0;line-height:1.6}
   /* 3カラム：課題 → PALの役割 → 変化 */
   .flow3{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:20px;align-items:stretch}
   .flow3__col{background:#fff;border-radius:16px;padding:32px 28px;display:flex;flex-direction:column}
@@ -37,7 +37,7 @@
   .flow3__col--pal::before{left:-8px;background:var(--navy)}
   .flow3__col--pal::after{right:-8px;background:var(--navy-2);z-index:1}
   .flow3__col--after{background:#FFF5F5;border:1px solid #FECACA}
-  .flow3__label{font-family:var(--font-en);font-size:12px;font-weight:800;letter-spacing:.14em;margin:0 0 8px}
+  .flow3__label{font-family:var(--font-en);font-size:11px;font-weight:800;letter-spacing:.14em;margin:0 0 8px}
   .flow3__col--before .flow3__label{color:#64748B}
   .flow3__col--pal .flow3__label{color:#F87171}
   .flow3__col--after .flow3__label{color:var(--red)}
@@ -85,7 +85,7 @@
   .step-card--means h4{font-size:16px;font-weight:800;color:var(--red);margin:0 0 8px}
   .step-card--means p{font-size:12.5px;color:var(--text);margin:0 0 12px;line-height:1.75}
   .step-card__examples{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 10px}
-  .step-card__examples span{background:#FEF2F2;border:1px solid var(--red-soft);border-radius:999px;padding:4px 10px;font-size:12px;color:var(--navy);font-weight:600}
+  .step-card__examples span{background:#FEF2F2;border:1px solid var(--red-soft);border-radius:999px;padding:4px 10px;font-size:11.5px;color:var(--navy);font-weight:600}
   .step-card__link{font-size:12px;color:var(--red);font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:4px}
   .step-card__link:hover{text-decoration:underline}
   .step-summary{background:#F8FAFC;border-radius:12px;padding:20px 24px;margin-top:32px;font-size:13px;line-height:2;color:var(--text)}
@@ -97,14 +97,6 @@
   }
   @media (max-width:900px){.approach-grid{grid-template-columns:1fr}.ba-diagram{grid-template-columns:1fr}.ba-arrow{flex-direction:row;padding:8px 0}.relation-map__cols{grid-template-columns:1fr}}
 </style>
-
-<!-- ===== FONT-FLOOR v1：ページ内 <style> の 10px〜11.5px 指定を 12px（0.75rem）へ引き上げ。
-     図解ラベルがスマホで実用限界を下回っていたため。既存の他プロパティは変更していない ===== -->
-<!-- ===== FDE-LINK-MAP v1：FDE への内部リンクについて
-     レビュー環境（GitHub Pages）では相対パス ./fde.html を使用する。
-     本番 WordPress 実装時は、すべて https://www.pal-style.co.jp/service/fde/ へ差し替える。
-     対象：本ファイル内の href="./fde.html" すべて
-     ===== FDE-LINK-MAP v1 END ===== -->
 </head>
 <body class="review-mode">
 
@@ -123,7 +115,7 @@
     <nav class="gnav" aria-label="グローバルナビゲーション">
       <a href="./home.html">ホーム</a>
       <a href="./role.html" class="is-current">PALを知る</a>
-      <a href="./home.html">サービス</a>
+      <a href="./service.html">サービス</a>
       <a href="#">物流DX事例</a><a href="#">会社概要</a><a href="#">物流DXコラム</a><a href="#">物流DXお役立ち資料</a>
       <a href="#" class="gnav-cta">お問い合わせ</a>
     </nav>
@@ -132,7 +124,7 @@
 </header>
 <nav class="mobile-nav" id="mobileNav">
   <a href="./home.html">ホーム</a><a href="./role.html">私たちの役割</a><a href="./reason.html">PALの強み</a>
-  <a href="./home.html">サービス</a><a href="./fde.html">FDE（新規）</a>
+  <a href="./service.html">サービス</a><a href="./fde.html">FDE（新規）</a>
   <a href="#" class="gnav-cta">お問い合わせ</a>
 </nav>
 
@@ -146,95 +138,25 @@
   <div class="container phero__inner">
     <span class="phero__eyebrow">OUR ROLE</span>
     <h1 class="phero__title">私たちの役割</h1>
-    <!-- ===== ROLE-HERO v1 START：H1 直下のリード本文が次セクション OUR APPROACH と重複していたため、詳細説明を次セクションへ一本化。H1「物流の分断をつなぎ、変革を実行へ。」は維持 ===== -->
+    <!-- ===== ROLLBACK v2：FV のリードは R-01 の導入段落と重複するため、コピーのみに整理 ===== -->
     <p class="phero__sub">物流の分断をつなぎ、変革を実行へ。</p>
-    <!-- ===== ROLE-HERO v1 END ===== -->
   </div>
 </section>
 
-<!-- ===== v1.2 OUR APPROACH：役割を先に説明し、その後にイネーブラー考え方を自然に登場 ===== -->
-<section class="section section--soft review-added">
-  <span class="review-label review-label--added">新規追加</span>
-  <div class="container">
-    <div class="section__head" style="text-align:left;max-width:none">
-      <span class="section__eyebrow">OUR APPROACH</span>
-      <!-- ===== ROLE-APPROACH-H2 v1 START：ヒーローと同一文の見出しを繰り返していたため、このセクションの役割が伝わる表現へ変更 ===== -->
-      <h2 class="section__title" style="font-size:clamp(24px,3vw,32px)">PALは、どの分断に立つのか</h2>
-      <!-- ===== ROLE-APPROACH-H2 v1 END ===== -->
-    </div>
-    <!-- 上段：短い説明（中央揃え、視線を落ち着かせる） -->
-    <div class="approach-head">
-      <p>物流に関わる経営、現場、人、データ、システム、設備、輸送、パートナー企業。<br>PAL は、それぞれの間にある分断をつなぎ、構想を現場で実行できる仕組みへ変えていきます。<br>こうした役割を、私たちは「物流イネーブラー」という考え方で整理しています。</p>
-      <p class="approach-head__note">以下では、3PL の限界、分離発注の非効率、LLP／4PL、ロジテックインテグレーター、そして FDE を通じて、PAL が担う役割を説明します。</p>
-    </div>
+<!-- ===== ROLLBACK v2：preview 独自の「OUR APPROACH」セクション（8要素関係図 ＋ BEFORE/PAL'S ROLE/AFTER の3カラム）を撤去。
+     理由：最終方針は「現行サイトの構成を基本維持し、文章だけ追加」であり、現行サイトに存在しない大型レイアウトのため。
+     救済情報：内容は FV 直下に追加した R-01 の導入段落（3段落）で文章として表現している。
+     復元するには git 履歴 cd01610 の該当 section を戻す ===== -->
 
-    <!-- 8 要素の関係図：PAL が間に立つ表現（中央支配型ではない） -->
-    <div class="connect-diagram" aria-label="PAL がつなぐ 8 つの要素">
-      <p class="connect-diagram__title">PAL がつなぐ 8 つの要素</p>
-      <!-- ===== ROLE-8ELEM v1 START：見出しは「8 つの要素」だが本文の列挙が 7 つで「人」が欠落していたため追加。図の 8 個と一致させる ===== -->
-      <p class="connect-diagram__lead">経営、現場、人、データ、システム、設備、輸送、パートナー企業。<br>PAL は、それぞれの「つなぎ目」に立ち、整理・調整・実行を支えます。</p>
-      <!-- ===== ROLE-8ELEM v1 END ===== -->
-      <div class="connect-diagram__ring">
-        <div class="connect-side connect-side--left">
-          <div class="connect-side__item">経営</div>
-          <div class="connect-side__item">現場</div>
-          <div class="connect-side__item">データ</div>
-          <div class="connect-side__item">システム</div>
-        </div>
-        <div class="connect-hub" aria-label="PAL">
-          <p class="connect-hub__lbl">CONNECTS</p>
-          <p class="connect-hub__name">PAL</p>
-          <p class="connect-hub__desc">つなぎ目に立ち<br>整理・調整・実行を支える</p>
-        </div>
-        <div class="connect-side connect-side--right">
-          <div class="connect-side__item">設備</div>
-          <div class="connect-side__item">輸送</div>
-          <div class="connect-side__item">人</div>
-          <div class="connect-side__item">パートナー企業</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 下段 3カラム：課題 → PAL の役割 → 変化 -->
-    <div class="flow3" aria-label="分断された状態から、実行できる仕組みへの変化">
-      <div class="flow3__col flow3__col--before">
-        <p class="flow3__label">BEFORE</p>
-        <h3 class="flow3__title">分断された状態</h3>
-        <ul class="flow3__list">
-          <li>経営と現場の認識がそろわない</li>
-          <li>現場とシステムがつながっていない</li>
-          <li>データを判断に使えない</li>
-          <li>設備が運用に結びつかない</li>
-          <li>関係者が個別に動いてしまう</li>
-        </ul>
-      </div>
-      <div class="flow3__col flow3__col--pal">
-        <p class="flow3__label">PAL'S ROLE</p>
-        <h3 class="flow3__title">PAL の役割</h3>
-        <ul class="flow3__list">
-          <li>翻訳する</li>
-          <li>接続する</li>
-          <li>整理する</li>
-          <li>調整する</li>
-          <li>設計する</li>
-          <li>実行を支える</li>
-        </ul>
-      </div>
-      <div class="flow3__col flow3__col--after">
-        <p class="flow3__label">AFTER</p>
-        <h3 class="flow3__title">実行できる仕組みへ</h3>
-        <ul class="flow3__list">
-          <li>共通の目的が整理されている</li>
-          <li>現場で実行できる形になっている</li>
-          <li>データを判断に使える</li>
-          <li>システムや設備が運用につながる</li>
-          <li>継続的に改善できる</li>
-        </ul>
-      </div>
-    </div>
-    <p class="flow3__caption">PAL は中央ですべてを支配する存在ではなく、間に立って橋渡しをする役割です。</p>
+<!-- ===== R-01：FV 直下の導入段落。現行構成は変えず、役割の総括だけを先に置く ===== -->
+<section class="section">
+  <div class="container container--narrow">
+    <p class="prose">PALの役割は、物流に関わる経営、現場、人、データ、システム、設備、輸送、パートナー企業の間にある分断をつなぎ、構想を現場で実行できる状態へ変えていくことです。</p>
+    <p class="prose">つないで終わりではありません。実行し、運用に定着させ、そこで得られたものをお客さま側に残すところまでを、私たちの役割と考えています。</p>
+    <p class="prose">以下では、物流業界が置かれている現状と、そのなかでPALが担う役割を順に説明します。</p>
   </div>
 </section>
+<!-- ===== R-01 END ===== -->
 
 <!-- 現行 SEC1：なぜ今、物流DXが避けられないのか -->
 <section class="section">
@@ -284,42 +206,6 @@
       </div>
     </div>
     <p class="note note--sm" style="margin-top:16px">※ 図解「物流アウトソーシング進化段階（国土交通省定義準拠：1PL → 2PL → 3PL → 4PL／LLP）」は現行サイトの図を踏襲します。</p>
-
-    <!-- ===== TERMS-MAP v1 START：3PL／LLP・4PL／ロジテックインテグレーター／FDE／イネーブラーの関係が未整理だったため、このセクション末尾に吸収して追加（独立セクションは作らない）。工程順の STEP ではなく「何の種類の言葉か」で並置し、イネーブラーだけは別カテゴリ（考え方）として下段に置く ===== -->
-    <div class="terms-map">
-      <p class="terms-map__title">それぞれの言葉は、何を指しているか</p>
-      <p class="terms-map__lead">順番に進んでいく工程ではありません。種類の違う言葉が、それぞれの位置で役割を持っています。</p>
-      <div class="terms-map__row">
-        <div class="terms-map__item">
-          <span class="terms-map__kind">事業モデル</span>
-          <h4 class="terms-map__name">3PL</h4>
-          <p class="terms-map__desc">倉庫・輸送の運用を担う。現在も物流DXに欠かせないパートナーです。</p>
-        </div>
-        <div class="terms-map__item">
-          <span class="terms-map__kind">役割</span>
-          <h4 class="terms-map__name">LLP／4PL</h4>
-          <p class="terms-map__desc">物流全体を設計・管理する。複数の領域と事業者を横断してまとめ上げます。</p>
-        </div>
-        <div class="terms-map__item">
-          <span class="terms-map__kind">機能</span>
-          <h4 class="terms-map__name">ロジテックインテグレーター</h4>
-          <p class="terms-map__desc">システム・設備・データ・パートナーを統合する。PALが担う「つなぐ力」です。</p>
-        </div>
-        <div class="terms-map__item">
-          <span class="terms-map__kind">サービス</span>
-          <h4 class="terms-map__name">FDE</h4>
-          <p class="terms-map__desc">現場で実装・運用・定着を進める。上記を実際の現場で動かす手段の一つです。</p>
-        </div>
-      </div>
-      <div class="terms-map__band">
-        <span class="terms-map__kind terms-map__kind--band">考え方</span>
-        <div>
-          <h4 class="terms-map__name">物流イネーブラー</h4>
-          <p class="terms-map__desc">上の4つを通じて、お客さま自身が改善を続けられる状態をつくること。並列の5番目ではなく、これらが何のためにあるかを示す考え方です。</p>
-        </div>
-      </div>
-    </div>
-    <!-- ===== TERMS-MAP v1 END ===== -->
   </div>
 </section>
 
@@ -335,9 +221,19 @@
       <div class="card card--filled"><h4 class="card__title">プロセスの透明化</h4><p class="card__body">何が起きているかを、関係者の間で共有します。</p></div>
       <div class="card card--filled"><h4 class="card__title">ボトルネックの開示</h4><p class="card__body">課題を隠さず、改善提案とセットで開示します。</p></div>
     </div>
-    <!-- ===== OPEN-CONCLUSION v1 START：現行サイト「オープン型統合管理」にあった結論文が、3点への圧縮時に落ちていたため復元 ===== -->
-    <p class="open-conclusion">この開示を前提とした進め方によって、データとノウハウは荷主企業側に蓄積されます。</p>
-    <!-- ===== OPEN-CONCLUSION v1 END ===== -->
+    <!-- ===== R-02：現行サイトの結論文（1文目）を反映したうえで、確定した2文を追加。本サイトでイネーブラーを定義する唯一の箇所 ===== -->
+    <p class="prose" style="margin-top:24px">この開示を前提とした進め方によって、荷主企業側にデータとノウハウが着実に蓄積され、投資判断や改善判断の精度が高まる状態を実現します。</p>
+    <p class="prose">目的は、PALが関与し続けることではなく、お客さま自身が判断し、改善を続けられる状態をつくることです。</p>
+    <p class="prose">こうした役割を、私たちは「物流イネーブラー」という考え方で整理しています。</p>
+    <!-- ===== R-02 END ===== -->
+    <!-- ===== R-03：Core Zero の前に FDE 言及。既存ボタン様式で FDE ページへ ===== -->
+    <div class="section__head" style="margin-top:48px">
+      <h3 class="section__title" style="font-size:22px">構想を現場で動かす、FDE</h3>
+      <p class="section__lead">構想を現場で動かす段階では、FDE（Forward Deployed Engineer）が現場に入ります。<br>業務、人、データ、システム、設備の実態を確認しながら、課題整理から実装、運用、定着までを進める役割です。</p>
+      <a href="./fde.html" class="btn btn--ghost">FDEを知る</a>
+    </div>
+    <!-- ===== R-03 END ===== -->
+
     <div class="section__head" style="margin-top:48px">
       <h3 class="section__title" style="font-size:22px">初期費用ゼロで導入できる仕組み</h3>
       <p class="section__lead">「Core Zero」により、設備・システム・運用を PAL 側で保有・提供し、業務委託費のみで統合物流環境を利用できます。</p>
@@ -346,177 +242,11 @@
   </div>
 </section>
 
-<!-- ===== v1.4：STEP 表現を撤廃、全体設計 + FDE + 各サービス の連動型3カード横並びに刷新 ===== -->
-<section class="section review-added">
-  <span class="review-label review-label--added">新規追加</span>
-  <div class="container">
-    <div class="section__head">
-      <span class="section__eyebrow">RELATION</span>
-      <h2 class="section__title">構想・機能・現場実装を、<br>ひとつにつなぐ。</h2>
-      <p class="section__lead">PAL は、物流戦略を描くだけでも、システムや設備を導入するだけでもありません。<br>物流全体を設計する機能と、現場へ落とし込む FDE、課題に応じた各サービスを組み合わせ、構想を実際に動く仕組みへ変えていきます。</p>
-    </div>
-
-    <div class="connect3" aria-label="全体設計 + FDE による現場実装 + 各サービスによる課題解決 の連動">
-      <!-- 1: 全体を設計する -->
-      <div class="connect3__card">
-        <p class="connect3__lbl">FUNCTION</p>
-        <h3 class="connect3__title">全体を設計する</h3>
-        <p class="connect3__desc">物流全体を俯瞰し、進む方向をそろえる。物流戦略、関係者の役割、システム・設備・データの全体像を整理します。</p>
-        <div class="connect3__tags">
-          <span>LLP／4PL</span><span>ロジテックインテグレーター</span>
-        </div>
-      </div>
-
-      <div class="connect3__plus" aria-hidden="true">+</div>
-
-      <!-- 2: 現場へ落とし込む（FDE を少し強調） -->
-      <div class="connect3__card connect3__card--fde">
-        <p class="connect3__lbl">FIELD</p>
-        <h3 class="connect3__title">現場へ落とし込む</h3>
-        <p class="connect3__desc">FDE が、構想と現場の間をつなぐ。現場の実態に合わせて、構想や機能を実行できる形へ変えます。</p>
-        <div class="connect3__tags">
-          <span>現場理解</span><span>課題整理</span><span>要件整理</span><span>関係者調整</span><span>実装</span><span>運用定着</span>
-        </div>
-        <a href="./fde.html" class="connect3__link">FDE の詳細を見る →</a>
-      </div>
-
-      <div class="connect3__plus" aria-hidden="true">+</div>
-
-      <!-- 3: 具体的に解決する -->
-      <div class="connect3__card">
-        <p class="connect3__lbl">SOLUTION</p>
-        <h3 class="connect3__title">具体的に解決する</h3>
-        <p class="connect3__desc">課題に応じたサービスを実装する。データ活用、自動化、輸送、システム連携など、必要な手段を組み合わせます。</p>
-        <div class="connect3__tags">
-          <span>Core First</span><span>DTS</span><span>Core AX</span><span>Core GX</span><span>その他の既存サービス</span>
-        </div>
-        <a href="./home.html" class="connect3__link">サービス一覧を見る →</a>
-      </div>
-    </div>
-
-    <div class="connect3__result" aria-hidden="true">
-      <span class="connect3__result-arrow">↓</span>
-      <p class="connect3__result-band">現場で動き、改善が続く物流へ</p>
-    </div>
-
-    <!-- ===== ENABLER-WORDING v1 START：「社内で」は対外サイトの文として不適（読者にとっての意味が消える）ため修正 ===== -->
-    <p class="connect3__summary">この 3 つが連動することで、物流の構想が現場で動き、運用・改善まで続く状態をつくります。<br><small>※ こうした役割を、私たちは「物流イネーブラー」という考え方で整理しています。</small></p>
-    <!-- ===== ENABLER-WORDING v1 END ===== -->
-  </div>
-
-  <style>
-    /* v1.4：STEP を廃止し、3カード横並び + 中央「+」+ 下部矢印バンド の連動型 */
-    .connect3{display:grid;grid-template-columns:1fr 40px 1.1fr 40px 1fr;gap:12px;align-items:stretch;margin:32px 0 20px}
-    .connect3__card{background:#fff;border:1px solid var(--border);border-radius:14px;padding:26px 24px;display:flex;flex-direction:column;box-shadow:var(--shadow-sm)}
-    .connect3__card--fde{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;box-shadow:0 12px 32px rgba(15,23,42,.18);border:none;transform:scale(1.03)}
-    .connect3__lbl{font-family:var(--font-en);font-size:12px;font-weight:800;letter-spacing:.14em;margin:0 0 8px;color:var(--red)}
-    .connect3__card--fde .connect3__lbl{color:#F87171}
-    .connect3__title{font-size:17px;font-weight:800;color:var(--navy);margin:0 0 12px;line-height:1.5}
-    .connect3__card--fde .connect3__title{color:#fff;font-size:19px}
-    .connect3__desc{font-size:13px;line-height:1.85;color:var(--text);margin:0 0 14px;flex-grow:1}
-    .connect3__card--fde .connect3__desc{color:rgba(255,255,255,.88)}
-    .connect3__tags{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
-    .connect3__tags span{background:#F8FAFC;border:1px solid var(--border);border-radius:999px;padding:4px 10px;font-size:12px;color:var(--navy);font-weight:600}
-    .connect3__card--fde .connect3__tags span{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.25);color:#fff}
-    .connect3__link{font-size:12px;color:var(--red);font-weight:800;text-decoration:none;margin-top:auto}
-    .connect3__card--fde .connect3__link{color:#F87171}
-    .connect3__link:hover{text-decoration:underline}
-    .connect3__plus{display:flex;align-items:center;justify-content:center;color:var(--red);font-family:var(--font-en);font-size:28px;font-weight:900}
-    .connect3__result{text-align:center;margin:8px 0 24px}
-    .connect3__result-arrow{display:block;color:#CBD5E1;font-size:28px;line-height:1;margin-bottom:8px;font-weight:800}
-    .connect3__result-band{background:linear-gradient(90deg,#FEF2F2 0%,#fff 50%,#FEF2F2 100%);border:1px solid var(--red-soft);border-radius:999px;padding:14px 32px;display:inline-block;font-size:15px;font-weight:800;color:var(--navy);margin:0}
-    .connect3__summary{background:#F8FAFC;border-radius:12px;padding:20px 24px;font-size:13px;line-height:2;color:var(--text);text-align:center;margin:0}
-    .connect3__summary small{display:block;margin-top:6px;font-size:12px;color:var(--text-mute);line-height:1.8}
-    @media(max-width:900px){
-      .connect3{grid-template-columns:1fr;gap:8px}
-      .connect3__card--fde{transform:none}
-      .connect3__plus{padding:4px 0}
-    }
-  </style>
-</section>
-
-<!-- ===== ENABLER-DEF v1 START：「物流イネーブラー」の語は出るが定義が一度も書かれておらず、読者が意味を理解できないため RELATION 直後に定義ブロックを追加。肩書きの言い切りにはせず、役割を説明したあとの整理として置く ===== -->
-<section class="section enabler-def review-added">
-  <span class="review-label review-label--added">新規追加</span>
-  <div class="container container--narrow">
-
-    <!-- PART 1：定義 -->
-    <div class="section__head">
-      <span class="section__eyebrow">ENABLER</span>
-      <h2 class="section__title">「物流イネーブラー」とは、何を指しているか。</h2>
-    </div>
-    <div class="enabler-def__body">
-      <p>PALがすべてを代行し続けることではありません。</p>
-      <p>現場を理解し、関係者をつなぎ、構想を実行できる形にしていく過程で、そこで得られたデータや判断のしかたを、お客さま側に残していくことを指します。</p>
-      <p>PALの関与が薄くなっても、お客さま自身で改善を続けられる。その状態をつくることを目的にしています。</p>
-    </div>
-
-    <!-- PART 2：顧客側に残るもの（時間軸で対比） -->
-    <div class="remains">
-      <h3 class="remains__title">PALの支援が終わったあと、お客さま側に残るもの。</h3>
-      <div class="remains__axis">
-
-        <div class="remains__phase remains__phase--during">
-          <span class="remains__phase-lbl">PALが関与している間</span>
-          <ul class="remains__acts">
-            <li>現場と業務の実態を確認する</li>
-            <li>関係者の認識をそろえる</li>
-            <li>データと要件を整理する</li>
-            <li>運用に落とし込み、定着させる</li>
-          </ul>
-        </div>
-
-        <span class="remains__arrow" aria-hidden="true">→</span>
-
-        <div class="remains__phase remains__phase--after">
-          <span class="remains__phase-lbl">PALの関与が薄くなったあと</span>
-          <ul class="remains__stack">
-            <li class="remains__item">
-              <h4 class="remains__item-name">データ</h4>
-              <p class="remains__item-desc">現場・輸送・設備の実績が、判断に使える形で手元にある。</p>
-            </li>
-            <li class="remains__item">
-              <h4 class="remains__item-name">判断基準</h4>
-              <p class="remains__item-desc">何を見て、どう決めるか。属人化していた基準が言語化されている。</p>
-            </li>
-            <li class="remains__item">
-              <h4 class="remains__item-name">運用ルール</h4>
-              <p class="remains__item-desc">担当者が変わっても、同じ手順で運用が続く。</p>
-            </li>
-            <li class="remains__item">
-              <h4 class="remains__item-name">業務ノウハウ</h4>
-              <p class="remains__item-desc">現場の暗黙知が、共有できる形で整理されている。</p>
-            </li>
-            <li class="remains__item">
-              <h4 class="remains__item-name">改善方法</h4>
-              <p class="remains__item-desc">次にどこを直すか、自社で見つけられる。</p>
-            </li>
-            <li class="remains__item remains__item--goal">
-              <h4 class="remains__item-name">自社で改善を続けられる体制</h4>
-              <p class="remains__item-desc">上の5つが揃うことで成立する状態。これが最終的な目的です。</p>
-            </li>
-          </ul>
-        </div>
-
-      </div>
-    </div>
-
-  </div>
-</section>
-<!-- ===== ENABLER-DEF v1 END ===== -->
-
-<!-- ===== v1.2 FDE 誘導：サービス宣伝色を弱めて「現場で動かす手段」として ===== -->
-<section class="section section--soft review-added">
-  <span class="review-label review-label--added">新規追加</span>
-  <div class="container container--narrow">
-    <div class="section__head">
-      <span class="section__eyebrow">FIELD IMPLEMENTATION</span>
-      <h2 class="section__title">構想を現場で動かす、FDE</h2>
-      <p class="section__lead">FDE は、物流現場に入り、業務、人、データ、システム、設備の実態を確認し、課題整理から設計、実装、運用、改善、定着までを支援するサービスです。<br>ここまで説明してきた考え方を、実際の現場で動かすための一つの手段として位置づけています。</p>
-      <a href="./fde.html" class="btn btn--red">FDE のサービス詳細を見る</a>
-    </div>
-  </div>
-</section>
+<!-- ===== ROLLBACK v2：preview 独自の「RELATION（構想・機能・現場実装を、ひとつにつなぐ）」3カラム図解と、
+     その直後の FDE 独立セクションを撤去。現行サイトに存在しない大型レイアウトのため。
+     救済情報：FDE の位置づけは R-03（ロジテックインテグレーション内に追加した FDE 言及）へ、
+     イネーブラーの整理は R-02（オープン型統合管理の結び）へ集約している。
+     復元するには git 履歴 cd01610 の該当 section を戻す ===== -->
 
 <!-- 次のページへ -->
 <section class="section">

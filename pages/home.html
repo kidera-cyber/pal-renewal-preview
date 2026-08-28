@@ -10,11 +10,6 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Inter:wght@600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/common.css">
-<!-- ===== FDE-LINK-MAP v1：FDE への内部リンクについて
-     レビュー環境（GitHub Pages）では相対パス ./fde.html を使用する。
-     本番 WordPress 実装時は、すべて https://www.pal-style.co.jp/service/fde/ へ差し替える。
-     対象：本ファイル内の href="./fde.html" すべて
-     ===== FDE-LINK-MAP v1 END ===== -->
 </head>
 <body class="review-mode">
 
@@ -33,7 +28,7 @@
     <nav class="gnav" aria-label="グローバルナビゲーション">
       <a href="./home.html" class="is-current">ホーム</a>
       <a href="./role.html">PALを知る</a>
-      <a href="./home.html">サービス</a>
+      <a href="./service.html">サービス</a>
       <a href="#">物流DX事例</a>
       <a href="#">会社概要</a>
       <a href="#">物流DXコラム</a>
@@ -47,7 +42,7 @@
   <a href="./home.html">ホーム</a>
   <a href="./role.html">私たちの役割</a>
   <a href="./reason.html">PALの強み</a>
-  <a href="./home.html">サービス</a>
+  <a href="./service.html">サービス</a>
   <a href="./fde.html">FDE（新規）</a>
   <a href="#">物流DX事例</a>
   <a href="#">会社概要</a>
@@ -59,7 +54,8 @@
   <span class="review-label">今回変更</span>
   <div class="container phero__inner">
     <h1 class="phero__title">物流の構想を、<br>現場で動く仕組みへ。</h1>
-    <p class="phero__sub">経営、現場、データ、システム、設備の間をつなぎ、構想から実行、運用、改善までを一つの流れで支援します。物流変革が現場で動き続ける状態をつくる。<br><small class="phero__sub-note">こうした役割を、PAL では「物流イネーブラー」という考え方で整理しています。</small></p>
+    <!-- ===== H-01：FV サブコピー末尾に1文追加。イネーブラーの言及は H-02（分断セクション末尾）へ集約するため FV からは外す ===== -->
+    <p class="phero__sub">経営、現場、データ、システム、設備の間をつなぎ、構想から実行、運用、改善までを一つの流れで支援します。物流変革が現場で動き続ける状態をつくる。<br><small class="phero__sub-note">その過程で得られたデータとノウハウは、お客さま側に残ります。</small></p>
     <div class="phero__ctas">
       <a href="#" class="btn btn--red">お問い合わせ</a>
       <a href="#" class="btn btn--ghost">資料ダウンロード</a>
@@ -129,6 +125,8 @@
     <div class="section__head">
       <h2 class="section__title">物流のデータが見えないまま、<br>個別の改善を重ねても物流DXは進みません。</h2>
       <p class="section__lead">多くの企業が物流の課題に対し、新しいシステムや機械を導入してきました。しかし、それだけでは根本的な解決にはなりません。<br>経営、現場、データ、システム、設備、そしてパートナー企業。分断された領域をつなぎ直すことが、これからの物流DXの前提です。</p>
+      <!-- ===== H-02：既存CTAの直前に2文追加。ホームでは定義を書かず、考え方の存在が分かる程度に留める ===== -->
+      <p class="section__lead">つないで終わりにせず、構想を現場で実行し、運用に定着させるところまでを役割としています。<br>こうした役割を、私たちは「物流イネーブラー」という考え方で整理しています。</p>
       <a href="./role.html" class="btn btn--red">PALの役割を見る</a>
     </div>
   </div>
@@ -140,38 +138,17 @@
     <div class="section__head">
       <span class="section__eyebrow">APPROACH</span>
       <h2 class="section__title">なぜPALなら、物流DXが進むのか？</h2>
-      <p class="section__lead">物流DXを阻む最大の壁は、データのサイロ化に加え、戦略と実行が複数のベンダーに分断されていることです。</p>
+      <!-- ===== H-03：APPROACH リード末尾に1文追加。3本柱カードは無変更 ===== -->
+      <p class="section__lead">物流DXを阻む最大の壁は、データのサイロ化に加え、戦略と実行が複数のベンダーに分断されていることです。<br>これらは、PALが動き続けるための力ではなく、お客さまが自ら改善を続けられる状態をつくるための力です。</p>
     </div>
-    <!-- ===== APPROACH-4TH v1 START：H1「構想を、現場で動く仕組みへ」に対して「顧客側に残る」根拠が3本柱に無いため4本目を追加。既存3本は本文無改変、grid-3 → grid-4 のみ変更 ===== -->
-    <div class="grid-4">
+    <div class="grid-3">
       <div class="card card--filled"><p class="card__eyebrow">現場とデジタルをつなぐ</p><h3 class="card__title">データ統合力</h3><p class="card__body">現場のオペレーション知識とデータ統合技術の両方を持ち、アナログとデジタルをつなぐことができます。</p></div>
       <div class="card card--filled"><p class="card__eyebrow">戦略から実行まで担う</p><h3 class="card__title">一気通貫の実行力</h3><p class="card__body">通常2年以上かかる物流DXを、分離発注や複数ベンダーとの調整などの統合マネジメントでスピーディに実現します。</p></div>
       <div class="card card--filled"><p class="card__eyebrow">失敗しないための</p><h3 class="card__title">段階的検証力</h3><p class="card__body">投資リスクを最小化する仕組みを持ち、一度DXに失敗した企業も既存資産を活かして次のステージへ導きます。</p></div>
-      <div class="card card--filled"><p class="card__eyebrow">支援が終わったあとに</p><h3 class="card__title">顧客側に残す力</h3><p class="card__body">データ、判断基準、運用ルール、業務ノウハウをお客さま側に残し、PALの関与が薄くなっても、お客さま自身で改善を続けられる状態をつくります。</p></div>
     </div>
-    <!-- ===== APPROACH-4TH v1 END ===== -->
     <p class="section__cta-wrap"><a href="./reason.html" class="btn btn--ghost">PALの強みを見る</a></p>
   </div>
 </section>
-
-<!-- ===== FDE-INTRO v1 START：ホームからFDEの意味が読めない（SERVICE一覧のカード1枚のみ）ため、APPROACHとSERVICE LINE UPの間に紹介ブロックを追加。画面1つ分以内に収め、ホームの主役にはしない ===== -->
-<section class="section section--soft review-added fde-intro">
-  <span class="review-label">新規追加</span>
-  <div class="container">
-    <div class="section__head">
-      <span class="section__eyebrow">FDE</span>
-      <h2 class="section__title">構想を、現場で動かす。</h2>
-      <p class="section__lead">分断をつなぎ、進む方向を決めたあとに残るのは、それを現場で動く形にする作業です。PALの役割を実際の現場で実行するサービスの一つが、FDE（Forward Deployed Engineer）です。現場に入り、業務・人・データ・システム・設備の実態を確認し、課題整理から実装、運用、定着までを進めます。</p>
-    </div>
-    <ul class="fde-intro__labels">
-      <li class="fde-intro__label">現場を理解する</li>
-      <li class="fde-intro__label">関係者と要件を整理する</li>
-      <li class="fde-intro__label">運用と改善が続く形にする</li>
-    </ul>
-    <p class="section__cta-wrap"><a href="./fde.html" class="btn btn--red">FDEについて詳しく見る</a></p>
-  </div>
-</section>
-<!-- ===== FDE-INTRO v1 END ===== -->
 
 <!-- SEC6：SERVICE LINE UP - 現行7サービス + FDE 1件のみ追加 -->
 <section class="section section--soft review-changed">
@@ -180,7 +157,8 @@
     <div class="section__head">
       <span class="section__eyebrow">SERVICE LINE UP</span>
       <h2 class="section__title">戦略・システム・現場を統合し、成果を創出する多彩なサービス</h2>
-      <p class="section__lead">戦略策定から、データ統合、輸送効率化、投資最適化、人材確保まで。あらゆる物流課題に対応し、部分ではなく全体を動かすことで、確実に成果を実現します。</p>
+      <!-- ===== H-04：SERVICE LINE UP リード末尾に1文追加（FDE導線を兼ねる。独立セクションは作らない） ===== -->
+      <p class="section__lead">戦略策定から、データ統合、輸送効率化、投資最適化、人材確保まで。あらゆる物流課題に対応し、部分ではなく全体を動かすことで、確実に成果を実現します。<br>これらを現場で組み合わせ、実装から定着まで進める役割は、FDE が担います。</p>
     </div>
     <div class="grid-3">
       <a class="card" href="https://www.pal-style.co.jp/service/logistics-consulting/"><h3 class="card__title">物流コンサルティング</h3><p class="card__body-sm">物流DXの戦略策定・実行支援・成果創出</p></a>
@@ -190,11 +168,10 @@
       <a class="card" href="https://lp.pal-style.co.jp/core-gx/index.html"><h3 class="card__title">Core GX</h3><p class="card__body-sm">データ連携により現場最適を制御する自動搬送ロボットソリューション</p></a>
       <a class="card" href="https://lp.pal-style.co.jp/logitec-integration/"><h3 class="card__title">ロジテックインテグレーション</h3><p class="card__body-sm">物流DXを戦略から実行まで一気通貫で支援</p></a>
       <a class="card" href="https://www.pal-style.co.jp/service/zero/"><h3 class="card__title">Core Zero</h3><p class="card__body-sm">物流DXの初期費用をゼロにする</p></a>
-      <!-- ===== 追加：FDE を既存カード群の末尾に、既存カードと同じサイズ・文章量で追加 ===== -->
-      <!-- ===== FDE-CARD v1：FDEカードのみ説明文が60字超で他7枚とカード高さが揃わないため、同じ粒度（28字）へ短縮 ===== -->
-      <a class="card card--new" href="./fde.html"><span class="card__badge">NEW</span><h3 class="card__title">FDE</h3><p class="card__body-sm">構想を現場で動かす、実装・定着支援サービス</p></a>
+      <!-- ===== H-05：FDE カード。既存カードと同じ粒度・同じ形式。FDEだけ特別扱いしない ===== -->
+      <a class="card" href="./fde.html"><h3 class="card__title">FDE</h3><p class="card__body-sm">現場実装・定着支援</p></a>
     </div>
-    <p class="section__cta-wrap"><a href="./home.html" class="btn btn--ghost">サービス一覧を見る</a></p>
+    <p class="section__cta-wrap"><a href="./service.html" class="btn btn--ghost">サービス一覧を見る</a></p>
   </div>
 </section>
 
