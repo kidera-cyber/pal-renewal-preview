@@ -692,3 +692,51 @@ body.review-mode .rnew{display:inline-block}
 .review-label{background:var(--pal-bg-light);color:var(--pal-heading);border:1px solid var(--pal-border)}
 .review-label--added{background:var(--pal-accent-pale);color:var(--pal-accent-dark);border-color:var(--pal-accent)}
 .review-label--check{background:var(--pal-bg);color:var(--pal-muted);border:1px dashed var(--pal-border-strong)}
+
+/* =========================================================
+   ===== PAL TYPOGRAPHY & BUTTON MATCH START =====
+   現行サイト（/about/role/）の実測値へ、色以外のトーンも合わせる。
+     英字ラベル : Lato 16px / weight 500 / letter-spacing 3.2px（0.2em）
+     ボタン     : padding 16px 16px 16px 32px / gap 12px / 16px / weight 500 /
+                  pill / 右端に円形の矢印アイコン
+     見出し h2  : 25px / weight 500 / Noto Sans JP
+     本文       : 16px / line-height 28.8px（1.8）
+   ========================================================= */
+:root{ --font-en:"Lato","Noto Sans JP",sans-serif; }
+
+/* 英字ラベル（SOLUTION / APPROACH / FIELD など） */
+.section__eyebrow,.phero__eyebrow{
+  font-family:var(--font-en);
+  font-size:16px;font-weight:500;letter-spacing:.2em;line-height:1.6;
+}
+@media(max-width:640px){ .section__eyebrow,.phero__eyebrow{font-size:14px} }
+
+/* 見出し・本文のサイズを現行に合わせる */
+.section__title{font-size:25px;font-weight:500;line-height:1.6}
+.section__title[style*="font-size:22px"]{font-size:20px!important}
+@media(max-width:640px){ .section__title{font-size:21px} }
+.prose,.section__lead,.card__body{font-size:16px;line-height:1.8}
+.card__body-sm,.note,.note--sm{line-height:1.8}
+
+/* ボタン：現行の padding・字送り・円形矢印を再現 */
+.btn{
+  display:inline-flex;align-items:center;gap:12px;
+  padding:16px 16px 16px 32px;font-size:16px;font-weight:500;line-height:1.5;
+  border-radius:9999px;
+}
+.btn::after{
+  content:"";width:28px;height:28px;flex-shrink:0;border-radius:50%;
+  border:1px solid currentColor;
+  background-image:linear-gradient(currentColor,currentColor),linear-gradient(currentColor,currentColor);
+  background-repeat:no-repeat;
+  background-size:8px 1px,5px 1px;
+  background-position:center center,center calc(50% - 2px);
+  opacity:.9;
+}
+.btn--red::after{border-color:rgba(255,255,255,.85)}
+.btn--ghost::after{border-color:currentColor}
+@media(max-width:640px){
+  .btn{padding:14px 14px 14px 24px;font-size:15px;gap:10px}
+  .btn::after{width:24px;height:24px}
+}
+/* ===== PAL TYPOGRAPHY & BUTTON MATCH END ===== */
