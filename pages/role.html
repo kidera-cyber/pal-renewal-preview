@@ -123,7 +123,7 @@
   </div>
 </header>
 <nav class="mobile-nav" id="mobileNav">
-  <a href="./home.html">ホーム</a><a href="./role.html">私たちの役割</a><a href="./reason.html">PALの強み</a><a href="./fde.html">FDE（新規）</a>
+  <a href="./home.html">ホーム</a><a href="./role.html">私たちの役割</a><a href="./reason.html">PALの強み</a>
   <a href="./service.html">サービス</a>
   <a href="#" class="gnav-cta">お問い合わせ</a>
 </nav>
@@ -228,20 +228,107 @@
     <p class="prose"><span class="rnew">新規追加</span>こうした役割を、私たちは「物流イネーブラー」という考え方で整理しています。</p>
     <details class="rdiff"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt">この「オープン型統合管理」により、PALとともに物流DXを推進していくことで、荷主企業側にデータとノウハウが着実に蓄積され、投資判断や改善判断の精度が高まる状態を実現します。</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 1文目は現行サイトの内容を維持。2〜3文目が今回の追加です。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">この開示を前提とした進め方によって、荷主企業側にデータとノウハウが着実に蓄積され、投資判断や改善判断の精度が高まる状態を実現します。<br>目的は、PALが関与し続けることではなく、お客さま自身が判断し、改善を続けられる状態をつくることです。<br>こうした役割を、私たちは「物流イネーブラー」という考え方で整理しています。</p></div></div></details>
     <!-- ===== R-02 END ===== -->
-    <!-- ===== R-03：Core Zero の前に FDE 言及。既存ボタン様式で FDE ページへ ===== -->
-    <div class="section__head" style="margin-top:48px">
-      <h3 class="section__title" style="font-size:22px"><span class="rnew">新規追加</span>構想を現場で動かす、FDE</h3>
-      <p class="section__lead">構想を現場で動かす段階では、FDE（Forward Deployed Engineer）が現場に入ります。<br>現場を理解し、課題を整理し、経営・現場・技術の間を翻訳しながら、要件へ落とし込み、関係者を調整し、実装から運用への定着までを進めます。<br>そして、判断基準やノウハウをお客さま側に残すところまでを役割としています。</p>
-      <a href="./fde.html" class="btn btn--ghost">FDEについて知る</a>
-      <details class="rdiff"><summary>追加した文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトにFDEの記載はありません。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">構想を現場で動かす、FDE ／ 構想を現場で動かす段階では、FDE（Forward Deployed Engineer）が現場に入ります。業務、人、データ、システム、設備の実態を確認しながら、課題整理から実装、運用、定着までを進める役割です。</p></div></div></details>
-    </div>
-    <!-- ===== R-03 END ===== -->
+    <!-- ===== FDE-INTEGRATE v1：R-03（FDE短文＋別ページ導線）を撤去し、独立セクションとして拡充配置した ===== -->
 
     <div class="section__head" style="margin-top:48px">
       <h3 class="section__title" style="font-size:22px">初期費用ゼロで導入できる仕組み</h3>
       <p class="section__lead">「Core Zero」により、設備・システム・運用を PAL 側で保有・提供し、業務委託費のみで統合物流環境を利用できます。</p>
       <a href="https://www.pal-style.co.jp/service/zero/" class="btn btn--ghost">Core Zero を知る</a>
     </div>
+  </div>
+</section>
+
+<!-- ===== FDE-INTEGRATE v1 START：FDE を独立ページから「PALを知る」ページ内へ統合し、
+     ページ全体を PAL の企業理解の中心ページとして再構成。
+     追加：PALの強み（要約）／構想を現場で動かす FDE（拡充）／PALが目指している状態
+     撤去：FDE 独立ページ（pages/fde.html）と、その導線・パンくず・専用SEO設定
+     復元するには git 履歴 dee00e9 の pages/fde.html と関連導線を戻す ===== -->
+
+<section class="section">
+  <div class="container container--narrow">
+    <div class="section__head">
+      <span class="section__eyebrow">STRENGTH</span>
+      <h2 class="section__title"><span class="rnew">新規追加</span>PALの強み</h2>
+      <p class="section__lead">分断をつなぎ、構想を現場で動かすために、PALは次の特徴を備えています。<br>現場を理解できること、データ・システム・設備を横断できること、構想だけで終わらず実装できること、PoV などで小さく試せること、そしてノウハウをお客さま側へ残せること。</p>
+    </div>
+    <ul class="slist">
+        <li class="slist__item"><span class="slist__num">01</span><span class="slist__t">生産性向上とコスト最適化を実現できます</span></li>
+        <li class="slist__item"><span class="slist__num">02</span><span class="slist__t">初期費用ゼロ円で、物流DXを始められます</span></li>
+        <li class="slist__item"><span class="slist__num">03</span><span class="slist__t">「本当に物流DXで利益改善できるのか？」を、事前に検証できます</span></li>
+        <li class="slist__item"><span class="slist__num">04</span><span class="slist__t">現場とデジタル、両方を動かせます</span></li>
+        <li class="slist__item"><span class="slist__num">05</span><span class="slist__t">戦略から実行まで。すべてを一社で担い、最短で成果へ導きます</span></li>
+        <li class="slist__item"><span class="slist__num">06</span><span class="slist__t">既存のシステム・機器を活かし、メーカー問わずデータ統合できます</span></li>
+        <li class="slist__item"><span class="slist__num">07</span><span class="slist__t">既存の 3PL・SIer とも、協業できます</span></li>
+        <li class="slist__item"><span class="slist__num">08</span><span class="slist__t">業界の実験場として、新技術のリスクを引き受けます</span></li>
+    </ul>
+    <p style="margin-top:22px"><a href="./reason.html" class="btn btn--ghost">8つの強みを詳しく見る</a></p>
+    <details class="rdiff"><summary>追加した内容を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトの「私たちの役割」に強みの記載はありません。1ページでPALの全体像が理解できるよう要約を追加しています。8項目の本文・番号は「PALの強み」ページのまま変更していません。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">PALの強み（8項目の見出しを一覧で提示）＋5つの特徴のリード文。詳細は「PALの強み」ページへ。</p></div></div></details>
+  </div>
+</section>
+
+<section class="section section--soft" id="fde">
+  <div class="container container--narrow">
+
+    <div class="section__head">
+      <span class="section__eyebrow">FIELD</span>
+      <h2 class="section__title"><span class="rnew">新規追加</span>構想を、現場で動かす。FDE</h2>
+      <p class="section__lead">FDE（Forward Deployed Engineer）は、物流現場の業務と、データ・システム・設備の間に入り、現場で起きている課題を、実行できる仕組みへ変えていく役割です。</p>
+    </div>
+    <p class="prose">現場を見て、担当者の話を聞き、業務の流れを理解したうえで、課題を整理し、必要なデータ・システム・設備・運用へ落とし込みます。</p>
+
+    <div class="section__head" style="margin-top:44px">
+      <h3 class="section__title" style="font-size:22px">なぜ、FDE が必要なのか</h3>
+    </div>
+    <div class="grid-2">
+      <div class="card card--filled"><h4 class="card__title">構想と現場がつながらない</h4><p class="card__body">DXの構想はあるが、現場運用へ落とし込めない。</p></div>
+      <div class="card card--filled"><h4 class="card__title">システムと業務が合わない</h4><p class="card__body">システムを導入しても、現場の実態と合わず使われない。</p></div>
+      <div class="card card--filled"><h4 class="card__title">関係者の認識が揃わない</h4><p class="card__body">荷主、現場、システム会社、設備会社などで課題の捉え方が異なる。</p></div>
+      <div class="card card--filled"><h4 class="card__title">データを改善に使えない</h4><p class="card__body">データはあるが、次の判断や改善へつながらない。</p></div>
+    </div>
+
+    <div class="section__head" style="margin-top:44px">
+      <h3 class="section__title" style="font-size:22px">FDE は現場で何をするのか</h3>
+    </div>
+    <div class="fde-flow">
+      <div class="fde-flow__step" data-num="1"><h4>現場を理解する</h4><p>現場を見る／作業者・担当者へヒアリングする／業務フローを整理する。</p></div>
+      <div class="fde-flow__step" data-num="2"><h4>課題を整理する</h4><p>ボトルネックを見つける／暗黙知を整理する／必要なデータを定義する。</p></div>
+      <div class="fde-flow__step" data-num="3"><h4>実行できる形へ変える</h4><p>システム要件、データ基盤、設備、業務フロー、運用ルールへ落とし込む。</p></div>
+      <div class="fde-flow__step" data-num="4"><h4>実装・定着・改善する</h4><p>関係者と実装し、実際に現場で使われているかを確認し、改善を続ける。</p></div>
+    </div>
+
+    <div class="section__head" style="margin-top:44px">
+      <h3 class="section__title" style="font-size:22px">経営・現場・技術をつなぐ &ldquo;翻訳者&rdquo;</h3>
+      <p class="section__lead">経営、現場、システム、設備、データ、パートナー企業の間に入り、「現場では何が起きているのか」「何をシステム要件にすべきか」「何を運用ルールにすべきか」を整理する役割です。</p>
+    </div>
+
+    <div class="section__head" style="margin-top:44px">
+      <h3 class="section__title" style="font-size:22px">PALの機能・サービスとの関係</h3>
+      <p class="section__lead">FDE がPALのサービスの上位にあるわけでも、すべてのサービスに FDE が必要になるわけでもありません。課題に応じて、必要な機能を選び、組み合わせます。</p>
+    </div>
+    <ol class="fchain">
+      <li class="fchain__item"><span class="fchain__lbl">01</span><p class="fchain__t">顧客の課題</p></li>
+      <li class="fchain__item"><span class="fchain__lbl">02</span><p class="fchain__t">FDE が現場を理解・整理する</p></li>
+      <li class="fchain__item"><span class="fchain__lbl">03</span><p class="fchain__t">必要なPALの機能・サービスを組み合わせる</p><p class="fchain__d">物流戦略／データ活用／システム／設備／物流センター／配送／各PALサービス／運用設計／関係者調整</p></li>
+      <li class="fchain__item"><span class="fchain__lbl">04</span><p class="fchain__t">現場で実装・運用する</p></li>
+    </ol>
+
+    <div class="section__head" style="margin-top:44px">
+      <h3 class="section__title" style="font-size:22px">FDE が入った結果、お客さま側に残るもの</h3>
+    </div>
+    <p class="prose">データ、判断基準、運用ルール、業務ノウハウ、改善方法がお客さま側に残ります。最終的に目指すのは、お客さま自身が改善を続けられる状態です。</p>
+
+    <details class="rdiff"><summary>追加した内容を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトにFDEの記載はありません。当初は独立ページ（/service/fde/ → /about/fde/）として作成していましたが、独立ページ化はせず「PALを知る」ページ内のセクションへ統合しました。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">「構想を、現場で動かす。FDE」セクション（FDEとは／なぜ必要か／現場で何をするのか／翻訳者／PALの機能・サービスとの関係／お客さま側に残るもの）</p></div></div></details>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container container--narrow">
+    <div class="section__head">
+      <h2 class="section__title"><span class="rnew">新規追加</span>PALが目指している状態</h2>
+    </div>
+    <p class="prose">PALが目指しているのは、システムや設備を導入することそのものではありません。</p>
+    <p class="prose">現場で仕組みが動き、データが蓄積され、判断基準やノウハウがお客さま側に残り、お客さま自身が改善を続けられる。その状態までつくることが、PALの役割です。</p>
+    <details class="rdiff"><summary>追加した内容を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトの「私たちの役割」は Core Zero の紹介で終わっています。ページ全体の締めとして追加しています。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">PALが目指している状態（ページの締めくくり）</p></div></div></details>
   </div>
 </section>
 
@@ -258,7 +345,6 @@
     <div class="grid-3">
       <a class="card" href="./reason.html"><h3 class="card__title">PALの強み</h3><p class="card__body-sm">分断を橋渡しし、変革を前へ進めるために、PAL が持っている 8 つの強みをご紹介します。</p></a>
       <a class="card" href="./home.html"><h3 class="card__title">サービス一覧</h3><p class="card__body-sm">現行の全サービスをご覧いただけます。</p></a>
-      <a class="card" href="./fde.html"><h3 class="card__title">FDE</h3><p class="card__body-sm">PALの役割を現場で実行する存在について説明します。</p></a>
     </div>
   </div>
 </section>
@@ -291,7 +377,7 @@
       <p class="gfooter__desc">物流をコストから、戦略資産に。</p>
       <p class="gfooter__tel">TEL 06-6534-8998<br><small>営業時間：平日 9:00-18:00</small></p>
     </div>
-    <div class="gfooter__col"><h4>PALを知る</h4><ul><li><a href="./role.html">私たちの役割</a></li><li><a href="./reason.html">PALの強み</a></li><li><a href="./fde.html">FDE（新規）</a></li><li><a href="#">よくあるご質問</a></li><li><a href="#">トップメッセージ</a></li><li><a href="#">ミッション・バリュー</a></li></ul></div>
+    <div class="gfooter__col"><h4>PALを知る</h4><ul><li><a href="./role.html">私たちの役割</a></li><li><a href="./reason.html">PALの強み</a></li><li><a href="#">よくあるご質問</a></li><li><a href="#">トップメッセージ</a></li><li><a href="#">ミッション・バリュー</a></li></ul></div>
     <div class="gfooter__col"><h4>サービス</h4><ul>
       <li><a href="https://www.pal-style.co.jp/service/logistics-consulting/">物流コンサルティング</a></li>
       <li><a href="https://lp.pal-style.co.jp/logitec-integration/">ロジテックインテグレーション</a></li>
