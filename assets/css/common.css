@@ -524,3 +524,77 @@ body.review-mode .rnew{display:inline-block}
 .fchain__d{font-size:13px;color:var(--text-mute);margin:8px 0 0;line-height:1.85}
 @media(max-width:640px){.fchain__item{padding:14px 16px}}
 /* ===== FDE INTEGRATE END ===== */
+
+/* =========================================================
+   ===== KNOW-PAL SECTIONS START =====
+   「PALを知る」1ページ統合に伴う追加スタイル。
+   現行サイトのトーン（白地・細い境界線・影なし・pillボタン）に合わせる。
+   ========================================================= */
+/* SEC04：つなぐ→…→残す の6段 */
+.vchain{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.vchain__item{background:#fff;border:1px solid var(--border);border-radius:8px;padding:18px 20px}
+.vchain__item--goal{border-color:var(--red);background:var(--red-soft)}
+.vchain__n{font-family:var(--font-en);font-size:12px;font-weight:600;color:var(--red);letter-spacing:.08em;display:block;margin-bottom:6px}
+.vchain__t{font-size:16px;font-weight:500;color:var(--heading);margin:0 0 6px;line-height:1.5}
+.vchain__d{font-size:13px;color:var(--text);margin:0;line-height:1.85}
+@media(max-width:900px){.vchain{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.vchain{grid-template-columns:1fr}}
+
+/* SEC04：イネーブラーが目的にしていること */
+.ecmp{margin:30px 0 0;border:1px solid var(--border);border-radius:8px;background:var(--bg-soft);padding:22px 24px}
+.ecmp__title{font-size:15px;font-weight:500;color:var(--heading);margin:0 0 14px}
+.ecmp__list{list-style:none;margin:0;padding:0}
+.ecmp__row{display:grid;grid-template-columns:120px minmax(0,1fr);gap:14px;padding:11px 0;border-top:1px solid var(--border)}
+.ecmp__row:first-child{border-top:none}
+.ecmp__k{font-size:13px;font-weight:500;color:var(--text-mute)}
+.ecmp__v{font-size:14.5px;color:var(--text);line-height:1.75}
+.ecmp__row--goal .ecmp__k,.ecmp__row--goal .ecmp__v{color:var(--red);font-weight:500}
+.ecmp__note{font-size:12.5px;color:var(--text-mute);margin:14px 0 0;line-height:1.85}
+@media(max-width:600px){.ecmp{padding:18px 16px}.ecmp__row{grid-template-columns:1fr;gap:3px}}
+
+/* SEC05：3つの提供価値 */
+.v3{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.v3__item{background:#fff;border:1px solid var(--border);border-top:2px solid var(--navy-3);border-radius:8px;padding:18px 20px}
+.v3__item--mid{border-top-color:var(--red)}
+.v3__lbl{font-family:var(--font-en);font-size:12px;font-weight:600;letter-spacing:.12em;color:var(--text-mute);margin:0 0 4px}
+.v3__t{font-size:16px;font-weight:500;color:var(--heading);margin:0 0 8px}
+.v3__d{font-size:13px;color:var(--text);margin:0;line-height:1.85}
+@media(max-width:860px){.v3{grid-template-columns:1fr}}
+
+/* SEC06：翻訳の流れ */
+.tchain{list-style:none;margin:24px 0 0;padding:0;display:flex;flex-wrap:wrap;align-items:stretch;gap:8px}
+.tchain__item{flex:1 1 150px;background:#fff;border:1px solid var(--border);border-radius:8px;padding:14px 16px;position:relative;display:flex;align-items:center;justify-content:center;text-align:center}
+.tchain__item + .tchain__item::before{content:"→";position:absolute;left:-11px;top:50%;transform:translateY(-50%);color:var(--border-dark);font-size:13px}
+.tchain__item--goal{border-color:var(--red);background:var(--red-soft)}
+.tchain__t{font-size:14px;font-weight:500;color:var(--heading);margin:0;line-height:1.5}
+@media(max-width:700px){.tchain{flex-direction:column}.tchain__item + .tchain__item::before{content:"↓";left:50%;top:-11px;transform:translateX(-50%)}}
+
+/* SEC06：テーマ例・実務タグ */
+.themes{list-style:none;margin:20px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.themes__item{border:1px solid var(--border);border-radius:999px;padding:7px 16px;font-size:13px;color:var(--text);background:#fff;line-height:1.7}
+.themes--work .themes__item{background:var(--bg-soft)}
+
+/* SEC07：お客さま側に残るもの */
+.remain{list-style:none;margin:24px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+.remain__item{background:#fff;border:1px solid var(--border);border-left:3px solid var(--navy-3);border-radius:8px;padding:14px 18px}
+.remain__item--goal{border-left-color:var(--red);background:var(--red-soft)}
+.remain__t{display:block;font-size:15px;font-weight:500;color:var(--heading);margin-bottom:4px}
+.remain__d{display:block;font-size:13px;color:var(--text);line-height:1.8}
+@media(max-width:760px){.remain{grid-template-columns:1fr}}
+/* ===== KNOW-PAL SECTIONS END ===== */
+
+/* =========================================================
+   ===== FONT FLOOR START =====
+   最小フォント 12px（0.75rem）。以前のロールバックで失われたため再設定。
+   #previewBanner はレビュー用チップのため対象外。
+   ========================================================= */
+.card__eyebrow,.card__badge,.card__tags,
+.info-band__eyebrow,.cta-block__eyebrow,.role-hierarchy__label,
+.enabler__center small,.gbrand__name small,
+.gfooter__bottom,.gfooter__legal a,.gfooter__tel small,
+.connect3__lbl,.connect3__tags span,.connect3__summary small,.connect3__link,
+.note--sm,.stat-list__lbl{font-size:12px}
+/* レビューUIも 12px を下限にする（ご指定の 12〜13px に合わせる） */
+.rnew,.rdiff summary,.rdiff__lbl,.rdiff__txt{font-size:12px}
+.rdiff__txt{line-height:1.9}
+/* ===== FONT FLOOR END ===== */

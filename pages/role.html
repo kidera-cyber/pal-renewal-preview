@@ -25,9 +25,9 @@
   .connect-side--left .connect-side__item::after{right:-24px}
   .connect-side--right .connect-side__item::after{left:-24px}
   .connect-hub{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;border-radius:14px;padding:22px 20px;text-align:center;min-width:130px;box-shadow:0 6px 20px rgba(27,29,49,.15)}
-  .connect-hub__lbl{font-family:var(--font-en);font-size:10.5px;font-weight:800;color:#E0838A;letter-spacing:.14em;margin:0 0 6px}
+  .connect-hub__lbl{font-family:var(--font-en);font-size:12px;font-weight:800;color:#E0838A;letter-spacing:.14em;margin:0 0 6px}
   .connect-hub__name{font-size:20px;font-weight:800;margin:0 0 6px;color:#fff}
-  .connect-hub__desc{font-size:11.5px;color:rgba(255,255,255,.85);margin:0;line-height:1.6}
+  .connect-hub__desc{font-size:12px;color:rgba(255,255,255,.85);margin:0;line-height:1.6}
   /* 3カラム：課題 → PALの役割 → 変化 */
   .flow3{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:20px;align-items:stretch}
   .flow3__col{background:#fff;border-radius:16px;padding:32px 28px;display:flex;flex-direction:column}
@@ -37,7 +37,7 @@
   .flow3__col--pal::before{left:-8px;background:var(--navy)}
   .flow3__col--pal::after{right:-8px;background:var(--navy-2);z-index:1}
   .flow3__col--after{background:#FFF5F5;border:1px solid #F0C9CB}
-  .flow3__label{font-family:var(--font-en);font-size:11px;font-weight:800;letter-spacing:.14em;margin:0 0 8px}
+  .flow3__label{font-family:var(--font-en);font-size:12px;font-weight:800;letter-spacing:.14em;margin:0 0 8px}
   .flow3__col--before .flow3__label{color:#6B6D81}
   .flow3__col--pal .flow3__label{color:#E0838A}
   .flow3__col--after .flow3__label{color:var(--red)}
@@ -85,7 +85,7 @@
   .step-card--means h4{font-size:16px;font-weight:800;color:var(--red);margin:0 0 8px}
   .step-card--means p{font-size:12.5px;color:var(--text);margin:0 0 12px;line-height:1.75}
   .step-card__examples{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 10px}
-  .step-card__examples span{background:#FBE7E8;border:1px solid var(--red-soft);border-radius:999px;padding:4px 10px;font-size:11.5px;color:var(--navy);font-weight:600}
+  .step-card__examples span{background:#FBE7E8;border:1px solid var(--red-soft);border-radius:999px;padding:4px 10px;font-size:12px;color:var(--navy);font-weight:600}
   .step-card__link{font-size:12px;color:var(--red);font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:4px}
   .step-card__link:hover{text-decoration:underline}
   .step-summary{background:#F2F3F6;border-radius:12px;padding:20px 24px;margin-top:32px;font-size:13px;line-height:2;color:var(--text)}
@@ -225,7 +225,7 @@
     <!-- ===== R-02：現行サイトの結論文（1文目）を反映したうえで、確定した2文を追加。本サイトでイネーブラーを定義する唯一の箇所 ===== -->
     <p class="prose" style="margin-top:24px">この開示を前提とした進め方によって、荷主企業側にデータとノウハウが着実に蓄積され、投資判断や改善判断の精度が高まる状態を実現します。</p>
     <p class="prose">目的は、PALが関与し続けることではなく、お客さま自身が判断し、改善を続けられる状態をつくることです。</p>
-    <p class="prose"><span class="rnew">新規追加</span>こうした役割を、私たちは「物流イネーブラー」という考え方で整理しています。</p>
+    <!-- ===== SEC04 v1：イネーブラーの一文は SEC04「つないで終わらない」の末尾へ移設（設計書 2.1 の説明位置に合わせる） ===== -->
     <details class="rdiff"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt">この「オープン型統合管理」により、PALとともに物流DXを推進していくことで、荷主企業側にデータとノウハウが着実に蓄積され、投資判断や改善判断の精度が高まる状態を実現します。</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 1文目は現行サイトの内容を維持。2〜3文目が今回の追加です。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">この開示を前提とした進め方によって、荷主企業側にデータとノウハウが着実に蓄積され、投資判断や改善判断の精度が高まる状態を実現します。<br>目的は、PALが関与し続けることではなく、お客さま自身が判断し、改善を続けられる状態をつくることです。<br>こうした役割を、私たちは「物流イネーブラー」という考え方で整理しています。</p></div></div></details>
     <!-- ===== R-02 END ===== -->
     <!-- ===== FDE-INTEGRATE v1：R-03（FDE短文＋別ページ導線）を撤去し、独立セクションとして拡充配置した ===== -->
@@ -237,6 +237,43 @@
     </div>
   </div>
 </section>
+
+<!-- ===== SEC04 v1 START：設計書 2.1／2.2 を根拠に「つないで終わらない」を独立セクション化。
+     つなぐ（既存の統合力）を否定せず、その先へ価値を拡張する位置づけ。
+     イネーブラーの一文は本セクションの説明後に置く（設計書の説明順に準拠） ===== -->
+<section class="section">
+  <div class="container container--narrow">
+    <div class="section__head">
+      <span class="section__eyebrow">BEYOND CONNECTING</span>
+      <h2 class="section__title"><span class="rnew">新規追加</span>つないで、終わらない。</h2>
+      <p class="section__lead">分断をつなぎ、全体が見える状態をつくることは出発点です。<br>PALは、そこから先の実行まで担います。</p>
+    </div>
+    <ol class="vchain">
+      <li class="vchain__item"><span class="vchain__n">01</span><p class="vchain__t">つなぐ</p><p class="vchain__d">現場のアナログとデジタル、分断されたシステム・データ・設備・業務をつなぎ、物流全体を見える状態にします。</p></li>
+      <li class="vchain__item"><span class="vchain__n">02</span><p class="vchain__t">設計する</p><p class="vchain__d">見えるようになった実態をもとに、業務フロー、データ項目、人・設備・システムの役割を設計します。</p></li>
+      <li class="vchain__item"><span class="vchain__n">03</span><p class="vchain__t">現場で実行する</p><p class="vchain__d">関係者と実装を進め、現場で使われる形にします。</p></li>
+      <li class="vchain__item"><span class="vchain__n">04</span><p class="vchain__t">運用する</p><p class="vchain__d">稼働後の状況を確認し、運用が回る状態にします。</p></li>
+      <li class="vchain__item"><span class="vchain__n">05</span><p class="vchain__t">改善する</p><p class="vchain__d">蓄積されたデータをもとに、次の改善へつなげます。</p></li>
+      <li class="vchain__item vchain__item--goal"><span class="vchain__n">06</span><p class="vchain__t">お客さま側へ残す</p><p class="vchain__d">データ、判断基準、運用ルール、業務ノウハウをお客さま側に残し、お客さま自身が改善を続けられる状態にします。</p></li>
+    </ol>
+
+    <p class="prose" style="margin-top:32px"><span class="rnew">新規追加</span>こうした役割を、私たちは「物流イネーブラー」という考え方で整理しています。</p>
+    <p class="prose">お客さまの代わりに手を動かし続ける外注でも、情報を囲い込む統合ベンダーでもなく、<strong>お客さまが自らの力で成果を出し続けられる状態を社内に残すこと</strong>を目的に伴走する、という考え方です。</p>
+
+    <div class="ecmp">
+      <p class="ecmp__title">PALが目的にしていること</p>
+      <ul class="ecmp__list">
+        <li class="ecmp__row"><span class="ecmp__k">成果</span><span class="ecmp__v">お客さま社内に残る</span></li>
+        <li class="ecmp__row"><span class="ecmp__k">データ</span><span class="ecmp__v">可視化され、お客さま側に蓄積される</span></li>
+        <li class="ecmp__row"><span class="ecmp__k">ノウハウ</span><span class="ecmp__v">引き継ぎを前提に移管される</span></li>
+        <li class="ecmp__row ecmp__row--goal"><span class="ecmp__k">最終状態</span><span class="ecmp__v">お客さま自身が改善を続けられる</span></li>
+      </ul>
+      <p class="ecmp__note">PALの関与を永続させることではなく、お客さま自身が動ける状態へつなげることを目的にしています。</p>
+    </div>
+    <details class="rdiff"><summary>追加した内容を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトはロジテックインテグレーターと Core Zero の説明で終わっており、この先の説明はありません。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">SEC04「つないで終わらない」（つなぐ→設計→実行→運用→改善→顧客側へ残す の6段）＋イネーブラーの整理（設計書2.1の定義と比較の考え方）</p></div></div></details>
+  </div>
+</section>
+<!-- ===== SEC04 v1 END ===== -->
 
 <!-- ===== FDE-INTEGRATE v1 START：FDE を独立ページから「PALを知る」ページ内へ統合し、
      ページ全体を PAL の企業理解の中心ページとして再構成。
@@ -261,63 +298,127 @@
         <li class="slist__item"><span class="slist__num">07</span><span class="slist__t">既存の 3PL・SIer とも、協業できます</span></li>
         <li class="slist__item"><span class="slist__num">08</span><span class="slist__t">業界の実験場として、新技術のリスクを引き受けます</span></li>
     </ul>
+    <!-- ===== SEC05 v1：設計書 2.3 の3つの提供価値を、8つの強みの補足として追加。8項目は再構成しない ===== -->
+    <div class="v3" style="margin-top:30px">
+      <div class="v3__item">
+        <p class="v3__lbl">Integrate</p>
+        <p class="v3__t">つなぐ</p>
+        <p class="v3__d">現場のアナログとデジタル、分断されたシステム・データ・設備・業務をつなぎ、物流全体を見える状態にします。</p>
+      </div>
+      <div class="v3__item v3__item--mid">
+        <p class="v3__lbl">Enable</p>
+        <p class="v3__t">できるようにする</p>
+        <p class="v3__d">現場に入り、運用設計・実装・定着・教育まで進め、データとノウハウをお客さま側に残します。この役割を担うのが FDE です。</p>
+      </div>
+      <div class="v3__item">
+        <p class="v3__lbl">De-risk</p>
+        <p class="v3__t">失敗させない</p>
+        <p class="v3__d">PoV や段階導入により、いきなり大きな投資をするのではなく、小さく検証して成果を確認しながら広げます。</p>
+      </div>
+    </div>
     <p style="margin-top:22px"><a href="./reason.html" class="btn btn--ghost">8つの強みを詳しく見る</a></p>
     <details class="rdiff"><summary>追加した内容を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトの「私たちの役割」に強みの記載はありません。1ページでPALの全体像が理解できるよう要約を追加しています。8項目の本文・番号は「PALの強み」ページのまま変更していません。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">PALの強み（8項目の見出しを一覧で提示）＋5つの特徴のリード文。詳細は「PALの強み」ページへ。</p></div></div></details>
   </div>
 </section>
 
+<!-- ===== SEC06 v1：設計書 3.2 を「PALを知る」ページ内へ再配置。FDE 独立ページは作らない。
+     「常駐」は契約条件として確定していないため使用せず「現場に入り」で統一。
+     守備範囲6領域は提供中サービスとして断定せず「扱うテーマ例」として掲載。
+     Palantir／トヨタ自働化への言及は今回不掲載 ===== -->
 <section class="section section--soft" id="fde">
   <div class="container container--narrow">
 
     <div class="section__head">
       <span class="section__eyebrow">FIELD</span>
       <h2 class="section__title"><span class="rnew">新規追加</span>構想を、現場で動かす。FDE</h2>
-      <p class="section__lead">FDE（Forward Deployed Engineer）は、物流現場の業務と、データ・システム・設備の間に入り、現場で起きている課題を、実行できる仕組みへ変えていく役割です。</p>
+      <p class="section__lead">ツールを入れても現場で止まる。その理由の一つは、業務とデータをつなぐ&ldquo;翻訳者&rdquo;がいないことです。</p>
     </div>
+    <p class="prose">FDE（Forward Deployed Engineer／伴走型エンジニア）は、お客さまの現場に入り、業務を理解しながら、データ・システム・設備・運用設計までをつなぐ役割です。</p>
     <p class="prose">現場を見て、担当者の話を聞き、業務の流れを理解したうえで、課題を整理し、必要なデータ・システム・設備・運用へ落とし込みます。</p>
 
     <div class="section__head" style="margin-top:44px">
-      <h3 class="section__title" style="font-size:22px">なぜ、FDE が必要なのか</h3>
+      <h3 class="section__title" style="font-size:22px">一般的なエンジニアとの違い</h3>
     </div>
-    <div class="grid-2">
-      <div class="card card--filled"><h4 class="card__title">構想と現場がつながらない</h4><p class="card__body">DXの構想はあるが、現場運用へ落とし込めない。</p></div>
-      <div class="card card--filled"><h4 class="card__title">システムと業務が合わない</h4><p class="card__body">システムを導入しても、現場の実態と合わず使われない。</p></div>
-      <div class="card card--filled"><h4 class="card__title">関係者の認識が揃わない</h4><p class="card__body">荷主、現場、システム会社、設備会社などで課題の捉え方が異なる。</p></div>
-      <div class="card card--filled"><h4 class="card__title">データを改善に使えない</h4><p class="card__body">データはあるが、次の判断や改善へつながらない。</p></div>
-    </div>
-
-    <div class="section__head" style="margin-top:44px">
-      <h3 class="section__title" style="font-size:22px">FDE は現場で何をするのか</h3>
-    </div>
-    <div class="fde-flow">
-      <div class="fde-flow__step" data-num="1"><h4>現場を理解する</h4><p>現場を見る／作業者・担当者へヒアリングする／業務フローを整理する。</p></div>
-      <div class="fde-flow__step" data-num="2"><h4>課題を整理する</h4><p>ボトルネックを見つける／暗黙知を整理する／必要なデータを定義する。</p></div>
-      <div class="fde-flow__step" data-num="3"><h4>実行できる形へ変える</h4><p>システム要件、データ基盤、設備、業務フロー、運用ルールへ落とし込む。</p></div>
-      <div class="fde-flow__step" data-num="4"><h4>実装・定着・改善する</h4><p>関係者と実装し、実際に現場で使われているかを確認し、改善を続ける。</p></div>
+    <div class="grid-3">
+      <div class="card card--filled"><h4 class="card__title">業務理解が先</h4><p class="card__body">システム要件から入るのではなく、まず現場の業務を理解します。</p></div>
+      <div class="card card--filled"><h4 class="card__title">現場に入り伴走する</h4><p class="card__body">つくって渡して終わりにせず、実際に運用されているかを現場で確認します。</p></div>
+      <div class="card card--filled"><h4 class="card__title">運用設計まで担う</h4><p class="card__body">業務とデータをつなぐ&ldquo;翻訳者&rdquo;として、運用が回る形まで設計します。</p></div>
     </div>
 
     <div class="section__head" style="margin-top:44px">
-      <h3 class="section__title" style="font-size:22px">経営・現場・技術をつなぐ &ldquo;翻訳者&rdquo;</h3>
-      <p class="section__lead">経営、現場、システム、設備、データ、パートナー企業の間に入り、「現場では何が起きているのか」「何をシステム要件にすべきか」「何を運用ルールにすべきか」を整理する役割です。</p>
+      <h3 class="section__title" style="font-size:22px">業務とデータの&ldquo;翻訳者&rdquo;として</h3>
+      <p class="section__lead">経営、現場、データ、システム、設備、パートナー企業の間に入り、現場で起きていることを、実行できる形へ翻訳していきます。</p>
     </div>
+    <ol class="tchain">
+      <li class="tchain__item"><p class="tchain__t">現場の課題</p></li>
+      <li class="tchain__item"><p class="tchain__t">データ</p></li>
+      <li class="tchain__item"><p class="tchain__t">システム要件</p></li>
+      <li class="tchain__item"><p class="tchain__t">設備</p></li>
+      <li class="tchain__item tchain__item--goal"><p class="tchain__t">運用ルール</p></li>
+    </ol>
+
+    <div class="section__head" style="margin-top:44px">
+      <h3 class="section__title" style="font-size:22px">FDE が扱うテーマ例</h3>
+      <p class="section__lead">現場の課題に応じて、次のようなテーマを横断して整理します。どのテーマに関わるかは案件ごとに異なります。</p>
+    </div>
+    <ul class="themes">
+      <li class="themes__item">データ統合基盤</li>
+      <li class="themes__item">自働化機器連携</li>
+      <li class="themes__item">運送・配車デジタル化</li>
+      <li class="themes__item">AIチューニング</li>
+      <li class="themes__item">ダッシュボード設計</li>
+      <li class="themes__item">横展開・トレーサビリティ</li>
+    </ul>
+
+    <div class="section__head" style="margin-top:44px">
+      <h3 class="section__title" style="font-size:22px">構想を現場で動かすのは、地道な作業の積み上げです</h3>
+      <p class="section__lead">DX構想を実際に動く仕組みへ変えるまでには、表に出にくい実務があります。FDE はここを引き受けます。</p>
+    </div>
+    <ul class="themes themes--work">
+      <li class="themes__item">要件の擦り合わせ</li>
+      <li class="themes__item">データ整形</li>
+      <li class="themes__item">関係者調整</li>
+      <li class="themes__item">現場教育</li>
+      <li class="themes__item">障害対応</li>
+      <li class="themes__item">合意形成</li>
+      <li class="themes__item">ドキュメント整備</li>
+      <li class="themes__item">実装・運用定着</li>
+      <li class="themes__item">引き継ぎ</li>
+    </ul>
 
     <div class="section__head" style="margin-top:44px">
       <h3 class="section__title" style="font-size:22px">PALの機能・サービスとの関係</h3>
       <p class="section__lead">FDE がPALのサービスの上位にあるわけでも、すべてのサービスに FDE が必要になるわけでもありません。課題に応じて、必要な機能を選び、組み合わせます。</p>
     </div>
     <ol class="fchain">
-      <li class="fchain__item"><span class="fchain__lbl">01</span><p class="fchain__t">顧客の課題</p></li>
+      <li class="fchain__item"><span class="fchain__lbl">01</span><p class="fchain__t">お客さまの課題</p></li>
       <li class="fchain__item"><span class="fchain__lbl">02</span><p class="fchain__t">FDE が現場を理解・整理する</p></li>
       <li class="fchain__item"><span class="fchain__lbl">03</span><p class="fchain__t">必要なPALの機能・サービスを組み合わせる</p><p class="fchain__d">物流戦略／データ活用／システム／設備／物流センター／配送／各PALサービス／運用設計／関係者調整</p></li>
       <li class="fchain__item"><span class="fchain__lbl">04</span><p class="fchain__t">現場で実装・運用する</p></li>
     </ol>
 
-    <div class="section__head" style="margin-top:44px">
-      <h3 class="section__title" style="font-size:22px">FDE が入った結果、お客さま側に残るもの</h3>
-    </div>
-    <p class="prose">データ、判断基準、運用ルール、業務ノウハウ、改善方法がお客さま側に残ります。最終的に目指すのは、お客さま自身が改善を続けられる状態です。</p>
+    <p class="prose" style="margin-top:28px">FDE は、引き継ぎを最初から設計に含めます。実装して終わりではなく、運用ルールや判断基準を文書として整え、お客さま側へ移していきます。</p>
+    <details class="rdiff"><summary>追加した内容を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトにFDEの記載はありません。設計書 3.2 の内容を「PALを知る」ページ内へ再配置しています（独立ページは作りません）。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">SEC06「構想を現場で動かす、FDE」（FDEとは／一般的なエンジニアとの違い3点／業務とデータの翻訳者／扱うテーマ例／地道な実装を進める力／PALの機能・サービスとの関係）</p></div></div></details>
+  </div>
+</section>
 
-    <details class="rdiff"><summary>追加した内容を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトにFDEの記載はありません。当初は独立ページ（/service/fde/ → /about/fde/）として作成していましたが、独立ページ化はせず「PALを知る」ページ内のセクションへ統合しました。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">「構想を、現場で動かす。FDE」セクション（FDEとは／なぜ必要か／現場で何をするのか／翻訳者／PALの機能・サービスとの関係／お客さま側に残るもの）</p></div></div></details>
+<!-- ===== SEC07 v1：設計書 2.1「顧客社内に残す」を独立セクション化 ===== -->
+<section class="section">
+  <div class="container container--narrow">
+    <div class="section__head">
+      <h2 class="section__title"><span class="rnew">新規追加</span>お客さま側に残るもの</h2>
+      <p class="section__lead">PALの支援によって、次のものがお客さま側に残ります。</p>
+    </div>
+    <ul class="remain">
+      <li class="remain__item"><span class="remain__t">データ</span><span class="remain__d">現場・輸送・設備の実績が、判断に使える形で手元にある</span></li>
+      <li class="remain__item"><span class="remain__t">判断基準</span><span class="remain__d">何を見て、どう決めるか。属人化していた基準が言語化されている</span></li>
+      <li class="remain__item"><span class="remain__t">運用ルール</span><span class="remain__d">担当者が変わっても、同じ手順で運用が続く</span></li>
+      <li class="remain__item"><span class="remain__t">業務ノウハウ</span><span class="remain__d">現場の暗黙知が、共有できる形で整理されている</span></li>
+      <li class="remain__item"><span class="remain__t">改善方法</span><span class="remain__d">次にどこを直すか、自社で見つけられる</span></li>
+      <li class="remain__item remain__item--goal"><span class="remain__t">改善を続けられる体制</span><span class="remain__d">上の5つが揃うことで成立する状態。これが最終的なゴールです</span></li>
+    </ul>
+    <p class="prose" style="margin-top:24px">目指しているのは、PALが入り続けることではありません。お客さま自身が物流を改善し続けられる状態です。</p>
+    <details class="rdiff"><summary>追加した内容を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトの「オープン型統合管理」には「データとノウハウが蓄積される」との記載がありますが、何が残るかの一覧はありません。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">SEC07「お客さま側に残るもの」（データ／判断基準／運用ルール／業務ノウハウ／改善方法／改善を続けられる体制）</p></div></div></details>
   </div>
 </section>
 
