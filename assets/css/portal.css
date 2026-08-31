@@ -3,12 +3,12 @@
    ポータル UI と iframe 内ページのデザインが混ざらないよう分離
    ================================================================ */
 *{box-sizing:border-box}
-html,body{margin:0;padding:0;background:#F1F5F9;color:#0F172A;font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html,body{margin:0;padding:0;background:#F2F3F6;color:#1B1D31;font-family:"Noto Sans JP",-apple-system,BlinkMacSystemFont,"Segoe UI","Hiragino Sans",sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
 /* ヘッダー：濃ネイビー */
 .portal-header{
   position:sticky;top:0;z-index:100;
-  background:linear-gradient(135deg,#0F172A 0%,#1E3A5F 100%);
+  background:linear-gradient(135deg,#1B1D31 0%,#262946 100%);
   color:#fff;
   padding:12px 20px;
   display:grid;
@@ -18,7 +18,7 @@ html,body{margin:0;padding:0;background:#F1F5F9;color:#0F172A;font-family:"Noto 
   box-shadow:0 4px 12px rgba(27,29,49,.2);
 }
 .portal-header__brand{display:flex;align-items:center;gap:12px;justify-self:start}
-.portal-header__mark{width:36px;height:36px;border-radius:8px;background:#D71920;color:#fff;font-family:"Inter",sans-serif;font-weight:900;font-size:13px;display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
+.portal-header__mark{width:36px;height:36px;border-radius:8px;background:#CF131B;color:#fff;font-family:"Inter",sans-serif;font-weight:900;font-size:13px;display:flex;align-items:center;justify-content:center;letter-spacing:.02em}
 .portal-header__names{display:flex;flex-direction:column;line-height:1.35}
 .portal-header__title{font-size:14px;font-weight:800;color:#fff}
 .portal-header__sub{font-size:11px;color:rgba(255,255,255,.6);font-weight:500}
@@ -39,30 +39,30 @@ html,body{margin:0;padding:0;background:#F1F5F9;color:#0F172A;font-family:"Noto 
   white-space:nowrap;
 }
 .portal-tab:hover{background:rgba(255,255,255,.16);color:#fff}
-.portal-tab[aria-selected="true"]{background:#D71920;border-color:#D71920;color:#fff;box-shadow:0 3px 10px rgba(207,19,27,.35)}
-.portal-tab:focus-visible{outline:2px solid #F87171;outline-offset:2px}
+.portal-tab[aria-selected="true"]{background:#CF131B;border-color:#CF131B;color:#fff;box-shadow:0 3px 10px rgba(207,19,27,.35)}
+.portal-tab:focus-visible{outline:2px solid #E0838A;outline-offset:2px}
 
 /* 右側メタ情報 */
 .portal-header__meta{display:flex;gap:16px;align-items:center;justify-self:end}
 .portal-current{font-size:12.5px;color:rgba(255,255,255,.75)}
 .portal-current strong{color:#fff;font-weight:800;margin-left:4px}
-.portal-open{background:#fff;color:#0F172A;font-size:12px;font-weight:800;padding:7px 14px;border-radius:6px;text-decoration:none;transition:all .18s}
-.portal-open:hover{background:#F87171;color:#fff}
-.portal-open:focus-visible{outline:2px solid #F87171;outline-offset:2px}
+.portal-open{background:#fff;color:#1B1D31;font-size:12px;font-weight:800;padding:7px 14px;border-radius:6px;text-decoration:none;transition:all .18s}
+.portal-open:hover{background:#E0838A;color:#fff}
+.portal-open:focus-visible{outline:2px solid #E0838A;outline-offset:2px}
 
 /* 凡例バー */
 .portal-legend{
   display:flex;gap:10px;flex-wrap:wrap;align-items:center;
-  background:#fff;border-bottom:1px solid #E2E8F0;
+  background:#fff;border-bottom:1px solid #DAE1F2;
   padding:8px 20px;font-size:11.5px;
 }
 .portal-legend__item{padding:3px 10px;border-radius:4px;font-weight:800;font-size:11px;letter-spacing:.02em}
-.portal-legend__item--changed{background:#f5b800;color:#111827}
-.portal-legend__item--added{background:#2583d8;color:#fff}
-.portal-legend__item--check{background:#d71920;color:#fff}
-.portal-legend__item--pending{background:#f5b800;color:#111827;border:1px dashed #B45309}
-.portal-legend__note{color:#64748B;font-size:11px;margin-left:auto;line-height:1.5}
-.portal-legend__note code{background:#F1F5F9;padding:1px 5px;border-radius:3px;font-size:10.5px}
+.portal-legend__item--changed{background:#CF131B;color:#1B1D31}
+.portal-legend__item--added{background:#797DAC;color:#fff}
+.portal-legend__item--check{background:#CF131B;color:#fff}
+.portal-legend__item--pending{background:#CF131B;color:#1B1D31;border:1px dashed #A80F16}
+.portal-legend__note{color:#6B6D81;font-size:11px;margin-left:auto;line-height:1.5}
+.portal-legend__note code{background:#F2F3F6;padding:1px 5px;border-radius:3px;font-size:10.5px}
 
 /* メイン iframe */
 .portal-main{background:#fff}
