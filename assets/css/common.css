@@ -740,3 +740,74 @@ body.review-mode .rnew{display:inline-block}
   .btn::after{width:24px;height:24px}
 }
 /* ===== PAL TYPOGRAPHY & BUTTON MATCH END ===== */
+
+/* =========================================================
+   ===== FV TONE MATCH START =====
+   ファーストビューのみ本番サイトのトーンへ。下層セクションは変更しない。
+
+   実測（本番サイト）
+     ホーム FV : 背景画像 home_mv_bg.webp（2880x1566）
+                 平均 #BF1C18／主要 #C01818 29% #A80000 12% #A81818 12% #D81818 8% #900000 7%
+                 位置別 左上 #A32019 ／ 中央 #C91C19 ／ 右中 #DC271C ／ 右下 #8F1014
+                 h1 は #FFFFFF 48px / weight 700
+     下層 FV   : 背景 #FFFFFF ／ h1 #262946 48px（.section-top-single）
+                 ＝ 本番の下層は赤ではなく白地。プレビューの濃紺は本番と不一致のため合わせる
+   画像は複製せず、抽出した色でグラデーションとして再現する。
+   ========================================================= */
+:root{
+  --pal-fv-red-deep:#8F1014;
+  --pal-fv-red:#C01818;
+  --pal-fv-red-bright:#DC271C;
+  --pal-fv-red-mid:#A81818;
+}
+
+/* ---- ホーム FV：赤を主役に ---- */
+.phero--home{
+  background:
+    linear-gradient(118deg,
+      var(--pal-fv-red-deep) 0%,
+      var(--pal-fv-red-mid) 22%,
+      var(--pal-fv-red) 52%,
+      var(--pal-fv-red-bright) 82%,
+      var(--pal-fv-red-mid) 100%);
+  position:relative;
+}
+/* 斜めの面をうっすら重ねて奥行きを出す（文字の可読性を優先し極薄） */
+.phero--home::before{
+  content:"";position:absolute;inset:0;width:auto;height:auto;top:0;right:0;bottom:0;left:0;pointer-events:none;display:block;
+  background:linear-gradient(118deg,rgba(255,255,255,.06) 0%,rgba(255,255,255,0) 45%,rgba(0,0,0,.06) 78%,rgba(0,0,0,.12) 100%);
+}
+.phero--home::after{display:none}
+.phero--home>*{position:relative;z-index:1}
+.phero--home .phero__title{color:#fff;font-weight:700}
+.phero--home .phero__sub{color:rgba(255,255,255,.92)}
+.phero--home .phero__sub-note{color:rgba(255,255,255,.80)}
+.phero--home .phero__eyebrow{color:#fff;opacity:.85}
+
+/* CTA：主＝白地に赤文字 ／ 副＝ネイビー地に白文字 */
+.phero--home .btn--red{background:#fff;color:var(--pal-accent)!important;border:0}
+.phero--home .btn--red:hover{background:#F7F7FA;color:var(--pal-accent-dark)!important}
+.phero--home .btn--red::after{border-color:var(--pal-accent)}
+.phero--home .btn--ghost{background:var(--pal-navy);color:#fff!important;border:1px solid var(--pal-navy)}
+.phero--home .btn--ghost:hover{background:var(--pal-heading);border-color:var(--pal-heading);color:#fff!important}
+.phero--home .btn--ghost::after{border-color:rgba(255,255,255,.85)}
+
+/* FV 内のレビューUI：赤地でも浮かない白カードに */
+.phero--home .rdiff summary{background:#fff;color:var(--pal-heading);border-color:#fff}
+.phero--home .rdiff summary:hover{color:var(--pal-accent);border-color:#fff}
+.phero--home .rdiff__body{background:#fff;border-color:var(--pal-border)}
+.phero--home .rnew{background:#fff;color:var(--pal-heading);border-color:#fff}
+.phero--home .review-label{background:rgba(255,255,255,.92);color:var(--pal-heading);border-color:rgba(255,255,255,.92)}
+
+/* ---- 下層ページ FV：本番と同じ白地＋濃紺見出し ---- */
+.phero:not(.phero--home){
+  background:#fff;border-bottom:1px solid var(--pal-border);
+}
+.phero:not(.phero--home)::before,.phero:not(.phero--home)::after{display:none}
+.phero:not(.phero--home) .phero__title{color:var(--pal-heading)}
+.phero:not(.phero--home) .phero__sub{color:var(--pal-text)}
+.phero:not(.phero--home) .phero__eyebrow{color:var(--pal-heading);opacity:1}
+.phero:not(.phero--home) .btn--ghost{color:var(--pal-heading);border-color:var(--pal-border-strong);background:transparent}
+.phero:not(.phero--home) .btn--ghost:hover{background:var(--pal-bg-light);color:var(--pal-heading)}
+.phero:not(.phero--home) .btn--ghost::after{border-color:currentColor}
+/* ===== FV TONE MATCH END ===== */
