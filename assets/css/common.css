@@ -811,3 +811,23 @@ body.review-mode .rnew{display:inline-block}
 .phero:not(.phero--home) .btn--ghost:hover{background:var(--pal-bg-light);color:var(--pal-heading)}
 .phero:not(.phero--home) .btn--ghost::after{border-color:currentColor}
 /* ===== FV TONE MATCH END ===== */
+
+/* =========================================================
+   ===== FV FOCUS START =====
+   ホームFVは説明を絞り H1 を主役にする。
+   サブコピーは2行・H1 との差を明確につける。
+   ========================================================= */
+.phero--home .phero__title{
+  font-size:clamp(32px,4.8vw,56px);line-height:1.32;letter-spacing:-.02em;
+  font-weight:700;margin:0 0 20px;
+}
+.phero--home .phero__sub{
+  font-size:18px;line-height:1.9;font-weight:400;
+  color:rgba(255,255,255,.92);max-width:34em;margin:0 0 34px;
+}
+@media(max-width:900px){ .phero--home .phero__sub{font-size:16.5px} }
+@media(max-width:640px){
+  .phero--home .phero__title{font-size:29px;line-height:1.4;margin:0 0 16px}
+  .phero--home .phero__sub{font-size:15.5px;line-height:1.85;margin:0 0 26px}
+}
+/* ===== FV FOCUS END ===== */
