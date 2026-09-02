@@ -831,3 +831,9 @@ body.review-mode .rnew{display:inline-block}
   .phero--home .phero__sub{font-size:15.5px;line-height:1.85;margin:0 0 26px}
 }
 /* ===== FV FOCUS END ===== */
+
+/* ===== REVIEW DIFF UI（追補）：レビュー用チップも review-mode に連動させる =====
+   「本番化は body から review-mode を外すだけ」を成立させるため、
+   叩き台バナーも review-mode ON のときだけ表示する。 */
+#previewBanner{display:none}
+body.review-mode #previewBanner{display:block}
