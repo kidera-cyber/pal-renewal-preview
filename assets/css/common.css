@@ -837,3 +837,278 @@ body.review-mode .rnew{display:inline-block}
    叩き台バナーも review-mode ON のときだけ表示する。 */
 #previewBanner{display:none}
 body.review-mode #previewBanner{display:block}
+
+/* ============================================================
+   ===== PHASE & FDE PAGE v1 START =====
+   追加要素：APPROACHカード補足／4段階（PHASE）／DX成熟度バー／
+   役割ページの4段階要約（pmini）／FDE常設ページの図解4種
+   既存ルールは書き換えず、末尾追記で後勝ちさせる。
+   配色は --pal-* トークンのみを使用（新色を足さない）。
+   ============================================================ */
+
+/* --- APPROACH 3本柱カードの補足1行 --- */
+.card__note{
+  margin:14px 0 0;padding-top:12px;border-top:1px solid var(--pal-border);
+  font-size:13.5px;line-height:1.8;color:var(--pal-sub);
+}
+
+/* --- PHASE：4段階カード（PCは横4列） --- */
+.phase-grid{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:20px;
+}
+.phase-card{
+  position:relative;display:flex;flex-direction:column;
+  background:var(--pal-bg);border:1px solid var(--pal-border);
+  border-radius:8px;padding:26px 22px 22px;
+}
+.phase-card::after{
+  content:"";position:absolute;top:50%;right:-13px;width:10px;height:10px;
+  border-top:2px solid var(--pal-blue);border-right:2px solid var(--pal-blue);
+  transform:translateY(-50%) rotate(45deg);
+}
+.phase-card--last::after{display:none}
+.phase-card__n{
+  display:inline-flex;align-items:center;align-self:flex-start;
+  font-family:Lato,'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:.14em;color:var(--pal-accent);
+  padding:5px 10px;border:1px solid var(--pal-accent);border-radius:9999px;
+}
+.phase-card__t{
+  margin:14px 0 10px;font-size:21px;font-weight:700;line-height:1.4;
+  color:var(--pal-heading);
+}
+.phase-card__aim{margin:0 0 18px;font-size:13.5px;line-height:1.9;color:var(--pal-text)}
+.phase-card__lbl{
+  margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--pal-muted);
+}
+.phase-card__list{list-style:none;margin:0 0 18px;padding:0}
+.phase-card__list li{
+  position:relative;padding-left:14px;margin-bottom:6px;
+  font-size:13px;line-height:1.75;color:var(--pal-sub);
+}
+.phase-card__list li::before{
+  content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;
+  border-radius:50%;background:var(--pal-blue);
+}
+.phase-card__goal{
+  margin:auto 0 0;padding:14px;border-radius:6px;background:var(--pal-bg-light);
+  font-size:13px;line-height:1.85;color:var(--pal-heading);
+}
+.phase-card__goal-lbl{
+  display:block;margin-bottom:5px;font-size:12px;font-weight:700;
+  letter-spacing:.06em;color:var(--pal-blue);
+}
+@media(max-width:1000px){
+  .phase-grid{grid-template-columns:repeat(2,1fr)}
+  .phase-card:nth-child(2)::after{display:none}
+}
+@media(max-width:640px){
+  .phase-grid{grid-template-columns:1fr;gap:16px}
+  .phase-card::after{display:none}
+  .phase-card{padding:22px 18px 18px}
+}
+
+/* --- PHASE：どの段階からでも始められる注記 --- */
+.phase-note{
+  margin-top:28px;padding:22px 24px;border-radius:8px;
+  background:var(--pal-bg);border:1px solid var(--pal-border-strong);
+}
+.phase-note__t{margin:0 0 8px;font-size:16px;font-weight:700;color:var(--pal-heading)}
+.phase-note__b{margin:0;font-size:13.5px;line-height:1.95;color:var(--pal-text)}
+
+/* --- DX成熟度バー（モデル例） --- */
+.dxm{margin-top:32px;padding:26px 24px;border-radius:8px;background:var(--pal-bg-light)}
+.dxm__title{margin:0 0 18px;font-size:15px;font-weight:700;color:var(--pal-heading)}
+.dxm__bar{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:end;
+}
+.dxm__step{
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  padding:14px 6px 12px;border-radius:6px;background:var(--pal-bg);
+  border:1px solid var(--pal-border);
+}
+.dxm__step:nth-child(1){margin-top:76px}
+.dxm__step:nth-child(2){margin-top:57px}
+.dxm__step:nth-child(3){margin-top:38px}
+.dxm__step:nth-child(4){margin-top:19px}
+.dxm__step--goal{background:var(--pal-heading);border-color:var(--pal-heading)}
+.dxm__lv{
+  font-family:Lato,'Noto Sans JP',sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:.1em;color:var(--pal-muted);
+}
+.dxm__step--goal .dxm__lv{color:var(--pal-blue-pale)}
+.dxm__pct{font-size:24px;font-weight:700;line-height:1;color:var(--pal-heading)}
+.dxm__pct small{font-size:13px;font-weight:700;margin-left:1px}
+.dxm__step--goal .dxm__pct{color:#fff}
+.dxm__lbl{font-size:12px;line-height:1.5;text-align:center;color:var(--pal-sub)}
+.dxm__step--goal .dxm__lbl{color:var(--pal-blue-pale)}
+.dxm__note{margin:16px 0 0;font-size:12px;line-height:1.8;color:var(--pal-muted)}
+@media(max-width:640px){
+  .dxm__bar{grid-template-columns:repeat(5,1fr);gap:5px}
+  .dxm__step{padding:10px 3px 9px}
+  .dxm__step:nth-child(1){margin-top:44px}
+  .dxm__step:nth-child(2){margin-top:33px}
+  .dxm__step:nth-child(3){margin-top:22px}
+  .dxm__step:nth-child(4){margin-top:11px}
+  .dxm__pct{font-size:17px}
+  .dxm__lbl{font-size:12px;word-break:keep-all}
+}
+
+/* --- 役割ページ：4段階の要約ストリップ --- */
+.pmini{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+}
+.pmini__item{
+  padding:18px 16px;border-radius:8px;
+  background:var(--pal-bg);border:1px solid var(--pal-border);
+}
+.pmini__item--goal{background:var(--pal-bg-light)}
+.pmini__n{
+  display:block;font-family:Lato,'Noto Sans JP',sans-serif;
+  font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--pal-accent);
+}
+.pmini__t{margin:8px 0 8px;font-size:17px;font-weight:700;color:var(--pal-heading)}
+.pmini__d{margin:0;font-size:13px;line-height:1.8;color:var(--pal-sub)}
+@media(max-width:900px){.pmini{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.pmini{grid-template-columns:1fr}}
+
+/* --- FDE：ギャップ図（理論／GAP／現実） --- */
+.fgap{display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.fgap__col{
+  padding:22px 20px;border-radius:8px;
+  background:var(--pal-bg);border:1px solid var(--pal-border);
+}
+.fgap__col--gap{background:var(--pal-heading);border-color:var(--pal-heading)}
+.fgap__lbl{
+  margin:0 0 10px;font-family:Lato,'Noto Sans JP',sans-serif;
+  font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--pal-muted);
+}
+.fgap__col--gap .fgap__lbl{color:var(--pal-blue-pale)}
+.fgap__t{margin:0 0 12px;font-size:17px;font-weight:700;line-height:1.5;color:var(--pal-heading)}
+.fgap__col--gap .fgap__t{color:#fff}
+.fgap__d{margin:0;font-size:13px;line-height:1.85;color:var(--pal-blue-pale)}
+.fgap__list{list-style:none;margin:0;padding:0}
+.fgap__list li{
+  position:relative;padding-left:14px;margin-bottom:7px;
+  font-size:13px;line-height:1.8;color:var(--pal-sub);
+}
+.fgap__list li::before{
+  content:"";position:absolute;left:0;top:.65em;width:5px;height:5px;
+  border-radius:50%;background:var(--pal-blue);
+}
+@media(max-width:820px){.fgap{grid-template-columns:1fr}}
+
+/* --- FDE：4つの機能（1周する） --- */
+.floop{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+}
+.floop__item{
+  position:relative;padding:24px 20px;border-radius:8px;
+  background:var(--pal-bg);border:1px solid var(--pal-border);
+}
+.floop__item::after{
+  content:"";position:absolute;top:50%;right:-12px;width:9px;height:9px;
+  border-top:2px solid var(--pal-blue);border-right:2px solid var(--pal-blue);
+  transform:translateY(-50%) rotate(45deg);
+}
+.floop__item--loop{background:var(--pal-bg-light)}
+.floop__item--loop::after{display:none}
+.floop__n{
+  font-family:Lato,'Noto Sans JP',sans-serif;font-size:13px;font-weight:700;
+  letter-spacing:.1em;color:var(--pal-accent);
+}
+.floop__t{margin:8px 0 12px;font-size:16.5px;font-weight:700;line-height:1.55;color:var(--pal-heading)}
+.floop__list{list-style:none;margin:0;padding:0}
+.floop__list li{
+  position:relative;padding-left:14px;margin-bottom:6px;
+  font-size:13px;line-height:1.75;color:var(--pal-sub);
+}
+.floop__list li::before{
+  content:"";position:absolute;left:0;top:.62em;width:5px;height:5px;
+  border-radius:50%;background:var(--pal-blue);
+}
+.floop__d{margin:12px 0 0;font-size:12.5px;line-height:1.8;color:var(--pal-muted)}
+@media(max-width:1000px){
+  .floop{grid-template-columns:repeat(2,1fr)}
+  .floop__item:nth-child(2)::after{display:none}
+}
+@media(max-width:600px){
+  .floop{grid-template-columns:1fr}
+  .floop__item::after{display:none}
+}
+
+/* --- FDE：コンサル／開発との違い --- */
+.fdiff{list-style:none;margin:0;padding:0;border-top:1px solid var(--pal-border)}
+.fdiff__row{
+  display:grid;grid-template-columns:200px 1fr;gap:20px;
+  padding:20px 4px;border-bottom:1px solid var(--pal-border);
+}
+.fdiff__row--goal{background:var(--pal-bg-light)}
+.fdiff__k{font-size:15px;font-weight:700;color:var(--pal-heading)}
+.fdiff__row--goal .fdiff__k{color:var(--pal-accent)}
+.fdiff__v{font-size:14px;line-height:1.95;color:var(--pal-text)}
+@media(max-width:640px){
+  .fdiff__row{grid-template-columns:1fr;gap:8px;padding:16px 12px}
+}
+
+/* --- FDE：現場 ⇄ FDE ⇄ PALの機能 --- */
+.fbridge{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:16px;align-items:stretch}
+.fbridge__side,.fbridge__mid{
+  padding:24px 20px;border-radius:8px;
+  background:var(--pal-bg);border:1px solid var(--pal-border);
+}
+.fbridge__mid{background:var(--pal-heading);border-color:var(--pal-heading);text-align:center}
+.fbridge__lbl{
+  margin:0 0 14px;font-size:14px;font-weight:700;letter-spacing:.04em;color:var(--pal-heading);
+}
+.fbridge__mid .fbridge__lbl{color:#fff;font-family:Lato,'Noto Sans JP',sans-serif;letter-spacing:.16em}
+.fbridge__list{list-style:none;margin:0;padding:0}
+.fbridge__list li{
+  position:relative;padding-left:14px;margin-bottom:7px;
+  font-size:13.5px;line-height:1.8;color:var(--pal-sub);
+}
+.fbridge__list li::before{
+  content:"";position:absolute;left:0;top:.65em;width:5px;height:5px;
+  border-radius:50%;background:var(--pal-blue);
+}
+.fbridge__list--mid{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.fbridge__list--mid li{
+  padding:7px 14px;margin:0;border-radius:9999px;
+  background:rgba(255,255,255,.12);color:#fff;font-size:13px;line-height:1.4;
+}
+.fbridge__list--mid li::before{display:none}
+.fbridge__arrow{margin:18px 0 10px;font-size:26px;line-height:1;color:var(--pal-blue-pale)}
+.fbridge__d{margin:0;font-size:13px;line-height:1.85;color:var(--pal-blue-pale)}
+@media(max-width:900px){.fbridge{grid-template-columns:1fr}.fbridge__arrow{transform:rotate(90deg)}}
+
+/* --- FDE：導入・伴走の流れ --- */
+.fflow{list-style:none;margin:0;padding:0;counter-reset:none}
+.fflow__item{
+  position:relative;padding:20px 20px 20px 74px;margin-bottom:12px;
+  border-radius:8px;background:var(--pal-bg);border:1px solid var(--pal-border);
+}
+.fflow__item--goal{background:var(--pal-bg-light);border-color:var(--pal-border-strong)}
+.fflow__n{
+  position:absolute;left:20px;top:20px;
+  display:inline-flex;align-items:center;justify-content:center;
+  width:38px;height:38px;border-radius:9999px;
+  background:var(--pal-heading);color:#fff;
+  font-family:Lato,'Noto Sans JP',sans-serif;font-size:14px;font-weight:700;
+}
+.fflow__item--goal .fflow__n{background:var(--pal-accent)}
+.fflow__t{margin:0 0 6px;font-size:16.5px;font-weight:700;color:var(--pal-heading)}
+.fflow__d{margin:0;font-size:13.5px;line-height:1.9;color:var(--pal-sub)}
+@media(max-width:560px){
+  .fflow__item{padding:18px 16px 18px 16px}
+  .fflow__n{position:static;margin-bottom:10px}
+}
+
+/* --- 要確認インラインバッジの下限フォントを 12px に揃える --- */
+body.review-mode .review-inline-check{font-size:12px;line-height:1.6;max-width:62em}
+/* ===== PHASE & FDE PAGE v1 END ===== */
+/* レビュー凡例内の code も 12px 下限に合わせる（レビューUIのみ） */
+.review-legend__note code{font-size:12px}

@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>【叩き台】FDEとは｜株式会社PAL</title>
+<meta name="description" content="FDE（Forward Deployed Engineer）は、お客さまの現場とPALのプロダクト・技術の間に立ち、課題整理からPoV、実装、運用、定着までを進める役割です。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260904a">
+<style>
+  /* v1.3 リデザイン：上段=見出し+短説明+関係図／下段=課題→PALの役割→変化 の3カラム */
+  .approach-head{max-width:900px;margin:0 auto 40px;text-align:center}
+  .approach-head p{font-size:16px;line-height:2;color:var(--text);margin:0 0 12px}
+  .approach-head p.approach-head__note{font-size:13px;color:var(--text-mute);line-height:1.9}
+  /* 8要素関係図（PALが間に立つ表現） */
+  .connect-diagram{background:#F2F3F6;border:1px solid var(--border);border-radius:16px;padding:36px 28px;margin:0 0 48px}
+  .connect-diagram__title{text-align:center;font-size:14px;font-weight:800;color:var(--navy);margin:0 0 4px;letter-spacing:.02em}
+  .connect-diagram__lead{text-align:center;font-size:13px;color:var(--text-mute);margin:0 0 24px;line-height:1.8}
+  .connect-diagram__ring{display:grid;grid-template-columns:1fr auto 1fr;gap:24px;align-items:center;max-width:820px;margin:0 auto}
+  .connect-side{display:flex;flex-direction:column;gap:10px}
+  .connect-side__item{background:#fff;border:1px solid var(--border);border-radius:10px;padding:12px 16px;text-align:center;font-size:14px;font-weight:700;color:var(--navy);box-shadow:var(--shadow-sm);position:relative}
+  .connect-side__item::after{content:"";position:absolute;top:50%;width:24px;height:1px;background:#C3CBE0}
+  .connect-side--left .connect-side__item::after{right:-24px}
+  .connect-side--right .connect-side__item::after{left:-24px}
+  .connect-hub{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;border-radius:14px;padding:22px 20px;text-align:center;min-width:130px;box-shadow:0 6px 20px rgba(27,29,49,.15)}
+  .connect-hub__lbl{font-family:var(--font-en);font-size:12px;font-weight:800;color:#E0838A;letter-spacing:.14em;margin:0 0 6px}
+  .connect-hub__name{font-size:20px;font-weight:800;margin:0 0 6px;color:#fff}
+  .connect-hub__desc{font-size:12px;color:rgba(255,255,255,.85);margin:0;line-height:1.6}
+  /* 3カラム：課題 → PALの役割 → 変化 */
+  .flow3{display:grid;grid-template-columns:1fr 1.15fr 1fr;gap:20px;align-items:stretch}
+  .flow3__col{background:#fff;border-radius:16px;padding:32px 28px;display:flex;flex-direction:column}
+  .flow3__col--before{background:#F2F3F6;border:1px solid #C3CBE0}
+  .flow3__col--pal{background:linear-gradient(160deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;box-shadow:0 12px 32px rgba(27,29,49,.18);position:relative}
+  .flow3__col--pal::before,.flow3__col--pal::after{content:"";position:absolute;top:50%;width:16px;height:16px;transform:translateY(-50%) rotate(45deg);background:inherit}
+  .flow3__col--pal::before{left:-8px;background:var(--navy)}
+  .flow3__col--pal::after{right:-8px;background:var(--navy-2);z-index:1}
+  .flow3__col--after{background:#FFFFFF;border:1px solid #DAE1F2}
+  .flow3__label{font-family:var(--font-en);font-size:12px;font-weight:800;letter-spacing:.14em;margin:0 0 8px}
+  .flow3__col--before .flow3__label{color:#6B6D81}
+  .flow3__col--pal .flow3__label{color:#E0838A}
+  .flow3__col--after .flow3__label{color:var(--red)}
+  .flow3__title{font-size:18px;font-weight:800;margin:0 0 20px;line-height:1.5}
+  .flow3__col--before .flow3__title,.flow3__col--after .flow3__title{color:var(--navy)}
+  .flow3__col--pal .flow3__title{color:#fff;font-size:20px}
+  .flow3__list{list-style:none;padding:0;margin:0;flex-grow:1}
+  .flow3__list li{font-size:14px;line-height:1.7;padding:10px 0 10px 26px;position:relative;border-bottom:1px dashed rgba(121,125,172,.4)}
+  .flow3__list li:last-child{border-bottom:none}
+  .flow3__col--before .flow3__list li{color:#464A6F}
+  .flow3__col--before .flow3__list li::before{content:"✕";position:absolute;left:4px;top:10px;color:#797DAC;font-weight:800;font-size:13px}
+  .flow3__col--pal .flow3__list li{color:#fff;border-bottom-color:rgba(255,255,255,.15);font-weight:600}
+  .flow3__col--pal .flow3__list li::before{content:"→";position:absolute;left:0;top:10px;color:#E0838A;font-weight:800}
+  .flow3__col--after .flow3__list li{color:var(--navy)}
+  .flow3__col--after .flow3__list li::before{content:"✓";position:absolute;left:2px;top:10px;color:var(--red);font-weight:800;font-size:14px}
+  .flow3__caption{text-align:center;font-size:13px;color:var(--text-mute);margin:28px 0 0}
+  @media (max-width:900px){
+    .connect-diagram__ring{grid-template-columns:1fr;gap:16px}
+    .connect-side__item::after{display:none}
+    .connect-hub{margin:8px 0}
+    .flow3{grid-template-columns:1fr;gap:16px}
+    .flow3__col--pal::before,.flow3__col--pal::after{display:none}
+  }
+  /* v1.3 step-flow：考え方 → 機能・アプローチ → 実行手段 の3ステップ縦フロー */
+  .step-flow{margin:32px 0 12px;display:flex;flex-direction:column;align-items:stretch;gap:0}
+  .step-flow__step{position:relative;padding:0}
+  .step-flow__num{display:flex;align-items:center;gap:12px;margin-bottom:14px}
+  .step-flow__num-badge{width:38px;height:38px;border-radius:50%;background:var(--red);color:#fff;font-family:var(--font-en);font-size:14px;font-weight:900;display:flex;align-items:center;justify-content:center;letter-spacing:.02em;flex-shrink:0}
+  .step-flow__num-label{font-family:var(--font-en);font-size:12px;font-weight:800;color:var(--red);letter-spacing:.14em}
+  .step-flow__num-title{font-size:15px;font-weight:800;color:var(--navy);margin-left:6px}
+  .step-flow__body{margin-left:50px}
+  .step-flow__arrow{margin:16px 0 16px 68px;width:2px;height:32px;background:#C3CBE0;position:relative}
+  .step-flow__arrow::after{content:"";position:absolute;bottom:-6px;left:50%;transform:translateX(-50%);width:0;height:0;border-left:8px solid transparent;border-right:8px solid transparent;border-top:10px solid #C3CBE0}
+  /* STEP 1：ネイビー1枚 */
+  .step-card--concept{background:linear-gradient(135deg,var(--navy) 0%,var(--navy-2) 100%);color:#fff;border-radius:14px;padding:24px 28px;box-shadow:0 6px 20px rgba(27,29,49,.15)}
+  .step-card--concept h4{font-size:20px;font-weight:800;color:#fff;margin:0 0 8px}
+  .step-card--concept p{font-size:13.5px;color:rgba(255,255,255,.88);margin:0;line-height:1.85}
+  /* STEP 2：薄ブルーカード×2 */
+  .step-cards-2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .step-card--function{background:#F4F5F8;border:1px solid var(--border-blue);border-radius:12px;padding:20px 22px}
+  .step-card--function h4{font-size:16px;font-weight:800;color:var(--navy);margin:0 0 8px}
+  .step-card--function p{font-size:12.5px;color:var(--text);margin:0;line-height:1.75}
+  /* STEP 3：白背景+赤アクセント×2 */
+  .step-card--means{background:#fff;border:2px solid var(--red-soft);border-radius:12px;padding:20px 22px;position:relative}
+  .step-card--means h4{font-size:16px;font-weight:800;color:var(--red);margin:0 0 8px}
+  .step-card--means p{font-size:12.5px;color:var(--text);margin:0 0 12px;line-height:1.75}
+  .step-card__examples{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 10px}
+  .step-card__examples span{background:#FBE7E8;border:1px solid var(--red-soft);border-radius:999px;padding:4px 10px;font-size:12px;color:var(--navy);font-weight:600}
+  .step-card__link{font-size:12px;color:var(--red);font-weight:800;text-decoration:none;display:inline-flex;align-items:center;gap:4px}
+  .step-card__link:hover{text-decoration:underline}
+  .step-summary{background:#F2F3F6;border-radius:12px;padding:20px 24px;margin-top:32px;font-size:13px;line-height:2;color:var(--text)}
+  .step-summary strong{color:var(--navy)}
+  @media(max-width:768px){
+    .step-cards-2{grid-template-columns:1fr}
+    .step-flow__body{margin-left:0}
+    .step-flow__arrow{margin-left:18px}
+  }
+  @media (max-width:900px){.approach-grid{grid-template-columns:1fr}.ba-diagram{grid-template-columns:1fr}.ba-arrow{flex-direction:row;padding:8px 0}.relation-map__cols{grid-template-columns:1fr}}
+</style>
+</head>
+<body class="review-mode">
+
+<div id="previewBanner">🛠 叩き台（社内レビュー用）／ noindex ／ 本番URLではありません</div>
+
+<div class="review-legend" role="note" aria-label="レビュー用マーキングの凡例">
+  <span class="review-legend__item review-legend__item--changed">今回変更</span>
+  <span class="review-legend__item review-legend__item--added">新規追加</span>
+  <span class="review-legend__item review-legend__item--check">要確認</span>
+  <span class="review-legend__note">※ 本番化は body から <code>review-mode</code> を外すだけ</span>
+</div>
+
+<header class="gheader">
+  <div class="gheader__inner">
+    <a class="gbrand" href="./home.html"><span class="gbrand__mark">PAL</span><span class="gbrand__name">株式会社PAL<small>PAL Co., Ltd.</small></span></a>
+    <nav class="gnav" aria-label="グローバルナビゲーション">
+      <a href="./home.html">ホーム</a>
+      <a href="./role.html">PALを知る</a>
+      <a href="./service.html">サービス</a>
+      <a href="#">物流DX事例</a><a href="#">会社概要</a><a href="#">物流DXコラム</a><a href="#">物流DXお役立ち資料</a>
+      <a href="#" class="gnav-cta">お問い合わせ</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="./home.html">ホーム</a><a href="./role.html">私たちの役割</a><a href="./reason.html">PALの強み</a><a href="./fde.html">FDEとは</a>
+  <a href="./service.html">サービス</a>
+  <a href="#" class="gnav-cta">お問い合わせ</a>
+</nav>
+
+<nav class="breadcrumb"><div class="container"><ol>
+  <li><a href="./home.html">ホーム</a></li><li><a href="./role.html">PALを知る</a></li><li class="current">FDEとは</li>
+</ol></div></nav>
+<!-- ※ 本番想定URL：/about/fde/（「PALを知る」配下の常設ページ） -->
+
+<!-- ===== FDE-PAGE v1 START：FDE常設ページ。設計書 3.2 と FDE組織説明資料（社外公開可の範囲）に基づく。
+     社内情報（タスク件数・メンバー名・内部原価・訪問台帳・内部KPI・案件管理方法・採用評価）は一切掲載しない。
+     復元（削除）するには pages/fde.html ごと外し、導線（home / role / service / footer / portal）を戻す ===== -->
+<section class="phero review-added">
+  <span class="review-label review-label--added">新規追加</span>
+  <div class="container phero__inner">
+    <span class="phero__eyebrow">FDE</span>
+    <h1 class="phero__title">FDEとは</h1>
+    <p class="phero__sub">お客さまの現場と、PALのプロダクト・技術の間に立つ。</p>
+    <details class="rdiff"><summary>このページについて（新規追加）</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当ページなし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトにFDEの常設ページはありません。設計書 3.2 と社内資料のうち社外公開可能な範囲のみを再編集しています。社内情報（案件件数・担当者名・内部原価・訪問台帳・内部KPI・案件管理方法・採用評価）は掲載していません。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">FDE常設ページ（本番想定URL：/about/fde/）。01 FDEとは ／ 02 なぜ必要か ／ 03 3つの責任 ／ 04 4つの機能 ／ 05 コンサル・開発との違い ／ 06 PALで機能する理由 ／ 07 サービスとの関係 ／ 08 導入・伴走の流れ ／ 09 お客さま側に残るもの ／ 10 相談CTA</p></div></div></details>
+  </div>
+</section>
+
+<!-- 01 FDEとは -->
+<section class="section review-added">
+  <span class="review-label review-label--added">新規追加</span>
+  <div class="container container--narrow">
+    <div class="section__head">
+      <span class="section__eyebrow">01 DEFINITION</span>
+      <h2 class="section__title">FDE（Forward Deployed Engineer）</h2>
+    </div>
+    <p class="prose">FDEは、お客さまの現場と、PALのプロダクト・技術・サービスの間に立つ役割です。</p>
+    <p class="prose">「理論上できること」と「その現場で実際に価値が出ること」の間には、多くの場合ギャップがあります。FDEは、そのギャップを資料や助言ではなく、現場で動くもので埋めます。</p>
+    <p class="prose">製品やサービスを導入して終わりにせず、PoV（価値検証）から実装、本番運用、定着まで関わり、お客さまの環境で実際に価値が出るところまで進めます。</p>
+  </div>
+</section>
+
+<!-- 02 なぜFDEが必要なのか -->
+<section class="section review-added section--soft">
+  <span class="review-label review-label--added">新規追加</span>
+  <div class="container container--narrow">
+    <div class="section__head">
+      <span class="section__eyebrow">02 WHY</span>
+      <h2 class="section__title">「良い仕組み」と「現場で価値が出る」の間には、ギャップがあります</h2>
+    </div>
+    <div class="fgap">
+      <div class="fgap__col">
+        <p class="fgap__lbl">仕組み側の前提</p>
+        <p class="fgap__t">理論上できること</p>
+        <ul class="fgap__list"><li>機能は揃っている</li><li>標準的な業務フローなら回る</li><li>デモでは価値が伝わる</li></ul>
+      </div>
+      <div class="fgap__col fgap__col--gap">
+        <p class="fgap__lbl">THE GAP</p>
+        <p class="fgap__t">現場は標準どおりではない</p>
+        <p class="fgap__d">データ構造、権限、帳票、レイアウト。現場ごとに違う制約が、価値の実現を止めます。</p>
+      </div>
+      <div class="fgap__col">
+        <p class="fgap__lbl">現場側の現実</p>
+        <p class="fgap__t">実際に出る価値</p>
+        <ul class="fgap__list"><li>紙とペンのまま残る業務</li><li>実績がデータ化されていない</li><li>機器と業務が噛み合わない</li><li>導入したが使われない</li></ul>
+      </div>
+    </div>
+    <p class="prose" style="margin-top:28px">この溝を現場で埋める役割として、PALはFDEを置いています。</p>
+  </div>
+</section>
+
+<!-- 03 FDEの3つの責任 -->
+<section class="section review-added">
+  <span class="review-label review-label--added">新規追加</span>
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">03 RESPONSIBILITY</span>
+      <h2 class="section__title">FDEの3つの責任</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card card--filled"><p class="card__eyebrow">01</p><h3 class="card__title">入り込む</h3><p class="card__body">お客さまの業務、現場、データ、権限、制約、ワークフローを深く理解します。現場に入らなければ分からない前提を、まず押さえます。</p></div>
+      <div class="card card--filled"><p class="card__eyebrow">02</p><h3 class="card__title">作り切る</h3><p class="card__body">助言や要件定義だけで終わらせません。プロトタイプ、実装、データ連携、運用改善まで、実際に形にします。</p></div>
+      <div class="card card--filled"><p class="card__eyebrow">03</p><h3 class="card__title">残していく</h3><p class="card__body">現場で得られた知見を、手順・テンプレート・Playbook・仕組みとして残します。その現場でも、他の現場でも再利用できる状態にします。</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 FDEが担う4つの機能 -->
+<section class="section review-added section--soft">
+  <span class="review-label review-label--added">新規追加</span>
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">04 FUNCTION</span>
+      <h2 class="section__title">FDEが担う4つの機能</h2>
+      <p class="section__lead">解像度を上げる → 動く解を作る → 翻訳する → 資産化する。<br>この1周を回すことが、FDEの仕事です。</p>
+    </div>
+    <ol class="floop">
+      <li class="floop__item">
+        <span class="floop__n">01</span>
+        <h3 class="floop__t">お客さま課題の解像度を上げる</h3>
+        <ul class="floop__list"><li>ワークフロー分析</li><li>データ構造の把握</li><li>制約・規制の確認</li></ul>
+      </li>
+      <li class="floop__item">
+        <span class="floop__n">02</span>
+        <h3 class="floop__t">その場で動く解を作る</h3>
+        <ul class="floop__list"><li>プロトタイピング</li><li>実装</li><li>データ連携</li><li>運用改善</li></ul>
+      </li>
+      <li class="floop__item">
+        <span class="floop__n">03</span>
+        <h3 class="floop__t">社内外の翻訳者になる</h3>
+        <ul class="floop__list"><li>要件の翻訳</li><li>技術の説明</li><li>合意形成</li></ul>
+        <p class="floop__d">お客さま・営業・開発・現場運用の間をつなぎます。</p>
+      </li>
+      <li class="floop__item floop__item--loop">
+        <span class="floop__n">04</span>
+        <h3 class="floop__t">現場知見を再利用可能にする</h3>
+        <ul class="floop__list"><li>Playbook化</li><li>テンプレート化</li><li>共通機能への反映</li><li>横展開</li></ul>
+        <p class="floop__d">ここで得たものが、次の01の精度を上げます。</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- 05 一般的なSE・コンサルとの違い -->
+<section class="section review-added">
+  <span class="review-label review-label--added">新規追加</span>
+  <div class="container container--narrow">
+    <div class="section__head">
+      <span class="section__eyebrow">05 DIFFERENCE</span>
+      <h2 class="section__title">コンサルティング・一般的な開発との違い</h2>
+      <p class="section__lead">いずれも役割が異なるだけで、優劣ではありません。FDEがどこを引き受けるのかを整理したものです。</p>
+    </div>
+    <ul class="fdiff">
+      <li class="fdiff__row"><span class="fdiff__k">コンサルティング</span><span class="fdiff__v">論点整理、要件整理、意思決定の支援を担います。実装の手前までを範囲とする場合があります。</span></li>
+      <li class="fdiff__row"><span class="fdiff__k">一般的な開発</span><span class="fdiff__v">システムやプロダクトをリリースすることがゴールになります。</span></li>
+      <li class="fdiff__row fdiff__row--goal"><span class="fdiff__k">FDE</span><span class="fdiff__v">お客さまの現場そのものに入り、その環境で本当に価値が出ているかまでを範囲とします。</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 06 PALだからFDEが機能する理由 -->
+<section class="section review-added section--soft">
+  <span class="review-label review-label--added">新規追加</span>
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">06 WHY PAL</span>
+      <h2 class="section__title">PALでFDEが機能する理由</h2>
+      <p class="section__lead">ソフトウェア × 現場運用 × データ。この3つを自社で持っていることが前提になります。</p>
+    </div>
+    <div class="grid-3">
+      <div class="card card--filled"><h3 class="card__title">ソフトウェア</h3><p class="card__body">Core First をはじめとする自社システムを持ち、現場に合わせて手を入れられます。</p></div>
+      <div class="card card--filled"><h3 class="card__title">現場運用</h3><p class="card__body">物流BPO や DTS など、実際に現場を運営してきた知見があります。業務を理解したうえで設計できます。</p></div>
+      <div class="card card--filled"><h3 class="card__title">データ</h3><p class="card__body">日々の運用から実データが蓄積されます。机上ではなく実績にもとづいて判断できます。</p></div>
+    </div>
+    <p class="prose" style="margin-top:28px">仕組みだけ、あるいは現場だけを持つ立場では、この往復は成立しません。3つを併せ持つことで、現場での価値実現まで進められます。</p>
+  </div>
+</section>
+
+<!-- 07 PALのサービスとの接続 -->
+<section class="section review-added">
+  <span class="review-label review-label--added">新規追加</span>
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">07 CONNECT</span>
+      <h2 class="section__title">PALのサービスとの関係</h2>
+      <p class="section__lead">FDEの下にサービスがぶら下がる、という関係ではありません。<br>FDEがお客さまの現場を理解し、必要な機能へつなぐ役割です。</p>
+    </div>
+    <div class="fbridge">
+      <div class="fbridge__side">
+        <p class="fbridge__lbl">お客さまの現場</p>
+        <ul class="fbridge__list"><li>業務</li><li>人</li><li>設備</li><li>データ</li><li>制約</li></ul>
+      </div>
+      <div class="fbridge__mid">
+        <p class="fbridge__lbl">FDE</p>
+        <ul class="fbridge__list fbridge__list--mid"><li>理解する</li><li>作る</li><li>翻訳する</li><li>残す</li></ul>
+        <p class="fbridge__arrow" aria-hidden="true">⇄</p>
+        <p class="fbridge__d">左と右を往復しながら、現場で使える形へ落とし込みます。</p>
+      </div>
+      <div class="fbridge__side">
+        <p class="fbridge__lbl">PALの機能</p>
+        <ul class="fbridge__list"><li>Core First</li><li>DTS</li><li>物流BPO</li><li>自働化・設備</li><li>データ基盤</li><li>各サービス</li></ul>
+      </div>
+    </div>
+    <p class="prose" style="margin-top:28px">すべてのご支援にFDEが必要になるわけではありません。課題に応じて、必要な機能を選び、組み合わせます。</p>
+    <p class="section__cta-wrap" style="text-align:left"><a href="./service.html" class="btn btn--ghost">サービス一覧を見る</a></p>
+  </div>
+</section>
+
+<!-- 08 導入・伴走の流れ -->
+<section class="section review-added section--soft">
+  <span class="review-label review-label--added">新規追加</span>
+  <div class="container container--narrow">
+    <div class="section__head">
+      <span class="section__eyebrow">08 FLOW</span>
+      <h2 class="section__title">導入・伴走の流れ</h2>
+    </div>
+    <ol class="fflow">
+      <li class="fflow__item"><span class="fflow__n">01</span><p class="fflow__t">現場の理解・課題整理</p><p class="fflow__d">業務、データ、設備、制約を確認し、どこに手を入れるかを整理します。</p></li>
+      <li class="fflow__item"><span class="fflow__n">02</span><p class="fflow__t">PoV（価値検証）</p><p class="fflow__d">一部の工程・拠点で小さく試し、効果と課題をデータで確認します。</p></li>
+      <li class="fflow__item"><span class="fflow__n">03</span><p class="fflow__t">実装</p><p class="fflow__d">必要なシステム・設備・データ連携を、現場に合わせて形にします。</p></li>
+      <li class="fflow__item"><span class="fflow__n">04</span><p class="fflow__t">本番運用・運用設計</p><p class="fflow__d">運用ルールと手順を整え、日々の業務のなかで回る状態にします。</p></li>
+      <li class="fflow__item fflow__item--goal"><span class="fflow__n">05</span><p class="fflow__t">定着・引き継ぎ</p><p class="fflow__d">判断基準やノウハウを文書として整え、お客さま側へ移していきます。</p></li>
+    </ol>
+    <p class="prose" style="margin-top:24px">FDEは、引き継ぎを最初から設計に含めます。実装して終わりではありません。</p>
+  </div>
+</section>
+
+<!-- 09 お客さま側に残るもの -->
+<section class="section review-added">
+  <span class="review-label review-label--added">新規追加</span>
+  <div class="container container--narrow">
+    <div class="section__head">
+      <span class="section__eyebrow">09 WHAT REMAINS</span>
+      <h2 class="section__title">お客さま側に残るもの</h2>
+      <p class="section__lead">FDEが関わった現場には、次のものが残ります。</p>
+    </div>
+    <ul class="remain">
+      <li class="remain__item"><span class="remain__t">データ</span><span class="remain__d">現場・輸送・設備の実績が、判断に使える形で手元にある</span></li>
+      <li class="remain__item"><span class="remain__t">手順・運用ルール</span><span class="remain__d">担当者が変わっても、同じ手順で運用が続く</span></li>
+      <li class="remain__item"><span class="remain__t">判断基準</span><span class="remain__d">何を見て、どう決めるか。属人化していた基準が言語化されている</span></li>
+      <li class="remain__item remain__item--goal"><span class="remain__t">改善を続けられる状態</span><span class="remain__d">日々の運用を回せる。異常時に一次対応できる。改善点を自ら見つけられる</span></li>
+    </ul>
+    <p class="prose" style="margin-top:24px">目指しているのは、現場に仕組みとノウハウを残し、お客さま自身でも改善を続けられる状態です。</p>
+    <span class="review-inline-check">要確認：FDEの支援事例（企業名・数値）の掲載可否。掲載可となった場合はここに事例ブロックを追加します（FDE-CASE SLOT）</span>
+  </div>
+</section>
+
+<!-- 10 相談CTA -->
+<section class="section review-added section--soft">
+  <span class="review-label review-label--added">新規追加</span>
+  <div class="container">
+    <div class="section__head">
+      <h2 class="section__title">現場で止まっている課題について、ご相談ください</h2>
+      <p class="section__lead">「システムは入れたが使われていない」「データが取れていない」といった段階からご相談いただけます。</p>
+    </div>
+    <div class="phero__ctas" style="justify-content:flex-start">
+      <a href="#" class="btn btn--red">お問い合わせ</a>
+      <a href="#" class="btn btn--ghost">資料ダウンロード</a>
+    </div>
+    <span class="review-inline-check">要確認：物流DXコラム内のFDE解説記事の有無。存在する場合は「さらに詳しく知る」として本ページから内部リンクします</span>
+  </div>
+</section>
+
+<!-- 次のページへ -->
+<section class="section review-added">
+  <span class="review-label review-label--added">新規追加</span>
+  <div class="container">
+    <div class="section__head"><span class="section__eyebrow">NEXT</span><h2 class="section__title">PALについて、さらに知る</h2></div>
+    <div class="grid-3">
+      <a class="card" href="./role.html"><h3 class="card__title">私たちの役割</h3><p class="card__body-sm">分断をつなぎ、現場で動く状態にするまで。PALの役割をご説明します。</p></a>
+      <a class="card" href="./reason.html"><h3 class="card__title">PALの強み</h3><p class="card__body-sm">PAL が持っている 8 つの強みをご紹介します。</p></a>
+      <a class="card" href="./home.html#phase"><h3 class="card__title">物流DXの4つの段階</h3><p class="card__body-sm">試す／強くなる／全て見える／未来に対応する。PALの進め方です。</p></a>
+    </div>
+  </div>
+</section>
+<!-- ===== FDE-PAGE v1 END ===== -->
+
+<footer class="gfooter">
+  <div class="gfooter__grid">
+    <div>
+      <p class="gfooter__brand">株式会社PAL（パル）</p>
+      <p class="gfooter__desc">物流をコストから、戦略資産に。</p>
+      <p class="gfooter__tel">TEL 06-6534-8998<br><small>営業時間：平日 9:00-18:00</small></p>
+    </div>
+    <div class="gfooter__col"><h4>PALを知る</h4><ul><li><a href="./role.html">私たちの役割</a></li><li><a href="./reason.html">PALの強み</a></li><li><a href="./fde.html">FDEとは</a></li><li><a href="#">よくあるご質問</a></li><li><a href="#">トップメッセージ</a></li><li><a href="#">ミッション・バリュー</a></li></ul></div>
+    <div class="gfooter__col"><h4>サービス</h4><ul>
+      <li><a href="https://www.pal-style.co.jp/service/logistics-consulting/">物流コンサルティング</a></li>
+      <li><a href="https://lp.pal-style.co.jp/logitec-integration/">ロジテックインテグレーション</a></li>
+      <li><a href="https://www.pal-style.co.jp/service/core-first/">Core First</a></li>
+      <li><a href="https://www.pal-style.co.jp/service/zero/">Core Zero</a></li>
+      <li><a href="https://www.pal-style.co.jp/service/mate/">Core Mate</a></li>
+      <li><a href="https://www.pal-style.co.jp/service/dts/">DTS</a></li>
+      <li><a href="https://lp.pal-style.co.jp/core-gx/index.html">Core GX</a></li>
+          </ul></div>
+    <div class="gfooter__col"><h4>情報</h4><ul><li><a href="#">会社概要</a></li><li><a href="#">物流DX事例</a></li><li><a href="#">物流DXコラム</a></li><li><a href="#">お問い合わせ</a></li></ul></div>
+  </div>
+  <div class="gfooter__bottom">
+    <ul class="gfooter__legal"><li><a href="#">プライバシーポリシー</a></li><li><a href="#">利用規約</a></li><li><a href="#">サイトマップ</a></li></ul>
+    <p>© 2026 PAL Services. All rights reserved. ／ 本ページは社内レビュー用の叩き台です</p>
+  </div>
+</footer>
+
+<script>(function(){var b=document.getElementById('menuToggle'),n=document.getElementById('mobileNav');if(b&&n){b.addEventListener('click',function(){n.classList.toggle('open');document.body.style.overflow=n.classList.contains('open')?'hidden':'';});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');document.body.style.overflow='';});});}})();</script>
+</body>
+</html>

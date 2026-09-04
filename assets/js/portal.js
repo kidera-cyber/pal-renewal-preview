@@ -8,6 +8,7 @@
     home:   { file: 'pages/home.html',   name: 'ホーム' },
     role:   { file: 'pages/role.html',   name: '私たちの役割' },
     reason: { file: 'pages/reason.html', name: 'PALの強み' },
+    fde:    { file: 'pages/fde.html',    name: 'FDEとは' },
     service:{ file: 'pages/service.html',name: 'サービス一覧' }
   };
   const DEFAULT_PAGE = 'home';
