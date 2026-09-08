@@ -241,27 +241,45 @@
       <span class="review-inline-check">要確認：DX成熟度の数値（22／38／52／62／70%）の出典・診断ロジックの公開可否</span>
     </div>
 
-    <details class="rdiff"><summary>追加した内容を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトでは「段階的検証力」がカード1枚の説明のみで、進め方の段階は示されていません。本セクションはその具体化です。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">PHASE「物流DXの進め方は、4つの段階で考えます」（試す／強くなる／全て見える／未来に対応する ＋ どの段階からでも始められる注記 ＋ DX成熟度モデル例）</p></div></div></details>
+    <!-- ===== PHASE→FDE 橋渡し（次セクションへの接続）===== -->
+    <p class="prose" style="margin-top:28px;text-align:center;font-weight:600"><span class="rnew">今回変更</span>大切なのは、段階を描くだけではなく、それぞれを<strong>現場で動く形へ落とし込み、運用に定着させる</strong>ことです。<br>この4段階を現場で実行する役割を、次のセクション（FDE）で説明します。</p>
+
+    <details class="rdiff"><summary>追加した内容を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトでは「段階的検証力」がカード1枚の説明のみで、進め方の段階は示されていません。本セクションはその具体化です。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">PHASE「物流DXの進め方は、4つの段階で考えます」（試す／強くなる／全て見える／未来に対応する ＋ どの段階からでも始められる注記 ＋ DX成熟度モデル例 ＋ FDE への橋渡し1文）</p></div></div></details>
   </div>
 </section>
 <!-- ===== PHASE v1 END ===== -->
 
-<!-- ===== FDE-TOP v1 START：トップからFDE常設ページ（pages/fde.html）への理解促進導線。
-     トップでは詳しく説明せず「現場に入って動かす役割も持っている」ことが伝わる分量に留める ===== -->
-<section class="section review-added">
-  <span class="review-label review-label--added">新規追加</span>
+<!-- ===== FDE-TOP v2 START：PHASE との接続を明示し、FDE を "4段階を現場で実行する役割" として位置づける ===== -->
+<section class="section review-changed">
+  <span class="review-label">今回変更</span>
   <div class="container container--narrow">
     <div class="section__head">
       <span class="section__eyebrow">FDE</span>
-      <h2 class="section__title"><span class="rnew">新規追加</span>構想やシステムを、現場で使える状態へ。</h2>
+      <h2 class="section__title">構想やシステムを、現場で使える状態へ。</h2>
+      <p class="section__lead"><span class="rnew">今回変更</span>4つの段階を、現場で実行するための役割が FDE です。</p>
     </div>
-    <p class="prose">物流DXは、システムを導入しただけでは進みません。現場ごとに異なる業務、データ、設備、運用ルールを理解し、実際に使える仕組みへ落とし込む必要があります。</p>
-    <p class="prose">PALのFDE（Forward Deployed Engineer）は、お客さまの現場に入り、課題の整理から PoV、実装、運用設計、定着までを支援します。</p>
-    <p class="section__cta-wrap" style="text-align:left"><a href="./fde.html" class="btn btn--red">FDEについて詳しく見る</a></p>
-    <details class="rdiff"><summary>追加した内容を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトにFDEの記載はありません。トップでは短い紹介に留め、詳細はFDE常設ページに置いています。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">FDE 紹介セクション（見出し＋2段落＋「FDEについて詳しく見る」導線）</p></div></div></details>
+    <p class="prose">物流DXは、構想やシステムを作るだけでは進みません。</p>
+    <p class="prose">PAL の FDE（Forward Deployed Engineer）が現場に入り、業務や課題を理解し、データ・システム・設備・運用へ落とし込みます。<br>構想を実装につなげ、<strong>現場で使われ、改善が続く状態</strong>まで支援します。</p>
+
+    <!-- FDE の役割ミニフロー：設計→実装→運用→改善（4サイクルは英語併記せず、日本語のみで簡潔に） -->
+    <ol class="fde-miniflow" aria-label="FDE が現場で担う流れ" style="list-style:none;padding:0;margin:24px 0 8px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
+      <li style="background:#F7F8FA;border:1px solid #E5E9EF;border-radius:8px;padding:14px 12px;text-align:center;font-size:14px;font-weight:700;color:#111">01｜設計</li>
+      <li style="background:#F7F8FA;border:1px solid #E5E9EF;border-radius:8px;padding:14px 12px;text-align:center;font-size:14px;font-weight:700;color:#111">02｜実装</li>
+      <li style="background:#F7F8FA;border:1px solid #E5E9EF;border-radius:8px;padding:14px 12px;text-align:center;font-size:14px;font-weight:700;color:#111">03｜運用</li>
+      <li style="background:#F7F8FA;border:1px solid #E5E9EF;border-radius:8px;padding:14px 12px;text-align:center;font-size:14px;font-weight:700;color:#111">04｜改善</li>
+    </ol>
+    <p class="prose" style="font-size:13.5px;color:#6a7280;margin-top:6px">運用ルールやデータ・ノウハウはお客さま側に残し、お客さま自身が改善を続けられる状態を目指します。</p>
+
+    <p class="section__cta-wrap" style="text-align:left;margin-top:20px"><a href="./role.html#fde" class="btn btn--red">FDEの役割を詳しく見る</a></p>
+    <details class="rdiff"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】新規追加時（FDE-TOP v1）</span><p class="rdiff__txt">物流DXは、システムを導入しただけでは進みません。現場ごとに異なる業務、データ、設備、運用ルールを理解し、実際に使える仕組みへ落とし込む必要があります。</p><p class="rdiff__txt">PALのFDE（Forward Deployed Engineer）は、お客さまの現場に入り、課題の整理から PoV、実装、運用設計、定着までを支援します。</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ CTA は「FDEについて詳しく見る」→ pages/fde.html への導線でした。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">見出し下に「4つの段階を、現場で実行するための役割が FDE です」を明示。本文は「業務や課題を理解し、データ・システム・設備・運用へ落とし込み、現場で使われ、改善が続く状態まで支援」に集約。<br>下段に 設計 → 実装 → 運用 → 改善 の4ステップミニフローを追加。CTA は「PALを知る」ページの FDE セクション（role.html#fde）へ差し替え。</p></div></div></details>
   </div>
 </section>
-<!-- ===== FDE-TOP v1 END ===== -->
+<style>
+  @media (max-width: 640px){
+    .fde-miniflow{grid-template-columns:repeat(2,1fr) !important}
+  }
+</style>
+<!-- ===== FDE-TOP v2 END ===== -->
 
 <!-- SEC6：SERVICE LINE UP - 現行7サービス + FDE 1件のみ追加 -->
 <section class="section section--soft review-changed">
