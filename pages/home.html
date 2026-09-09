@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260909b">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260909c">
 </head>
 <body class="review-mode">
 
@@ -303,39 +303,44 @@
     <p class="prose">FDE（Forward Deployed Engineer）は、現場に入り、業務・データ・システム・設備・運用のズレを整理し、構想を<strong>その現場で動く解</strong>へ変える役割です。</p>
     <p class="fde-lead">会議室で要件をまとめるだけではなく、現場で価値が出るところまで動かす。</p>
 
-    <!-- 4つの役割 -->
-    <ol class="fderole" aria-label="FDE が担う4つの役割">
+    <!-- ===== FDE-ROLE v5：Design/Deploy/Operate/Evolve の4カードを撤去し、
+         FDE 固有の4機能（理解する→作る→翻訳する→残す）を主役に据える。
+         4サイクルは PHASE セクションで PAL 全体の価値サイクルとして説明済みのため、
+         FDE 内では繰り返さない。各カードへ補足例（実務レベル）を追加。
+         救済情報：撤去した .fde-cyclelead と .fde-miniflow のマークアップは
+                   git 履歴 a0ad97e の pages/home.html を参照。CSS は common.css に残置 ===== -->
+    <div class="section__head" style="margin-top:40px;margin-bottom:0">
+      <h3 class="fderole__head"><span class="rnew">今回変更</span>FDEが現場で担う4つの役割</h3>
+      <p class="fderole__lead">現場を理解し、動く解をつくり、翻訳し、知見を残す。<br>この4つが、FDE の仕事の核です。</p>
+    </div>
+    <ol class="fderole" aria-label="FDE が現場で担う4つの役割">
       <li class="fderole__item">
         <span class="fderole__n">01</span>
         <p class="fderole__t">課題の解像度を上げる</p>
-        <p class="fderole__d">現場の業務、データ構造、制約、運用まで踏み込んで理解します。</p>
+        <p class="fderole__d">現場の業務、データ構造、設備、運用ルール、制約まで理解し、「本当に何が止まっているのか」を整理します。</p>
+        <ul class="fderole__ex"><li>ワークフロー分析</li><li>データ構造把握</li><li>制約・課題整理</li></ul>
       </li>
       <li class="fderole__item">
         <span class="fderole__n">02</span>
-        <p class="fderole__t">動く解をつくる</p>
-        <p class="fderole__d">助言で終わらせず、実装・データ連携・運用改善まで形にします。</p>
+        <p class="fderole__t">その場で動く解をつくる</p>
+        <p class="fderole__d">助言や要件整理だけで終わらず、その現場で実際に使える形へ落とし込みます。</p>
+        <ul class="fderole__ex"><li>プロトタイピング</li><li>システム実装</li><li>データ連携</li><li>運用改善</li></ul>
       </li>
       <li class="fderole__item">
         <span class="fderole__n">03</span>
-        <p class="fderole__t">翻訳する</p>
-        <p class="fderole__d">現場の声を、システム要件・設備要件・運用ルールへ翻訳します。</p>
+        <p class="fderole__t">社内外の翻訳者になる</p>
+        <p class="fderole__d">現場の言葉を、データ・システム・設備・運用要件へ翻訳し、関係者の認識をそろえます。</p>
+        <ul class="fderole__ex"><li>要件翻訳</li><li>技術説明</li><li>関係者調整</li><li>合意形成</li></ul>
       </li>
       <li class="fderole__item">
         <span class="fderole__n">04</span>
         <p class="fderole__t">知見を残す</p>
-        <p class="fderole__d">得られた知見を、手順・テンプレート・運用ルールとして残します。</p>
+        <p class="fderole__d">現場で得た知見をその場限りにせず、次の改善や横展開に使える形へ残します。</p>
+        <ul class="fderole__ex"><li>Playbook化</li><li>テンプレート化</li><li>運用ルール化</li><li>ノウハウ共有</li></ul>
       </li>
     </ol>
 
-    <!-- Design → Deploy → Operate → Evolve との接続 -->
-    <p class="fde-cyclelead">この4つの役割を通じて、FDE は 設計 → 実装 → 運用 → 改善 のサイクルを現場で回していきます。</p>
-    <ol class="fde-miniflow" aria-label="FDE が現場で回すサイクル">
-      <li class="fde-miniflow__item">01｜設計<span class="fde-miniflow__en">Design</span></li>
-      <li class="fde-miniflow__item">02｜実装<span class="fde-miniflow__en">Deploy</span></li>
-      <li class="fde-miniflow__item">03｜運用<span class="fde-miniflow__en">Operate</span></li>
-      <li class="fde-miniflow__item">04｜改善<span class="fde-miniflow__en">Evolve</span></li>
-    </ol>
-    <p class="fde-note">FDE がすべてのサービスの上位にあるわけでも、すべてのご支援に必要になるわけでもありません。課題に応じて、必要な機能を選び、組み合わせます。</p>
+    <p class="fde-note"><span class="rnew">今回変更</span>課題に応じて、必要な場面で FDE が現場に入り、実装・調整・定着を支援します。<br>FDE がすべてのサービスの上位にあるわけでも、すべてのご支援に必要になるわけでもありません。</p>
 
     <!-- 締め：最後に何が残るか -->
     <div class="fde-remain">
@@ -344,7 +349,7 @@
     </div>
 
     <p class="section__cta-wrap" style="text-align:left;margin-top:24px"><a href="./fde.html" class="btn btn--red">FDEの役割を詳しく見る</a></p>
-    <details class="rdiff"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】v3</span><p class="rdiff__txt">物流DXは、構想やシステムをつくるだけでは進みません。<br>PAL の FDE（Forward Deployed Engineer）が現場に入り、業務や課題を理解し、データ・システム・設備・運用へ落とし込みます。構想を実装につなげ、現場で使われ、改善が続く状態まで支援します。<br>＋ 設計→実装→運用→改善 のミニフロー ＋ 「運用ルールやデータ・ノウハウはお客さま側に残し…」の1行</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 概要説明に留まり、FDE の必要性と独自性が伝わらないためv4で再構成しました。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】v4</span><p class="rdiff__txt">「なぜ必要か（システムを入れただけでは価値にならない）」→「何をするか（4つの役割＋設計/実装/運用/改善のサイクル）」→「何が残るか（お客さま自身が改善を続けられる状態）」の3点構成へ再編。見出しを「現場で&ldquo;価値が出る状態&rdquo;へ。」に変更。CTA遷移先を FDE 常設ページ（PALを知る配下）へ。</p></div></div></details>
+    <details class="rdiff"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】v3</span><p class="rdiff__txt">物流DXは、構想やシステムをつくるだけでは進みません。<br>PAL の FDE（Forward Deployed Engineer）が現場に入り、業務や課題を理解し、データ・システム・設備・運用へ落とし込みます。構想を実装につなげ、現場で使われ、改善が続く状態まで支援します。<br>＋ 設計→実装→運用→改善 のミニフロー ＋ 「運用ルールやデータ・ノウハウはお客さま側に残し…」の1行</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 概要説明に留まり、FDE の必要性と独自性が伝わらないためv4で再構成しました。</p></div><div class="rdiff__row"><span class="rdiff__lbl">【変更前】v4</span><p class="rdiff__txt">4つの役割カードの下に「設計 → 実装 → 運用 → 改善」のサイクル説明と Design / Deploy / Operate / Evolve の4カードを併置していました。</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 4サイクルは PHASE セクションで PAL 全体の価値サイクルとして説明済みのため、FDE 内での重複を解消しました。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】v5</span><p class="rdiff__txt">「なぜ必要か」→「何をするか」→「何が残るか」の3点構成。Design / Deploy / Operate / Evolve の4カードを撤去し、FDE 固有の4役割（課題の解像度を上げる／その場で動く解をつくる／社内外の翻訳者になる／知見を残す）を見出し「FDEが現場で担う4つの役割」のもとに主役化。各カードへ補足例を追加。下部補足に「必要な場面で FDE が現場に入り、実装・調整・定着を支援します」を追加。</p></div></div></details>
   </div>
 </section>
 <!-- ===== FDE-TOP v4 END ===== -->

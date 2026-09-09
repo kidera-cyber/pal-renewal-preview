@@ -1280,3 +1280,27 @@ body.review-mode .review-inline-check{font-size:12px;line-height:1.6;max-width:6
 .fde-remain .rnew{background:#fff;color:var(--pal-heading);border-color:#fff}
 @media(max-width:560px){.fde-remain{padding:20px 18px}.fde-remain__t{font-size:16px}}
 /* ===== FDE-TOP v4 END ===== */
+
+/* ============================================================
+   ===== FDE-ROLE v5 START =====
+   トップ FDE ブロックの4役割を主役化。見出し・導入・補足例チップを追加。
+   .fde-miniflow / .fde-cyclelead の CSS は復元用に残置（HTML 側は撤去済み）。
+   末尾追記で後勝ち。
+   ============================================================ */
+.fderole__head{
+  margin:0 0 10px;font-size:22px;font-weight:700;line-height:1.5;color:var(--pal-heading);
+}
+.fderole__lead{margin:0;font-size:14.5px;line-height:1.95;color:var(--pal-text)}
+.fderole{margin-top:24px}
+.fderole__ex{
+  list-style:none;margin:14px 0 0;padding:12px 0 0;
+  border-top:1px solid var(--pal-border);
+  display:flex;flex-wrap:wrap;gap:6px;
+}
+.fderole__ex li{
+  padding:5px 10px;border-radius:9999px;
+  background:var(--pal-bg-light);color:var(--pal-sub);
+  font-size:12px;line-height:1.5;
+}
+@media(max-width:560px){.fderole__head{font-size:19px}}
+/* ===== FDE-ROLE v5 END ===== */
