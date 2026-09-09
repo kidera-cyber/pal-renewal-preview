@@ -449,6 +449,8 @@ body{line-height:1.8;color:var(--text)}
    ========================================================= */
 .rdiff,.rnew{display:none}
 body.review-mode .rdiff{display:block}
+/* ===== HIDDEN-ATTR v1：HTML の hidden 属性を全要素で強制優先（rdiff/dxm/prose 等の非表示化を確実に） ===== */
+[hidden]{display:none!important}
 body.review-mode .rnew{display:inline-block}
 
 /* 新規追加ラベル */
