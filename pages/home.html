@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260909d">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260909e">
 </head>
 <body class="review-mode">
 
@@ -129,10 +129,14 @@
   <div class="container container--narrow">
     <div class="section__head">
       <h2 class="section__title">物流のデータが見えないまま、<br>個別の改善を重ねても物流DXは進みません。</h2>
-      <p class="section__lead">多くの企業が物流の課題に対し、新しいシステムや機械を導入してきました。しかし、それだけでは根本的な解決にはなりません。<br>経営、現場、データ、システム、設備、そしてパートナー企業。分断された領域をつなぎ直すことが、これからの物流DXの前提です。</p>
-      <!-- ===== H-02 v2：造語（物流イネーブラー）を撤去し、"何をする会社か"を平易な言葉で示す ===== -->
-      <p class="section__lead"><span class="rnew">今回変更</span>つないで終わりにせず、構想を現場で動く仕組みに変え、運用・改善が続く状態まで支援します。<br>そこで得られたデータやノウハウ、判断基準はお客さま側に残し、お客さま自身が改善を続けられる物流を目指します。</p>
-      <details class="rdiff"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt">そんな状況に対してPALは、戦略から実行まで統合するロジテックインテグレーターとして、分断を解消し、スピーディに物流DXを実現します。</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトでは同セクションの締めにこの一文が置かれています。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">つないで終わりにせず、構想を現場で動く仕組みに変え、運用・改善が続く状態まで支援します。<br>そこで得られたデータやノウハウ、判断基準はお客さま側に残し、お客さま自身が改善を続けられる物流を目指します。</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 当初は「物流イネーブラーという考え方で整理しています」の一文を含めていたが、造語を前面に出さず中身を平易な言葉で伝える方針に変更したため撤去。</p></div></div></details>
+      <p class="section__lead"><span class="rnew">今回変更</span>多くの企業が物流課題に対して、新しいシステムや設備を導入してきました。<br>しかし、経営、現場、データ、システム、設備、そしてパートナー企業が分断されたままでは、改善は部分最適にとどまります。</p>
+      <p class="section__lead">物流DXに必要なのは、一つひとつを入れ替えることではなく、物流全体を一つの流れとして捉え直すことです。</p>
+      <!-- ===== H-02 v3：PALの提供価値（つないで終わりにせず／データ・ノウハウ・判断基準をお客さま側に残す）を
+           本セクションから撤去。本セクションは「なぜ物流DXが進まないのか」という課題提示に専念し、
+           PALの答えは次の APPROACH セクションで示す（役割の重複解消）。
+           救済情報：内容は APPROACH の「できるようにする（Enable）」カードへ移設。
+           復元するには git 履歴 1f20550 の該当段落を戻す ===== -->
+      <details class="rdiff"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt">そんな状況に対してPALは、戦略から実行まで統合するロジテックインテグレーターとして、分断を解消し、スピーディに物流DXを実現します。</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトでは同セクションの締めにこの一文が置かれています。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">多くの企業が物流課題に対して、新しいシステムや設備を導入してきました。しかし、経営、現場、データ、システム、設備、そしてパートナー企業が分断されたままでは、改善は部分最適にとどまります。<br>物流DXに必要なのは、一つひとつを入れ替えることではなく、物流全体を一つの流れとして捉え直すことです。</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 本セクションは課題提示に専念する方針へ変更しました。PALの提供価値（つないで終わりにせず／データ・ノウハウ・判断基準をお客さま側に残す）は、次の APPROACH セクションの「できるようにする（Enable）」カードへ移しています。</p></div></div></details>
       <!-- ===== FDE-REPOSITION v2：FDE の紹介は独立セクション（FDE-TOP v1）と常設ページ pages/fde.html へ移設。
            本セクションでは触れない。復元するには git 履歴 9500fee の該当段落を戻す ===== -->
       <p class="section__cta-wrap" style="text-align:left"><a href="./role.html" class="btn btn--red">PALの役割を見る</a></p>
@@ -147,21 +151,22 @@
     <div class="section__head">
       <span class="section__eyebrow">APPROACH</span>
       <h2 class="section__title">なぜPALなら、物流DXが進むのか？</h2>
-      <!-- ===== H-03 v3：以前の "3本柱を明示する分かりやすさ" を戻しつつ、今回整理した「つなぐ／できるようにする／失敗させない」の3価値へ再構成 ===== -->
-      <p class="section__lead">物流DXを阻む最大の壁は、データのサイロ化に加え、戦略と実行が複数の領域に分断されていることです。<br>PALは、<strong>分断をつなぐ力</strong>、<strong>構想を現場で動く形に落とし込む力</strong>、そして<strong>失敗リスクを抑えながら段階的に進める力</strong>で、こうした壁を越え、物流DXを前へ進めます。</p>
-    <details class="rdiff"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt">物流DXを阻む最大の壁は、データのサイロ化に加え、戦略と実行が複数のベンダーに分断されていることです。PALは、現場とデジタルをつなぐ「データ統合力」、戦略から実行まで担う「一気通貫の実行力」、そしてリスクを最小化する「段階的検証力」で、これらの壁を突破し、確実に物流DXを推進します。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">物流DXを阻む最大の壁は、データのサイロ化に加え、戦略と実行が複数の領域に分断されていることです。<br>PALは、分断をつなぐ力、構想を現場で動く形に落とし込む力、そして失敗リスクを抑えながら段階的に進める力で、こうした壁を越え、物流DXを前へ進めます。</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトの "3本柱を明示する分かりやすさ" を戻しつつ、3本柱の中身を「つなぐ／できるようにする／失敗させない」の3価値へ再構成しました。</p></div></div></details>
+      <!-- ===== H-03 v4：冒頭の課題再説明（データのサイロ化／分断）は前セクションと重複するため撤去し、
+           「PALはどう解決するのか」から書き出す。3カードへの接続を明示 ===== -->
+      <p class="section__lead"><span class="rnew">今回変更</span>PALは、物流DXを<strong>「つなぐ」</strong><strong>「現場で動かす」</strong><strong>「小さく検証する」</strong>という3つの力で前へ進めます。<br>データやシステムを統合するだけでなく、構想を現場で使える形へ落とし込み、成果を確かめながら段階的に改善していきます。</p>
+    <details class="rdiff"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt">物流DXを阻む最大の壁は、データのサイロ化に加え、戦略と実行が複数のベンダーに分断されていることです。PALは、現場とデジタルをつなぐ「データ統合力」、戦略から実行まで担う「一気通貫の実行力」、そしてリスクを最小化する「段階的検証力」で、これらの壁を突破し、確実に物流DXを推進します。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">PALは、物流DXを「つなぐ」「現場で動かす」「小さく検証する」という3つの力で前へ進めます。<br>データやシステムを統合するだけでなく、構想を現場で使える形へ落とし込み、成果を確かめながら段階的に改善していきます。</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 冒頭の課題説明（データのサイロ化・分断）は前セクションと重複するため撤去し、PALの答えから書き出す構成に変更しました。3本柱の中身は「つなぐ（Integrate）／できるようにする（Enable）／失敗させない（De-risk）」として維持しています。</p></div></div></details>
     </div>
     <div class="grid-3">
       <div class="card card--filled">
         <p class="card__eyebrow">つなぐ（Integrate）</p>
         <h3 class="card__title">データ統合力</h3>
-        <p class="card__body">現場のアナログとデジタル、分断されたシステムをつなぎ、物流の全体像を見える化します。</p>
+        <p class="card__body">現場のアナログとデジタル、拠点や機器ごとに散らばったシステムをつなぎ、物流の全体像を見える化します。</p>
         <p class="card__note"><span class="rnew">今回変更</span>現場・システム・設備・データを横断してつなぎます。</p>
       </div>
       <div class="card card--filled">
         <p class="card__eyebrow">できるようにする（Enable）</p>
-        <h3 class="card__title">FDEによる伴走・内製化</h3>
-        <p class="card__body">FDEが現場に入り、運用設計や教育まで伴走。データとノウハウをお客さま側に残し、現場で実行できる状態をつくります。</p>
+        <h3 class="card__title">現場実装・伴走</h3>
+        <p class="card__body"><span class="rnew">今回変更</span>現場に入り、構想を実際に動く仕組みへ落とし込みます。そこで得られたデータやノウハウ、判断基準をお客さま側に残し、改善を続けられる状態をつくります。</p>
         <p class="card__note"><span class="rnew">今回変更</span>構想や設計だけで終わらせず、現場実装から運用への定着までを担います。</p>
       </div>
       <div class="card card--filled">
