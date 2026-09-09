@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260909c">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260909d">
 </head>
 <body class="review-mode">
 
@@ -188,8 +188,8 @@
          復元：本ブロックを v3 の姿へ戻す（v3 マーカーの構造は git 履歴 6491e20 参照）===== -->
     <div class="section__head">
       <span class="section__eyebrow">PHASE / CYCLE</span>
-      <h2 class="section__title"><span class="rnew">今回変更</span>設計・実装・運用・進化。<br>物流DXを前へ進める4サイクル</h2>
-      <p class="section__lead">はじめから大きく作り替えるのではなく、小さく試し、現場を強くし、データをつなぐ。<br>その積み重ねが、AI・ロボティクスなど次の技術を活かせる現場につながります。</p>
+      <h2 class="section__title"><span class="rnew">今回変更</span>物流DXを、現場の進化につなげる4つの段階</h2>
+      <p class="section__lead">小さく試し、現場を強くし、データをつなぎ、次の技術へつなげる。<br>PALは物流DXを、この4つの流れで整理しています。</p>
     </div>
 
     <!-- 4サイクル大表示フロー（セクションを見た瞬間に最初に目に入る主役） -->
@@ -215,51 +215,52 @@
       </li>
       <li class="phase-cycle-flow__loop" aria-label="サイクル継続" title="Evolve から次の Design へ・継続改善">↺</li>
     </ol>
-    <p class="phase-cycle-flow__note">Evolve は次の Design へ戻り、改善が続きます。</p>
+    <!-- ===== PHASE v5：フロー下の補足「Evolve は次の Design へ戻り、改善が続きます。」を削除。
+         ループ記号 ↺ で同じ意味を表現しており重複のため。復元は git 履歴 40a97c6 参照 ===== -->
 
+    <!-- ===== PHASE v5：カード内を簡素化（一目で分かる図解へ）。
+         削減：長文の本文説明／「代表的な取り組み」の見出しと箇条書き（最大4項目）／到達イメージの長文
+         変更後：1行説明 ＋ 取り組みチップ3つ ＋ 到達1行
+         訴求点（4サイクル英日／PHASE 1〜4／小さく試す→現場を強くする→可視化→次の技術）は維持。
+         復元するには git 履歴 40a97c6 の pages/home.html 該当 ol を戻す ===== -->
     <ol class="phase-grid">
       <li class="phase-card">
         <span class="phase-card__cycle"><b>Design</b><span class="phase-card__cycle-ja">設計</span></span>
         <span class="phase-card__n">PHASE 1｜試す</span>
-        <p class="phase-card__aim">現場全体を捉え、課題・データ・設備・業務を整理し、何を変えるべきかを設計します。</p>
-        <p class="phase-card__lbl">代表的な取り組み</p>
-        <ul class="phase-card__list"><li>PoV（価値検証）</li><li>現状把握・データ収集</li><li>既存設備の活用</li><li>小規模導入</li></ul>
-        <p class="phase-card__goal"><span class="phase-card__goal-lbl">到達イメージ</span>改善や自動化を検討するための判断材料が、データとして手元にある。</p>
+        <p class="phase-card__aim">現場を理解し、小さく始める。</p>
+        <ul class="phase-card__chips"><li>PoV</li><li>現状把握</li><li>既存設備活用</li></ul>
+        <p class="phase-card__goal"><span class="phase-card__goal-lbl">到達</span>判断材料となるデータがそろう</p>
       </li>
       <li class="phase-card">
         <span class="phase-card__cycle"><b>Deploy</b><span class="phase-card__cycle-ja">実装・導入</span></span>
         <span class="phase-card__n">PHASE 2｜強くなる</span>
-        <p class="phase-card__aim">システム・設備・業務を組み合わせ、現場で使える形へ実装します。</p>
-        <p class="phase-card__lbl">代表的な取り組み</p>
-        <ul class="phase-card__list"><li>業務標準化</li><li>運用設計</li><li>システム連携・設備連携</li><li>FDE による現場実装</li></ul>
-        <p class="phase-card__goal"><span class="phase-card__goal-lbl">到達イメージ</span>現場の運用が安定し、実績が正しくデータとして残る。</p>
+        <p class="phase-card__aim">業務・設備・システムをつなぐ。</p>
+        <ul class="phase-card__chips"><li>業務標準化</li><li>運用設計</li><li>現場実装</li></ul>
+        <p class="phase-card__goal"><span class="phase-card__goal-lbl">到達</span>現場で安定して回り始める</p>
       </li>
       <li class="phase-card">
         <span class="phase-card__cycle"><b>Operate</b><span class="phase-card__cycle-ja">運用</span></span>
         <span class="phase-card__n">PHASE 3｜全て見える</span>
-        <p class="phase-card__aim">現場で安定して運用し、データを継続的に蓄積・可視化します。</p>
-        <p class="phase-card__lbl">代表的な取り組み</p>
-        <ul class="phase-card__list"><li>データ統合／Core First</li><li>ダッシュボード</li><li>リアルタイム可視化</li><li>拠点横断分析</li></ul>
-        <p class="phase-card__goal"><span class="phase-card__goal-lbl">到達イメージ</span>「データがある」から「物流全体を見て判断できる」状態へ。</p>
+        <p class="phase-card__aim">運用を回し、データを見える化する。</p>
+        <ul class="phase-card__chips"><li>データ統合</li><li>ダッシュボード</li><li>可視化</li></ul>
+        <p class="phase-card__goal"><span class="phase-card__goal-lbl">到達</span>全体を見て判断できる</p>
       </li>
       <li class="phase-card phase-card--last">
         <span class="phase-card__cycle"><b>Evolve</b><span class="phase-card__cycle-ja">進化</span></span>
         <span class="phase-card__n">PHASE 4｜未来に対応する</span>
-        <p class="phase-card__aim">データや知見をもとに改善を続け、AI・ロボティクスなど新しい技術も活用できる現場へ進化します。</p>
-        <p class="phase-card__lbl">代表的な取り組み</p>
-        <ul class="phase-card__list"><li>AI・予測・最適化の活用</li><li>ロボティクス</li><li>新しい自動化技術への対応</li><li>継続改善</li></ul>
-        <p class="phase-card__goal"><span class="phase-card__goal-lbl">到達イメージ</span>データと現場の仕組みが整うことで、AI・ロボティクスなど、これから登場する技術を現場で活かせる状態へ。</p>
+        <p class="phase-card__aim">改善を続け、次の技術へ備える。</p>
+        <ul class="phase-card__chips"><li>AI活用</li><li>ロボティクス</li><li>新技術対応</li></ul>
+        <p class="phase-card__goal"><span class="phase-card__goal-lbl">到達</span>変化に強い現場になる</p>
       </li>
     </ol>
 
-    <!-- Evolve の到達点として Physical AI さわりを配置（Evolve↺Design サイクルの未来接続） -->
     <p class="phase-future"><span class="phase-future__eyebrow">Evolve のその先へ</span><span class="rnew">今回変更</span>その先には、AIが判断し、人とロボットが協調する<b>Physical AI</b>の時代があります。</p>
     <!-- ===== PHASE v4 END ===== -->
 
     <!-- ===== PHASE-NOTE v3：表示へ復帰。本セクションで閲覧者向けに残すのはこの説明のみ ===== -->
     <div class="phase-note">
       <p class="phase-note__t">どの段階からでも始められます</p>
-      <p class="phase-note__b">PHASE 1 を終えなければ次に進めない、というものではありません。データの可視化から始める企業も、現場改善から始める企業も、設備導入から始める企業もあります。現在地は企業によって異なります。<br>一方で、各段階はつながっています。試す → 現場が強くなる → 正しいデータが増える → 全体が見える → より高度な活用ができる、という関係です。</p>
+      <p class="phase-note__b"><span class="rnew">今回変更</span>どの企業も、PHASE 1 から順番に始める必要はありません。現状に応じて始める場所は異なりますが、各段階はつながっています。<br class="phase-note__br">試す → 強くなる → 全て見える → 未来に対応する、という流れで進化します。</p>
     </div>
 
     <!-- ===== DXM v3：HTML から実削除（旧 v2 は hidden 属性のみで、CSS キャッシュ差異により

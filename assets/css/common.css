@@ -1304,3 +1304,38 @@ body.review-mode .review-inline-check{font-size:12px;line-height:1.6;max-width:6
 }
 @media(max-width:560px){.fderole__head{font-size:19px}}
 /* ===== FDE-ROLE v5 END ===== */
+
+/* ============================================================
+   ===== PHASE v5 START =====
+   PHASE カードの簡素化。長文本文と箇条書きをチップ＋1行へ置換。
+   .phase-card__lbl / .phase-card__list の旧ルールは復元用に残置（HTML 側は撤去済み）。
+   末尾追記で後勝ち。
+   ============================================================ */
+.phase-card{padding:24px 20px 20px}
+.phase-card__aim{
+  margin:12px 0 16px;font-size:14px;line-height:1.8;font-weight:700;color:var(--pal-heading);
+}
+.phase-card__chips{
+  list-style:none;margin:0 0 18px;padding:0;
+  display:flex;flex-wrap:wrap;gap:6px;
+}
+.phase-card__chips li{
+  padding:5px 10px;border-radius:9999px;
+  background:var(--pal-bg-light);border:1px solid var(--pal-border);
+  color:var(--pal-sub);font-size:12px;line-height:1.5;
+}
+.phase-card__goal{
+  margin:auto 0 0;padding:12px 14px;border-radius:6px;
+  background:var(--pal-heading);
+  font-size:13px;line-height:1.7;font-weight:700;color:#fff;
+}
+.phase-card__goal-lbl{
+  display:block;margin-bottom:4px;
+  font-family:Lato,'Noto Sans JP',sans-serif;
+  font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--pal-blue-pale);
+}
+/* 「どの段階からでも始められます」注記の圧縮 */
+.phase-note{margin-top:24px;padding:20px 22px}
+.phase-note__t{font-size:15px}
+.phase-note__b{font-size:13.5px;line-height:1.9}
+/* ===== PHASE v5 END ===== */
