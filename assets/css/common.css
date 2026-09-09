@@ -912,6 +912,7 @@ body.review-mode #previewBanner{display:block}
    ===== PHASE v3 / FDE-TOP v3 CSS START =====
    Design/Deploy/Operate/Evolve 補助ラベル・Physical AIさわり文・
    PHASE→FDE 橋渡し文・FDE英日併記 のスタイル追加（日本語主・英語補助の原則）
+   ※ v4 で .phase-card__cycle は大表示化・下記ルールを一部後勝ちで上書き
    ============================================================ */
 .phase-card__cycle{
   display:inline-block;margin-top:6px;padding:2px 8px;border-radius:4px;
@@ -919,6 +920,66 @@ body.review-mode #previewBanner{display:block}
   font-family:'Noto Sans JP',sans-serif;font-weight:400;
 }
 .phase-card__cycle b{font-family:Lato,'Noto Sans JP',sans-serif;font-weight:700;color:var(--pal-blue);margin-right:4px;letter-spacing:.06em}
+/* ===== PHASE v4 CSS：4サイクルを主役へ格上げ（上部大フロー＋カード内 cycle 大表示化） ===== */
+.phase-cycle-flow{
+  list-style:none;margin:8px 0 8px;padding:22px 24px;display:flex;align-items:center;
+  justify-content:center;flex-wrap:wrap;gap:12px 14px;background:linear-gradient(180deg,#fff, var(--pal-bg-light));
+  border:1px solid #E5E9EF;border-radius:12px;box-shadow:0 2px 8px rgba(0,51,102,.04);
+}
+.phase-cycle-flow__step{
+  display:inline-flex;flex-direction:column;align-items:center;min-width:118px;padding:6px 10px;
+  border-bottom:3px solid var(--pal-blue);
+}
+.phase-cycle-flow__en{
+  font-family:Lato,'Noto Sans JP',sans-serif;font-weight:700;font-size:28px;color:var(--pal-blue);
+  letter-spacing:.05em;line-height:1.05;
+}
+.phase-cycle-flow__ja{
+  margin-top:4px;font-size:12.5px;font-weight:700;color:var(--pal-heading);letter-spacing:.04em;
+}
+.phase-cycle-flow__arrow{
+  font-family:Lato,sans-serif;font-size:22px;color:var(--pal-blue);opacity:.55;font-weight:400;
+}
+.phase-cycle-flow__loop{
+  display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;
+  margin-left:6px;border-radius:50%;background:var(--pal-accent);color:#fff;font-size:22px;line-height:1;
+  box-shadow:0 2px 6px rgba(200,16,46,.28);
+}
+.phase-cycle-flow__note{
+  margin:6px 0 22px;text-align:center;font-size:11.5px;color:var(--pal-muted);letter-spacing:.02em;
+}
+@media(max-width:720px){
+  .phase-cycle-flow{padding:18px 12px;gap:8px 6px}
+  .phase-cycle-flow__step{min-width:88px;padding:4px 6px}
+  .phase-cycle-flow__en{font-size:22px}
+  .phase-cycle-flow__arrow{font-size:18px}
+  .phase-cycle-flow__loop{width:32px;height:32px;font-size:18px}
+}
+/* v4：カード内 .phase-card__cycle を最上位大表示（v3 の小タグ表示を後勝ち上書き） */
+.phase-card .phase-card__cycle{
+  display:block;margin:0 0 8px;padding:8px 10px;background:transparent;
+  border:none;border-bottom:2px solid var(--pal-blue);border-radius:0;
+  font-size:12px;color:var(--pal-heading);text-align:left;
+}
+.phase-card .phase-card__cycle b{
+  display:block;font-family:Lato,'Noto Sans JP',sans-serif;font-weight:700;font-size:22px;
+  color:var(--pal-blue);letter-spacing:.05em;line-height:1.15;margin:0 0 2px;
+}
+.phase-card__cycle-ja{
+  display:block;font-size:12px;font-weight:700;color:var(--pal-heading);letter-spacing:.04em;
+}
+/* v4：PHASE番号バッジは副次化（.phase-card__n を小さく・落ち着いた表示に） */
+.phase-card .phase-card__n{
+  order:2;margin:6px 0 12px;padding:3px 8px;font-size:11px;font-weight:700;letter-spacing:.06em;
+  color:var(--pal-muted);border:1px solid var(--pal-muted);opacity:.85;background:transparent;
+}
+/* Physical AI さわり文の見出し補助 */
+.phase-future__eyebrow{
+  display:inline-block;margin-right:8px;padding:2px 8px;border-radius:10px;
+  background:var(--pal-blue);color:#fff;font-size:10.5px;font-weight:700;letter-spacing:.05em;
+  vertical-align:middle;
+}
+/* ===== PHASE v4 CSS END ===== */
 .phase-future{
   margin:22px auto 0;padding:14px 20px;max-width:900px;text-align:center;
   background:linear-gradient(90deg, rgba(0,51,102,.04), rgba(200,16,46,.04));
