@@ -1339,3 +1339,129 @@ body.review-mode .review-inline-check{font-size:12px;line-height:1.6;max-width:6
 .phase-note__t{font-size:15px}
 .phase-note__b{font-size:13.5px;line-height:1.9}
 /* ===== PHASE v5 END ===== */
+
+/* ============================================================
+   ===== REVIEW MOVED LABEL v1 START =====
+   §20：トップから下層へ「移動」した箇所を判別するための第3のマーカー。
+   review-mode 限定表示は既存 .review-label / .rnew の仕組みをそのまま継承。
+   ============================================================ */
+body.review-mode .review-label--moved{background:#464A6F;color:#fff}
+.review-legend__item--moved{background:#464A6F;color:#fff}
+.rnew--moved{background:#464A6F;color:#fff;border-color:#464A6F}
+/* ===== REVIEW MOVED LABEL v1 END ===== */
+
+/* ============================================================
+   ===== CYCLE-MINI v1 START =====
+   トップ APPROACH 直下の 4サイクル横1列フロー（§11）。
+   詳細4カードは PALの強み（reason.html #cycle）へ移動済み。
+   ============================================================ */
+.cyclemini{
+  position:relative;margin:36px 0 8px;padding:26px 28px;
+  border:1px solid var(--pal-border);border-radius:8px;background:var(--pal-bg);
+}
+.cyclemini__flow{
+  list-style:none;margin:0 0 18px;padding:0;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 14px;
+}
+.cyclemini__step{
+  display:flex;flex-direction:column;align-items:center;gap:2px;
+  padding:10px 18px;border-radius:8px;background:var(--pal-bg-light);
+  border:1px solid var(--pal-border);min-width:118px;
+}
+.cyclemini__step b{
+  font-family:Lato,'Noto Sans JP',sans-serif;
+  font-size:17px;font-weight:700;letter-spacing:.02em;color:var(--pal-heading);
+}
+.cyclemini__step span{font-size:12px;color:var(--pal-muted)}
+.cyclemini__arrow{color:var(--pal-blue);font-size:15px;line-height:1}
+.cyclemini__lead{margin:0;font-size:14.5px;line-height:1.9;color:var(--pal-text);text-align:center}
+.cyclemini__future{
+  margin:14px 0 0;padding-top:14px;border-top:1px solid var(--pal-border);
+  font-size:13.5px;line-height:1.9;color:var(--pal-sub);text-align:center;
+}
+.cyclemini__future b{color:var(--pal-accent);font-weight:700}
+.cyclemini__link{margin:14px 0 0;text-align:center;font-size:13.5px}
+.cyclemini__link a{color:var(--pal-accent);font-weight:700;text-decoration:underline}
+.card__link{color:var(--pal-accent);font-weight:700;text-decoration:underline}
+@media(max-width:640px){
+  .cyclemini{padding:20px 16px}
+  .cyclemini__arrow{display:none}
+  .cyclemini__flow{gap:8px}
+  .cyclemini__step{min-width:0;flex:1 1 44%;padding:10px 8px}
+}
+/* ===== CYCLE-MINI v1 END ===== */
+
+/* ============================================================
+   ===== CYCLE v1 START =====
+   PALの強み：Design→Deploy→Operate→Evolve の循環表示（§13）。
+   ============================================================ */
+.cycle4{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:18px;
+}
+.cycle4__item{
+  position:relative;display:flex;flex-direction:column;
+  padding:24px 20px 20px;border-radius:8px;
+  background:var(--pal-bg);border:1px solid var(--pal-border);
+}
+.cycle4__item::after{
+  content:"";position:absolute;top:50%;right:-13px;width:10px;height:10px;
+  border-top:2px solid var(--pal-blue);border-right:2px solid var(--pal-blue);
+  transform:translateY(-50%) rotate(45deg);
+}
+.cycle4__item--last::after{display:none}
+.cycle4__cy{display:block;padding-bottom:12px;border-bottom:1px solid var(--pal-border)}
+.cycle4__cy b{
+  display:block;font-family:Lato,'Noto Sans JP',sans-serif;
+  font-size:20px;font-weight:700;color:var(--pal-heading);
+}
+.cycle4__ja{display:block;margin-top:2px;font-size:12px;color:var(--pal-muted)}
+.cycle4__ph{
+  display:inline-flex;align-self:flex-start;margin:14px 0 10px;
+  padding:5px 10px;border-radius:9999px;
+  border:1px solid var(--pal-accent);color:var(--pal-accent);
+  font-size:12px;font-weight:700;letter-spacing:.02em;
+}
+.cycle4__aim{margin:0 0 14px;font-size:13.5px;line-height:1.85;color:var(--pal-text)}
+.cycle4__chips{list-style:none;margin:0 0 16px;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.cycle4__chips li{
+  padding:5px 10px;border-radius:9999px;
+  background:var(--pal-bg-light);border:1px solid var(--pal-border);
+  color:var(--pal-sub);font-size:12px;line-height:1.5;
+}
+.cycle4__goal{
+  margin:auto 0 0;padding:12px 14px;border-radius:6px;
+  background:var(--pal-heading);font-size:13px;line-height:1.7;font-weight:700;color:#fff;
+}
+.cycle4__goal-lbl{
+  display:block;margin-bottom:4px;font-family:Lato,'Noto Sans JP',sans-serif;
+  font-size:12px;font-weight:700;letter-spacing:.1em;color:var(--pal-blue-pale);
+}
+.cycle4__loop{
+  margin:20px 0 0;padding:16px 20px;border-radius:8px;
+  background:var(--pal-bg-light);border:1px dashed var(--pal-border-strong);
+  font-size:13.5px;line-height:1.9;color:var(--pal-text);
+}
+.cycle4__loop-mark{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:26px;height:26px;margin-right:10px;border-radius:9999px;
+  background:var(--pal-accent);color:#fff;font-size:14px;vertical-align:-6px;
+}
+.cycle4__future{
+  margin:24px 0 0;padding:20px 22px;border-radius:8px;
+  background:var(--pal-heading);font-size:13.5px;line-height:1.95;color:var(--pal-blue-pale);
+}
+.cycle4__future b{color:#fff;font-weight:700}
+.cycle4__future-eyebrow{
+  display:block;margin-bottom:8px;font-family:Lato,'Noto Sans JP',sans-serif;
+  font-size:12px;font-weight:700;letter-spacing:.1em;color:#fff;
+}
+@media(max-width:1000px){
+  .cycle4{grid-template-columns:repeat(2,1fr)}
+  .cycle4__item:nth-child(2)::after{display:none}
+}
+@media(max-width:600px){
+  .cycle4{grid-template-columns:1fr}
+  .cycle4__item::after{display:none}
+}
+/* ===== CYCLE v1 END ===== */

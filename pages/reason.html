@@ -8,7 +8,7 @@
 <meta name="description" content="現場の「運用力」とデジタルの「技術力」。その両輪で確実に成果を生み出す、株式会社PALの強みをご紹介します。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260909f">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260909g">
 <style>
   .strength-list{display:grid;grid-template-columns:1fr;gap:20px}
   .strength-item{background:#fff;border:1px solid var(--border);border-radius:14px;padding:28px 32px;box-shadow:var(--shadow-sm);position:relative}
@@ -27,6 +27,7 @@
 <div class="review-legend" role="note" aria-label="レビュー用マーキングの凡例">
   <span class="review-legend__item review-legend__item--changed">今回変更</span>
   <span class="review-legend__item review-legend__item--added">新規追加</span>
+  <span class="review-legend__item review-legend__item--moved">移動</span>
   <span class="review-legend__item review-legend__item--check">要確認</span>
   <span class="review-legend__note">※ 本番化は body から <code>review-mode</code> を外すだけ</span>
 </div>
@@ -140,7 +141,7 @@
     <p class="prose">現場でこれらを組み合わせ、実装と定着まで進める役割を、FDE（Forward Deployed Engineer）が担います。FDE は 9 つ目の強みではなく、既存の強みを現場で実行するための一つの手段です。</p>
     <!-- ===== S-02 v1：§25 に基づき「段階的な導入」の説明を1文だけ追加。8つの強み本文は無変更 ===== -->
     <p class="prose"><span class="rnew">新規追加</span>これらの強みは、一度にすべてを使うものではありません。小さく試し、現場を強くし、データをつなぎ、次の技術に備える。PALは物流DXを4つの段階に分けて進めます。</p>
-    <p style="margin-top:20px;display:flex;flex-wrap:wrap;gap:12px"><a href="./fde.html" class="btn btn--ghost">FDEについて知る</a><a href="./home.html#phase" class="btn btn--ghost">4つの段階を見る</a></p>
+    <p style="margin-top:20px;display:flex;flex-wrap:wrap;gap:12px"><a href="./fde.html" class="btn btn--ghost">FDEについて知る</a><a href="#cycle" class="btn btn--ghost">4つのサイクルを見る</a></p>
     <details class="rdiff"><summary>追加した文章と導線を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトでは 08 の後に補足文はありません。8つの強みの本文・番号・並び順は変更していません。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">これら 8 つの強みは、PALが作業を引き受け続けるためのものではありません。／ 現場を理解し、データをつなぎ、実行まで担う過程で、判断に使えるデータ、判断の基準、運用のルール、業務のノウハウがお客さま側に残ります。PALの関与が薄くなっても、お客さま自身で改善を続けられる。その状態をつくるために、これらの強みを使います。／ 現場でこれらを組み合わせ、実装と定着まで進める役割は、FDE が担います。＋「FDEを知る」導線</p></div></div></details>
     <!-- ===== S-01 END ===== -->
   </div>
@@ -150,6 +151,64 @@
      救済情報：「FDE は 9 つ目の新しい強みではない」という位置づけは、
      補足段落の「現場でこれらを組み合わせ、実装と定着まで進める役割は、FDE が担います」で表現している。
      復元するには git 履歴 cd01610 時点の当該 section を戻す ===== -->
+
+<!-- ===== CYCLE v1 START：トップの PHASE 詳細4カード（§12）を本ページへ移動。
+     8つの強みが個別能力の羅列ではなく、Design→Deploy→Operate→Evolve という
+     改善を繰り返すサイクルとして機能することを示す。
+     PHASE 1〜4（試す／強くなる／全て見える／未来に対応する）は各サイクルに併記。
+     移動元のマークアップは git 履歴 92b0959 の pages/home.html の PHASE セクションを参照 ===== -->
+<section class="section section--soft review-changed" id="cycle">
+  <span class="review-label review-label--moved">移動</span>
+  <div class="container">
+    <div class="section__head">
+      <span class="section__eyebrow">CYCLE</span>
+      <h2 class="section__title"><span class="rnew rnew--moved">移動</span>強みは、一つのサイクルとして機能します</h2>
+      <p class="section__lead">8つの強みは、個別に使われるものではありません。<br>設計 → 実装 → 運用 → 進化。この流れを回し続けることで、現場は少しずつ強くなっていきます。</p>
+    </div>
+
+    <ol class="cycle4">
+      <li class="cycle4__item">
+        <span class="cycle4__cy"><b>Design</b><span class="cycle4__ja">設計</span></span>
+        <span class="cycle4__ph">PHASE 1｜試す</span>
+        <p class="cycle4__aim">現場全体を捉え、課題・業務・データ・設備を整理する。</p>
+        <ul class="cycle4__chips"><li>PoV</li><li>現状把握</li><li>既存設備活用</li></ul>
+        <p class="cycle4__goal"><span class="cycle4__goal-lbl">到達</span>判断材料となるデータがそろう</p>
+      </li>
+      <li class="cycle4__item">
+        <span class="cycle4__cy"><b>Deploy</b><span class="cycle4__ja">実装・導入</span></span>
+        <span class="cycle4__ph">PHASE 2｜強くなる</span>
+        <p class="cycle4__aim">必要なシステム・設備・運用を組み合わせ、現場で使える状態へ実装する。</p>
+        <ul class="cycle4__chips"><li>業務標準化</li><li>運用設計</li><li>現場実装</li></ul>
+        <p class="cycle4__goal"><span class="cycle4__goal-lbl">到達</span>現場で安定して回り始める</p>
+      </li>
+      <li class="cycle4__item">
+        <span class="cycle4__cy"><b>Operate</b><span class="cycle4__ja">運用</span></span>
+        <span class="cycle4__ph">PHASE 3｜全て見える</span>
+        <p class="cycle4__aim">実際の現場で安定して運用し、データを継続的に蓄積・可視化する。</p>
+        <ul class="cycle4__chips"><li>データ統合</li><li>ダッシュボード</li><li>可視化</li></ul>
+        <p class="cycle4__goal"><span class="cycle4__goal-lbl">到達</span>全体を見て判断できる</p>
+      </li>
+      <li class="cycle4__item cycle4__item--last">
+        <span class="cycle4__cy"><b>Evolve</b><span class="cycle4__ja">進化</span></span>
+        <span class="cycle4__ph">PHASE 4｜未来に対応する</span>
+        <p class="cycle4__aim">データや知見をもとに改善し、次の技術を活かせる現場へ進化させる。</p>
+        <ul class="cycle4__chips"><li>AI活用</li><li>ロボティクス</li><li>新技術対応</li></ul>
+        <p class="cycle4__goal"><span class="cycle4__goal-lbl">到達</span>変化に強い現場になる</p>
+      </li>
+    </ol>
+
+    <p class="cycle4__loop"><span class="cycle4__loop-mark" aria-hidden="true">↺</span>Evolve で得られたデータと知見は、次の Design へ戻ります。一度きりの導入ではなく、改善を繰り返すサイクルです。</p>
+
+    <div class="phase-note">
+      <p class="phase-note__t">どの段階からでも始められます</p>
+      <p class="phase-note__b">どの企業も、PHASE 1 から順番に始める必要はありません。現状に応じて始める場所は異なりますが、各段階はつながっています。<br>試す → 強くなる → 全て見える → 未来に対応する、という流れで進化します。</p>
+    </div>
+
+    <p class="cycle4__future"><span class="cycle4__future-eyebrow">Evolve のその先へ</span>データが蓄積され、現場の仕組みが整うことで、AI・ロボティクスなど新しい技術も現場で活かせるようになります。その先にあるのが、AIが判断し、人とロボットが協調する<b>Physical AI</b>の時代です。PALが目指しているのは、その時代が来たときに、お客さまの現場がすでに受け入れられる状態になっていることです。</p>
+
+    <details class="rdiff"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（トップページからの移動）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 直前のレビュー版ではトップページに「物流DXを、現場の進化につなげる4つの段階」として4カードを掲載していました。トップが説明過多になるため本ページへ移しています。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">CYCLE「強みは、一つのサイクルとして機能します」（Design／Deploy／Operate／Evolve の4サイクル＋PHASE 1〜4 併記＋Evolve→Design の循環＋どの段階からでも始められる注記＋Physical AI への接続）。トップには4語の横フローと1文のみを残しています。</p></div></div></details>
+  </div>
+</section>
 
 <!-- 現行：CASE STUDY -->
 <section class="section">

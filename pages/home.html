@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260909f">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260909g">
 </head>
 <body class="review-mode">
 
@@ -18,6 +18,7 @@
 <div class="review-legend" role="note" aria-label="レビュー用マーキングの凡例">
   <span class="review-legend__item review-legend__item--changed">今回変更</span>
   <span class="review-legend__item review-legend__item--added">新規追加</span>
+  <span class="review-legend__item review-legend__item--moved">移動</span>
   <span class="review-legend__item review-legend__item--check">要確認</span>
   <span class="review-legend__note">※ 本番化は body から <code>review-mode</code> を外すだけ</span>
 </div>
@@ -160,205 +161,53 @@
       <div class="card card--filled">
         <p class="card__eyebrow">つなぐ（Integrate）</p>
         <h3 class="card__title">データ統合力</h3>
-        <p class="card__body">現場のアナログとデジタル、拠点や機器ごとに散らばったシステムをつなぎ、物流の全体像を見える化します。</p>
-        <p class="card__note"><span class="rnew">今回変更</span>現場・システム・設備・データを横断してつなぎます。</p>
+        <p class="card__body">現場・データ・システム・設備をつなぎ、物流全体を見える状態へ。</p>
       </div>
       <div class="card card--filled">
         <p class="card__eyebrow">できるようにする（Enable）</p>
-        <h3 class="card__title">現場実装・伴走</h3>
-        <p class="card__body"><span class="rnew">今回変更</span>現場に入り、戦略や課題を実際に動く仕組みへ落とし込みます。そこで得られたデータやノウハウ、判断基準をお客さま側に残し、改善を続けられる状態をつくります。</p>
-        <p class="card__note"><span class="rnew">今回変更</span>戦略や設計だけで終わらせず、現場実装から運用への定着までを担います。</p>
+        <h3 class="card__title">現場実装力</h3>
+        <p class="card__body">現場を理解し、業務・データ・システムを実際に使える仕組みへ。</p>
+        <p class="card__note"><span class="rnew">今回変更</span>必要に応じて FDE が現場に入り、課題整理・実装・運用定着まで支援します。<br><a href="./role.html#fde" class="card__link">FDEの役割を見る</a></p>
       </div>
       <div class="card card--filled">
         <p class="card__eyebrow">失敗させない（De-risk）</p>
         <h3 class="card__title">段階的検証力</h3>
-        <p class="card__body">PoV（価値検証）やスモールスタートで投資リスクを抑え、成果を確かめながら次の段階へ広げます。</p>
-        <p class="card__note"><span class="rnew">今回変更</span>初期費用ゼロで始められる「Core Zero」も組み合わせ、失敗リスクを最小化します。</p>
+        <p class="card__body">PoV やスモールスタートで小さく試し、成果を確かめながら次へ進む。</p>
       </div>
     </div>
+    <!-- ===== CYCLE-MINI v1 START：§11 4サイクルは横1列フロー＋1文のみ。
+         詳細4カードは「PALの強み」（reason.html#cycle）へ移動。
+         救済情報：詳細のマークアップは git 履歴 92b0959 の PHASE セクションを参照 ===== -->
+    <div class="cyclemini">
+      <span class="review-label review-label--moved">移動</span>
+      <ol class="cyclemini__flow" aria-label="PAL の価値サイクル">
+        <li class="cyclemini__step"><b>Design</b><span>設計</span></li>
+        <li class="cyclemini__arrow" aria-hidden="true">→</li>
+        <li class="cyclemini__step"><b>Deploy</b><span>実装</span></li>
+        <li class="cyclemini__arrow" aria-hidden="true">→</li>
+        <li class="cyclemini__step"><b>Operate</b><span>運用</span></li>
+        <li class="cyclemini__arrow" aria-hidden="true">→</li>
+        <li class="cyclemini__step"><b>Evolve</b><span>進化</span></li>
+      </ol>
+      <p class="cyclemini__lead"><span class="rnew rnew--moved">移動</span>PALは、設計・実装・運用・改善を一つの流れとして捉え、現場で価値が続く状態へつなげます。</p>
+      <p class="cyclemini__future">その先には、AIが判断し、人とロボットが協調する<b>Physical AI</b>の時代があります。</p>
+      <p class="cyclemini__link"><a href="./reason.html#cycle">4つのサイクルを詳しく見る</a></p>
+    </div>
+    <!-- ===== CYCLE-MINI v1 END ===== -->
     <p class="section__cta-wrap"><a href="./reason.html" class="btn btn--ghost">PALの強みを見る</a></p>
   </div>
 </section>
 
-<!-- ===== PHASE v1 START：現行の強み「段階的検証力」を、進め方として具体化した4段階。
-     新しい企業コンセプトではなく、APPROACH の直後に置いて③段階的検証力の説明を担う。
-     Physical AI は主役化せず、PHASE4 は「新しい技術に対応しやすくなる状態」として記述。
-     復元（削除）するには本ブロックを PHASE v1 START〜END ごと外す ===== -->
-<section class="section section--soft review-added" id="phase">
-  <span class="review-label review-label--added">新規追加</span>
-  <div class="container">
-    <!-- ===== PHASE v4 START：4サイクル(Design/Deploy/Operate/Evolve)をセクション主役に格上げ
-         v3 → v4：上部サイクルフロー大表示新設・カード内 phase-card__cycle を最上位に順序入替・
-                  PHASE番号バッジは副次化・見出しに4サイクル英字を強調
-         復元：本ブロックを v3 の姿へ戻す（v3 マーカーの構造は git 履歴 6491e20 参照）===== -->
-    <div class="section__head">
-      <span class="section__eyebrow">PHASE / CYCLE</span>
-      <h2 class="section__title"><span class="rnew">今回変更</span>物流DXを、現場の進化につなげる4つの段階</h2>
-      <p class="section__lead">小さく試し、現場を強くし、データをつなぎ、次の技術へつなげる。<br>PALは物流DXを、この4つの流れで整理しています。</p>
-    </div>
+<!-- ===== PHASE v6：トップから撤去（§10・§12）。
+     移動先：PALの強み（pages/reason.html #cycle）— Design→Deploy→Operate→Evolve の循環構造として再構成。
+     トップに残したもの：APPROACH 3カード直下の 4語横フロー＋1文＋Physical AI 1文（CYCLE-MINI v1）。
+     復元するには git 履歴 92b0959 の pages/home.html の PHASE セクションを戻す ===== -->
 
-    <!-- 4サイクル大表示フロー（セクションを見た瞬間に最初に目に入る主役） -->
-    <ol class="phase-cycle-flow" aria-label="PAL の 4サイクル">
-      <li class="phase-cycle-flow__step">
-        <span class="phase-cycle-flow__en">Design</span>
-        <span class="phase-cycle-flow__ja">設計</span>
-      </li>
-      <li class="phase-cycle-flow__arrow" aria-hidden="true">→</li>
-      <li class="phase-cycle-flow__step">
-        <span class="phase-cycle-flow__en">Deploy</span>
-        <span class="phase-cycle-flow__ja">実装・導入</span>
-      </li>
-      <li class="phase-cycle-flow__arrow" aria-hidden="true">→</li>
-      <li class="phase-cycle-flow__step">
-        <span class="phase-cycle-flow__en">Operate</span>
-        <span class="phase-cycle-flow__ja">運用</span>
-      </li>
-      <li class="phase-cycle-flow__arrow" aria-hidden="true">→</li>
-      <li class="phase-cycle-flow__step">
-        <span class="phase-cycle-flow__en">Evolve</span>
-        <span class="phase-cycle-flow__ja">進化</span>
-      </li>
-      <li class="phase-cycle-flow__loop" aria-label="サイクル継続" title="Evolve から次の Design へ・継続改善">↺</li>
-    </ol>
-    <!-- ===== PHASE v5：フロー下の補足「Evolve は次の Design へ戻り、改善が続きます。」を削除。
-         ループ記号 ↺ で同じ意味を表現しており重複のため。復元は git 履歴 40a97c6 参照 ===== -->
-
-    <!-- ===== PHASE v5：カード内を簡素化（一目で分かる図解へ）。
-         削減：長文の本文説明／「代表的な取り組み」の見出しと箇条書き（最大4項目）／到達イメージの長文
-         変更後：1行説明 ＋ 取り組みチップ3つ ＋ 到達1行
-         訴求点（4サイクル英日／PHASE 1〜4／小さく試す→現場を強くする→可視化→次の技術）は維持。
-         復元するには git 履歴 40a97c6 の pages/home.html 該当 ol を戻す ===== -->
-    <ol class="phase-grid">
-      <li class="phase-card">
-        <span class="phase-card__cycle"><b>Design</b><span class="phase-card__cycle-ja">設計</span></span>
-        <span class="phase-card__n">PHASE 1｜試す</span>
-        <p class="phase-card__aim"><span class="rnew">今回変更</span>現場を理解し、何を変えるべきかを整理する。</p>
-        <ul class="phase-card__chips"><li>PoV</li><li>現状把握</li><li>既存設備活用</li></ul>
-        <p class="phase-card__goal"><span class="phase-card__goal-lbl">到達</span>判断材料となるデータがそろう</p>
-      </li>
-      <li class="phase-card">
-        <span class="phase-card__cycle"><b>Deploy</b><span class="phase-card__cycle-ja">実装・導入</span></span>
-        <span class="phase-card__n">PHASE 2｜強くなる</span>
-        <p class="phase-card__aim"><span class="rnew">今回変更</span>業務・システム・設備を、現場で使える形へつなぐ。</p>
-        <ul class="phase-card__chips"><li>業務標準化</li><li>運用設計</li><li>現場実装</li></ul>
-        <p class="phase-card__goal"><span class="phase-card__goal-lbl">到達</span>現場で安定して回り始める</p>
-      </li>
-      <li class="phase-card">
-        <span class="phase-card__cycle"><b>Operate</b><span class="phase-card__cycle-ja">運用</span></span>
-        <span class="phase-card__n">PHASE 3｜全て見える</span>
-        <p class="phase-card__aim"><span class="rnew">今回変更</span>現場で安定して回し、データを蓄積・可視化する。</p>
-        <ul class="phase-card__chips"><li>データ統合</li><li>ダッシュボード</li><li>可視化</li></ul>
-        <p class="phase-card__goal"><span class="phase-card__goal-lbl">到達</span>全体を見て判断できる</p>
-      </li>
-      <li class="phase-card phase-card--last">
-        <span class="phase-card__cycle"><b>Evolve</b><span class="phase-card__cycle-ja">進化</span></span>
-        <span class="phase-card__n">PHASE 4｜未来に対応する</span>
-        <p class="phase-card__aim"><span class="rnew">今回変更</span>得られたデータや知見をもとに、改善を続ける。</p>
-        <ul class="phase-card__chips"><li>AI活用</li><li>ロボティクス</li><li>新技術対応</li></ul>
-        <p class="phase-card__goal"><span class="phase-card__goal-lbl">到達</span>変化に強い現場になる</p>
-      </li>
-    </ol>
-
-    <p class="phase-future"><span class="phase-future__eyebrow">Evolve のその先へ</span><span class="rnew">今回変更</span>その先には、AIが判断し、人とロボットが協調する<b>Physical AI</b>の時代があります。</p>
-    <!-- ===== PHASE v4 END ===== -->
-
-    <!-- ===== PHASE-NOTE v3：表示へ復帰。本セクションで閲覧者向けに残すのはこの説明のみ ===== -->
-    <div class="phase-note">
-      <p class="phase-note__t">どの段階からでも始められます</p>
-      <p class="phase-note__b"><span class="rnew">今回変更</span>どの企業も、PHASE 1 から順番に始める必要はありません。現状に応じて始める場所は異なりますが、各段階はつながっています。<br class="phase-note__br">試す → 強くなる → 全て見える → 未来に対応する、という流れで進化します。</p>
-    </div>
-
-    <!-- ===== DXM v3：HTML から実削除（旧 v2 は hidden 属性のみで、CSS キャッシュ差異により
-         レビュー環境で表示され続けていたため、属性依存をやめて要素ごと除去）
-         削除内容：DX成熟度の進み方（モデル例）L1 22% / L2 38% / L3 52% / L4 62% / L5 70% の帯
-         削除理由：数値の出典・診断ロジックが未確認。閲覧者向けページには不要。
-         救済情報：マークアップは git 履歴 9c20513 の pages/home.html を参照。
-                   CSS（.dxm 系）は assets/css/common.css に残置しているため、
-                   戻す場合は該当 div を貼り直すだけで復元可能 ===== -->
-
-    <!-- ===== PHASE-BRIDGE v3：HTML から実削除（旧 v2 は hidden 属性のみ）
-         救済情報：橋渡しの意味は .phase-future（Evolve のその先へ）と
-                   FDE-TOP セクション冒頭の .phase-to-fde が担っている。
-                   マークアップは git 履歴 9c20513 を参照 ===== -->
-
-    <!-- ===== PHASE-RDIFF v3：HTML から実削除（旧 v2 は hidden 属性のみで、CSS キャッシュ差異により
-         レビュー環境で【変更前】v1／【変更後】v4 の制作履歴が本文に展開されていた）
-         方針：本セクションでは変更履歴表示を省略する。他セクションの rdiff（初期状態で閉じた
-               折りたたみ「変更前の文章を見る」）は従来どおり温存。
-         救済情報：マークアップは git 履歴 9c20513 を参照 ===== -->
-  </div>
-</section>
-<!-- ===== PHASE v1 END ===== -->
-
-<!-- ===== FDE-TOP v4 START：v3 の概要説明では FDE の独自性・必要性が伝わらないため、
-     「なぜ必要か → 何をするか → 何が残るか」の3点を核として再構成。
-     追加：ギャップ導入／4つの役割カード／Design→Deploy→Operate→Evolve との接続／お客さま側に残るもの
-     方針：トップでは核心のみ。他社名・採用要件・社内運用数値（案件件数／台帳／KPI等）は掲載しない。
-     復元するには git 履歴 4c06cb5 の FDE-TOP v3 ブロックを戻す ===== -->
-<section class="section review-changed">
-  <span class="review-label">今回変更</span>
-  <div class="container container--narrow">
-    <p class="phase-to-fde"><span class="rnew">今回変更</span>この4つの段階を、実際の現場で動く仕組みに変えていく役割の一つが <b>FDE</b> です。</p>
-    <div class="section__head">
-      <span class="section__eyebrow">FDE</span>
-      <h2 class="section__title"><span class="rnew">今回変更</span>システムや仕組みを、<br>現場で&ldquo;価値が出る状態&rdquo;へ。<span class="fde-en">FDE｜Forward Deployed Engineer</span></h2>
-    </div>
-
-    <!-- 導入：なぜFDEが必要なのか（「良い製品」と「価値が出た」の間の溝） -->
-    <p class="prose"><span class="rnew">新規追加</span>システムや設備は、入れただけでは価値になりません。現場ごとの業務、データ、権限、レイアウト、運用ルール。その違いを埋めて、実際に動く状態まで持っていく必要があります。</p>
-    <p class="prose">FDE（Forward Deployed Engineer）は、現場に入り、業務・データ・システム・設備・運用のズレを整理し、現場の課題を<strong>その現場で動く解</strong>へ変える役割です。</p>
-    <p class="fde-lead">会議室で要件をまとめるだけではなく、現場で価値が出るところまで動かす。</p>
-
-    <!-- ===== FDE-ROLE v5：Design/Deploy/Operate/Evolve の4カードを撤去し、
-         FDE 固有の4機能（理解する→作る→翻訳する→残す）を主役に据える。
-         4サイクルは PHASE セクションで PAL 全体の価値サイクルとして説明済みのため、
-         FDE 内では繰り返さない。各カードへ補足例（実務レベル）を追加。
-         救済情報：撤去した .fde-cyclelead と .fde-miniflow のマークアップは
-                   git 履歴 a0ad97e の pages/home.html を参照。CSS は common.css に残置 ===== -->
-    <div class="section__head" style="margin-top:40px;margin-bottom:0">
-      <h3 class="fderole__head"><span class="rnew">今回変更</span>FDEが現場で担う4つの役割</h3>
-      <p class="fderole__lead">現場を理解し、動く解をつくり、翻訳し、知見を残す。<br>この4つが、FDE の仕事の核です。</p>
-    </div>
-    <ol class="fderole" aria-label="FDE が現場で担う4つの役割">
-      <li class="fderole__item">
-        <span class="fderole__n">01</span>
-        <p class="fderole__t">課題の解像度を上げる</p>
-        <p class="fderole__d">現場の業務、データ構造、設備、運用ルール、制約まで理解し、「本当に何が止まっているのか」を整理します。</p>
-        <ul class="fderole__ex"><li>ワークフロー分析</li><li>データ構造把握</li><li>制約・課題整理</li></ul>
-      </li>
-      <li class="fderole__item">
-        <span class="fderole__n">02</span>
-        <p class="fderole__t">その場で動く解をつくる</p>
-        <p class="fderole__d">助言や要件整理だけで終わらず、その現場で実際に使える形へ落とし込みます。</p>
-        <ul class="fderole__ex"><li>プロトタイピング</li><li>システム実装</li><li>データ連携</li><li>運用改善</li></ul>
-      </li>
-      <li class="fderole__item">
-        <span class="fderole__n">03</span>
-        <p class="fderole__t">社内外の翻訳者になる</p>
-        <p class="fderole__d">現場の言葉を、データ・システム・設備・運用要件へ翻訳し、関係者の認識をそろえます。</p>
-        <ul class="fderole__ex"><li>要件翻訳</li><li>技術説明</li><li>関係者調整</li><li>合意形成</li></ul>
-      </li>
-      <li class="fderole__item">
-        <span class="fderole__n">04</span>
-        <p class="fderole__t">知見を残す</p>
-        <p class="fderole__d">現場で得た知見をその場限りにせず、次の改善や横展開に使える形へ残します。</p>
-        <ul class="fderole__ex"><li>Playbook化</li><li>テンプレート化</li><li>運用ルール化</li><li>ノウハウ共有</li></ul>
-      </li>
-    </ol>
-
-    <p class="fde-note"><span class="rnew">今回変更</span>課題に応じて、必要な場面で FDE が現場に入り、実装・調整・定着を支援します。<br>FDE がすべてのサービスの上位にあるわけでも、すべてのご支援に必要になるわけでもありません。</p>
-
-    <!-- 締め：最後に何が残るか -->
-    <div class="fde-remain">
-      <p class="fde-remain__t"><span class="rnew">新規追加</span>現場に入り、作り、運用し、知見を残す。</p>
-      <p class="fde-remain__b">目指すのは、FDE が入り続けることではありません。データ、運用ルール、判断基準、ノウハウを現場に残し、お客さま自身が改善を続けられる状態をつくることです。</p>
-    </div>
-
-    <p class="section__cta-wrap" style="text-align:left;margin-top:24px"><a href="./fde.html" class="btn btn--red">FDEの役割を詳しく見る</a></p>
-    <details class="rdiff"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】v3</span><p class="rdiff__txt">物流DXは、構想やシステムをつくるだけでは進みません。<br>PAL の FDE（Forward Deployed Engineer）が現場に入り、業務や課題を理解し、データ・システム・設備・運用へ落とし込みます。構想を実装につなげ、現場で使われ、改善が続く状態まで支援します。<br>＋ 設計→実装→運用→改善 のミニフロー ＋ 「運用ルールやデータ・ノウハウはお客さま側に残し…」の1行</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 概要説明に留まり、FDE の必要性と独自性が伝わらないためv4で再構成しました。</p></div><div class="rdiff__row"><span class="rdiff__lbl">【変更前】v4</span><p class="rdiff__txt">4つの役割カードの下に「設計 → 実装 → 運用 → 改善」のサイクル説明と Design / Deploy / Operate / Evolve の4カードを併置していました。</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 4サイクルは PHASE セクションで PAL 全体の価値サイクルとして説明済みのため、FDE 内での重複を解消しました。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】v6</span><p class="rdiff__txt">「なぜ必要か」→「何をするか」→「何が残るか」の3点構成。Design / Deploy / Operate / Evolve の4カードを撤去し、FDE 固有の4役割（課題の解像度を上げる／その場で動く解をつくる／社内外の翻訳者になる／知見を残す）を見出し「FDEが現場で担う4つの役割」のもとに主役化。各カードへ補足例を追加。下部補足に「必要な場面で FDE が現場に入り、実装・調整・定着を支援します」を追加。<br>v6：抽象語「構想」を撤去し、見出しを「システムや仕組みを、現場で&ldquo;価値が出る状態&rdquo;へ。」、定義文を「現場の課題を、その現場で動く解へ変える役割」へ変更。</p></div></div></details>
-  </div>
-</section>
-<!-- ===== FDE-TOP v4 END ===== -->
+<!-- ===== FDE-TOP v5：トップから撤去（§7・§9）。
+     移動先：PALを知る（pages/role.html #fde）— FDEとは／4つの役割／お客さま側に残るもの を拡充。
+     さらに詳しい説明は FDE 常設ページ pages/fde.html（本番想定 /about/fde/）。
+     トップに残したもの：APPROACH「できるようにする（Enable）」カード内の1文と導線のみ。
+     復元するには git 履歴 92b0959 の pages/home.html の FDE-TOP セクションを戻す ===== -->
 
 <!-- SEC6：SERVICE LINE UP - 現行7サービス + FDE 1件のみ追加 -->
 <section class="section section--soft review-changed">
