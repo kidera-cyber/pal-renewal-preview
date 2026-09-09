@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260904a">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260909a">
 </head>
 <body class="review-mode">
 
@@ -189,7 +189,7 @@
     <div class="section__head">
       <span class="section__eyebrow">PHASE / CYCLE</span>
       <h2 class="section__title"><span class="rnew">今回変更</span>設計・実装・運用・進化。<br>物流DXを前へ進める4サイクル</h2>
-      <p class="section__lead">はじめから大きく作り替えるのではなく、小さく試し、現場を強くし、データをつなぐ。<br>その積み重ねが、AI・ロボティクスなど次の技術を活かせる現場につながります。現在地は企業によって異なるため、どの段階からでも始められます。</p>
+      <p class="section__lead">はじめから大きく作り替えるのではなく、小さく試し、現場を強くし、データをつなぐ。<br>その積み重ねが、AI・ロボティクスなど次の技術を活かせる現場につながります。</p>
     </div>
 
     <!-- 4サイクル大表示フロー（セクションを見た瞬間に最初に目に入る主役） -->
@@ -256,45 +256,30 @@
     <p class="phase-future"><span class="phase-future__eyebrow">Evolve のその先へ</span><span class="rnew">今回変更</span>その先には、AIが判断し、人とロボットが協調する<b>Physical AI</b>の時代があります。</p>
     <!-- ===== PHASE v4 END ===== -->
 
-    <!-- ===== PHASE-NOTE v2：非表示化（カード直下の枠が冗長との判断）
-         救済情報：「どの段階からでも始められます」は 192 行目のセクションリード文へ吸収済み。
-         復元条件：div の hidden 属性を外すだけで再表示可能。===== -->
-    <div class="phase-note" hidden aria-hidden="true">
+    <!-- ===== PHASE-NOTE v3：表示へ復帰。本セクションで閲覧者向けに残すのはこの説明のみ ===== -->
+    <div class="phase-note">
       <p class="phase-note__t">どの段階からでも始められます</p>
       <p class="phase-note__b">PHASE 1 を終えなければ次に進めない、というものではありません。データの可視化から始める企業も、現場改善から始める企業も、設備導入から始める企業もあります。現在地は企業によって異なります。<br>一方で、各段階はつながっています。試す → 現場が強くなる → 正しいデータが増える → 全体が見える → より高度な活用ができる、という関係です。</p>
     </div>
 
-    <!-- ===== DXM v2：削除（トップ非採用・非表示化）
-         削除理由：
-         (1) 数値（22/38/52/62/70%）の出典・診断ロジックが公開できない（v1 の要確認マーカーで既に指摘済）
-         (2) 設計書（PALサイトリニューアル設計書_v1.1）にトップ共通表現として採用指示なし
-         (3) 設計書のトップ主軸ストーリー「WHY → 3価値 → FDE → サービス」から外れる
-         (4) 「成熟度が上がると○○%」という印象が根拠弱で誤解を生む
-         救済情報：将来 診断ページや別セクションで復活させる場合、v1 のマークアップは
-                   git 履歴 c147661 以前を参照。CSS(.dxm 系)は common.css に残置（可逆保持）===== -->
-    <div class="dxm" hidden aria-hidden="true">
-      <p class="dxm__title">DX成熟度の進み方（モデル例）</p>
-      <ol class="dxm__bar">
-        <li class="dxm__step"><span class="dxm__lv">L1</span><span class="dxm__pct">22<small>%</small></span><span class="dxm__lbl">現在地</span></li>
-        <li class="dxm__step"><span class="dxm__lv">L2</span><span class="dxm__pct">38<small>%</small></span><span class="dxm__lbl">試す</span></li>
-        <li class="dxm__step"><span class="dxm__lv">L3</span><span class="dxm__pct">52<small>%</small></span><span class="dxm__lbl">強くなる</span></li>
-        <li class="dxm__step"><span class="dxm__lv">L4</span><span class="dxm__pct">62<small>%</small></span><span class="dxm__lbl">全て見える</span></li>
-        <li class="dxm__step dxm__step--goal"><span class="dxm__lv">L5</span><span class="dxm__pct">70<small>%</small></span><span class="dxm__lbl">未来に対応する</span></li>
-      </ol>
-      <p class="dxm__note">※ 成熟度の進み方を示す診断イメージ（モデル例）です。導入企業が必ずこの数値に到達することを示すものではありません。</p>
-    </div>
-    <!-- ===== DXM v2 END ===== -->
+    <!-- ===== DXM v3：HTML から実削除（旧 v2 は hidden 属性のみで、CSS キャッシュ差異により
+         レビュー環境で表示され続けていたため、属性依存をやめて要素ごと除去）
+         削除内容：DX成熟度の進み方（モデル例）L1 22% / L2 38% / L3 52% / L4 62% / L5 70% の帯
+         削除理由：数値の出典・診断ロジックが未確認。閲覧者向けページには不要。
+         救済情報：マークアップは git 履歴 9c20513 の pages/home.html を参照。
+                   CSS（.dxm 系）は assets/css/common.css に残置しているため、
+                   戻す場合は該当 div を貼り直すだけで復元可能 ===== -->
 
-    <!-- ===== PHASE-BRIDGE v2：削除（PHASE v3 の .phase-future / FDE-TOP v3 の .phase-to-fde と重複）
-         救済情報：接続の意味は 233行目 .phase-future および FDE-TOP v3 冒頭 .phase-to-fde が担う ===== -->
-    <p class="prose" hidden aria-hidden="true"><span class="rnew">削除</span>大切なのは、段階を描くだけではなく、それぞれを<strong>現場で動く形へ落とし込み、運用に定着させる</strong>ことです。<br>この4段階を現場で実行する役割を、次のセクション（FDE）で説明します。</p>
-    <!-- ===== PHASE-BRIDGE v2 END ===== -->
+    <!-- ===== PHASE-BRIDGE v3：HTML から実削除（旧 v2 は hidden 属性のみ）
+         救済情報：橋渡しの意味は .phase-future（Evolve のその先へ）と
+                   FDE-TOP セクション冒頭の .phase-to-fde が担っている。
+                   マークアップは git 履歴 9c20513 を参照 ===== -->
 
-    <!-- ===== PHASE-RDIFF v2：hidden 化（Design→Deploy→Operate→Evolve→Physical AI→FDE の流れを制作履歴で止めないため）
-         救済情報：本ブロックは元「追加した内容を見る」の変更履歴表示。
-         復元条件：hidden 属性を外すだけで再表示可能。他セクションの rdiff は温存。===== -->
-    <details class="rdiff" hidden aria-hidden="true"><summary>追加した内容を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】v1（新規追加時）</span><p class="rdiff__txt">PHASE 4段階（試す／強くなる／全て見える／未来に対応する）＋ どの段階からでも始められる注記 ＋ DX成熟度モデル例（L1-L5 %表示）＋ FDE への橋渡し文</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】v4</span><p class="rdiff__txt">DX成熟度モデル例（22/38/52/62/70%）は削除。橋渡しも PHASE v4 の .phase-future と FDE-TOP v3 の .phase-to-fde に一元化。v4 で 4サイクル(Design/Deploy/Operate/Evolve)を主役化・上部大フロー新設・カード内順序入替。</p></div></div></details>
-    <!-- ===== PHASE-RDIFF v2 END ===== -->
+    <!-- ===== PHASE-RDIFF v3：HTML から実削除（旧 v2 は hidden 属性のみで、CSS キャッシュ差異により
+         レビュー環境で【変更前】v1／【変更後】v4 の制作履歴が本文に展開されていた）
+         方針：本セクションでは変更履歴表示を省略する。他セクションの rdiff（初期状態で閉じた
+               折りたたみ「変更前の文章を見る」）は従来どおり温存。
+         救済情報：マークアップは git 履歴 9c20513 を参照 ===== -->
   </div>
 </section>
 <!-- ===== PHASE v1 END ===== -->
@@ -314,10 +299,10 @@
 
     <!-- FDE の役割ミニフロー：日本語主・Design/Deploy/Operate/Evolve は補助ラベル -->
     <ol class="fde-miniflow" aria-label="FDE が現場で担う流れ" style="list-style:none;padding:0;margin:24px 0 8px;display:grid;grid-template-columns:repeat(4,1fr);gap:8px">
-      <li style="background:#F7F8FA;border:1px solid #E5E9EF;border-radius:8px;padding:14px 12px;text-align:center;font-size:14px;font-weight:700;color:#111">01｜設計<span style="display:block;font-size:10.5px;font-weight:500;letter-spacing:.06em;color:#6a7280;margin-top:2px">Design</span></li>
-      <li style="background:#F7F8FA;border:1px solid #E5E9EF;border-radius:8px;padding:14px 12px;text-align:center;font-size:14px;font-weight:700;color:#111">02｜実装<span style="display:block;font-size:10.5px;font-weight:500;letter-spacing:.06em;color:#6a7280;margin-top:2px">Deploy</span></li>
-      <li style="background:#F7F8FA;border:1px solid #E5E9EF;border-radius:8px;padding:14px 12px;text-align:center;font-size:14px;font-weight:700;color:#111">03｜運用<span style="display:block;font-size:10.5px;font-weight:500;letter-spacing:.06em;color:#6a7280;margin-top:2px">Operate</span></li>
-      <li style="background:#F7F8FA;border:1px solid #E5E9EF;border-radius:8px;padding:14px 12px;text-align:center;font-size:14px;font-weight:700;color:#111">04｜改善<span style="display:block;font-size:10.5px;font-weight:500;letter-spacing:.06em;color:#6a7280;margin-top:2px">Evolve</span></li>
+      <li style="background:#F7F8FA;border:1px solid #E5E9EF;border-radius:8px;padding:14px 12px;text-align:center;font-size:14px;font-weight:700;color:#111">01｜設計<span style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;color:#5B5F73;margin-top:2px">Design</span></li>
+      <li style="background:#F7F8FA;border:1px solid #E5E9EF;border-radius:8px;padding:14px 12px;text-align:center;font-size:14px;font-weight:700;color:#111">02｜実装<span style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;color:#5B5F73;margin-top:2px">Deploy</span></li>
+      <li style="background:#F7F8FA;border:1px solid #E5E9EF;border-radius:8px;padding:14px 12px;text-align:center;font-size:14px;font-weight:700;color:#111">03｜運用<span style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;color:#5B5F73;margin-top:2px">Operate</span></li>
+      <li style="background:#F7F8FA;border:1px solid #E5E9EF;border-radius:8px;padding:14px 12px;text-align:center;font-size:14px;font-weight:700;color:#111">04｜改善<span style="display:block;font-size:12px;font-weight:500;letter-spacing:.06em;color:#5B5F73;margin-top:2px">Evolve</span></li>
     </ol>
     <p class="prose" style="font-size:13.5px;color:#6a7280;margin-top:6px">運用ルールやデータ・ノウハウはお客さま側に残し、お客さま自身が改善を続けられる状態を目指します。</p>
 

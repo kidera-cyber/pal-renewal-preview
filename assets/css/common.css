@@ -1203,3 +1203,16 @@ body.review-mode .review-inline-check{font-size:12px;line-height:1.6;max-width:6
 /* ===== PHASE & FDE PAGE v1 END ===== */
 /* レビュー凡例内の code も 12px 下限に合わせる（レビューUIのみ） */
 .review-legend__note code{font-size:12px}
+
+/* ============================================================
+   ===== FONT FLOOR v2 START =====
+   本プロジェクトの最小フォント下限は 12px。
+   PHASE v3/v4・FDE-TOP v3 で追加された補助ラベルが 10.5〜11.5px のため、
+   末尾追記で 12px へ引き上げる（元の宣言は残置・後勝ちで上書き）。
+   戻す場合は本ブロックを FONT FLOOR v2 START〜END ごと削除する。
+   ============================================================ */
+.phase-cycle-flow__note{font-size:12px}
+.phase-card .phase-card__n{font-size:12px}
+.phase-future__eyebrow{font-size:12px}
+.fde-en{font-size:12px}
+/* ===== FONT FLOOR v2 END ===== */
