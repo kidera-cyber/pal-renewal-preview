@@ -1216,3 +1216,67 @@ body.review-mode .review-inline-check{font-size:12px;line-height:1.6;max-width:6
 .phase-future__eyebrow{font-size:12px}
 .fde-en{font-size:12px}
 /* ===== FONT FLOOR v2 END ===== */
+
+/* ============================================================
+   ===== FDE-TOP v4 START =====
+   トップ FDE ブロック拡充用。v3 のインライン style を廃し、
+   .fde-miniflow 系をクラス化して common.css へ集約。
+   配色は --pal-* トークンのみ。既存ルールは書き換えず末尾追記で後勝ち。
+   ============================================================ */
+
+/* 独自性を一言で示すリード */
+.fde-lead{
+  margin:22px 0 0;padding:16px 20px;border-left:3px solid var(--pal-accent);
+  background:var(--pal-bg-light);border-radius:0 6px 6px 0;
+  font-size:15.5px;line-height:1.85;font-weight:700;color:var(--pal-heading);
+}
+
+/* 4つの役割 */
+.fderole{
+  list-style:none;margin:28px 0 0;padding:0;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:14px;
+}
+.fderole__item{
+  padding:20px 18px;border-radius:8px;
+  background:var(--pal-bg);border:1px solid var(--pal-border);
+}
+.fderole__n{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:30px;height:30px;border-radius:9999px;
+  background:var(--pal-heading);color:#fff;
+  font-family:Lato,'Noto Sans JP',sans-serif;font-size:13px;font-weight:700;
+}
+.fderole__t{margin:12px 0 8px;font-size:16px;font-weight:700;line-height:1.5;color:var(--pal-heading)}
+.fderole__d{margin:0;font-size:13px;line-height:1.85;color:var(--pal-sub)}
+@media(max-width:900px){.fderole{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.fderole{grid-template-columns:1fr}}
+
+/* Design → Deploy → Operate → Evolve への接続 */
+.fde-cyclelead{margin:32px 0 12px;font-size:14.5px;line-height:1.9;color:var(--pal-text)}
+.fde-miniflow{
+  list-style:none;margin:0;padding:0;
+  display:grid;grid-template-columns:repeat(4,1fr);gap:8px;
+}
+.fde-miniflow__item{
+  position:relative;padding:14px 12px;border-radius:8px;text-align:center;
+  background:var(--pal-bg-light);border:1px solid var(--pal-border);
+  font-size:14px;font-weight:700;color:var(--pal-heading);
+}
+.fde-miniflow__en{
+  display:block;margin-top:2px;
+  font-family:Lato,'Noto Sans JP',sans-serif;
+  font-size:12px;font-weight:500;letter-spacing:.06em;color:var(--pal-muted);
+}
+.fde-note{margin:14px 0 0;font-size:13px;line-height:1.9;color:var(--pal-muted)}
+@media(max-width:640px){.fde-miniflow{grid-template-columns:repeat(2,1fr)}}
+
+/* 締め：お客さま側に残るもの */
+.fde-remain{
+  margin-top:28px;padding:22px 24px;border-radius:8px;
+  background:var(--pal-heading);
+}
+.fde-remain__t{margin:0 0 10px;font-size:17px;font-weight:700;line-height:1.6;color:#fff}
+.fde-remain__b{margin:0;font-size:14px;line-height:1.95;color:var(--pal-blue-pale)}
+.fde-remain .rnew{background:#fff;color:var(--pal-heading);border-color:#fff}
+@media(max-width:560px){.fde-remain{padding:20px 18px}.fde-remain__t{font-size:16px}}
+/* ===== FDE-TOP v4 END ===== */
