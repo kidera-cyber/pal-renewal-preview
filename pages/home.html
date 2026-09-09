@@ -238,7 +238,15 @@
       <p class="phase-note__b">PHASE 1 を終えなければ次に進めない、というものではありません。データの可視化から始める企業も、現場改善から始める企業も、設備導入から始める企業もあります。現在地は企業によって異なります。<br>一方で、各段階はつながっています。試す → 現場が強くなる → 正しいデータが増える → 全体が見える → より高度な活用ができる、という関係です。</p>
     </div>
 
-    <div class="dxm">
+    <!-- ===== DXM v2：削除（トップ非採用・非表示化）
+         削除理由：
+         (1) 数値（22/38/52/62/70%）の出典・診断ロジックが公開できない（v1 の要確認マーカーで既に指摘済）
+         (2) 設計書（PALサイトリニューアル設計書_v1.1）にトップ共通表現として採用指示なし
+         (3) 設計書のトップ主軸ストーリー「WHY → 3価値 → FDE → サービス」から外れる
+         (4) 「成熟度が上がると○○%」という印象が根拠弱で誤解を生む
+         救済情報：将来 診断ページや別セクションで復活させる場合、v1 のマークアップは
+                   git 履歴 c147661 以前を参照。CSS(.dxm 系)は common.css に残置（可逆保持）===== -->
+    <div class="dxm" hidden aria-hidden="true">
       <p class="dxm__title">DX成熟度の進み方（モデル例）</p>
       <ol class="dxm__bar">
         <li class="dxm__step"><span class="dxm__lv">L1</span><span class="dxm__pct">22<small>%</small></span><span class="dxm__lbl">現在地</span></li>
@@ -248,13 +256,15 @@
         <li class="dxm__step dxm__step--goal"><span class="dxm__lv">L5</span><span class="dxm__pct">70<small>%</small></span><span class="dxm__lbl">未来に対応する</span></li>
       </ol>
       <p class="dxm__note">※ 成熟度の進み方を示す診断イメージ（モデル例）です。導入企業が必ずこの数値に到達することを示すものではありません。</p>
-      <span class="review-inline-check">要確認：DX成熟度の数値（22／38／52／62／70%）の出典・診断ロジックの公開可否</span>
     </div>
+    <!-- ===== DXM v2 END ===== -->
 
-    <!-- ===== PHASE→FDE 橋渡し（次セクションへの接続）===== -->
-    <p class="prose" style="margin-top:28px;text-align:center;font-weight:600"><span class="rnew">今回変更</span>大切なのは、段階を描くだけではなく、それぞれを<strong>現場で動く形へ落とし込み、運用に定着させる</strong>ことです。<br>この4段階を現場で実行する役割を、次のセクション（FDE）で説明します。</p>
+    <!-- ===== PHASE-BRIDGE v2：削除（PHASE v3 の .phase-future / FDE-TOP v3 の .phase-to-fde と重複）
+         救済情報：接続の意味は 233行目 .phase-future および FDE-TOP v3 冒頭 .phase-to-fde が担う ===== -->
+    <p class="prose" hidden aria-hidden="true"><span class="rnew">削除</span>大切なのは、段階を描くだけではなく、それぞれを<strong>現場で動く形へ落とし込み、運用に定着させる</strong>ことです。<br>この4段階を現場で実行する役割を、次のセクション（FDE）で説明します。</p>
+    <!-- ===== PHASE-BRIDGE v2 END ===== -->
 
-    <details class="rdiff"><summary>追加した内容を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトでは「段階的検証力」がカード1枚の説明のみで、進め方の段階は示されていません。本セクションはその具体化です。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">PHASE「物流DXの進め方は、4つの段階で考えます」（試す／強くなる／全て見える／未来に対応する ＋ どの段階からでも始められる注記 ＋ DX成熟度モデル例 ＋ FDE への橋渡し1文）</p></div></div></details>
+    <details class="rdiff"><summary>追加した内容を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】v1（新規追加時）</span><p class="rdiff__txt">PHASE 4段階（試す／強くなる／全て見える／未来に対応する）＋ どの段階からでも始められる注記 ＋ DX成熟度モデル例（L1-L5 %表示）＋ FDE への橋渡し文</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】v3</span><p class="rdiff__txt"><span class="rnew">今回変更</span>DX成熟度モデル例（22/38/52/62/70%）は<b>削除</b>（出典・診断ロジック非公開のため）。橋渡し文も PHASE v3 の <code>.phase-future</code>（Physical AI さわり）＋ FDE-TOP v3 の <code>.phase-to-fde</code>（FDE への橋渡し）に一元化。マークアップと CSS は残置（可逆保持）。</p></div></div></details>
   </div>
 </section>
 <!-- ===== PHASE v1 END ===== -->
