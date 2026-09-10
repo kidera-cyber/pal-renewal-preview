@@ -10,7 +10,16 @@
 <meta name="robots" content="noindex, nofollow">
 <meta name="googlebot" content="noindex, nofollow">
 <title>株式会社PAL コーポレートサイト改修｜社内確認用</title>
-<link rel="stylesheet" href="assets/css/portal.css?v=20260910n">
+<link rel="stylesheet" href="assets/css/portal.css?v=20260910o">
+<style>
+  .build-stamp{margin:0 0 10px;font-size:12px;color:#6B6D81;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .build-stamp b{font-weight:700;color:#262946}
+  .build-stamp__btn{
+    padding:4px 12px;border:1px solid #C3CBE0;border-radius:9999px;background:#fff;
+    font-size:12px;color:#262946;cursor:pointer;font-family:inherit;
+  }
+  .build-stamp__btn:hover{background:#F2F3F6}
+</style>
 </head>
 <body>
 
@@ -22,6 +31,9 @@
       <span class="portal-header__sub">社内レビュー用ポータル</span>
     </div>
   </div>
+  <!-- ===== BUILD STAMP v1：レビュアーが新旧を判別できるよう最終更新時刻を表示。
+       表示されている時刻が最新でなければ、ブラウザのキャッシュが残っている ===== -->
+  <p class="build-stamp">最終更新：<b id="buildStamp">-</b>　<button type="button" id="forceReload" class="build-stamp__btn">最新を再取得</button></p>
   <nav class="portal-tabs" role="tablist" aria-label="ページ切替タブ">
     <button class="portal-tab" role="tab" data-page="home"   aria-selected="true"  aria-controls="previewFrame">ホーム</button>
     <button class="portal-tab" role="tab" data-page="role"   aria-selected="false" aria-controls="previewFrame">私たちの役割</button>
@@ -53,6 +65,6 @@
   ></iframe>
 </main>
 
-<script src="assets/js/portal.js?v=20260910n" defer></script>
+<script src="assets/js/portal.js?v=20260910o" defer></script>
 </body>
 </html>

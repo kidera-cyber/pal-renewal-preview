@@ -21,10 +21,25 @@
      本番化時はこのブロックごと削除し、bust を素通しにしてよい ===== */
   const bust = function (f) { return f + '?t=' + Date.now(); };
 
+  /* 最終更新時刻（push のたびに自動更新される） */
+  const BUILD_STAMP = '2026-09-10 17:01';
+
   const frame       = document.getElementById('previewFrame');
   const openLink    = document.getElementById('openPage');
   const currentName = document.getElementById('currentPageName');
   const tabs        = Array.from(document.querySelectorAll('.portal-tab'));
+
+  /* ===== BUILD STAMP v1：最終更新の表示と強制再取得 ===== */
+  const stampEl = document.getElementById('buildStamp');
+  if (stampEl) stampEl.textContent = BUILD_STAMP;
+  const reloadBtn = document.getElementById('forceReload');
+  if (reloadBtn) {
+    reloadBtn.addEventListener('click', function () {
+      const u = new URL(location.href);
+      u.searchParams.set('r', Date.now());
+      location.replace(u.toString());
+    });
+  }
 
   function switchTo(pageKey, opts) {
     opts = opts || {};
