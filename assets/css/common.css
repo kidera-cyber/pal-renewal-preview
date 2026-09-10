@@ -1494,3 +1494,30 @@ body.review-mode .review-label--moved{background:#464A6F;color:#fff}
 
 /* ===== CYCLE-ROLE v1：役割ページの4サイクルはチップ・到達を持たないため縦詰めを調整 ===== */
 .cycle4__item .cycle4__aim:last-child{margin-bottom:0}
+
+/* ============================================================
+   ===== INTEGRATE v1 START =====
+   役割ページ「統合アプローチによる課題解決」の全プロセス横フロー。
+   調査→戦略→設計→選定→導入→運用 の6段。既存トークンのみ使用。
+   ============================================================ */
+.iflow{
+  list-style:none;margin:0;padding:0;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 10px;
+}
+.iflow__item{
+  padding:12px 20px;border-radius:8px;min-width:92px;text-align:center;
+  background:var(--pal-bg);border:1px solid var(--pal-border);
+  font-size:15px;font-weight:700;color:var(--pal-heading);
+}
+.iflow__item--goal{background:var(--pal-heading);border-color:var(--pal-heading);color:#fff}
+.iflow__arrow{color:var(--pal-blue);font-size:14px;line-height:1}
+.iflow__note{
+  margin:16px 0 0;font-size:13px;line-height:1.9;color:var(--pal-muted);text-align:center;
+}
+@media(max-width:640px){
+  .iflow{gap:6px}
+  .iflow__arrow{display:none}
+  .iflow__item{flex:1 1 30%;min-width:0;padding:11px 6px;font-size:14px}
+  .iflow__note{text-align:left}
+}
+/* ===== INTEGRATE v1 END ===== */
