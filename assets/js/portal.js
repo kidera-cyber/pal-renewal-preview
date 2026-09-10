@@ -8,7 +8,8 @@
     home:   { file: 'pages/home.html',   name: 'ホーム' },
     role:   { file: 'pages/role.html',   name: '私たちの役割' },
     reason: { file: 'pages/reason.html', name: 'PALの強み' },
-    fde:    { file: 'pages/fde.html',    name: 'FDEとは' },
+    /* fde タブは廃止（FDE 専用ページを削除し、説明は role.html #fde へ統合）
+       ?page=fde でアクセスされた場合は DEFAULT_PAGE（home）へフォールバックする */
     service:{ file: 'pages/service.html',name: 'サービス一覧' }
   };
   const DEFAULT_PAGE = 'home';
@@ -16,7 +17,7 @@
   /* ===== CACHE-BUST v1：レビュー環境で旧版HTMLがブラウザキャッシュから
      表示される事故を防ぐため、iframe とリンクにビルド番号を付与する。
      更新手順：ページを更新したら BUILD の値を上げる ===== */
-  const BUILD = '20260910g';
+  const BUILD = '20260910h';
   const bust  = function (f) { return f + '?v=' + BUILD; };
 
   const frame       = document.getElementById('previewFrame');

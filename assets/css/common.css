@@ -1527,3 +1527,32 @@ body.review-mode .review-label--moved{background:#464A6F;color:#fff}
   margin:0 0 4px;padding-left:14px;border-left:3px solid var(--pal-border-strong);
   font-size:14.5px;line-height:1.9;color:var(--pal-muted);
 }
+
+/* ============================================================
+   ===== UNUSED CSS INDEX（2026-09-10 時点）=====
+   下記のクラスは、セクションの移動・統合により現在どのHTMLからも
+   参照されていません。将来の復元用に残置しています。
+   削除する場合は、対応する START〜END ブロックごと外してください。
+
+   ■ 旧 FDE 専用ページ（pages/fde.html を削除）で使用していたもの
+     .fgap*      ギャップ図（理論／THE GAP／現実の3カラム）
+     .floop*     FDEが担う4つの機能（1周する図）
+     .fdiff*     コンサル・開発との違い／一般的なエンジニアとの違い
+     .fbridge*   現場 ⇄ FDE ⇄ PALの機能 の往復図
+     .fflow*     導入・伴走の流れ（5段）
+     .themes*    扱うテーマ例／地道な実務のチップ
+
+   ■ トップ PHASE セクション廃止で使用しなくなったもの
+     .phase-grid / .phase-card* / .phase-note* / .phase-cycle-flow*
+     .phase-future* / .dxm*（DX成熟度バー）/ .fde-miniflow* / .fde-cyclelead
+     .pmini*（役割ページの4段階要約）
+
+   ■ セクション統合で使用しなくなったもの
+     .ecmp*（PALが目的にしていること比較表）
+     .tchain* / .fchain*（旧 FDE 翻訳者チェーン・機能接続フロー）
+     .slist*（役割ページ内の強み要約リスト）
+
+   現在も使用中：.fderole* / .fde-lead / .fde-note / .fde-remain*（role.html #fde）
+                 .cycle4*（role.html #cycle）／.iflow*（統合アプローチ）
+                 .vision*（DXのその先へ）／.remain*（つないで、終わらない。）
+   ============================================================ */
