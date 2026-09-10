@@ -8,7 +8,7 @@
 <meta name="description" content="FDE（Forward Deployed Engineer）は、お客さまの現場とPALのプロダクト・技術の間に立ち、課題整理からPoV、実装、運用、定着までを進める役割です。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260910a">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260910b">
 <style>
   /* v1.3 リデザイン：上段=見出し+短説明+関係図／下段=課題→PALの役割→変化 の3カラム */
   .approach-head{max-width:900px;margin:0 auto 40px;text-align:center}
@@ -143,7 +143,7 @@
     <span class="phero__eyebrow">FDE</span>
     <h1 class="phero__title">FDEとは</h1>
     <p class="phero__sub">お客さまの現場と、PALのプロダクト・技術の間に立つ。</p>
-    <details class="rdiff"><summary>このページについて（新規追加）</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当ページなし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトにFDEの常設ページはありません。設計書 3.2 と社内資料のうち社外公開可能な範囲のみを再編集しています。社内情報（案件件数・担当者名・内部原価・訪問台帳・内部KPI・案件管理方法・採用評価）は掲載していません。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">FDE常設ページ（本番想定URL：/about/fde/）。01 FDEとは ／ 02 なぜ必要か ／ 03 3つの責任 ／ 04 4つの機能 ／ 05 コンサル・開発との違い ／ 06 PALで機能する理由 ／ 07 サービスとの関係 ／ 08 導入・伴走の流れ ／ 09 お客さま側に残るもの ／ 10 相談CTA</p></div></div></details>
+    <details class="rdiff"><summary>このページについて（新規追加）</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当ページなし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトにFDEの常設ページはありません。設計書 3.2 と社内資料のうち社外公開可能な範囲のみを再編集しています。社内情報（案件件数・担当者名・内部原価・訪問台帳・内部KPI・案件管理方法・採用評価）は掲載していません。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">FDE常設ページ（本番想定URL：/about/fde/）。01 FDEとは ／ 02 なぜ必要か ／ 03 3つの責任 ／ 04 4つの機能 ／ 05 コンサル・開発との違い ／ 06 PALで機能する理由 ／ 07 扱うテーマ例・価値の本質 ／ 08 サービスとの関係 ／ 09 導入・伴走の流れ ／ 10 お客さま側に残るもの ／ 相談CTA</p></div></div></details>
   </div>
 </section>
 
@@ -256,6 +256,16 @@
       <li class="fdiff__row"><span class="fdiff__k">一般的な開発</span><span class="fdiff__v">システムやプロダクトをリリースすることがゴールになります。</span></li>
       <li class="fdiff__row fdiff__row--goal"><span class="fdiff__k">FDE</span><span class="fdiff__v">お客さまの現場そのものに入り、その環境で本当に価値が出ているかまでを範囲とします。</span></li>
     </ul>
+
+    <div class="section__head" style="margin-top:44px;margin-bottom:0">
+      <h3 class="fderole__head"><span class="rnew rnew--moved">移動</span>一般的なエンジニアとの違い</h3>
+    </div>
+    <ul class="fdiff" style="margin-top:20px">
+      <li class="fdiff__row"><span class="fdiff__k">業務理解が先</span><span class="fdiff__v">システム要件から入るのではなく、まず現場の業務を理解します。</span></li>
+      <li class="fdiff__row"><span class="fdiff__k">現場に入り伴走する</span><span class="fdiff__v">つくって渡して終わりにせず、実際に運用されているかを現場で確認します。</span></li>
+      <li class="fdiff__row"><span class="fdiff__k">運用設計まで担う</span><span class="fdiff__v">動く状態をつくるだけでなく、運用が回る形まで設計します。</span></li>
+      <li class="fdiff__row fdiff__row--goal"><span class="fdiff__k">業務とデータの翻訳者</span><span class="fdiff__v">現場で起きていることを、データ・システム・設備・運用の言葉へ翻訳します。</span></li>
+    </ul>
   </div>
 </section>
 
@@ -277,12 +287,49 @@
   </div>
 </section>
 
+<!-- ===== FDE-SCOPE v1 START：設計書 3.2「守備範囲6領域」「価値の本質」を常設ページへ集約。
+     提供実績が未確認のため「扱うテーマ例」として掲載し、提供中サービスとして断定しない。
+     移動元：git 履歴 9500fee の pages/role.html（旧 SEC06）===== -->
+<section class="section review-added">
+  <span class="review-label review-label--added">新規追加</span>
+  <div class="container container--narrow">
+    <div class="section__head">
+      <span class="section__eyebrow">07 SCOPE</span>
+      <h2 class="section__title">FDE が扱うテーマ例</h2>
+      <p class="section__lead">現場の課題に応じて、次のようなテーマを横断して整理します。<br>どのテーマに関わるかは案件ごとに異なります。</p>
+    </div>
+    <ul class="themes">
+      <li class="themes__item">データ統合基盤</li>
+      <li class="themes__item">自働化機器連携</li>
+      <li class="themes__item">運送・配車デジタル化</li>
+      <li class="themes__item">AIチューニング</li>
+      <li class="themes__item">ダッシュボード設計</li>
+      <li class="themes__item">横展開・トレーサビリティ</li>
+    </ul>
+
+    <div class="section__head" style="margin-top:48px">
+      <h3 class="section__title" style="font-size:22px">現場で動かすのは、地道な作業の積み上げです</h3>
+      <p class="section__lead">計画を実際に動く仕組みへ変えるまでには、表に出にくい実務があります。FDE はここを引き受けます。</p>
+    </div>
+    <ul class="themes themes--work">
+      <li class="themes__item">要件の擦り合わせ</li>
+      <li class="themes__item">データ整形</li>
+      <li class="themes__item">現場教育</li>
+      <li class="themes__item">障害対応</li>
+      <li class="themes__item">合意形成</li>
+      <li class="themes__item">ドキュメント整備</li>
+    </ul>
+    <p class="prose" style="margin-top:24px">派手さはありませんが、模倣が難しいのはここです。現場ごとの制約を一つずつ解いていく積み上げが、実際に使われる仕組みをつくります。</p>
+  </div>
+</section>
+<!-- ===== FDE-SCOPE v1 END ===== -->
+
 <!-- 07 PALのサービスとの接続 -->
 <section class="section review-added">
   <span class="review-label review-label--added">新規追加</span>
   <div class="container">
     <div class="section__head">
-      <span class="section__eyebrow">07 CONNECT</span>
+      <span class="section__eyebrow">08 CONNECT</span>
       <h2 class="section__title">PALのサービスとの関係</h2>
       <p class="section__lead">FDEの下にサービスがぶら下がる、という関係ではありません。<br>FDEがお客さまの現場を理解し、必要な機能へつなぐ役割です。</p>
     </div>
@@ -312,7 +359,7 @@
   <span class="review-label review-label--added">新規追加</span>
   <div class="container container--narrow">
     <div class="section__head">
-      <span class="section__eyebrow">08 FLOW</span>
+      <span class="section__eyebrow">09 FLOW</span>
       <h2 class="section__title">導入・伴走の流れ</h2>
     </div>
     <ol class="fflow">
@@ -331,7 +378,7 @@
   <span class="review-label review-label--added">新規追加</span>
   <div class="container container--narrow">
     <div class="section__head">
-      <span class="section__eyebrow">09 WHAT REMAINS</span>
+      <span class="section__eyebrow">10 WHAT REMAINS</span>
       <h2 class="section__title">お客さま側に残るもの</h2>
       <p class="section__lead">FDEが関わった現場には、次のものが残ります。</p>
     </div>
@@ -346,18 +393,13 @@
   </div>
 </section>
 
-<!-- 10 相談CTA -->
-<section class="section review-added section--soft">
-  <span class="review-label review-label--added">新規追加</span>
+<!-- ===== FDE-CTA v2：FDE 専用の大型CTAに見せないため、他ページと同じ final-cta 形式へ統一 ===== -->
+<section class="final-cta review-changed">
+  <span class="review-label">今回変更</span>
   <div class="container">
-    <div class="section__head">
-      <h2 class="section__title">現場で止まっている課題について、ご相談ください</h2>
-      <p class="section__lead">「システムは入れたが使われていない」「データが取れていない」といった段階からご相談いただけます。</p>
-    </div>
-    <div class="phero__ctas" style="justify-content:flex-start">
-      <a href="#" class="btn btn--red">お問い合わせ</a>
-      <a href="#" class="btn btn--ghost">資料ダウンロード</a>
-    </div>
+    <h2>物流DXの専門家が、無料でご相談をお受けします。</h2>
+    <p class="final-cta__body">「システムは入れたが使われていない」「データが取れていない」といった段階からご相談いただけます。</p>
+    <a href="#" class="btn btn--red btn--lg">お問い合わせ</a>
     <span class="review-inline-check">要確認：物流DXコラム内のFDE解説記事の有無。存在する場合は「さらに詳しく知る」として本ページから内部リンクします</span>
   </div>
 </section>
