@@ -1465,3 +1465,10 @@ body.review-mode .review-label--moved{background:#464A6F;color:#fff}
   .cycle4__item::after{display:none}
 }
 /* ===== CYCLE v1 END ===== */
+
+/* ===== R-01 v2：役割ページの短い強調文（背景→課題→PALの役割 の結節点） ===== */
+.rlead{
+  margin:26px 0 0;padding:16px 20px;border-left:3px solid var(--pal-accent);
+  background:var(--pal-bg-light);border-radius:0 6px 6px 0;
+  font-size:16px;line-height:1.8;font-weight:700;color:var(--pal-heading);
+}

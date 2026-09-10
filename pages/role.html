@@ -8,7 +8,7 @@
 <meta name="description" content="物流に関わる経営、現場、人、データ、システム、設備、輸送、パートナー企業。PALは、それぞれの間にある分断をつなぎ、計画を現場で実行できる仕組みへと変えていきます。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260909h">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260910a">
 <style>
   /* v1.3 リデザイン：上段=見出し+短説明+関係図／下段=課題→PALの役割→変化 の3カラム */
   .approach-head{max-width:900px;margin:0 auto 40px;text-align:center}
@@ -146,27 +146,28 @@
 
 <!-- ===== ROLLBACK v2：preview 独自の「OUR APPROACH」セクション（8要素関係図 ＋ BEFORE/PAL'S ROLE/AFTER の3カラム）を撤去。
      理由：最終方針は「現行サイトの構成を基本維持し、文章だけ追加」であり、現行サイトに存在しない大型レイアウトのため。
-     救済情報：内容は FV 直下に追加した R-01 の導入段落（3段落）で文章として表現している。
+     救済情報：内容は「なぜ今、物流DX が避けられないのか」セクション本文（第3〜4段落）で表現している。
      復元するには git 履歴 cd01610 の該当 section を戻す ===== -->
 
-<!-- ===== R-01：FV 直下の導入段落。現行構成は変えず、役割の総括だけを先に置く ===== -->
-<section class="section review-added">
-  <span class="review-label review-label--added">新規追加</span>
-  <div class="container container--narrow">
-    <p class="prose"><span class="rnew">新規追加</span>PALの役割は、物流に関わる経営、現場、人、データ、システム、設備、輸送、パートナー企業の間にある分断をつなぎ、描いた計画を現場で実行できる状態へ変えていくことです。</p>
-    <p class="prose">つないで終わりではありません。実行し、運用に定着させ、そこで得られたものをお客さま側に残すところまでを、私たちの役割と考えています。</p>
-    <p class="prose">以下では、物流業界が置かれている現状と、そのなかでPALが担う役割を順に説明します。</p>
-    <details class="rdiff"><summary>追加した文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトではFV直下が目次のため、対応する文章はありません。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">PALの役割は、物流に関わる経営、現場、人、データ、システム、設備、輸送、パートナー企業の間にある分断をつなぎ、描いた計画を現場で実行できる状態へ変えていくことです。<br>つないで終わりではありません。実行し、運用に定着させ、そこで得られたものをお客さま側に残すところまでを、私たちの役割と考えています。<br>以下では、物流業界が置かれている現状と、そのなかでPALが担う役割を順に説明します。</p></div></div></details>
-  </div>
-</section>
-<!-- ===== R-01 END ===== -->
+<!-- ===== R-01 v2：独立セクションとしての導入段落を撤去。
+     理由：PALの役割説明が問題提起とは別の話として突然始まって見えるため。
+     吸収先：直下の「なぜ今、物流DX が避けられないのか」セクション本文（第3〜4段落）。
+     背景 → 課題 → PALの役割、を一続きの文章として読ませる。
+     復元するには git 履歴 0666054 の pages/role.html の R-01 セクションを戻す ===== -->
 
-<!-- 現行 SEC1：なぜ今、物流DXが避けられないのか -->
-<section class="section">
+<!-- 現行 SEC1：なぜ今、物流DXが避けられないのか
+     ===== R-01 v2 統合：旧・独立導入セクションの内容を第3〜4段落として本文へ吸収 ===== -->
+<section class="section review-changed">
+  <span class="review-label">今回変更</span>
   <div class="container container--narrow">
     <div class="section__head"><h2 class="section__title">なぜ今、物流DX が避けられないのか</h2></div>
     <p class="prose">2024年問題による労働時間規制、深刻な人手不足、EC市場拡大による少量多頻度配送の常態化。物流を取り巻く環境は大きく変わりました。CLO の選任義務化や Scope3 開示により、経営層が物流データの把握と説明責任を負う時代になっています。</p>
-    <p class="prose">しかし、多くの企業では拠点ごとに物流データが分断されたまま、個別施策が積み上げられ、全体最適化には至っていません。物流DX は、経営を持続可能なものにするために避けられない取り組みです。</p>
+    <p class="prose">しかし、多くの企業では拠点ごとに物流データが分断されたまま、個別施策が積み上げられています。この状態では、システムや設備を個別に導入しても、物流全体の最適化にはつながりません。物流DX は、経営を持続可能なものにするために避けられない取り組みです。</p>
+    <p class="prose"><span class="rnew">今回変更</span>PALは、物流に関わる経営、現場、人、データ、システム、設備、輸送、パートナー企業の間にある分断を整理し、それぞれをつなぎながら、現場で実際に動く仕組みへ変えていきます。</p>
+    <p class="prose">つないで終わりではありません。実装し、運用に定着させ、そこで得られたデータやノウハウ、判断基準をお客さま側に残すところまでを、PALの役割と考えています。</p>
+    <p class="rlead">分断をつなぎ、現場で動く仕組みへ。</p>
+    <p class="prose" style="margin-top:24px">以下では、物流業界の構造的な課題と、PALがどのようにその分断をつないでいるのかを説明します。</p>
+    <details class="rdiff"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt">2024年問題による労働時間規制、深刻な人手不足、EC市場拡大による少量多頻度配送の常態化。物流を取り巻く環境は大きく変わりました。CLO の選任義務化や Scope3 開示により、経営層が物流データの把握と説明責任を負う時代になっています。<br>しかし、多くの企業では拠点ごとに物流データが分断されたまま、個別施策が積み上げられ、全体最適化には至っていません。物流DX は、経営を持続可能なものにするために避けられない取り組みです。</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 直前のレビュー版では、この上に「PALの役割は、物流に関わる経営、現場、人、データ、システム、設備、輸送、パートナー企業の間にある分断をつなぎ…」という導入段落を独立セクションとして置いていました。PALの役割説明が別の話として始まって見えるため、本セクションの本文へ吸収しています。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">第1段落：環境変化（現行サイトのまま）<br>第2段落：分断されたままでは進まない（「この状態では、システムや設備を個別に導入しても、物流全体の最適化にはつながりません。」を追記）<br>第3段落：PALは分断を整理し、つなぎ、現場で動く仕組みへ変える<br>第4段落：つないで終わりではなく、実装・運用定着・お客さま側に残すところまで<br>強調文：分断をつなぎ、現場で動く仕組みへ。<br>結び：以下では、物流業界の構造的な課題と、PALがどのようにその分断をつないでいるのかを説明します。</p></div></div></details>
   </div>
 </section>
 
