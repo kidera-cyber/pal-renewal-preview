@@ -14,11 +14,12 @@
   };
   const DEFAULT_PAGE = 'home';
 
-  /* ===== CACHE-BUST v1：レビュー環境で旧版HTMLがブラウザキャッシュから
-     表示される事故を防ぐため、iframe とリンクにビルド番号を付与する。
-     更新手順：ページを更新したら BUILD の値を上げる ===== */
-  const BUILD = '20260910l';
-  const bust  = function (f) { return f + '?v=' + BUILD; };
+  /* ===== CACHE-BUST v2：レビュー環境で旧版が表示される事故を根本的に防ぐ。
+     GitHub Pages は全ファイルに Cache-Control: max-age=600（10分）を付けるため、
+     固定のビルド番号では「portal.js 自身が古いまま」だと番号も古く、無効化されていた。
+     そこでプレビュー対象ページは毎回タイムスタンプを付けて必ず最新を取得する。
+     本番化時はこのブロックごと削除し、bust を素通しにしてよい ===== */
+  const bust = function (f) { return f + '?t=' + Date.now(); };
 
   const frame       = document.getElementById('previewFrame');
   const openLink    = document.getElementById('openPage');
@@ -31,9 +32,8 @@
     const key  = PAGES[pageKey] ? pageKey : DEFAULT_PAGE;
 
     // iframe src 切替（同一なら再ロードしない）
-    if (frame.getAttribute('src') !== bust(page.file)) {
-      frame.setAttribute('src', bust(page.file));
-    }
+    // タイムスタンプ方式のため毎回セットする（常に最新を読み込む）
+    frame.setAttribute('src', bust(page.file));
     frame.setAttribute('title', '株式会社PAL コーポレートサイト改修プレビュー ／ ' + page.name);
 
     // 「新しいタブで開く」リンクを同期
