@@ -1472,3 +1472,25 @@ body.review-mode .review-label--moved{background:#464A6F;color:#fff}
   background:var(--pal-bg-light);border-radius:0 6px 6px 0;
   font-size:16px;line-height:1.8;font-weight:700;color:var(--pal-heading);
 }
+
+/* ============================================================
+   ===== FUTURE VISION v1 START =====
+   私たちの役割ページ下部：現在の価値 → 目指す未来 の時間軸表示。
+   Physical AI Enabler を現在提供中のサービスに見せないための対比ブロック。
+   ============================================================ */
+.vision{
+  margin-top:28px;padding:24px 26px;border-radius:8px;
+  background:var(--pal-bg);border:1px solid var(--pal-border);text-align:center;
+}
+.vision__t{
+  margin:0 0 8px;font-family:Lato,'Noto Sans JP',sans-serif;
+  font-size:12px;font-weight:700;letter-spacing:.12em;color:var(--pal-muted);
+}
+.vision__t--future{color:var(--pal-accent)}
+.vision__b{margin:0;font-size:14.5px;line-height:1.9;color:var(--pal-heading);font-weight:700}
+.vision__arrow{margin:16px 0;font-size:20px;line-height:1;color:var(--pal-blue)}
+@media(max-width:560px){.vision{padding:20px 16px}.vision__b{font-size:13.5px}}
+/* ===== FUTURE VISION v1 END ===== */
+
+/* ===== CYCLE-ROLE v1：役割ページの4サイクルはチップ・到達を持たないため縦詰めを調整 ===== */
+.cycle4__item .cycle4__aim:last-child{margin-bottom:0}
