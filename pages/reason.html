@@ -12,7 +12,7 @@
 <meta name="description" content="現場の「運用力」とデジタルの「技術力」。その両輪で確実に成果を生み出す、株式会社PALの強みをご紹介します。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260910m">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260910n">
 <style>
   .strength-list{display:grid;grid-template-columns:1fr;gap:20px}
   .strength-item{background:#fff;border:1px solid var(--border);border-radius:14px;padding:28px 32px;box-shadow:var(--shadow-sm);position:relative}
@@ -22,6 +22,18 @@
   .strength-item__tags{font-size:12px;color:var(--text-mute);font-weight:600}
   .strength-item__tags a{color:var(--red);text-decoration:none;margin-right:8px}
   .strength-item__tags a:hover{text-decoration:underline}
+  /* ===== S-03：補足カード。既存 .strength-item の枠線・角丸・余白・文字サイズを流用し、
+     番号のかわりに POINT ラベルを置く（8つの強みと区別するため） ===== */
+  .point-head{font-size:22px;font-weight:800;color:var(--navy);margin:0 0 20px;line-height:1.5}
+  .strength-list--point{margin-top:0}
+  .strength-item--point{background:var(--bg-soft)}
+  .strength-item__num--point{
+    top:26px;right:28px;display:flex;flex-direction:column;align-items:flex-end;
+    font-family:var(--font-en);font-size:12px;font-weight:700;letter-spacing:.1em;
+    color:var(--text-mute);line-height:1.2;
+  }
+  .strength-item__num--point b{font-size:28px;font-weight:900;color:var(--red-soft);line-height:1}
+  .strength-item--point .strength-item__title{padding-right:76px}
 </style>
 </head>
 <body class="review-mode">
@@ -138,16 +150,37 @@
         <p class="strength-item__tags">関連サービス：協業をお考えの企業さまへ</p>
       </div>
     </div>
-    <!-- ===== S-01：08 の後に補足段落。8項目の本文・番号・並び順は一切変更していない ===== -->
-    <p class="prose" style="margin-top:32px"><span class="rnew">新規追加</span>これら 8 つの強みは、PALが作業を引き受け続けるためのものではありません。</p>
-    <p class="prose">現場を理解し、データをつなぎ、実行まで担う過程で、判断に使えるデータ、判断の基準、運用のルール、業務のノウハウがお客さま側に残ります。PALの関与が薄くなっても、お客さま自身で改善を続けられる。その状態をつくるために、これらの強みを使います。</p>
-    <p class="prose"><span class="rnew">今回変更</span>現場でこれらを組み合わせ、実装と定着まで進める役割を、FDE（Forward Deployed Engineer）が担います。9 つ目の強みではなく、既存の強みを現場で実行するための一つの手段です。</p>
-    <!-- ===== S-02 v1：§25 に基づき「段階的な導入」の説明を1文だけ追加。8つの強み本文は無変更 ===== -->
-    <p class="prose"><span class="rnew">新規追加</span>これらの強みは、一度にすべてを使うものではありません。小さく試し、現場を強くし、データをつなぎ、改善を続ける。PALは物流DXを一つのサイクルとして進めます。</p>
-    <p class="prose"><span class="rnew">今回変更</span>データ統合から現場実装、運用、継続改善まで。今の物流DXだけでなく、将来のAI・ロボティクス活用にもつながる基盤を整えます。</p>
-    <p style="margin-top:20px;display:flex;flex-wrap:wrap;gap:12px"><a href="./role.html#fde" class="btn btn--ghost">FDEについて知る</a><a href="./role.html#cycle" class="btn btn--ghost">PALの価値サイクルを見る</a></p>
-    <details class="rdiff"><summary>追加した文章と導線を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（新規追加）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイトでは 08 の後に補足文はありません。8つの強みの本文・番号・並び順は変更していません。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">これら 8 つの強みは、PALが作業を引き受け続けるためのものではありません。／ 現場を理解し、データをつなぎ、実行まで担う過程で、判断に使えるデータ、判断の基準、運用のルール、業務のノウハウがお客さま側に残ります。PALの関与が薄くなっても、お客さま自身で改善を続けられる。その状態をつくるために、これらの強みを使います。／ 現場でこれらを組み合わせ、実装と定着まで進める役割は、FDE が担います。＋「FDEを知る」導線</p></div></div></details>
-    <!-- ===== S-01 END ===== -->
+    <!-- ===== S-03 v1：08 の後の補足を、既存の強みカード（.strength-item）と同じ体裁へ整形。
+         8つの強みと誤認させないため番号は使わず POINT 01〜03 の補助ラベルにする。
+         8項目の本文・番号・並び順は一切変更していない。
+         復元するには git 履歴 ae3f7c3 の pages/reason.html の S-01／S-02 段落を戻す ===== -->
+    <div class="section__head" style="margin-top:56px;margin-bottom:0">
+      <span class="section__eyebrow">SUPPLEMENT</span>
+      <h3 class="point-head"><span class="rnew">今回変更</span>8つの強みを、どう使い、何を残すのか</h3>
+    </div>
+    <div class="strength-list strength-list--point">
+      <div class="strength-item strength-item--point">
+        <span class="strength-item__num strength-item__num--point">POINT<b>01</b></span>
+        <h4 class="strength-item__title">強みは、PALが抱え続けるためではなく、お客さま側に残すために。</h4>
+        <p class="strength-item__body">PALは、現場を理解し、データをつなぎ、実装・運用まで進めます。<br>その過程で得られた<strong>データ・判断基準・運用ルール・業務ノウハウ</strong>をお客さま側に残し、お客さま自身が改善を続けられる状態をつくります。</p>
+      </div>
+
+      <div class="strength-item strength-item--point">
+        <span class="strength-item__num strength-item__num--point">POINT<b>02</b></span>
+        <h4 class="strength-item__title">FDEは、強みを現場で実行する役割。</h4>
+        <p class="strength-item__body">FDE は 9 つ目の強みではありません。<br>既存の強みを、現場で実際に使える形へ落とし込み、実装・運用・定着まで進めるための役割の一つです。</p>
+        <p class="strength-item__tags"><a href="./role.html#fde">FDEの役割を見る</a></p>
+      </div>
+
+      <div class="strength-item strength-item--point">
+        <span class="strength-item__num strength-item__num--point">POINT<b>03</b></span>
+        <h4 class="strength-item__title">課題に応じて、必要な強みを組み合わせる。</h4>
+        <p class="strength-item__body">8 つの強みを、すべて同時に使うわけではありません。<br>課題に応じて必要な力を組み合わせ、小さく試し、現場を強くし、データをつなぎ、改善を続けます。<br>こうした積み重ねは、将来の AI・ロボティクス活用の土台にもつながります。</p>
+        <p class="strength-item__tags"><a href="./role.html#cycle">PALの価値サイクルを見る</a></p>
+      </div>
+    </div>
+    <details class="rdiff" style="margin-top:20px"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（08 の後に補足はありません）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 直前のレビュー版では、5つの段落を本文としてそのまま追記していました（これら 8 つの強みは、PALが作業を引き受け続けるためのものではありません／現場を理解し、データをつなぎ、実行まで担う過程で…／現場でこれらを組み合わせ、実装と定着まで進める役割を、FDE が担います…／これらの強みは、一度にすべてを使うものではありません…／データ統合から現場実装、運用、継続改善まで…）。文章の羅列で、既存の強みカードと体裁が合っていませんでした。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">既存の強みカード（.strength-item）と同じ枠線・角丸・背景・見出しサイズ・本文サイズ・余白で、SUPPLEMENT の3カードへ整形しました。<br>POINT 01 お客さま側に残すために ／ POINT 02 FDEは強みを現場で実行する役割 ／ POINT 03 必要な強みを組み合わせる<br>8つの強みと誤認させないため、01〜08 の連番ではなく POINT ラベルにしています。将来のAI・ロボティクス活用は POINT 03 の末尾1文に留めています。</p></div></div></details>
+    <!-- ===== S-03 END ===== -->
   </div>
 </section>
 
@@ -219,7 +252,7 @@
       <p class="gfooter__desc">物流をコストから、戦略資産に。</p>
       <p class="gfooter__tel">TEL 06-6534-8998<br><small>営業時間：平日 9:00-18:00</small></p>
     </div>
-    <div class="gfooter__col"><h4>PALを知る</h4><ul><li><a href="./role.html">私たちの役割</a></li><li><a href="./reason.html">PALの強み</a></li><li></li><li><a href="#">よくあるご質問</a></li><li><a href="#">トップメッセージ</a></li><li><a href="#">ミッション・バリュー</a></li></ul></div>
+    <div class="gfooter__col"><h4>PALを知る</h4><ul><li><a href="./role.html">私たちの役割</a></li><li><a href="./reason.html">PALの強み</a></li><li><a href="#">よくあるご質問</a></li><li><a href="#">トップメッセージ</a></li><li><a href="#">ミッション・バリュー</a></li></ul></div>
     <div class="gfooter__col"><h4>サービス</h4><ul>
       <li><a href="https://www.pal-style.co.jp/service/logistics-consulting/">物流コンサルティング</a></li>
       <li><a href="https://lp.pal-style.co.jp/logitec-integration/">ロジテックインテグレーション</a></li>
