@@ -13,6 +13,12 @@
   };
   const DEFAULT_PAGE = 'home';
 
+  /* ===== CACHE-BUST v1：レビュー環境で旧版HTMLがブラウザキャッシュから
+     表示される事故を防ぐため、iframe とリンクにビルド番号を付与する。
+     更新手順：ページを更新したら BUILD の値を上げる ===== */
+  const BUILD = '20260910g';
+  const bust  = function (f) { return f + '?v=' + BUILD; };
+
   const frame       = document.getElementById('previewFrame');
   const openLink    = document.getElementById('openPage');
   const currentName = document.getElementById('currentPageName');
@@ -24,13 +30,13 @@
     const key  = PAGES[pageKey] ? pageKey : DEFAULT_PAGE;
 
     // iframe src 切替（同一なら再ロードしない）
-    if (frame.getAttribute('src') !== page.file) {
-      frame.setAttribute('src', page.file);
+    if (frame.getAttribute('src') !== bust(page.file)) {
+      frame.setAttribute('src', bust(page.file));
     }
     frame.setAttribute('title', '株式会社PAL コーポレートサイト改修プレビュー ／ ' + page.name);
 
     // 「新しいタブで開く」リンクを同期
-    openLink.setAttribute('href', page.file);
+    openLink.setAttribute('href', bust(page.file));
 
     // 現在ページ名
     if (currentName) currentName.textContent = page.name;
