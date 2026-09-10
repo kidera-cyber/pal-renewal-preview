@@ -17,7 +17,7 @@
   /* ===== CACHE-BUST v1：レビュー環境で旧版HTMLがブラウザキャッシュから
      表示される事故を防ぐため、iframe とリンクにビルド番号を付与する。
      更新手順：ページを更新したら BUILD の値を上げる ===== */
-  const BUILD = '20260910i';
+  const BUILD = '20260910j';
   const bust  = function (f) { return f + '?v=' + BUILD; };
 
   const frame       = document.getElementById('previewFrame');

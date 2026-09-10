@@ -1556,3 +1556,51 @@ body.review-mode .review-label--moved{background:#464A6F;color:#fff}
                  .cycle4*（role.html #cycle）／.iflow*（統合アプローチ）
                  .vision*（DXのその先へ）／.remain*（つないで、終わらない。）
    ============================================================ */
+
+/* ============================================================
+   ===== MERGE v1 START =====
+   役割ページ「分断された関係者を、ひとつの実行体制へ。」の関係図。
+   BEFORE（分断）→ PAL（束ねる）→ AFTER（一つの実行体制）の縦3段。
+   .iflow（旧・工程横フロー）は HTML から撤去済み。CSS は復元用に残置。
+   ============================================================ */
+.merge{max-width:56em;margin:0 auto}
+.merge__stage{
+  padding:24px 26px;border-radius:8px;text-align:center;
+  background:var(--pal-bg);border:1px solid var(--pal-border);
+}
+.merge__stage--pal{background:var(--pal-heading);border-color:var(--pal-heading)}
+.merge__stage--after{background:var(--pal-bg-light);border-color:var(--pal-border-strong)}
+.merge__lbl{
+  margin:0 0 8px;font-family:Lato,'Noto Sans JP',sans-serif;
+  font-size:12px;font-weight:700;letter-spacing:.14em;color:var(--pal-muted);
+}
+.merge__stage--pal .merge__lbl{color:var(--pal-blue-pale)}
+.merge__t{margin:0 0 16px;font-size:17px;font-weight:700;line-height:1.5;color:var(--pal-heading)}
+.merge__stage--pal .merge__t{color:#fff}
+.merge__stage--after .merge__t{font-size:19px}
+.merge__parties,.merge__acts{
+  list-style:none;margin:0;padding:0;
+  display:flex;flex-wrap:wrap;justify-content:center;gap:8px;
+}
+.merge__parties li{
+  padding:8px 16px;border-radius:8px;
+  background:var(--pal-bg-light);border:1px dashed var(--pal-border-strong);
+  font-size:13.5px;line-height:1.5;color:var(--pal-sub);
+}
+.merge__acts li{
+  padding:8px 16px;border-radius:9999px;
+  background:rgba(255,255,255,.12);color:#fff;
+  font-size:13.5px;line-height:1.5;
+}
+.merge__d{margin:0;font-size:13.5px;line-height:1.9;color:var(--pal-sub)}
+.merge__arrow{margin:12px 0;text-align:center;font-size:20px;line-height:1;color:var(--pal-blue)}
+.merge__next{
+  margin:28px 0 0;padding:16px 20px;border-radius:8px;
+  background:var(--pal-bg-light);border-left:3px solid var(--pal-blue);
+  font-size:13.5px;line-height:1.9;color:var(--pal-text);
+}
+@media(max-width:560px){
+  .merge__stage{padding:20px 16px}
+  .merge__parties li,.merge__acts li{padding:7px 12px;font-size:13px}
+}
+/* ===== MERGE v1 END ===== */

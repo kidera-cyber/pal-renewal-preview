@@ -12,7 +12,7 @@
 <meta name="description" content="物流に関わる経営、現場、人、データ、システム、設備、輸送、パートナー企業。PALは、それぞれの間にある分断をつなぎ、計画を現場で実行できる仕組みへと変えていきます。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260910i">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260910j">
 <style>
   /* v1.3 リデザイン：上段=見出し+短説明+関係図／下段=課題→PALの役割→変化 の3カラム */
   .approach-head{max-width:900px;margin:0 auto 40px;text-align:center}
@@ -232,45 +232,58 @@
   </div>
 </section>
 
-<!-- ===== INTEGRATE v1 START：現行サイトの独立セクション「統合アプローチによる課題解決」を復活。
-     直前の「ロジテックインテグレーション」＝PALの立ち位置、
-     本セクション＝どう進めるか（プロセス・関係者・責任をつなぐ）、
-     直後の「オープン型統合管理」＝どう見える化するか、で役割を分ける。
-     復元（撤去）するには本ブロックを INTEGRATE v1 START〜END ごと外す ===== -->
+<!-- ===== INTEGRATE v2 START：役割を「工程をどう進めるか」から
+     「複数の会社・機能・責任・判断をどう束ねるか」へ変更。
+     縦の時間軸＝Design→Deploy→Operate→Evolve（価値サイクル）
+     横の統合軸＝本セクション、という役割分担にする。
+     撤去：調査→戦略→設計→選定→導入→運用 の工程横フロー（.iflow）
+           ※価値サイクルと時間軸が重複するため
+     復元するには git 履歴 26147b4 の .iflow ブロックを戻す ===== -->
 <section class="section review-changed">
   <span class="review-label">今回変更</span>
   <div class="container">
     <div class="section__head">
-      <h2 class="section__title">統合アプローチによる課題解決</h2>
-      <p class="section__lead">PALは、既存の3PLや各種パートナーが持つ強みを活かしながら、それぞれを分断させることなくつなぎ、<br>物流全体を一つの流れとして進めます。</p>
+      <h2 class="section__title"><span class="rnew">今回変更</span>分断された関係者を、ひとつの実行体制へ。</h2>
+      <p class="section__lead">PALは、既存の3PLや各種パートナーの強みを活かしながら、それぞれを分断させることなく、<br>物流全体を一つの流れとして束ねます。</p>
     </div>
 
-    <ol class="iflow" aria-label="PAL が統合管理する全プロセス">
-      <li class="iflow__item">調査</li>
-      <li class="iflow__arrow" aria-hidden="true">→</li>
-      <li class="iflow__item">戦略</li>
-      <li class="iflow__arrow" aria-hidden="true">→</li>
-      <li class="iflow__item">設計</li>
-      <li class="iflow__arrow" aria-hidden="true">→</li>
-      <li class="iflow__item">選定</li>
-      <li class="iflow__arrow" aria-hidden="true">→</li>
-      <li class="iflow__item">導入</li>
-      <li class="iflow__arrow" aria-hidden="true">→</li>
-      <li class="iflow__item iflow__item--goal">運用</li>
-    </ol>
-    <p class="iflow__note">分離発注では、この6つが別々の事業者に分かれます。PALはここを横断して管理します。</p>
-
-    <div class="grid-3" style="margin-top:32px">
-      <div class="card card--filled"><p class="card__eyebrow">01</p><h4 class="card__title">調整の重複を減らす</h4><p class="card__body">フェーズごとに繰り返されるコンペ・社内承認や、複数ベンダーとの調整を減らします。</p></div>
-      <div class="card card--filled"><p class="card__eyebrow">02</p><h4 class="card__title">責任点を一本化する</h4><p class="card__body">トラブル時の「誰のせいか分からない」を排除し、窓口と責任の所在を明確にします。</p></div>
-      <div class="card card--filled"><p class="card__eyebrow">03</p><h4 class="card__title">意思決定を速くする</h4><p class="card__body">戦略から実行までを一気通貫で進めることで、判断と改善のスピードが上がります。</p></div>
+    <div class="merge">
+      <div class="merge__stage">
+        <p class="merge__lbl">BEFORE</p>
+        <p class="merge__t">それぞれが別々に動いている</p>
+        <ul class="merge__parties">
+          <li>経営</li><li>現場</li><li>3PL</li><li>システムベンダー</li><li>設備ベンダー</li><li>運送会社</li>
+        </ul>
+      </div>
+      <p class="merge__arrow" aria-hidden="true">↓</p>
+      <div class="merge__stage merge__stage--pal">
+        <p class="merge__lbl">PAL</p>
+        <p class="merge__t">間に入り、束ねる</p>
+        <ul class="merge__acts">
+          <li>情報を整理する</li><li>役割を整理する</li><li>判断をそろえる</li><li>責任点を明確にする</li><li>ベンダー間を調整する</li>
+        </ul>
+      </div>
+      <p class="merge__arrow" aria-hidden="true">↓</p>
+      <div class="merge__stage merge__stage--after">
+        <p class="merge__lbl">AFTER</p>
+        <p class="merge__t">一つの実行体制</p>
+        <p class="merge__d">物流全体を、一つの方針・一つの流れとして進められる状態へ。</p>
+      </div>
     </div>
 
-    <p class="prose" style="margin-top:28px"><span class="rnew">今回変更</span>さらに、統合して終わりではありません。現場で実行し、運用に定着するところまでつなげることで、意思決定と改善のスピードを高めます。</p>
-    <details class="rdiff"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt">PALは、ロジテックインテグレーターとしての「統合する力」を活かし、分離発注が生む非効率を根本から解消します。「調査→戦略→設計→選定→導入→運用」に至る全プロセスをPALが統合管理することで、以下のメリットを提供します。<br>・フェーズごとのコンペ・承認の繰り返しを削減<br>・SIer・マテハンメーカー・3PLとの複雑な複数調整を不要化<br>・責任点を一本化し、トラブル時の「誰のせいか分からない」を排除<br>これにより、戦略から実行までを一気通貫で推進し、意思決定のスピードを飛躍的に向上させます。</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 直前のレビュー版では、この内容を「ロジテックインテグレーション」セクション本文の1段落に圧縮していました。現行サイトと同じく独立セクションへ戻しています。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">独立セクションとして復活。調査 → 戦略 → 設計 → 選定 → 導入 → 運用 の横フロー図解＋3つの効果（調整の重複を減らす／責任点を一本化する／意思決定を速くする）で構成。<br>末尾に「統合して終わりではなく、現場で実行し、運用に定着するところまでつなげる」という今回の方針との接続を1文追加しています。</p></div></div></details>
+    <p class="prose" style="margin-top:32px">複数の関係者・判断・責任点を整理することで、調整の重複を減らし、意思決定と実行を前へ進めます。</p>
+
+    <div class="grid-3" style="margin-top:24px">
+      <div class="card card--filled"><p class="card__eyebrow">01</p><h4 class="card__title">調整の重複を減らす</h4><p class="card__body">フェーズごとに別会社へ説明・調整する状態を減らし、関係者間のやり取りを整理します。</p></div>
+      <div class="card card--filled"><p class="card__eyebrow">02</p><h4 class="card__title">責任点を明確にする</h4><p class="card__body">複数ベンダー間で責任が曖昧になる状態を避け、誰が何を担うかを明確にします。</p></div>
+      <div class="card card--filled"><p class="card__eyebrow">03</p><h4 class="card__title">意思決定を速くする</h4><p class="card__body">必要な情報と関係者をつなぎ、判断から実行までの停滞を減らします。</p></div>
+    </div>
+
+    <p class="merge__next"><span class="rnew">今回変更</span>こうして関係者と役割を束ねた上で、PALは Design → Deploy → Operate → Evolve のサイクルを通じて、現場で改善を続けます。</p>
+    <details class="rdiff"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】直前のレビュー版</span><p class="rdiff__txt">見出し：統合アプローチによる課題解決<br>図解：調査 → 戦略 → 設計 → 選定 → 導入 → 運用 の工程横フロー<br>注記：分離発注では、この6つが別々の事業者に分かれます。PALはここを横断して管理します。<br>末尾：さらに、統合して終わりではありません。現場で実行し、運用に定着するところまでつなげることで、意思決定と改善のスピードを高めます。</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 工程を順番に進める説明が、後段の「PALの価値サイクル（Design → Deploy → Operate → Evolve）」と役割が重複していました。時間軸を2つ持つと理解しにくいため、本セクションは統合マネジメントの説明に絞っています。</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイト www.pal-style.co.jp では「統合アプローチによる課題解決」として、分離発注の解消メリット3点が箇条書きで掲載されています。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">見出し：分断された関係者を、ひとつの実行体制へ。<br>図解：BEFORE（経営／現場／3PL／システムベンダー／設備ベンダー／運送会社が別々に動く）→ PAL（情報を整理・役割を整理・判断をそろえる・責任点を明確にする・ベンダー間を調整する）→ AFTER（一つの実行体制）<br>3カード：調整の重複を減らす／責任点を明確にする／意思決定を速くする<br>末尾：価値サイクルへの接続を1文</p></div></div></details>
   </div>
 </section>
-<!-- ===== INTEGRATE v1 END ===== -->
+<!-- ===== INTEGRATE v2 END ===== -->
 
 <!-- ===== OPEN-MGMT v1 START：現行サイトの「ブラックボックスを解消するオープン型統合管理」を
      独立セクションへ分離（§15 の順序6番目）。顧客側にデータとノウハウが残る考え方の起点。
