@@ -8,7 +8,7 @@
 <meta name="description" content="物流に関わる経営、現場、人、データ、システム、設備、輸送、パートナー企業。PALは、それぞれの間にある分断をつなぎ、計画を現場で実行できる仕組みへと変えていきます。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260910d">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260910e">
 <style>
   /* v1.3 リデザイン：上段=見出し+短説明+関係図／下段=課題→PALの役割→変化 の3カラム */
   .approach-head{max-width:900px;margin:0 auto 40px;text-align:center}
@@ -291,6 +291,28 @@
 </section>
 <!-- ===== OPEN-MGMT v1 END ===== -->
 
+<!-- ===== CORE-ZERO v3 START：オープン型統合管理の直後へ移動（FDE の直後から）。
+     位置づけ：PALの統合モデルを、初期投資のハードルを抑えながら実装するための「導入手段」。
+     FDE（現場で誰が動かすか）とは役割が異なるため、FDE の説明直後には置かない。
+     現行サイトの「この統合モデルを、『初期費用ゼロ』で即座に実装」に対応。
+     復元するには git 履歴 0d44201 の配置（FDE の直後）へ戻す ===== -->
+<section class="section review-changed">
+  <span class="review-label">今回変更</span>
+  <div class="container container--narrow">
+    <p class="prose prose--bridge"><span class="rnew">今回変更</span>こうした統合モデルを実際の現場へ導入する際には、初期投資や判断のハードルも課題になります。</p>
+    <div class="section__head" style="margin-top:8px">
+      <h2 class="section__title">この統合モデルを、「初期費用ゼロ」で実装</h2>
+      <p class="section__lead">ロジテックインテグレーターとして描いた「あるべき物流」を、絵に描いた餅で終わらせないために。<br>PALは導入時の「投資リスク」と「判断の難しさ」を取り除きます。</p>
+    </div>
+    <p class="prose">通常、マテハンやシステムの導入には多額の初期費用が必要で、専門的な判断軸がなければ投資判断は容易ではありません。</p>
+    <p class="prose">PALの「Core Zero」では、設備・システム・運用を PAL 側で保有・提供するため、お客さまは業務委託費の中で、統合された物流環境を利用できます。</p>
+    <p class="prose">ベンダー選定や投資判断といった複雑なプロセスについても、実装前の検証を含めて PAL が担います。投資判断や予算承認のハードルを抑えながら、実行と成果につながる物流DXを現実的に進めることが可能になります。</p>
+    <p class="section__cta-wrap" style="text-align:left;margin-top:20px"><a href="https://www.pal-style.co.jp/service/zero/" class="btn btn--ghost">Core Zero を知る</a></p>
+    <details class="rdiff"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】直前のレビュー版</span><p class="rdiff__txt">配置：FDE セクションの直後（つないで終わらない → 価値サイクル → FDE → <strong>Core Zero</strong> → DXのその先へ）<br>見出し：「初期費用ゼロで導入できる仕組み」<br>リード：「描いた進め方を、投資判断で止めないために。」</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ Core Zero が FDE の続き・次のフェーズに見える並びでした。Core Zero は FDE の一部ではなく、統合モデルを現実的に導入するための手段のため、位置を改めています。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">配置：オープン型統合管理の直後（オープン型統合管理 → <strong>Core Zero</strong> → つないで終わらない → 価値サイクル → FDE → DXのその先へ）<br>見出し：「この統合モデルを、『初期費用ゼロ』で実装」（現行サイト www.pal-style.co.jp の文脈に合わせて変更）<br>橋渡し文「こうした統合モデルを実際の現場へ導入する際には、初期投資や判断のハードルも課題になります。」を追加し、"考え方 → 実装手段" の流れにしています。</p></div></div></details>
+  </div>
+</section>
+<!-- ===== CORE-ZERO v3 END ===== -->
+
 
 <!-- ===== SEC04 v1 START：設計書 2.1／2.2 を根拠に「つないで終わらない」を独立セクション化。
      つなぐ（既存の統合力）を否定せず、その先へ価値を拡張する位置づけ。
@@ -401,24 +423,10 @@
 </section>
 <!-- ===== FDE-ROLE v4 END ===== -->
 
-<!-- ===== CORE-ZERO v2 START：ロジテックインテグレーション節から分離し、
-     4サイクル・FDE の後（＝実装手段の説明）へ配置（§15 の順序10番目）。
-     現行サイトの「この統合モデルを、初期費用ゼロで即座に実装」に対応 ===== -->
-<section class="section review-changed">
-  <span class="review-label">今回変更</span>
-  <div class="container container--narrow">
-    <div class="section__head">
-      <h2 class="section__title">初期費用ゼロで導入できる仕組み</h2>
-      <p class="section__lead">描いた進め方を、投資判断で止めないために。</p>
-    </div>
-    <p class="prose">通常、マテハンやシステムの導入には多額の初期費用が必要で、専門的な判断軸がなければ投資判断は容易ではありません。</p>
-    <p class="prose">「Core Zero」では、設備・システム・運用を PAL 側で保有・提供するため、お客さまは業務委託費のみで統合された物流環境を利用できます。ベンダー選定や投資判断も、実装前の検証を含めて PAL が担います。</p>
-    <p class="section__cta-wrap" style="text-align:left;margin-top:20px"><a href="https://www.pal-style.co.jp/service/zero/" class="btn btn--ghost">Core Zero を知る</a></p>
-    <details class="rdiff"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】本ページ</span><p class="rdiff__txt">「PAL が実践するロジテックインテグレーション」セクションの末尾に、小見出しとして置いていました。</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 現行サイト www.pal-style.co.jp では「この統合モデルを、『初期費用ゼロ』で即座に実装」として独立ブロックになっています。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">独立セクションへ分離し、価値サイクルと FDE の後（＝実装手段の説明）へ配置しました。本文は現行サイトの内容に沿って補っています。</p></div></div></details>
-  </div>
-</section>
-<!-- ===== CORE-ZERO v2 END ===== -->
-
+<!-- ===== CORE-ZERO v3：本位置（FDE の直後）から撤去。
+     理由：Core Zero は FDE の続きではなく「統合モデルを現実的に導入するための手段」であり、
+           オープン型統合管理の直後が正しい文脈。
+     移動先：本ページ「ブラックボックスを解消するオープン型統合管理」セクションの直後 ===== -->
 <!-- ===== FUTURE v1 START：設計書 2.5／ブランドステートメントを Web 向けに短く再編集。
      Physical AI Enabler は「未来ビジョン」としてのみ使用し、現在提供中のサービスとして表現しない。
      移動元：git 履歴 8d3ec51 の pages/reason.html（.cycle4__future）===== -->

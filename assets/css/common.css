@@ -1521,3 +1521,9 @@ body.review-mode .review-label--moved{background:#464A6F;color:#fff}
   .iflow__note{text-align:left}
 }
 /* ===== INTEGRATE v1 END ===== */
+
+/* ===== CORE-ZERO v3：直前セクションからの橋渡し文（考え方 → 実装手段） ===== */
+.prose--bridge{
+  margin:0 0 4px;padding-left:14px;border-left:3px solid var(--pal-border-strong);
+  font-size:14.5px;line-height:1.9;color:var(--pal-muted);
+}
