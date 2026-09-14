@@ -1810,3 +1810,10 @@ a .fde-name{text-decoration:inherit}
 .gapviz > .review-label{position:static;display:inline-flex;margin:0 0 4px}
 body:not(.review-mode) .gapviz > .review-label{display:none}
 body.review-mode .gapviz > .review-label{position:static;display:inline-flex;margin:0 0 6px;box-shadow:none}
+
+/* ===== V2-APPROACH-BRIDGE v1：3つの力 → 4サイクル の接続文（HOME v2） ===== */
+.approach-bridge{margin:30px auto 0;max-width:44em;text-align:center;font-size:15px;line-height:1.85;font-weight:700;color:var(--pal-heading)}
+.approach-bridge + .v2cycle{margin-top:14px}
+.v2cycle .nw{white-space:nowrap}
+@media(max-width:640px){.approach-bridge{text-align:left;font-size:14.5px}.v2cycle .nw{white-space:normal}}
+@media(max-width:640px){.lead-flow br{display:none}.lead-flow{text-align:left}}
