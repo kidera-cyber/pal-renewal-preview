@@ -1918,3 +1918,30 @@ body.review-mode .fdemap > .review-label{position:static;display:inline-flex;mar
 
 /* ===== FDE-ROLE v7：#fde アンカーを V2-FDEMAP へ移設。固定ヘッダーに隠れないよう余白を確保 ===== */
 #fde.fdemap{scroll-margin-top:96px}
+
+/* ============================================================
+   ===== FDE-3PAGE v1 START =====
+   HOME＝短い認知（.fdebrief / .fdebridge / .fde-cta）、役割＝詳細（.fdepal）。
+   HOME-FDE-BRIEF v1 / ROLE-FDE-DETAIL v1 用。既存 .fdeflow / .fdemap は流用。
+   ============================================================ */
+.fdebrief{max-width:44em;margin:0 auto;text-align:center}
+.fdebrief__def{margin:0 0 8px;font-size:15.5px;font-weight:700;line-height:1.8;color:var(--pal-heading)}
+.fdebrief__txt{margin:0;font-size:14px;line-height:1.9;color:var(--pal-sub)}
+.fdebridge{list-style:none;margin:22px auto 0;padding:0;display:flex;align-items:stretch;justify-content:center;gap:28px;max-width:52em}
+.fdebridge li{position:relative;display:flex;align-items:center;justify-content:center;padding:12px 16px;border-radius:8px;background:var(--pal-bg-light);border:1px solid var(--pal-border);font-size:14px;font-weight:700;line-height:1.5;color:var(--pal-heading);text-align:center}
+.fdebridge li:not(:last-child)::after{content:"→";position:absolute;right:-21px;top:50%;transform:translateY(-50%);font-weight:400;color:var(--pal-blue)}
+.fdebridge .fdebridge__fde{background:var(--pal-heading);border-color:var(--pal-heading);color:#fff}
+.fde-cta{margin:16px 0 0;text-align:center}
+.fde-cta a{font-size:14px;font-weight:700;color:var(--pal-accent);text-decoration:underline;text-underline-offset:3px}
+.fde-cta a::after{content:" →"}
+.fde-cta a .fde-name{text-decoration:inherit}
+.fdepal{margin-top:16px;padding:16px 18px;border-radius:8px;background:var(--pal-bg-light);border-left:3px solid var(--pal-accent)}
+.fdepal__lead{margin:0 0 6px;font-size:15px;font-weight:700;color:var(--pal-heading)}
+.fdepal__txt{margin:0;font-size:13.5px;line-height:1.85;color:var(--pal-sub)}
+.fdemap__step > .fderole--inmap{margin-top:0}
+@media(max-width:768px){
+  .fdebridge{flex-direction:column;align-items:stretch;gap:22px;max-width:22em}
+  .fdebridge li:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-20px;transform:translateX(-50%)}
+}
+@media(max-width:640px){.fdebrief{text-align:left}}
+/* ===== FDE-3PAGE v1 END ===== */
