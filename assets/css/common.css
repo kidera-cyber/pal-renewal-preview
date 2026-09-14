@@ -1734,3 +1734,79 @@ a .fde-name{text-decoration:inherit}
 .fdevalue__result{margin-top:10px !important;color:var(--pal-heading) !important;font-weight:700}
 .fdevalue strong{color:var(--pal-heading);font-weight:700}
 @media(max-width:640px){.fdevalue{text-align:left}.fdevalue p{font-size:14.5px}}
+
+/* ============================================================
+   ===== V2-GAPVIZ v1 START =====
+   HOME v2：課題チップ直下の3段図解（ギャップ比較 → FDE の流れ → 役割分担）。
+   既存トークン（赤・ネイビー・白・薄グレー）のみ。文字は短く、図解を主役に。
+   ============================================================ */
+.gapviz{position:relative;max-width:52em;margin:28px auto 0;text-align:left}
+.gapviz .review-label{position:absolute;top:-10px;left:-10px}
+.gapviz__h{margin:34px 0 14px;text-align:center;font-size:18px;font-weight:700;line-height:1.6;color:var(--pal-heading)}
+.gapviz__h:first-of-type{margin-top:8px}
+.gapviz__def{margin:-6px auto 16px;max-width:40em;text-align:center;font-size:14px;line-height:1.85;color:var(--pal-sub)}
+.gapviz__note{margin:14px 0 0;text-align:center;font-size:14px;line-height:1.85;font-weight:700;color:var(--pal-heading)}
+.sp-only{display:none}
+
+/* 1段目：ギャップ比較 */
+.gapbridge{display:grid;grid-template-columns:1fr auto 1fr;align-items:stretch;gap:0}
+.gapbridge__side{padding:18px 20px;border-radius:8px;background:var(--pal-bg);border:1px solid var(--pal-border)}
+.gapbridge__who{margin:0 0 10px;font-size:15px;font-weight:700;color:var(--pal-heading)}
+.gapbridge__list{list-style:none;margin:0;padding:0}
+.gapbridge__list li{position:relative;padding-left:22px;margin:0 0 6px;font-size:13.5px;line-height:1.7;color:var(--pal-text)}
+.gapbridge__list li::before{position:absolute;left:0;top:0;font-weight:700}
+.gapbridge__list li.is-ok::before{content:"○";color:var(--pal-blue)}
+.gapbridge__list li.is-ng::before{content:"×";color:var(--pal-accent)}
+.gapbridge__list li.is-ng{font-weight:700;color:var(--pal-heading)}
+.gapbridge__gap{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0 16px;min-width:118px;
+  background:repeating-linear-gradient(135deg,transparent 0 6px,rgba(207,19,27,.06) 6px 12px)}
+.gapbridge__label{padding:8px 12px;border-radius:9999px;background:var(--pal-accent);color:#fff;font-size:13px;font-weight:700;line-height:1.35;text-align:center}
+.gapbridge__arrow{font-size:18px;line-height:1;color:var(--pal-accent)}
+
+/* 2段目：FDE の流れ */
+.fdeflow{display:grid;grid-template-columns:auto auto 1fr;align-items:center;gap:10px}
+.fdeflow__pre{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:6px}
+.fdeflow__pre li{padding:8px 12px;border-radius:8px;background:var(--pal-bg);border:1px dashed var(--pal-border-strong);font-size:13px;line-height:1.5;color:var(--pal-sub);white-space:nowrap}
+.fdeflow__join{font-size:18px;color:var(--pal-blue)}
+.fdeflow__core{padding:14px 16px 16px;border-radius:8px;background:var(--pal-heading)}
+.fdeflow__core-lbl{margin:0 0 10px;font-size:12px;font-weight:700;letter-spacing:.04em;color:var(--pal-blue-pale)}
+.fdeflow__steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:6px;counter-reset:fs}
+.fdeflow__steps li{counter-increment:fs;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  min-height:58px;padding:8px 4px;border-radius:6px;background:rgba(255,255,255,.1);color:#fff;font-size:14px;font-weight:700;line-height:1.35;text-align:center}
+.fdeflow__steps li small{display:block;margin-top:2px;font-size:12px;font-weight:500;color:var(--pal-blue-pale)}
+.fdeflow__steps li:not(:last-child)::after{content:"›";position:absolute;right:-6px;top:50%;transform:translateY(-50%);font-size:16px;color:var(--pal-blue-pale);z-index:1}
+
+/* 3段目：役割分担 */
+.splitroles{display:grid;grid-template-columns:1fr 1.6fr;gap:10px}
+.splitroles__col{padding:16px 18px;border-radius:8px;background:var(--pal-bg);border:1px solid var(--pal-border)}
+.splitroles__col--pal{background:var(--pal-heading);border-color:var(--pal-heading)}
+.splitroles__who{margin:0 0 10px;font-size:14px;font-weight:700;color:var(--pal-heading)}
+.splitroles__col--pal .splitroles__who{color:#fff}
+.splitroles__list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.splitroles__list li{padding:5px 12px;border-radius:9999px;background:var(--pal-bg-light);border:1px solid var(--pal-border);font-size:13px;line-height:1.5;color:var(--pal-heading)}
+.splitroles__col--pal .splitroles__list li{background:rgba(255,255,255,.12);border-color:transparent;color:#fff}
+
+@media(max-width:760px){
+  .sp-only{display:inline}
+  .gapviz__h{font-size:16.5px}
+  .gapbridge{grid-template-columns:1fr}
+  .gapbridge__gap{flex-direction:row;min-width:0;padding:10px 0}
+  .gapbridge__arrow{transform:rotate(90deg)}
+  .fdeflow{grid-template-columns:1fr}
+  .fdeflow__pre{flex-direction:row;flex-wrap:wrap}
+  .fdeflow__pre li{white-space:normal}
+  .fdeflow__join{justify-self:center;transform:rotate(90deg)}
+  .fdeflow__steps{grid-template-columns:1fr}
+  .fdeflow__steps li{min-height:0;flex-direction:row;gap:8px;padding:10px 12px;justify-content:flex-start}
+  .fdeflow__steps li small{margin-top:0}
+  .fdeflow__steps li:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-13px;transform:translateX(-50%);font-size:12px}
+  .fdeflow__steps{gap:14px}
+  .splitroles{grid-template-columns:1fr}
+  .gapviz .review-label{left:0}
+}
+/* ===== V2-GAPVIZ v1 END ===== */
+/* V2-GAPVIZ 追補：見出しの1〜2文字だけの改行を防ぐ／レビューラベルを見出しに重ねない */
+.gapviz .nw{white-space:nowrap}
+.gapviz > .review-label{position:static;display:inline-flex;margin:0 0 4px}
+body:not(.review-mode) .gapviz > .review-label{display:none}
+body.review-mode .gapviz > .review-label{position:static;display:inline-flex;margin:0 0 6px;box-shadow:none}
