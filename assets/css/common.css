@@ -1882,3 +1882,11 @@ body.review-mode .fdemap > .review-label{position:static;display:inline-flex;mar
   .fdemap__no{flex-wrap:wrap;gap:4px 8px}
 }
 /* ===== V2-FDEMAP v1 END ===== */
+
+/* ============================================================
+   ===== FDE-BRIDGE v1 START =====
+   役割v2：統合アプローチ直下へ移動した FDE セクション冒頭の橋渡し文。
+   ============================================================ */
+.fde-bridge{max-width:40em;margin:0 auto 28px;padding-bottom:22px;border-bottom:1px solid var(--pal-border);text-align:center;font-size:15px;font-weight:700;line-height:1.8;color:var(--pal-heading)}
+@media(max-width:640px){.fde-bridge{text-align:left;font-size:14.5px}}
+/* ===== FDE-BRIDGE v1 END ===== */
