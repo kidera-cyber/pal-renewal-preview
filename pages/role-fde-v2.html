@@ -12,7 +12,7 @@
 <meta name="description" content="物流に関わる経営、現場、人、データ、システム、設備、輸送、パートナー企業。PALは、それぞれの間にある分断をつなぎ、計画を現場で実行できる仕組みへと変えていきます。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260914k">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260914l">
 <style>
   /* v1.3 リデザイン：上段=見出し+短説明+関係図／下段=課題→PALの役割→変化 の3カラム */
   .approach-head{max-width:900px;margin:0 auto 40px;text-align:center}
@@ -260,26 +260,75 @@
 
     <p class="cycle4__loop"><span class="cycle4__loop-mark" aria-hidden="true">↺</span>Evolve で得られたデータや知見を、次の Design へ戻し、改善を繰り返します。</p>
 
-    <div class="across">
-      <p class="across__t"><span class="rnew">今回変更</span>この4サイクルを、PAL と <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が横断して担います</p>
-      <ul class="across__parties"><li>経営</li><li>現場</li><li>3PL</li><li>システム</li><li>設備</li><li>運送</li></ul>
-      <p class="across__d">現場実装を担う <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>とともに、関係者・システム・設備・データをつなぎ、一つの流れとして進めます。</p>
-      <div class="roles2">
-        <div class="roles2__col">
-          <p class="roles2__who">お客さま</p>
-          <p class="roles2__what">経営判断・方針承認・投資判断など、<b>必要な判断</b>を担っていただきます。</p>
-        </div>
-        <div class="roles2__col roles2__col--pal">
-          <p class="roles2__who">PAL / <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span></p>
-          <p class="roles2__what">現場調査・業務整理・データ整理・要件定義・設備選定支援・ベンダー調整・実装・テスト・運用設計・定着支援・改善までを<b>実行</b>します。</p>
+    <!-- ===== V2-FDEMAP v1 START：旧「この4サイクルを、PAL と FDE（…）が横断して担います」ブロック（.across）を
+         1枚図へ再設計。構成：見出し → 01 価値フロー → 02 つなぐ対象 → 03 役割分担 → 04 統合の効果。
+         旧ブロックは git 履歴 c0f52a5 を参照 ===== -->
+    <div class="fdemap">
+      <span class="review-label">今回変更</span>
+      <p class="fdemap__h">現場と技術をつなぎ、<span class="nw">実装・運用まで進めるのが、</span><br><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>です。</p>
+      <p class="fdemap__lead"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>とは、業務と技術を翻訳し、関係者をつなぎながら、設計・実装・運用・改善までを進める役割です。提案や助言を中心とするコンサルタント、特定のシステム開発を中心とするエンジニアとは異なり、業務課題の整理から現場での運用・改善までを一貫して担います。</p>
+
+      <div class="fdemap__step">
+        <p class="fdemap__no"><b>01</b><span><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の価値</span></p>
+        <div class="fdeflow">
+          <ol class="fdeflow__pre" aria-label="理解する">
+            <li>現場の課題を理解する</li>
+            <li>業務を整理する</li>
+          </ol>
+          <span class="fdeflow__join" aria-hidden="true">→</span>
+          <div class="fdeflow__core">
+            <p class="fdeflow__core-lbl"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の価値の中心</p>
+            <ol class="fdeflow__steps" aria-label="翻訳から改善まで">
+              <li>翻訳する<small>業務課題→技術要件</small></li>
+              <li>設計する</li>
+              <li>実装する</li>
+              <li>運用へつなぐ</li>
+              <li>改善する</li>
+            </ol>
+          </div>
         </div>
       </div>
-      <ul class="across__gains">
-        <li><span class="across__k">調整の重複を減らす</span>複数の関係者とのやり取りを整理し、重複する調整を減らす。</li>
-        <li><span class="across__k">責任点を明確にする</span>誰が何を担うかを整理し、責任の曖昧さをなくす。</li>
-        <li><span class="across__k">意思決定を速くする</span>必要な情報と関係者をつなぎ、判断から実行までの停滞を減らす。</li>
-      </ul>
+
+      <div class="fdemap__step">
+        <p class="fdemap__no"><b>02</b><span>つなぐ関係者・機能</span></p>
+        <p class="fdemap__d">複数のベンダーや関係者が別々に動く状態を、情報と役割の整理によって一つの実行体制にまとめます。</p>
+        <div class="hub">
+          <ul class="hub__parties" aria-label="関係者・機能"><li>お客さま</li><li>現場</li><li>3PL</li><li>システム</li><li>設備</li><li>運送</li></ul>
+          <span class="hub__arrow" aria-hidden="true">↓</span>
+          <div class="hub__core">
+            <p class="hub__name"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span></p>
+            <ul class="hub__acts"><li>情報を整理する</li><li>役割を整理する</li><li>判断材料をそろえる</li><li>ベンダー間を調整する</li><li>実装を前へ進める</li></ul>
+          </div>
+          <span class="hub__arrow" aria-hidden="true">↓</span>
+          <p class="hub__result">一つの実行体制</p>
+        </div>
+      </div>
+
+      <div class="fdemap__step">
+        <p class="fdemap__no"><b>03</b><span>お客さまと PAL / <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の役割分担</span></p>
+        <div class="splitroles">
+          <div class="splitroles__col">
+            <p class="splitroles__who">お客さまが担うこと</p>
+            <ul class="splitroles__list"><li>方針の確認</li><li>投資判断</li><li>最終判断</li></ul>
+          </div>
+          <div class="splitroles__col splitroles__col--pal">
+            <p class="splitroles__who">PAL / <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が担うこと</p>
+            <ul class="splitroles__list"><li>現場把握</li><li>業務整理</li><li>要件整理</li><li>設計</li><li>実装</li><li>テスト</li><li>運用設計</li><li>定着支援</li><li>改善</li></ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="fdemap__step">
+        <p class="fdemap__no"><b>04</b><span>統合による効果</span></p>
+        <p class="fdemap__d"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が関係者・役割・情報を束ねることで、次の3つが実現しやすくなります。</p>
+        <ol class="gains3">
+          <li><span class="gains3__n">01</span><p class="gains3__t">調整の重複を減らす</p><p class="gains3__b">複数の関係者とのやり取りを整理し、同じ説明や調整の繰り返しを減らします。</p></li>
+          <li><span class="gains3__n">02</span><p class="gains3__t">責任点を明確にする</p><p class="gains3__b">誰が何を担うのかを整理し、責任が曖昧になる状態を防ぎます。</p></li>
+          <li><span class="gains3__n">03</span><p class="gains3__t">意思決定を速くする</p><p class="gains3__b">必要な情報と関係者をつなぎ、判断から実行までの停滞を減らします。</p></li>
+        </ol>
+      </div>
     </div>
+    <!-- ===== V2-FDEMAP v1 END ===== -->
 
     <!-- V2：Design/Deploy に AI・ロボティクスを含めたため、未来1文は重複として撤去 -->
 

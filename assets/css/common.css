@@ -1845,3 +1845,40 @@ body.review-mode .fdeblock > .review-label{position:static;display:inline-flex;m
 .section__title .nw{white-space:nowrap}
 @media(max-width:640px){.section__title .nw{white-space:normal}.approach-lead2{text-align:left;margin-top:36px;padding-top:28px}}
 /* ===== V2-FDEBLOCK v2 END ===== */
+
+/* ============================================================
+   ===== V2-FDEMAP v1 START =====
+   役割v2：FDE（Forward Deployed Engineer）ブロックを「大きな1枚図」として見せる。
+   .fdeflow / .splitroles（V2-GAPVIZ）を流用し、ハブ図と効果3カードを追加。旧 .across は未使用化。
+   ============================================================ */
+.fdemap{position:relative;margin:48px 0 0;padding:36px 40px 40px;border-radius:12px;background:#fff;border:1px solid var(--pal-border)}
+body.review-mode .fdemap > .review-label{position:static;display:inline-flex;margin:0 0 12px;box-shadow:none}
+.fdemap .nw{white-space:nowrap}
+.fdemap__h{margin:0 0 12px;text-align:center;font-size:21px;font-weight:700;line-height:1.6;color:var(--pal-heading)}
+.fdemap__lead{max-width:44em;margin:0 auto;text-align:center;font-size:14px;line-height:1.9;color:var(--pal-sub)}
+.fdemap__step{margin-top:34px;padding-top:28px;border-top:1px solid var(--pal-border)}
+.fdemap__no{display:flex;align-items:baseline;gap:10px;margin:0 0 14px;font-size:16px;font-weight:700;color:var(--pal-heading)}
+.fdemap__no b{font-size:13px;letter-spacing:.08em;color:var(--pal-accent)}
+.fdemap__d{margin:-4px 0 14px;font-size:14px;line-height:1.85;color:var(--pal-sub)}
+.hub{display:flex;flex-direction:column;align-items:center;gap:8px}
+.hub__parties,.hub__acts{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:8px}
+.hub__parties li{padding:6px 16px;border-radius:9999px;background:var(--pal-bg-light);border:1px solid var(--pal-border);font-size:13px;line-height:1.5;color:var(--pal-heading)}
+.hub__arrow{font-size:18px;line-height:1;color:var(--pal-blue)}
+.hub__core{width:100%;max-width:46em;padding:16px 18px 18px;border-radius:8px;background:var(--pal-heading);text-align:center}
+.hub__name{margin:0 0 10px;font-size:14px;font-weight:700;color:#fff}
+.hub__acts li{padding:6px 14px;border-radius:9999px;background:rgba(255,255,255,.12);font-size:13px;line-height:1.5;color:#fff}
+.hub__result{margin:0;padding:8px 26px;border-radius:9999px;border:2px solid var(--pal-accent);background:#fff;font-size:14px;font-weight:700;color:var(--pal-accent)}
+.gains3{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.gains3 li{padding:18px 18px 20px;border-radius:8px;background:var(--pal-bg-light);border:1px solid var(--pal-border)}
+.gains3__n{display:block;font-size:13px;font-weight:700;letter-spacing:.08em;color:var(--pal-accent)}
+.gains3__t{margin:4px 0 8px;font-size:15px;font-weight:700;color:var(--pal-heading)}
+.gains3__b{margin:0;font-size:13.5px;line-height:1.8;color:var(--pal-sub)}
+@media(max-width:768px){.gains3{grid-template-columns:1fr}}
+@media(max-width:640px){
+  .fdemap{padding:24px 18px 28px}
+  .fdemap__h{font-size:18px}
+  .fdemap .nw{white-space:normal}
+  .fdemap__lead{text-align:left}
+  .fdemap__no{flex-wrap:wrap;gap:4px 8px}
+}
+/* ===== V2-FDEMAP v1 END ===== */
