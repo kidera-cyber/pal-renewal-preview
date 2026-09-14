@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260914d">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260914e">
 </head>
 <body class="review-mode">
 
@@ -146,7 +146,14 @@
           <li>複数ベンダーによる分断</li>
         </ul>
       </div>
-      <p class="section__lead" style="margin-top:20px">PALでは <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が現場に入り、業務を理解したうえで、現場の言葉を技術要件へ翻訳するところから進めます。</p>
+      <!-- ===== V2-FDE-VALUE v1：FDE の説明を「現場に入る人」から「リテラシーギャップを埋め、実装・運用まで成立させる役割」へ強化。
+           直上のチップ（課題）→ FDE の価値 → 結果、の因果で読ませる。
+           旧文：PALでは FDE が現場に入り、業務を理解したうえで、現場の言葉を技術要件へ翻訳するところから進めます。 ===== -->
+      <div class="fdevalue">
+        <p class="fdevalue__cause"><span class="rnew">今回変更</span>物流DXが止まる根本は、技術が足りないことではなく、<strong>現場とデジタルの間にあるリテラシーギャップ</strong>です。</p>
+        <p class="fdevalue__core"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span> の価値は、現場に入ることではありません。このギャップを埋め、業務課題をシステム・データ・設備の要件へ翻訳し、<strong>設計・実装・運用まで成立させること</strong>です。</p>
+        <p class="fdevalue__result">「導入したが使われない」で終わらせず、現場で安定して動き、価値を生み続けるところまで PAL が担います。</p>
+      </div>
       <!-- ===== H-02 v3：PALの提供価値（つないで終わりにせず／データ・ノウハウ・判断基準をお客さま側に残す）を
            本セクションから撤去。本セクションは「なぜ物流DXが進まないのか」という課題提示に専念し、
            PALの答えは次の APPROACH セクションで示す（役割の重複解消）。

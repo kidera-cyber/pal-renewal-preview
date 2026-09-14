@@ -1725,3 +1725,12 @@ body.review-mode .review-label--moved{background:#464A6F;color:#fff}
 .card__link:has(.fde-name)::after{display:inline-block;margin-left:4px}
 /* inline-block の正式名称はリンクの下線が伝播しないため、親リンクの装飾を引き継ぐ */
 a .fde-name{text-decoration:inherit}
+
+/* ===== V2-FDE-VALUE v1：HOME 課題チップ直下の FDE 説明（課題 → 価値 → 結果）。
+   新しいカードは作らず、既存の section__lead と同じ文字サイズ・中央寄せで3段に分ける ===== */
+.fdevalue{max-width:44em;margin:22px auto 0;text-align:center}
+.fdevalue p{margin:0;font-size:15px;line-height:1.95;color:var(--pal-text)}
+.fdevalue__core{margin-top:10px !important}
+.fdevalue__result{margin-top:10px !important;color:var(--pal-heading) !important;font-weight:700}
+.fdevalue strong{color:var(--pal-heading);font-weight:700}
+@media(max-width:640px){.fdevalue{text-align:left}.fdevalue p{font-size:14.5px}}
