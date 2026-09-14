@@ -1833,3 +1833,15 @@ body.review-mode .fdeblock > .review-label{position:static;display:inline-flex;m
 .nextlinks a .fde-name{text-decoration:inherit}
 @media(max-width:640px){.nextlinks{flex-direction:column;align-items:flex-start;gap:10px}.fdeblock .nw{white-space:normal}}
 /* ===== V2-FDEBLOCK v1 END ===== */
+
+/* ============================================================
+   ===== V2-FDEBLOCK v2 START =====
+   APPROACH をFDE見出し始まりに再配置したため、冒頭図解の上罫線を外し、
+   3つの力への導入文（.approach-lead2）に区切りを付ける。V2-FDEBLOCK v1 を後勝ち上書き。
+   ============================================================ */
+.fdeblock--top{margin-top:0;padding-top:0;border-top:0}
+.fdeblock--top .gapviz__def{margin-top:0}
+.approach-lead2{max-width:52em;margin:48px auto 28px;padding-top:36px;border-top:1px solid var(--pal-border);text-align:center}
+.section__title .nw{white-space:nowrap}
+@media(max-width:640px){.section__title .nw{white-space:normal}.approach-lead2{text-align:left;margin-top:36px;padding-top:28px}}
+/* ===== V2-FDEBLOCK v2 END ===== */
