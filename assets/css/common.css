@@ -1974,3 +1974,19 @@ body.review-mode .fdemap > .review-label{position:static;display:inline-flex;mar
 
 /* ===== ROLE-FDE-TRIM v1：定義文削除後、見出し直下の最初のステップの余白を詰める ===== */
 .fdemap .fdemap__step--first{margin-top:22px}
+
+/* ============================================================
+   ===== NAV-STRENGTH v1 START =====
+   PC グローバルナビ「PALを知る」配下に 私たちの役割／PALの強み のサブメニューを追加。
+   ホバー／キーボードフォーカスで開く。モバイルナビは既存のまま。
+   ============================================================ */
+.gnav__group{position:relative;display:inline-block}
+.gnav__group.is-current>a{color:var(--heading)}
+.gnav__group.is-current>a::after{content:"";position:absolute;bottom:-2px;left:14px;right:14px;height:2px;background:var(--red);border-radius:2px}
+.gnav__group>a{position:relative}
+.gnav__sub{display:none;position:absolute;top:100%;left:0;z-index:50;min-width:11em;padding:6px;border-radius:8px;background:#fff;border:1px solid var(--pal-border);box-shadow:0 8px 24px rgba(38,41,70,.12)}
+.gnav__sub a{display:block;padding:9px 12px;border-radius:6px;font-size:13.5px;white-space:nowrap;color:var(--pal-heading)}
+.gnav__sub a:hover,.gnav__sub a:focus{background:var(--pal-bg-light);color:var(--red)}
+.gnav__sub a.is-current{color:var(--red);font-weight:700}
+.gnav__group:hover .gnav__sub,.gnav__group:focus-within .gnav__sub{display:block}
+/* ===== NAV-STRENGTH v1 END ===== */

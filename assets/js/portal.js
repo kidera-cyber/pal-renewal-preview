@@ -25,7 +25,7 @@
   const bust = function (f) { return f + '?t=' + Date.now(); };
 
   /* 最終更新時刻（push のたびに自動更新される） */
-  const BUILD_STAMP = '2026-09-14 15:48';
+  const BUILD_STAMP = '2026-09-14 16:04';
 
   const frame       = document.getElementById('previewFrame');
   const openLink    = document.getElementById('openPage');
@@ -97,6 +97,31 @@
   const initialParam = new URLSearchParams(window.location.search).get('page');
   const initialPage  = PAGES[initialParam] ? initialParam : DEFAULT_PAGE;
   switchTo(initialPage, { skipUrl: !initialParam });
+
+  /* ============================================================
+     ===== IFRAME-SYNC v1：iframe 内のリンクで別ページへ移動したとき、タブ表示・ページ名・「新しいタブで開く」を追従させる =====
+     （src は再設定しない＝iframe 内の遷移・戻る操作を妨げない）
+     ============================================================ */
+  frame.addEventListener('load', function () {
+    let path;
+    try { path = frame.contentWindow.location.pathname; } catch (e) { return; }
+    const key = Object.keys(PAGES).find(function (k) { return path.endsWith('/' + PAGES[k].file); });
+    if (!key) return;
+    const page = PAGES[key];
+    openLink.setAttribute('href', bust(page.file));
+    if (currentName) currentName.textContent = page.name;
+    tabs.forEach(function (t) {
+      const on = t.dataset.page === key;
+      t.setAttribute('aria-selected', on ? 'true' : 'false');
+      t.classList.toggle('is-active', on);
+    });
+    const url = new URL(window.location.href);
+    if (url.searchParams.get('page') !== key) {
+      url.searchParams.set('page', key);
+      window.history.replaceState({ page: key }, '', url.toString());
+    }
+    document.title = '株式会社PAL コーポレートサイト改修｜' + page.name + '｜社内確認用';
+  });
 
   // ブラウザ戻る/進む対応
   window.addEventListener('popstate', function () {
