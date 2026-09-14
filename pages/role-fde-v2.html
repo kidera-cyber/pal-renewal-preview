@@ -12,7 +12,7 @@
 <meta name="description" content="物流に関わる経営、現場、人、データ、システム、設備、輸送、パートナー企業。PALは、それぞれの間にある分断をつなぎ、計画を現場で実行できる仕組みへと変えていきます。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260914o">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260914p">
 <style>
   /* v1.3 リデザイン：上段=見出し+短説明+関係図／下段=課題→PALの役割→変化 の3カラム */
   .approach-head{max-width:900px;margin:0 auto 40px;text-align:center}
@@ -263,7 +263,7 @@
     <!-- ===== V2-FDEMAP v1 START：旧「この4サイクルを、PAL と FDE（…）が横断して担います」ブロック（.across）を
          1枚図へ再設計。構成：見出し → 01 価値フロー → 02 つなぐ対象 → 03 役割分担 → 04 統合の効果。
          旧ブロックは git 履歴 c0f52a5 を参照 ===== -->
-    <div class="fdemap">
+    <div class="fdemap" id="fde">
       <span class="review-label">今回変更</span>
       <p class="fdemap__h">現場と技術をつなぎ、<span class="nw">実装・運用まで進めるのが、</span><br><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>です。</p>
       <p class="fdemap__lead"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>とは、業務と技術を翻訳し、関係者をつなぎながら、設計・実装・運用・改善までを進める役割です。提案や助言を中心とするコンサルタント、特定のシステム開発を中心とするエンジニアとは異なり、業務課題の整理から現場での運用・改善までを一貫して担います。</p>
@@ -347,34 +347,12 @@
 <!-- ===== INTEGRATE v3 END ===== -->
 
 <!-- FDE-ROLE v6 移動：統合アプローチ → FDE（Forward Deployed Engineer）詳細 の順で読めるよう、オープン型統合管理の前へ配置 -->
-<!-- ===== FDE-ROLE v5 START：FDE 専用ページ（pages/fde.html）を廃止し、その説明を本セクションへ統合。
-     方針：FDE は特設ページにせず、サイト全体の必要箇所で露出し、詳細は「PALを知る」配下に置く。
-     統合した内容：FDEの定義／ギャップ（理論上できること⇄現場の現実）／4つの役割／
-                   お客さま側に残るもの
-     掲載しない内容（社内資料由来）：案件件数・担当者名・内部原価・訪問台帳・内部KPI・
-                   案件管理方法・採用評価
-     復元するには git 履歴 4b1dfca の pages/fde.html と導線を戻す ===== -->
-<section class="section section--soft review-changed" id="fde">
-  <span class="review-label">今回変更</span>
-  <div class="container container--narrow">
-    <!-- ===== FDE-BRIDGE v1：削除済み（ご指示により橋渡し文を撤去。文面：統合アプローチと4つのサイクルを、現場で実際に動かす役割が FDE（Forward Deployed Engineer）です。） ===== -->
-    <div class="section__head">
-      <span class="section__eyebrow">FIELD</span>
-      <h2 class="section__title">現場で動くところまで、支える。<br><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span></h2>
-      <p class="section__lead"><span class="rnew">今回変更</span><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、単なるエンジニアやコンサルタントではなく、現場課題を具体的な実装へ変える役割を担います。</p>
-    </div>
-    <!-- ===== FIELD-SLIM v1：8ステップ（.fdesteps）と補足文を撤去。上段 V2-FDEMAP「01 価値フロー」と同じプロセスの二重説明になるため。
-         FIELD は「4つの役割」を主役にし、流れは役割カード下の1行補助フローへ圧縮。旧内容は git 履歴 4bb6eab ===== -->
-
-    <!-- ===== FDE-VALUE4 v1：「4つの役割」見出し＋4カードは、統合アプローチ内 V2-FDEMAP の定義文直下へ移動 ===== -->
-    <p class="fdeline"><span class="fdeline__lbl"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が関わる範囲</span><span class="fdeline__flow">現場理解<i aria-hidden="true">→</i>課題整理<i aria-hidden="true">→</i>技術要件への翻訳<i aria-hidden="true">→</i>設計・実装<i aria-hidden="true">→</i>運用・改善</span></p>
-
-    <p class="fde-note"><span class="rnew">今回変更</span>お客さまとの役割分担は、<a href="#cycle">統合アプローチ</a>の図（03 役割分担）のとおりです。</p>
-    <span class="review-inline-check">要確認：<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の支援事例（企業名・数値）の掲載可否（CASE SLOT）</span>
-    <details class="rdiff"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】既存案 role.html（約930字）</span><p class="rdiff__txt"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の定義／ギャップの説明／強調文／4つの役割（補足例チップつき）／必要な場面で入る旨／「目指すのは、<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が入り続けることではありません。…お客さま自身が改善を続けられる状態をつくることです。」／未来1文</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】新案 v2（約500字）</span><p class="rdiff__txt"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>を「統合アプローチとオープン型統合管理を現場で動かす役割」として位置づけ、4つの役割カードを主役に整理（担う流れは上段の価値フローと重複するため1行の補助フローへ圧縮）。お客さま自身に改善を委ねる表現を撤去し、「判断はお客さま、実装から運用・改善までは <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>」という役割分担に修正。<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の役割は統合アプローチ・オープン型統合管理にも分散しています。</p></div></div></details>
-  </div>
-</section>
-<!-- ===== FDE-ROLE v5 END ===== -->
+<!-- ===== FDE-ROLE v7：独立セクション「FIELD／現場で動くところまで、支える。FDE（Forward Deployed Engineer）」を削除。
+     理由：FDE の定義・4つの役割は統合アプローチ内 V2-FDEMAP（定義文直下に FDE-VALUE4）へ集約済みで、内容が重複するため。
+     削除した要素：FIELD ラベル／見出し／導入文／1行補助フロー（現場理解→課題整理→技術要件への翻訳→設計・実装→運用・改善）／
+                   役割分担への参照文／CASE SLOT 要確認表示（FDE 支援事例の企業名・数値の掲載可否）／変更前の文章を見る
+     アンカー #fde は V2-FDEMAP へ移設（HOME・強み・本ページ NEXT からのリンクを維持）。
+     復元するには git 履歴 ae667fb の本セクションを戻す ===== -->
 
 <!-- ===== OPEN-MGMT v2 START：「つないで、終わらない。」を本セクションへ統合し、
      このテーマを1セクションに集約。

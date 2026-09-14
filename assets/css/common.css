@@ -1915,3 +1915,6 @@ body.review-mode .fdemap > .review-label{position:static;display:inline-flex;mar
 @media(max-width:1024px){.fderole.fderole--inmap{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:640px){.fderole.fderole--inmap{grid-template-columns:1fr;margin-top:20px}}
 /* ===== FDE-VALUE4 v1 END ===== */
+
+/* ===== FDE-ROLE v7：#fde アンカーを V2-FDEMAP へ移設。固定ヘッダーに隠れないよう余白を確保 ===== */
+#fde.fdemap{scroll-margin-top:96px}
