@@ -10,7 +10,10 @@
     reason: { file: 'pages/reason.html', name: 'PALの強み' },
     /* fde タブは廃止（FDE 専用ページを削除し、説明は role.html #fde へ統合）
        ?page=fde でアクセスされた場合は DEFAULT_PAGE（home）へフォールバックする */
-    service:{ file: 'pages/service.html',name: 'サービス一覧' }
+    service:{ file: 'pages/service.html',name: 'サービス一覧' },
+    'home-v2':   { file: 'pages/home-fde-v2.html',   name: '【新案v2】ホーム' },
+    'role-v2':   { file: 'pages/role-fde-v2.html',   name: '【新案v2】私たちの役割' },
+    'reason-v2': { file: 'pages/reason-fde-v2.html', name: '【新案v2】PALの強み' }
   };
   const DEFAULT_PAGE = 'home';
 
@@ -22,7 +25,7 @@
   const bust = function (f) { return f + '?t=' + Date.now(); };
 
   /* 最終更新時刻（push のたびに自動更新される） */
-  const BUILD_STAMP = '2026-09-10 17:01';
+  const BUILD_STAMP = '2026-09-14 11:20';
 
   const frame       = document.getElementById('previewFrame');
   const openLink    = document.getElementById('openPage');

@@ -1668,3 +1668,35 @@ body.review-mode .review-label--moved{background:#464A6F;color:#fff}
 @media(max-width:820px){.across__gains{grid-template-columns:1fr;gap:14px}}
 @media(max-width:560px){.across{padding:20px 16px}}
 /* ===== INTEGRATE v3 END ===== */
+
+/* ============================================================
+   ===== FDE-V2 START =====
+   新案 v2（home/role/reason -fde-v2.html）専用の追加要素。
+   既存案のページでは使用しない。既存トークンのみ使用。
+   ============================================================ */
+/* HOME：物流DXが止まる背景 */
+.stall{margin-top:20px;padding:18px 22px;border-radius:8px;background:var(--pal-bg);border:1px solid var(--pal-border)}
+.stall__t{margin:0 0 10px;font-size:14.5px;font-weight:700;color:var(--pal-heading)}
+.stall__list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.stall__list li{padding:6px 12px;border-radius:9999px;background:var(--pal-bg-light);border:1px dashed var(--pal-border-strong);font-size:13px;line-height:1.5;color:var(--pal-sub)}
+/* HOME：4サイクル */
+.v2cycle{position:relative;margin:36px 0 8px;padding:26px 24px;border:1px solid var(--pal-border);border-radius:8px;background:var(--pal-bg)}
+.v2cycle__head{margin:0 0 16px;text-align:center;font-size:15px;font-weight:700;color:var(--pal-heading)}
+.v2cycle__fde{margin:18px 0 0;padding-top:16px;border-top:1px solid var(--pal-border);font-size:14px;line-height:1.9;color:var(--pal-text);text-align:center}
+@media(max-width:640px){.v2cycle{padding:20px 14px}.v2cycle__fde{text-align:left}}
+/* 役割：お客さまと PAL / FDE の役割分担 */
+.roles2{display:grid;grid-template-columns:1fr 1.6fr;gap:12px;margin:0 0 18px}
+.roles2__col{padding:16px 18px;border-radius:8px;background:var(--pal-bg);border:1px solid var(--pal-border)}
+.roles2__col--pal{background:var(--pal-heading);border-color:var(--pal-heading)}
+.roles2__who{margin:0 0 6px;font-size:13px;font-weight:700;letter-spacing:.04em;color:var(--pal-muted)}
+.roles2__col--pal .roles2__who{color:var(--pal-blue-pale)}
+.roles2__what{margin:0;font-size:13.5px;line-height:1.85;color:var(--pal-text)}
+.roles2__col--pal .roles2__what{color:#fff}
+.roles2__what b{color:var(--pal-accent)}
+.roles2__col--pal .roles2__what b{color:#fff;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:640px){.roles2{grid-template-columns:1fr}}
+/* 役割：FDE が担う8段階 */
+.fdesteps{list-style:none;margin:16px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:6px;counter-reset:fs}
+.fdesteps li{counter-increment:fs;padding:7px 12px 7px 10px;border-radius:9999px;background:var(--pal-bg);border:1px solid var(--pal-border);font-size:13px;line-height:1.5;color:var(--pal-heading)}
+.fdesteps li::before{content:counter(fs);display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;margin-right:6px;border-radius:9999px;background:var(--pal-accent);color:#fff;font-size:12px;font-weight:700;font-family:Lato,'Noto Sans JP',sans-serif}
+/* ===== FDE-V2 END ===== */

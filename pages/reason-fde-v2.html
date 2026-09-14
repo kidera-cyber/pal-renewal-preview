@@ -8,7 +8,7 @@
 <meta http-equiv="Expires" content="0">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="robots" content="noindex, nofollow">
-<title>【叩き台】PALの強み｜株式会社PAL</title>
+<title>【叩き台・新案v2】PALの強み｜株式会社PAL</title>
 <meta name="description" content="現場の「運用力」とデジタルの「技術力」。その両輪で確実に成果を生み出す、株式会社PALの強みをご紹介します。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
@@ -34,11 +34,16 @@
   }
   .strength-item__num--point b{font-size:28px;font-weight:900;color:var(--red-soft);line-height:1}
   .strength-item--point .strength-item__title{padding-right:76px}
+  /* ===== V2：8つの強みと 4サイクルの対応を示す小ラベル ===== */
+  .cyc-chips{display:flex;flex-wrap:wrap;gap:6px;margin:-4px 0 14px;padding-right:60px}
+  .cyc-chip{font-family:var(--font-en);font-size:12px;font-weight:700;letter-spacing:.04em;
+    padding:3px 10px;border-radius:9999px;border:1px solid var(--border);color:#B3B6C6;background:#fff}
+  .cyc-chip.is-on{color:#fff;background:var(--navy);border-color:var(--navy)}
 </style>
 </head>
 <body class="review-mode">
 
-<div id="previewBanner">🛠 叩き台（社内レビュー用）／ noindex ／ 本番URLではありません</div>
+<div id="previewBanner">🛠 新案 v2（FDE・4サイクル強化）／叩き台（社内レビュー用）／ noindex ／ 本番URLではありません</div>
 
 <div class="review-legend" role="note" aria-label="レビュー用マーキングの凡例">
   <span class="review-legend__item review-legend__item--changed">今回変更</span>
@@ -50,9 +55,9 @@
 
 <header class="gheader">
   <div class="gheader__inner">
-    <a class="gbrand" href="./home.html"><span class="gbrand__mark">PAL</span><span class="gbrand__name">株式会社PAL<small>PAL Co., Ltd.</small></span></a>
+    <a class="gbrand" href="./home-fde-v2.html"><span class="gbrand__mark">PAL</span><span class="gbrand__name">株式会社PAL<small>PAL Co., Ltd.</small></span></a>
     <nav class="gnav" aria-label="グローバルナビゲーション">
-      <a href="./home.html">ホーム</a><a href="./role.html" class="is-current">PALを知る</a><a href="./service.html">サービス</a>
+      <a href="./home-fde-v2.html">ホーム</a><a href="./role-fde-v2.html" class="is-current">PALを知る</a><a href="./service.html">サービス</a>
       <a href="#">物流DX事例</a><a href="#">会社概要</a><a href="#">物流DXコラム</a><a href="#">物流DXお役立ち資料</a>
       <a href="#" class="gnav-cta">お問い合わせ</a>
     </nav>
@@ -60,12 +65,12 @@
   </div>
 </header>
 <nav class="mobile-nav" id="mobileNav">
-  <a href="./home.html">ホーム</a><a href="./role.html">私たちの役割</a><a href="./reason.html">PALの強み</a>  <a href="./service.html">サービス</a>
+  <a href="./home-fde-v2.html">ホーム</a><a href="./role-fde-v2.html">私たちの役割</a><a href="./reason-fde-v2.html">PALの強み</a>  <a href="./service.html">サービス</a>
   <a href="#" class="gnav-cta">お問い合わせ</a>
 </nav>
 
 <nav class="breadcrumb"><div class="container"><ol>
-  <li><a href="./home.html">ホーム</a></li><li><a href="#">PALについて</a></li><li class="current">PALの強み</li>
+  <li><a href="./home-fde-v2.html">ホーム</a></li><li><a href="#">PALについて</a></li><li class="current">PALの強み</li>
 </ol></div></nav>
 
 <!-- FV：現行「Strength PALの強み」を維持しつつ、イネーブラー言及を短く追加 -->
@@ -97,6 +102,7 @@
       <div class="strength-item">
         <span class="strength-item__num">01</span>
         <h3 class="strength-item__title">生産性向上とコスト最適化を実現できます</h3>
+        <p class="cyc-chips" aria-label="4サイクルとの対応"><span class="rnew">新規追加</span><span class="cyc-chip">Design</span><span class="cyc-chip">Deploy</span><span class="cyc-chip is-on">Operate</span><span class="cyc-chip is-on">Evolve</span></p>
         <p class="strength-item__body">部分的な改善ではなく、物流全体のデータ統合と現場改善を一気通貫で実施します。WMS・ロボット・マテハン・人工業務データを統合する「Core First」と「DTS」により、倉庫から輸送までの全工程のボトルネックを特定。25 年の現場実績とデータを掛け合わせ、実行可能な改善策を設計・伴走します。</p>
         <p class="strength-item__tags">関連サービス：<a href="https://www.pal-style.co.jp/service/cost-optimization/">物流コスト削減・生産性向上</a>／<a href="https://www.pal-style.co.jp/service/core-first/">Core First</a>／<a href="https://www.pal-style.co.jp/service/dts/">DTS</a></p>
       </div>
@@ -104,6 +110,7 @@
       <div class="strength-item">
         <span class="strength-item__num">02</span>
         <h3 class="strength-item__title">初期費用ゼロ円で、物流DXを始められます</h3>
+        <p class="cyc-chips" aria-label="4サイクルとの対応"><span class="rnew">新規追加</span><span class="cyc-chip">Design</span><span class="cyc-chip is-on">Deploy</span><span class="cyc-chip">Operate</span><span class="cyc-chip">Evolve</span></p>
         <p class="strength-item__body">多額の初期投資が意思決定の障壁となる課題に対し、「Core Zero」を提供。倉庫・設備・システム・人材を PAL 保有・運用し、お客さまは物流業務委託のみで利用可能です。月々の委託費のみで導入・運用できます。</p>
         <p class="strength-item__tags">関連サービス：<a href="https://www.pal-style.co.jp/service/zero/">Core Zero</a></p>
       </div>
@@ -111,6 +118,7 @@
       <div class="strength-item">
         <span class="strength-item__num">03</span>
         <h3 class="strength-item__title">「本当に物流DXで利益改善できるのか？」を、事前に検証できます</h3>
+        <p class="cyc-chips" aria-label="4サイクルとの対応"><span class="rnew">新規追加</span><span class="cyc-chip is-on">Design</span><span class="cyc-chip">Deploy</span><span class="cyc-chip">Operate</span><span class="cyc-chip">Evolve</span></p>
         <p class="strength-item__body">PoV（価値検証）によって事前に効果を見極める仕組みを提供します。「Core First」が取得した工数・工程別原価データを基に ROI を可視化。トランスフォーメーションラボにて小規模実証も可能です。「やる前に効果を見極める」ことで投資失敗リスクを最小化します。</p>
         <p class="strength-item__tags">関連サービス：<a href="https://www.pal-style.co.jp/service/logistics-consulting/">物流コンサルティング</a>／<a href="https://www.pal-style.co.jp/service/core-first/">Core First</a></p>
       </div>
@@ -118,6 +126,7 @@
       <div class="strength-item">
         <span class="strength-item__num">04</span>
         <h3 class="strength-item__title">現場とデジタル、両方を動かせます</h3>
+        <p class="cyc-chips" aria-label="4サイクルとの対応"><span class="rnew">新規追加</span><span class="cyc-chip">Design</span><span class="cyc-chip is-on">Deploy</span><span class="cyc-chip is-on">Operate</span><span class="cyc-chip">Evolve</span></p>
         <p class="strength-item__body">物流DX は「現場オペレーション理解」と「データ統合デジタル技術」の両輪が必須です。しかし業界の支援企業は「現場に強いがシステムに弱い」または「システムに強いが現場を知らない」のいずれかになりがちです。PAL は 25 年の現場実績による運用力と、分単位でのデータ化技術を両立します。データで課題特定し、現場で実行できる改善策に落とし込みます。</p>
         <p class="strength-item__tags">関連サービス：<a href="https://www.pal-style.co.jp/service/logistics-consulting/">物流コンサルティング</a>／<a href="https://www.pal-style.co.jp/service/core-first/">Core First</a></p>
       </div>
@@ -125,6 +134,7 @@
       <div class="strength-item">
         <span class="strength-item__num">05</span>
         <h3 class="strength-item__title">戦略から実行まで。すべてを一社で担い、最短で成果へ導きます</h3>
+        <p class="cyc-chips" aria-label="4サイクルとの対応"><span class="rnew">新規追加</span><span class="cyc-chip is-on">Design</span><span class="cyc-chip is-on">Deploy</span><span class="cyc-chip is-on">Operate</span><span class="cyc-chip is-on">Evolve</span></p>
         <p class="strength-item__body">従来の物流DX は役割が分断（コンサル・SIer・3PL・メーカー）され、業者間の調整コストと責任所在の曖昧さが課題でした。PAL は物流コンサル・SIer・3PL・ファイナンス機能をすべて一社で保有。戦略策定からシステム導入、現場実行・検証までを一気通貫で担い、業者間分断ロスと認識ズレを排除します。</p>
         <p class="strength-item__tags">関連サービス：<a href="https://www.pal-style.co.jp/service/logistics-consulting/">物流コンサルティング</a></p>
       </div>
@@ -132,6 +142,7 @@
       <div class="strength-item">
         <span class="strength-item__num">06</span>
         <h3 class="strength-item__title">既存のシステム・機器を活かし、メーカー問わずデータ統合できます</h3>
+        <p class="cyc-chips" aria-label="4サイクルとの対応"><span class="rnew">新規追加</span><span class="cyc-chip is-on">Design</span><span class="cyc-chip">Deploy</span><span class="cyc-chip is-on">Operate</span><span class="cyc-chip">Evolve</span></p>
         <p class="strength-item__body">多くの現場で複数メーカーの機器・システムが稼働するも、データが分断され工程横断把握が困難です。「Core First」がメーカー問わず既存機器・システムのデータを統合し、資産入れ替えなく "つなぐ" ことで倉庫から配送を横断的に可視化します。現場実態をデータ起点で捉え、全体最適に向けた改善判断を可能にします。</p>
         <p class="strength-item__tags">関連サービス：<a href="https://www.pal-style.co.jp/service/core-first/">Core First</a></p>
       </div>
@@ -139,6 +150,7 @@
       <div class="strength-item">
         <span class="strength-item__num">07</span>
         <h3 class="strength-item__title">既存の 3PL・SIer とも、協業できます</h3>
+        <p class="cyc-chips" aria-label="4サイクルとの対応"><span class="rnew">新規追加</span><span class="cyc-chip">Design</span><span class="cyc-chip is-on">Deploy</span><span class="cyc-chip is-on">Operate</span><span class="cyc-chip">Evolve</span></p>
         <p class="strength-item__body">PAL との取引で既存 3PL・SIer 関係を損ないません。「Core First」がメーカー問わず多様なシステムと接続でき、既存ベンダーシステムを入れ替えずデータ統合可能です。協業実績豊富で既存ベンダーと PAL の役割を適切に棲み分け、パートナーの強みと PAL の推進力の両立でスピードを維持します。</p>
         <p class="strength-item__tags">関連サービス：<a href="https://www.pal-style.co.jp/service/logistics-consulting/">物流コンサルティング</a>／<a href="https://www.pal-style.co.jp/service/core-first/">Core First</a></p>
       </div>
@@ -146,6 +158,7 @@
       <div class="strength-item">
         <span class="strength-item__num">08</span>
         <h3 class="strength-item__title">業界の実験場として、新技術のリスクを引き受けます</h3>
+        <p class="cyc-chips" aria-label="4サイクルとの対応"><span class="rnew">新規追加</span><span class="cyc-chip">Design</span><span class="cyc-chip">Deploy</span><span class="cyc-chip">Operate</span><span class="cyc-chip is-on">Evolve</span></p>
         <p class="strength-item__body">新技術を検証できる現場やパートナーが見つからないジレンマに対し、PAL は「物流業界の実験場」として応えます。国内初の 5G 実証、ロボットアームの AI 知能化など、実証現場や実装・運用改善知見を活用し実運用を見据えた検証に取り組みます。お客さまは実証環境を活用しながら現場データ・ノウハウ共有で、次世代物流モデルづくりに共同で取り組めます。</p>
         <p class="strength-item__tags">関連サービス：協業をお考えの企業さまへ</p>
       </div>
@@ -161,25 +174,25 @@
     <div class="strength-list strength-list--point">
       <div class="strength-item strength-item--point">
         <span class="strength-item__num strength-item__num--point">POINT<b>01</b></span>
-        <h4 class="strength-item__title"><span class="rnew">新規追加</span>強みは、PALが抱え続けるためではなく、お客さま側に残すために。</h4>
-        <p class="strength-item__body">PALは、現場を理解し、データをつなぎ、実装・運用まで進めます。<br>その過程で得られた<strong>データ・判断基準・運用ルール・業務ノウハウ</strong>をお客さま側に残し、お客さま自身が改善を続けられる状態をつくります。</p>
+        <h4 class="strength-item__title"><span class="rnew">今回変更</span>強みを、現場で動かす。</h4>
+        <p class="strength-item__body">8つの強みを、実装・運用までつなげるのが FDE（Forward Deployed Engineer）の役割です。FDE は9つ目の強みではなく、既存の強みを現場で実行するための役割です。</p>
+        <p class="strength-item__tags"><a href="./role-fde-v2.html#fde">FDEの役割を見る</a></p>
       </div>
 
       <div class="strength-item strength-item--point">
         <span class="strength-item__num strength-item__num--point">POINT<b>02</b></span>
-        <h4 class="strength-item__title"><span class="rnew">新規追加</span>FDEは、強みを現場で実行する役割。</h4>
-        <p class="strength-item__body">FDE は 9 つ目の強みではありません。<br>既存の強みを、現場で実際に使える形へ落とし込み、実装・運用・定着まで進めるための役割の一つです。</p>
-        <p class="strength-item__tags"><a href="./role.html#fde">FDEの役割を見る</a></p>
+        <h4 class="strength-item__title"><span class="rnew">今回変更</span>必要な強みを、組み合わせる。</h4>
+        <p class="strength-item__body">8つの強みを、すべて同時に使うわけではありません。案件ごとに FDE が現場を見て、必要な技術・サービス・パートナーを組み合わせます。</p>
+        <p class="strength-item__tags"><a href="./role-fde-v2.html#cycle">PALの価値サイクルを見る</a></p>
       </div>
 
       <div class="strength-item strength-item--point">
         <span class="strength-item__num strength-item__num--point">POINT<b>03</b></span>
-        <h4 class="strength-item__title"><span class="rnew">新規追加</span>課題に応じて、必要な強みを組み合わせる。</h4>
-        <p class="strength-item__body">8 つの強みを、すべて同時に使うわけではありません。<br>課題に応じて必要な力を組み合わせ、小さく試し、現場を強くし、データをつなぎ、改善を続けます。<br>こうした積み重ねは、将来の AI・ロボティクス活用の土台にもつながります。</p>
-        <p class="strength-item__tags"><a href="./role.html#cycle">PALの価値サイクルを見る</a></p>
+        <h4 class="strength-item__title"><span class="rnew">今回変更</span>判断できる状態を、残す。</h4>
+        <p class="strength-item__body">データ・進捗・改善結果を可視化し、お客さまが必要な判断を行える状態をつくります。実装や運用の実務は PAL が担い、お客さまと一緒に改善を続けます。</p>
       </div>
     </div>
-    <details class="rdiff" style="margin-top:20px"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（08 の後に補足はありません）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 直前のレビュー版では、5つの段落を本文としてそのまま追記していました（これら 8 つの強みは、PALが作業を引き受け続けるためのものではありません／現場を理解し、データをつなぎ、実行まで担う過程で…／現場でこれらを組み合わせ、実装と定着まで進める役割を、FDE が担います…／これらの強みは、一度にすべてを使うものではありません…／データ統合から現場実装、運用、継続改善まで…）。文章の羅列で、既存の強みカードと体裁が合っていませんでした。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">既存の強みカード（.strength-item）と同じ枠線・角丸・背景・見出しサイズ・本文サイズ・余白で、SUPPLEMENT の3カードへ整形しました。<br>POINT 01 お客さま側に残すために ／ POINT 02 FDEは強みを現場で実行する役割 ／ POINT 03 必要な強みを組み合わせる<br>8つの強みと誤認させないため、01〜08 の連番ではなく POINT ラベルにしています。将来のAI・ロボティクス活用は POINT 03 の末尾1文に留めています。</p></div></div></details>
+    <details class="rdiff" style="margin-top:20px"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt rdiff__txt--none">該当なし（08 の後に補足はありません）</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 直前のレビュー版では、5つの段落を本文としてそのまま追記していました（これら 8 つの強みは、PALが作業を引き受け続けるためのものではありません／現場を理解し、データをつなぎ、実行まで担う過程で…／現場でこれらを組み合わせ、実装と定着まで進める役割を、FDE が担います…／これらの強みは、一度にすべてを使うものではありません…／データ統合から現場実装、運用、継続改善まで…）。文章の羅列で、既存の強みカードと体裁が合っていませんでした。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">既存の強みカードと同じデザインで POINT 3カードを掲載。<br>POINT 01 強みを、現場で動かす（FDE）／POINT 02 必要な強みを、組み合わせる／POINT 03 判断できる状態を、残す<br>旧 POINT 01 の「お客さま自身が改善を続けられる状態」を撤去し、判断はお客さま・実装と運用は PAL という役割分担へ修正。8つの強みには 4サイクル（Design／Deploy／Operate／Evolve）のどこで活きるかを小ラベルで表示。</p></div></div></details>
     <!-- ===== S-03 END ===== -->
   </div>
 </section>
@@ -216,8 +229,8 @@
   <div class="container">
     <div class="section__head"><h2 class="section__title">よりPALを知りたい方へ</h2></div>
     <div class="grid-3">
-      <a class="card" href="./role.html"><h3 class="card__title">私たちの役割</h3><p class="card__body-sm">分断をつなぎ、計画を現場で実行できる状態へ変えていく役割を説明します。</p></a>
-      <a class="card" href="./role.html#fde"><h3 class="card__title">FDEとは</h3><p class="card__body-sm">現場に入り、実際に動く状態まで進める役割です。「私たちの役割」内で説明しています。</p></a>
+      <a class="card" href="./role-fde-v2.html"><h3 class="card__title">私たちの役割</h3><p class="card__body-sm">分断をつなぎ、計画を現場で実行できる状態へ変えていく役割を説明します。</p></a>
+      <a class="card" href="./role-fde-v2.html#fde"><h3 class="card__title">FDEとは</h3><p class="card__body-sm">現場に入り、実際に動く状態まで進める役割です。「私たちの役割」内で説明しています。</p></a>
       <a class="card" href="./service.html"><h3 class="card__title">サービス一覧</h3><p class="card__body-sm">現行の全サービスをご覧いただけます。</p></a>
       <a class="card" href="#"><h3 class="card__title">よくあるご質問</h3><p class="card__body-sm">「何をしている会社？」などのご質問に Q&A 形式でお答えします。</p></a>
     </div>
@@ -252,7 +265,7 @@
       <p class="gfooter__desc">物流をコストから、戦略資産に。</p>
       <p class="gfooter__tel">TEL 06-6534-8998<br><small>営業時間：平日 9:00-18:00</small></p>
     </div>
-    <div class="gfooter__col"><h4>PALを知る</h4><ul><li><a href="./role.html">私たちの役割</a></li><li><a href="./reason.html">PALの強み</a></li><li><a href="#">よくあるご質問</a></li><li><a href="#">トップメッセージ</a></li><li><a href="#">ミッション・バリュー</a></li></ul></div>
+    <div class="gfooter__col"><h4>PALを知る</h4><ul><li><a href="./role-fde-v2.html">私たちの役割</a></li><li><a href="./reason-fde-v2.html">PALの強み</a></li><li><a href="#">よくあるご質問</a></li><li><a href="#">トップメッセージ</a></li><li><a href="#">ミッション・バリュー</a></li></ul></div>
     <div class="gfooter__col"><h4>サービス</h4><ul>
       <li><a href="https://www.pal-style.co.jp/service/logistics-consulting/">物流コンサルティング</a></li>
       <li><a href="https://lp.pal-style.co.jp/logitec-integration/">ロジテックインテグレーション</a></li>
