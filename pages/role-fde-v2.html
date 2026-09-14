@@ -12,7 +12,7 @@
 <meta name="description" content="物流に関わる経営、現場、人、データ、システム、設備、輸送、パートナー企業。PALは、それぞれの間にある分断をつなぎ、計画を現場で実行できる仕組みへと変えていきます。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260914n">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260914o">
 <style>
   /* v1.3 リデザイン：上段=見出し+短説明+関係図／下段=課題→PALの役割→変化 の3カラム */
   .approach-head{max-width:900px;margin:0 auto 40px;text-align:center}
@@ -268,6 +268,15 @@
       <p class="fdemap__h">現場と技術をつなぎ、<span class="nw">実装・運用まで進めるのが、</span><br><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>です。</p>
       <p class="fdemap__lead"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>とは、業務と技術を翻訳し、関係者をつなぎながら、設計・実装・運用・改善までを進める役割です。提案や助言を中心とするコンサルタント、特定のシステム開発を中心とするエンジニアとは異なり、業務課題の整理から現場での運用・改善までを一貫して担います。</p>
 
+      <!-- ===== FDE-VALUE4 v1 START：FIELD から移動。「FDEとは何か」→「現場で出す4つの価値」の順に接続 ===== -->
+      <ol class="fderole fderole--inmap" aria-label="FDE（Forward Deployed Engineer）が現場で担う4つの役割">
+        <li class="fderole__item"><span class="fderole__n">01</span><p class="fderole__t">課題の解像度を上げる</p><p class="fderole__d">業務・データ・設備・制約まで理解し、何が止まっているのかを整理します。</p></li>
+        <li class="fderole__item"><span class="fderole__n">02</span><p class="fderole__t">その場で動く解をつくる</p><p class="fderole__d">助言で終わらず、現場で使える形に実装します。</p></li>
+        <li class="fderole__item"><span class="fderole__n">03</span><p class="fderole__t">社内外の翻訳者になる</p><p class="fderole__d">現場の言葉を技術要件へ翻訳し、関係者の認識をそろえます。</p></li>
+        <li class="fderole__item"><span class="fderole__n">04</span><p class="fderole__t">知見を残す</p><p class="fderole__d">得られた知見を、次の改善や横展開に使える形で残します。</p></li>
+      </ol>
+      <!-- ===== FDE-VALUE4 v1 END ===== -->
+
       <div class="fdemap__step">
         <p class="fdemap__no"><b>01</b><span><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の価値</span></p>
         <div class="fdeflow">
@@ -357,15 +366,7 @@
     <!-- ===== FIELD-SLIM v1：8ステップ（.fdesteps）と補足文を撤去。上段 V2-FDEMAP「01 価値フロー」と同じプロセスの二重説明になるため。
          FIELD は「4つの役割」を主役にし、流れは役割カード下の1行補助フローへ圧縮。旧内容は git 履歴 4bb6eab ===== -->
 
-    <div class="section__head fderole__headwrap">
-      <h3 class="fderole__head"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が現場で担う4つの役割</h3>
-    </div>
-    <ol class="fderole" aria-label="FDE（Forward Deployed Engineer）が現場で担う4つの役割">
-      <li class="fderole__item"><span class="fderole__n">01</span><p class="fderole__t">課題の解像度を上げる</p><p class="fderole__d">業務・データ・設備・制約まで理解し、何が止まっているのかを整理します。</p></li>
-      <li class="fderole__item"><span class="fderole__n">02</span><p class="fderole__t">その場で動く解をつくる</p><p class="fderole__d">助言で終わらず、現場で使える形に実装します。</p></li>
-      <li class="fderole__item"><span class="fderole__n">03</span><p class="fderole__t">社内外の翻訳者になる</p><p class="fderole__d">現場の言葉を技術要件へ翻訳し、関係者の認識をそろえます。</p></li>
-      <li class="fderole__item"><span class="fderole__n">04</span><p class="fderole__t">知見を残す</p><p class="fderole__d">得られた知見を、次の改善や横展開に使える形で残します。</p></li>
-    </ol>
+    <!-- ===== FDE-VALUE4 v1：「4つの役割」見出し＋4カードは、統合アプローチ内 V2-FDEMAP の定義文直下へ移動 ===== -->
     <p class="fdeline"><span class="fdeline__lbl"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が関わる範囲</span><span class="fdeline__flow">現場理解<i aria-hidden="true">→</i>課題整理<i aria-hidden="true">→</i>技術要件への翻訳<i aria-hidden="true">→</i>設計・実装<i aria-hidden="true">→</i>運用・改善</span></p>
 
     <p class="fde-note"><span class="rnew">今回変更</span>お客さまとの役割分担は、<a href="#cycle">統合アプローチ</a>の図（03 役割分担）のとおりです。</p>

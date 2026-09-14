@@ -1902,3 +1902,16 @@ body.review-mode .fdemap > .review-label{position:static;display:inline-flex;mar
 .fdeline__flow i{font-style:normal;margin:0 6px;color:var(--pal-blue)}
 @media(max-width:640px){#fde .fderole__head{font-size:17px}.fdeline{justify-content:flex-start}}
 /* ===== FIELD-SLIM v1 END ===== */
+
+/* ============================================================
+   ===== FDE-VALUE4 v1 START =====
+   役割v2：4つの役割カードを V2-FDEMAP の定義文直下へ移動。余白と列数（PC4／タブレット2／スマホ1）を調整。
+   既存 .fderole の 900px/560px ブレークポイントを後勝ち上書き。
+   ============================================================ */
+.fdemap .fdemap__h{margin-bottom:10px}
+.fdemap .fdemap__lead{margin-bottom:0}
+.fderole.fderole--inmap{grid-template-columns:repeat(4,1fr);margin-top:24px}
+.fderole--inmap .fderole__item{background:var(--pal-bg-light)}
+@media(max-width:1024px){.fderole.fderole--inmap{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){.fderole.fderole--inmap{grid-template-columns:1fr;margin-top:20px}}
+/* ===== FDE-VALUE4 v1 END ===== */
