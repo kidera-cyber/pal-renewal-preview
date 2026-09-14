@@ -1945,3 +1945,29 @@ body.review-mode .fdemap > .review-label{position:static;display:inline-flex;mar
 }
 @media(max-width:640px){.fdebrief{text-align:left}}
 /* ===== FDE-3PAGE v1 END ===== */
+
+/* ============================================================
+   ===== V2-APPROACH v5 START =====
+   HOME APPROACH 簡素化：FDE 3列図解（.fde3）・役割分担の簡潔版・4サイクル予告版。
+   .splitroles / .v2cycle / .cycle4 / .approach-lead2 を後勝ち調整。
+   ============================================================ */
+.fde3{list-style:none;margin:8px auto 0;padding:0;display:grid;grid-template-columns:1fr 1.5fr 1fr;gap:34px;max-width:60em}
+.fde3__col{position:relative;padding:16px 18px;border-radius:8px;background:var(--pal-bg-light);border:1px solid var(--pal-border)}
+.fde3__col:not(:last-child)::after{content:"→";position:absolute;right:-25px;top:50%;transform:translateY(-50%);font-size:18px;color:var(--pal-blue)}
+.fde3__h{margin:0 0 10px;font-size:14px;font-weight:700;line-height:1.5;color:var(--pal-heading)}
+.fde3__list{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:6px}
+.fde3__list li{padding:5px 12px;border-radius:9999px;background:#fff;border:1px solid var(--pal-border);font-size:13px;line-height:1.5;color:var(--pal-heading)}
+.fde3__col--fde{background:var(--pal-heading);border-color:var(--pal-heading)}
+.fde3__col--fde .fde3__h{color:#fff}
+.fde3__col--fde .fde3__list li{background:rgba(255,255,255,.12);border-color:transparent;color:#fff}
+.fde3__col--goal{background:#fff;border:2px solid var(--pal-accent)}
+.fde3__col--goal .fde3__h{color:var(--pal-accent)}
+.splitroles--compact{max-width:60em;margin:20px auto 0}
+.splitroles--compact .splitroles__who{margin-bottom:8px;font-size:13px}
+.v2cycle--brief .cycle4__aim{margin:6px 0 0;font-size:13.5px;line-height:1.7}
+.v2cycle--brief .cycle4__item{padding-bottom:16px}
+@media(max-width:900px){
+  .fde3{grid-template-columns:1fr;gap:26px;max-width:32em}
+  .fde3__col:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-24px;transform:translateX(-50%)}
+}
+/* ===== V2-APPROACH v5 END ===== */
