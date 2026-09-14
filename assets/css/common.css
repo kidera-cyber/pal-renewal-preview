@@ -1700,3 +1700,7 @@ body.review-mode .review-label--moved{background:#464A6F;color:#fff}
 .fdesteps li{counter-increment:fs;padding:7px 12px 7px 10px;border-radius:9999px;background:var(--pal-bg);border:1px solid var(--pal-border);font-size:13px;line-height:1.5;color:var(--pal-heading)}
 .fdesteps li::before{content:counter(fs);display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;margin-right:6px;border-radius:9999px;background:var(--pal-accent);color:#fff;font-size:12px;font-weight:700;font-family:Lato,'Noto Sans JP',sans-serif}
 /* ===== FDE-V2 END ===== */
+
+/* ===== FDE-V2：HOME 3つの価値に添える対応サイクルの小ラベル（設計書 2.3 ※） ===== */
+.cyc-mini-row{display:flex;flex-wrap:wrap;gap:6px;margin:-2px 0 10px}
+.cyc-mini{padding:3px 10px;border-radius:9999px;background:var(--pal-heading);color:#fff;font-size:12px;font-weight:700;line-height:1.5;letter-spacing:.02em}
