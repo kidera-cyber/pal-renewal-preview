@@ -1704,3 +1704,24 @@ body.review-mode .review-label--moved{background:#464A6F;color:#fff}
 /* ===== FDE-V2：HOME 3つの価値に添える対応サイクルの小ラベル（設計書 2.3 ※） ===== */
 .cyc-mini-row{display:flex;flex-wrap:wrap;gap:6px;margin:-2px 0 10px}
 .cyc-mini{padding:3px 10px;border-radius:9999px;background:var(--pal-heading);color:#fff;font-size:12px;font-weight:700;line-height:1.5;letter-spacing:.02em}
+
+/* ============================================================
+   ===== FDE-NAME v1 START =====
+   新案v2：「FDE（Forward Deployed Engineer）」を1まとまりとして扱う。
+   ・行に収まらない場合は、まとまりごと次の行へ送る（inline-block）
+   ・それでも1行に入らない狭い画面では、英単語間のスペースでのみ折り返す
+   ・「FDE」と「（Forward」の間では絶対に改行しない（nowrap）
+   文字サイズは変更しない。
+   ============================================================ */
+.fde-name{display:inline-block;max-width:100%;text-indent:0}
+.fde-name__k{white-space:nowrap}
+/* 見出し内は行間を詰めすぎないように */
+.section__title .fde-name,.fderole__head .fde-name,.across__t .fde-name{line-height:inherit}
+/* ===== FDE-NAME v1 END ===== */
+/* ===== FDE-NAME v1（追補）：inline-flex のリンク内に正式名称が入ると、テキストが
+   フレックス項目に分割され横並びで割れるため、正式名称を含むリンクだけ通常の行内配置に戻す。
+   :has() で v2 のみに限定（既存案の .card__link は従来どおり inline-flex） ===== */
+.card__link:has(.fde-name){display:inline;line-height:1.8}
+.card__link:has(.fde-name)::after{display:inline-block;margin-left:4px}
+/* inline-block の正式名称はリンクの下線が伝播しないため、親リンクの装飾を引き継ぐ */
+a .fde-name{text-decoration:inherit}
