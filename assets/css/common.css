@@ -1971,3 +1971,6 @@ body.review-mode .fdemap > .review-label{position:static;display:inline-flex;mar
   .fde3__col:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-24px;transform:translateX(-50%)}
 }
 /* ===== V2-APPROACH v5 END ===== */
+
+/* ===== ROLE-FDE-TRIM v1：定義文削除後、見出し直下の最初のステップの余白を詰める ===== */
+.fdemap .fdemap__step--first{margin-top:22px}
