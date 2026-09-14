@@ -1817,3 +1817,19 @@ body.review-mode .gapviz > .review-label{position:static;display:inline-flex;mar
 .v2cycle .nw{white-space:nowrap}
 @media(max-width:640px){.approach-bridge{text-align:left;font-size:14.5px}.v2cycle .nw{white-space:normal}}
 @media(max-width:640px){.lead-flow br{display:none}.lead-flow{text-align:left}}
+
+/* ============================================================
+   ===== V2-FDEBLOCK v1 START =====
+   HOME v2 APPROACH 内の FDE 図解ブロックと次ページ導線。
+   図解のスタイルは V2-GAPVIZ（.fdeflow / .splitroles / .gapviz__h）を流用。
+   ============================================================ */
+.fdeblock{position:relative;max-width:52em;margin:40px auto 0;padding:8px 0 0;border-top:1px solid var(--pal-border)}
+body.review-mode .fdeblock > .review-label{position:static;display:inline-flex;margin:14px 0 0;box-shadow:none}
+.fdeblock .gapviz__h:first-of-type{margin-top:22px}
+.fdeblock .nw{white-space:nowrap}
+.nextlinks{list-style:none;margin:28px 0 0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px}
+.nextlinks a{display:inline-block;font-size:14px;font-weight:700;color:var(--pal-accent);text-decoration:underline;text-underline-offset:3px}
+.nextlinks a::after{content:" →"}
+.nextlinks a .fde-name{text-decoration:inherit}
+@media(max-width:640px){.nextlinks{flex-direction:column;align-items:flex-start;gap:10px}.fdeblock .nw{white-space:normal}}
+/* ===== V2-FDEBLOCK v1 END ===== */

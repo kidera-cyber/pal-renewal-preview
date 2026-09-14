@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260914i">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260914j">
 </head>
 <body class="review-mode">
 
@@ -181,40 +181,7 @@
           </div>
         </div>
 
-        <!-- 2段目：ギャップを埋めるのが FDE（Forward Deployed Engineer） -->
-        <p class="gapviz__h">このギャップを埋め、<span class="nw">物流DXを前に進めるのが、</span><br><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>です。</p>
-        <p class="gapviz__def"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>とは、業務と技術を翻訳し、設計・実装・運用・改善までをつなぐ役割です。</p>
-        <div class="fdeflow">
-          <ol class="fdeflow__pre" aria-label="理解する">
-            <li>現場の課題を理解する</li>
-            <li>業務を整理する</li>
-          </ol>
-          <span class="fdeflow__join" aria-hidden="true">→</span>
-          <div class="fdeflow__core">
-            <p class="fdeflow__core-lbl"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の価値の中心</p>
-            <ol class="fdeflow__steps" aria-label="翻訳から改善まで">
-              <li>翻訳する<small>技術要件へ</small></li>
-              <li>設計する</li>
-              <li>実装する</li>
-              <li>運用へつなぐ</li>
-              <li>改善する</li>
-            </ol>
-          </div>
-        </div>
-
-        <!-- 3段目：顧客とPALの役割分担 -->
-        <p class="gapviz__h">社内に専任エンジニアがいなくても、<br class="sp-only"><span class="nw">物流DXは進められます。</span></p>
-        <div class="splitroles">
-          <div class="splitroles__col">
-            <p class="splitroles__who">お客さまが担うこと</p>
-            <ul class="splitroles__list"><li>方針の確認</li><li>投資判断</li><li>最終判断</li></ul>
-          </div>
-          <div class="splitroles__col splitroles__col--pal">
-            <p class="splitroles__who">PAL / <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が担うこと</p>
-            <ul class="splitroles__list"><li>現場把握</li><li>業務整理</li><li>要件整理</li><li>設計</li><li>実装</li><li>運用</li><li>改善</li></ul>
-          </div>
-        </div>
-        <p class="gapviz__note">お客さまが判断を行い、PALが実装・運用・改善を担うことで、物流DXは現場で動く形になります。</p>
+        <!-- 2段目（FDE の流れ）・3段目（役割分担）は APPROACH セクション内の FDE 図解ブロック（V2-FDEBLOCK v1）へ移動 -->
       </div>
       <!-- ===== V2-GAPVIZ v1 END ===== -->
       <!-- ===== H-02 v3：PALの提供価値（つないで終わりにせず／データ・ノウハウ・判断基準をお客さま側に残す）を
@@ -230,54 +197,96 @@
   </div>
 </section>
 
-<!-- SEC5：APPROACH -->
+<!-- SEC5：APPROACH
+     ===== V2-APPROACH v3：前段の FDE 図解（流れ・役割分担）を本セクションへ統合。
+     構成：①導入（選ばれる理由）②3つの力 ③FDE 図解（価値の中心＋役割分担）④4サイクル ⑤締め＋次ページ導線
+     4サイクル文言は無変更。旧構成は git 履歴 4ab06d4 を参照 ===== -->
 <section class="section review-changed">
   <span class="review-label">今回変更</span>
   <div class="container">
     <div class="section__head">
       <span class="section__eyebrow">APPROACH</span>
       <h2 class="section__title">なぜPALなら、物流DXが進むのか？</h2>
-      <!-- ===== H-03 v4：冒頭の課題再説明（データのサイロ化／分断）は前セクションと重複するため撤去し、
-           「PALはどう解決するのか」から書き出す。3カードへの接続を明示 ===== -->
-      <p class="section__lead lead-flow"><span class="rnew">今回変更</span>現場とデジタルのギャップを埋めるだけでは、物流DXは完成しません。<br>課題を整理し、技術へ翻訳し、実装し、現場で安定して運用し、改善を続けるところまでつなぐ必要があります。<br>PALは、この一連の流れを<strong>「つなぐ」</strong><strong>「現場で動かす」</strong><strong>「小さく検証する」</strong>という3つの力で進めます。</p>
-    <details class="rdiff"><summary>変更前の文章を見る</summary><div class="rdiff__body"><div class="rdiff__row"><span class="rdiff__lbl">【変更前】現行サイト www.pal-style.co.jp</span><p class="rdiff__txt">物流DXを阻む最大の壁は、データのサイロ化に加え、戦略と実行が複数のベンダーに分断されていることです。PALは、現場とデジタルをつなぐ「データ統合力」、戦略から実行まで担う「一気通貫の実行力」、そしてリスクを最小化する「段階的検証力」で、これらの壁を突破し、確実に物流DXを推進します。</p></div><div class="rdiff__row rdiff__row--after"><span class="rdiff__lbl">【変更後】</span><p class="rdiff__txt">PALは、物流DXを「つなぐ」「現場で動かす」「小さく検証する」という3つの力で前へ進めます。<br>データやシステムを統合するだけでなく、描いた戦略を現場で使える形へ落とし込み、成果を確かめながら段階的に改善していきます。</p><p class="rdiff__txt rdiff__txt--none" style="margin-top:6px">※ 冒頭の課題説明（データのサイロ化・分断）は前セクションと重複するため撤去し、PALの答えから書き出す構成に変更しました。3本柱の中身は「つなぐ（Integrate）／できるようにする（Enable）／失敗させない（De-risk）」として維持しています。</p></div></div></details>
+      <p class="section__lead lead-flow"><span class="rnew">今回変更</span>物流DXのパートナーを選ぶうえで重要なのは、システムを入れることではなく、現場理解・要件整理・実装・運用・改善まで一貫して進められることです。<br>PALは、<strong>「つなぐ」</strong><strong>「現場で動かす」</strong><strong>「小さく検証する」</strong>の3つの力で、物流DXを前へ進めます。</p>
     </div>
+
+    <!-- ② 3つの力 -->
     <div class="grid-3">
       <div class="card card--filled">
         <p class="card__eyebrow">つなぐ（Integrate）</p>
         <h3 class="card__title">データ統合力</h3>
-        <p class="card__body"><span class="rnew">今回変更</span>現場・データ・システム・設備・パートナーをつなぎ、分断された情報と役割を一つの流れに整えます。</p>
+        <p class="card__body"><span class="rnew">今回変更</span>現場・データ・システム・設備・パートナーをつなぎ、分断された情報や役割を一つの流れに整理します。</p>
       </div>
       <div class="card card--filled">
         <p class="card__eyebrow">現場で動かす（Enable）</p>
         <h3 class="card__title">現場実装力</h3>
         <p class="card__body"><span class="rnew">今回変更</span><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が、業務課題を技術要件へ翻訳し、設計・実装・運用までを一貫して進めます。</p>
-        <p class="card__note"><a href="./role-fde-v2.html#fde" class="card__link"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の役割を見る</a></p>
       </div>
       <div class="card card--filled">
         <p class="card__eyebrow">失敗させない（De-risk）</p>
         <h3 class="card__title">段階的検証力</h3>
-        <p class="card__body"><span class="rnew">今回変更</span>PoV（価値検証）や段階的な導入、初期費用ゼロの Core Zero で、現場で本当に使えるかを確かめながら、投資リスクを抑えて進めます。</p>
+        <p class="card__body"><span class="rnew">今回変更</span>PoV（価値検証）や段階的な導入で、現場で本当に使えるかを確かめながら、投資リスクを抑えて進めます。初期費用ゼロで始められる Core Zero も用意しています。</p>
       </div>
     </div>
-    <!-- ===== CYCLE-MINI v1 START：§11 4サイクルは横1列フロー＋1文のみ。
-         詳細4カードは「PALの強み」（reason.html#cycle）へ移動。
-         救済情報：詳細のマークアップは git 履歴 92b0959 の PHASE セクションを参照 ===== -->
-    <!-- ===== V2-CYCLE v1：Design→Deploy→Operate→Evolve を英日＋説明で表示（共通価値表現・文言は正本どおり） ===== -->
-    <p class="approach-bridge"><span class="rnew">新規追加</span>この3つの力を使いながら、PALは物流DXを Design → Deploy → Operate → Evolve の4サイクルで進めます。</p>
+
+    <!-- ③ FDE 図解ブロック（前段から移動） -->
+    <!-- ===== V2-FDEBLOCK v1 START ===== -->
+    <div class="fdeblock">
+      <span class="review-label review-label--moved">移動</span>
+      <p class="gapviz__h">現場と技術のギャップを埋め、<span class="nw">物流DXを前に進めるのが、</span><br><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>です。</p>
+      <p class="gapviz__def"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、業務と技術をつなぎ、翻訳・設計・実装・運用・改善までを進める役割です。</p>
+      <div class="fdeflow">
+        <ol class="fdeflow__pre" aria-label="理解する">
+          <li>現場の課題を理解する</li>
+          <li>業務を整理する</li>
+        </ol>
+        <span class="fdeflow__join" aria-hidden="true">→</span>
+        <div class="fdeflow__core">
+          <p class="fdeflow__core-lbl"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の価値の中心</p>
+          <ol class="fdeflow__steps" aria-label="翻訳から改善まで">
+            <li>翻訳する<small>技術要件へ</small></li>
+            <li>設計する</li>
+            <li>実装する</li>
+            <li>運用へつなぐ</li>
+            <li>改善する</li>
+          </ol>
+        </div>
+      </div>
+
+      <p class="gapviz__h">社内に専任エンジニアがいなくても、<br class="sp-only"><span class="nw">物流DXは進められます。</span></p>
+      <div class="splitroles">
+        <div class="splitroles__col">
+          <p class="splitroles__who">お客さまが担うこと</p>
+          <ul class="splitroles__list"><li>方針の確認</li><li>投資判断</li><li>最終判断</li></ul>
+        </div>
+        <div class="splitroles__col splitroles__col--pal">
+          <p class="splitroles__who">PAL / <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が担うこと</p>
+          <ul class="splitroles__list"><li>現場把握</li><li>業務整理</li><li>要件整理</li><li>設計</li><li>実装</li><li>運用</li><li>改善</li></ul>
+        </div>
+      </div>
+      <p class="gapviz__note">お客さまが判断を行い、PALが実装・運用・改善を担うことで、物流DXは現場で動く形になります。</p>
+    </div>
+    <!-- ===== V2-FDEBLOCK v1 END ===== -->
+
+    <!-- ④ 4サイクル（文言は正本どおり・無変更） -->
     <div class="v2cycle">
       <span class="review-label">今回変更</span>
-      <p class="v2cycle__head">リテラシーギャップを埋めた後、物流DXを成果につなげるには、<span class="nw">設計・実装・運用・改善を</span><span class="nw">一貫して回す必要があります</span></p>
+      <p class="v2cycle__head">PALは、物流DXを <span class="nw">Design → Deploy → Operate → Evolve</span> の4サイクルで進めます</p>
       <ol class="cycle4">
         <li class="cycle4__item"><span class="cycle4__cy"><b>Design</b><span class="cycle4__ja">設計</span></span><p class="cycle4__aim">現場全体を捉え、人・設備・システム・AI・ロボティクスが最適に協調する仕組みを設計する。</p></li>
         <li class="cycle4__item"><span class="cycle4__cy"><b>Deploy</b><span class="cycle4__ja">実装・導入</span></span><p class="cycle4__aim">さまざまなAI、ソフトウェア、ロボティクスなどの技術を組み合わせ、現場に実装する。</p></li>
         <li class="cycle4__item"><span class="cycle4__cy"><b>Operate</b><span class="cycle4__ja">運用</span></span><p class="cycle4__aim">実際の現場で安定して価値を生み出し続ける。</p></li>
         <li class="cycle4__item cycle4__item--last"><span class="cycle4__cy"><b>Evolve</b><span class="cycle4__ja">進化</span></span><p class="cycle4__aim">現場から得られるデータや知見をもとに継続的に改善し、現場そのものを進化させていく。</p></li>
       </ol>
-      <p class="v2cycle__fde"><span class="rnew">今回変更</span>判断はお客さま。設計・実装・運用・改善は PAL / <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が担います。</p>
+      <p class="v2cycle__fde">お客さまの判断のもと、PAL / <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が物流DXを現場で動く形へ進めます。</p>
     </div>
-    <!-- ===== V2-CYCLE v1 END ===== -->
-    <p class="section__cta-wrap"><a href="./reason-fde-v2.html" class="btn btn--ghost">PALの強みを見る</a></p>
+
+    <!-- ⑤ 次ページへの導線 -->
+    <ul class="nextlinks" aria-label="さらに詳しく">
+      <li><a href="./role-fde-v2.html#fde"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の役割を見る</a></li>
+      <li><a href="./role-fde-v2.html">私たちの役割を見る</a></li>
+      <li><a href="./reason-fde-v2.html">PALの強みを見る</a></li>
+    </ul>
   </div>
 </section>
 
