@@ -2038,3 +2038,44 @@ body.review-mode .fdemap > .review-label{position:static;display:inline-flex;mar
   .faq-cat__title{font-size:17px}
 }
 /* ===== FAQ-V2 v1 END ===== */
+
+/* ============================================================
+   ===== FDE-PAGE v1 START =====
+   FDE（Forward Deployed Engineer）特設 v2（pages/fde-v2.html）。既存 .phero / .fdeflow / .fderole / .splitroles / .cycle4 / .faq-* を流用。
+   review-only：review-mode のときだけ表示するスロット（事例・人物）。
+   ============================================================ */
+.review-only{display:none}
+body.review-mode .review-only{display:block}
+.phero__title--fde{font-size:clamp(28px,4.2vw,44px);line-height:1.35}
+.phero__title-sub{display:block;margin-top:8px;font-size:.55em;font-weight:700;line-height:1.5}
+.phero--fde .phero__sub{max-width:52em}
+.fdepage-toc{position:relative;z-index:1;border-bottom:1px solid var(--pal-border);background:#fff}
+.fdepage-toc .container{display:flex;flex-wrap:wrap;gap:6px 18px;padding-block:14px}
+.fdepage-toc a{font-size:13px;font-weight:700;color:var(--pal-heading);white-space:nowrap}
+.fdepage-toc a:hover{color:var(--pal-accent)}
+.fdepage-sec{scroll-margin-top:96px}
+.fdepage-sec .section__lead+.section__lead{margin-top:10px}
+.fdepage-flow{max-width:60em;margin:8px auto 0}
+.fderole.fderole--page .fderole__item{background:#fff}
+.fdepage-roles{max-width:60em;margin:8px auto 0}
+.fdepage-table-wrap{overflow-x:auto;margin:0 0 18px;border:1px solid var(--pal-border);border-radius:8px;background:#fff}
+.fdepage-table{width:100%;min-width:34em;border-collapse:collapse;font-size:14px;line-height:1.7}
+.fdepage-table th,.fdepage-table td{padding:12px 16px;border-bottom:1px solid var(--pal-border);text-align:left;vertical-align:top;color:var(--pal-text)}
+.fdepage-table thead th{background:var(--pal-bg-light);font-size:13px;color:var(--pal-heading)}
+.fdepage-table tbody th{font-weight:700;color:var(--pal-heading);white-space:nowrap}
+.fdepage-table tbody tr:last-child th,.fdepage-table tbody tr:last-child td{border-bottom:0}
+.fdepage-table tr.is-fde th,.fdepage-table tr.is-fde td{background:var(--pal-heading);color:#fff}
+.fdepage-table tr.is-fde th{white-space:normal}
+.cycle4__fde{margin:10px 0 0;padding-top:10px;border-top:1px dashed var(--pal-border);font-size:13px;line-height:1.7;color:var(--pal-heading)}
+.cycle4__fde-lbl{display:block;margin-bottom:2px;font-size:12px;font-weight:700;color:var(--pal-accent)}
+.fde-cta-link{font-size:14px;font-weight:700;color:var(--pal-accent);text-decoration:underline;text-underline-offset:3px}
+.fde-cta-link::after{content:" →"}
+.fde-cta-link .fde-name{text-decoration:inherit}
+.fdepage-slot{padding:20px 22px;border:2px dashed var(--pal-border-strong);border-radius:8px;background:#fff}
+.fdepage-slot__t{margin:0 0 6px;font-size:14px;font-weight:700;color:var(--pal-heading)}
+.fdepage-slot__d{margin:0 0 8px;font-size:13.5px;line-height:1.8;color:var(--pal-sub)}
+@media(max-width:640px){.fdepage-toc .container{gap:6px 14px}.phero__title-sub{font-size:.6em}}
+/* ===== FDE-PAGE v1 END ===== */
+
+/* ===== ANCHOR-OFFSET v1：review-mode ではプレビューバナー（sticky 34px）＋ヘッダー（76px）が重なるため、アンカー位置の余白を増やす ===== */
+body.review-mode .fdepage-sec,body.review-mode #fde.fdemap,body.review-mode .faq-cat{scroll-margin-top:132px}
