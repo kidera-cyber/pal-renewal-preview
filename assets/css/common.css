@@ -2210,32 +2210,7 @@ body.review-mode .fdesum{scroll-margin-top:132px}
 .radial__lines line.radial__flow{stroke:var(--pal-accent);stroke-width:2;stroke-dasharray:none}
 .radial__arrow{margin-top:-2px;color:var(--pal-accent)}
 
-/* ============================================================
-   ===== COMPARE-V2 v1 START =====
-   FDE 特設 07：3つの要約カード＋4軸比較表（列＝役割、FDE 列を淡く強調）。スマホはカード1列＋表は枠内横スクロール。
-   ============================================================ */
-#compare .section__subcopy{margin-bottom:6px}
-.cmp3{list-style:none;margin:8px 0 24px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.cmp3__card{padding:20px 20px 22px;border-radius:10px;background:#fff;border:1px solid var(--pal-border);border-top:3px solid var(--pal-border-strong)}
-.cmp3__card--fde{border-top-color:var(--pal-accent);background:#F7F8FC}
-.cmp3__tag{margin:0 0 6px;font-size:12px;font-weight:700;color:var(--pal-sub)}
-.cmp3__card--fde .cmp3__tag{color:var(--pal-accent)}
-.cmp3__name{margin:0 0 8px;font-size:17px;font-weight:700;line-height:1.5;color:var(--pal-heading)}
-.cmp3__txt{margin:0;font-size:14px;line-height:1.85;color:var(--pal-text)}
-.cmp-table-wrap{margin-bottom:16px}
-.cmp-table{width:100%;min-width:44em;border-collapse:collapse;font-size:14px;line-height:1.75}
-.cmp-table__cap{caption-side:top;padding:12px 16px;text-align:left;font-size:13px;font-weight:700;color:var(--pal-heading);background:var(--pal-bg-light);border-bottom:1px solid var(--pal-border)}
-.cmp-table th,.cmp-table td{padding:14px 16px;border-bottom:1px solid var(--pal-border);text-align:left;vertical-align:top;color:var(--pal-text)}
-.cmp-table thead th{font-size:13.5px;font-weight:700;color:var(--pal-heading);background:#fff;border-bottom:2px solid var(--pal-border)}
-.cmp-table tbody th{width:9em;font-size:13px;font-weight:700;color:var(--pal-sub);white-space:nowrap}
-.cmp-table tbody tr:last-child th,.cmp-table tbody tr:last-child td{border-bottom:0}
-.cmp-table .is-fde{background:#F2F4FA;box-shadow:inset 3px 0 0 var(--pal-accent)}
-.cmp-table thead th.is-fde{color:var(--pal-heading)}
-.cmp-table tbody td.is-fde{font-weight:700;color:var(--pal-heading)}
-.cmp-note{max-width:48em;margin:0 auto;text-align:center;font-size:14px;line-height:1.85;color:var(--pal-heading)}
-@media(max-width:900px){.cmp3{grid-template-columns:1fr}}
-@media(max-width:640px){.cmp-note{text-align:left}.cmp-table{font-size:13.5px}}
-/* ===== COMPARE-V2 v1 END ===== */
+/* ===== COMPARE-V2 v1：削除済み（比較セクション撤去に伴い不要。復元は git 履歴） ===== */
 .nw-all{white-space:nowrap}
 
 /* ============================================================
@@ -2327,25 +2302,4 @@ body.review-mode .fdesum{scroll-margin-top:132px}
 /* ===== SERVICES-TIERS v1 END ===== */
 .tier__txt{min-width:0}
 
-/* ============================================================
-   ===== COMPARE-MERGE v1 START =====
-   FDE 特設 01：定義ブロックの下に比較（3カード＋4軸表＋まとめ）を統合。定義ブロックはやや詰め、比較カードは高さを抑える。
-   ============================================================ */
-#what .fdepage-def--compact{max-width:52em;margin:0 auto;padding:20px 26px}
-#what .fdepage-def--compact .fdepage-def__main{margin-bottom:12px;padding-bottom:12px;font-size:16px}
-#what .fdepage-def--compact .fdepage-def__list{gap:8px}
-#what > .container > .review-inline-check{display:block;max-width:52em;margin-left:auto;margin-right:auto}
-.what-compare{margin-top:56px;padding-top:40px;border-top:1px solid var(--pal-border)}
-.what-compare__h{margin:0 0 8px;text-align:center;font-size:21px;font-weight:700;line-height:1.6;color:var(--pal-heading)}
-.what-compare__sub{margin:0 0 4px;text-align:center;font-size:14.5px;font-weight:700;color:var(--pal-accent)}
-.what-compare__lead{margin:0 0 20px;text-align:center;font-size:14px;line-height:1.85;color:var(--pal-sub)}
-.what-compare .cmp3{margin-bottom:18px}
-.what-compare .cmp3__card{padding:16px 18px 16px}
-.what-compare .cmp3__name{margin-bottom:6px;font-size:16px}
-.what-compare .cmp3__txt{font-size:13.5px;line-height:1.75}
-.what-compare .cmp-table th,.what-compare .cmp-table td{padding:12px 16px}
-@media(max-width:900px){.what-compare .cmp3{grid-template-columns:repeat(3,1fr)}}
-@media(max-width:768px){.what-compare .cmp3{grid-template-columns:1fr}}
-@media(max-width:640px){.what-compare{margin-top:40px;padding-top:28px}.what-compare__h{font-size:18px}.what-compare__sub,.what-compare__lead{text-align:left}}
-/* ===== COMPARE-MERGE v1 END ===== */
-@media(min-width:641px){.what-compare .cmp3{grid-template-columns:repeat(3,1fr)}}
+/* ===== COMPARE-MERGE v1：削除済み（比較セクション撤去に伴い不要。復元は git 履歴） ===== */
