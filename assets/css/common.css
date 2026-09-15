@@ -2326,3 +2326,26 @@ body.review-mode .fdesum{scroll-margin-top:132px}
 }
 /* ===== SERVICES-TIERS v1 END ===== */
 .tier__txt{min-width:0}
+
+/* ============================================================
+   ===== COMPARE-MERGE v1 START =====
+   FDE 特設 01：定義ブロックの下に比較（3カード＋4軸表＋まとめ）を統合。定義ブロックはやや詰め、比較カードは高さを抑える。
+   ============================================================ */
+#what .fdepage-def--compact{max-width:52em;margin:0 auto;padding:20px 26px}
+#what .fdepage-def--compact .fdepage-def__main{margin-bottom:12px;padding-bottom:12px;font-size:16px}
+#what .fdepage-def--compact .fdepage-def__list{gap:8px}
+#what > .container > .review-inline-check{display:block;max-width:52em;margin-left:auto;margin-right:auto}
+.what-compare{margin-top:56px;padding-top:40px;border-top:1px solid var(--pal-border)}
+.what-compare__h{margin:0 0 8px;text-align:center;font-size:21px;font-weight:700;line-height:1.6;color:var(--pal-heading)}
+.what-compare__sub{margin:0 0 4px;text-align:center;font-size:14.5px;font-weight:700;color:var(--pal-accent)}
+.what-compare__lead{margin:0 0 20px;text-align:center;font-size:14px;line-height:1.85;color:var(--pal-sub)}
+.what-compare .cmp3{margin-bottom:18px}
+.what-compare .cmp3__card{padding:16px 18px 16px}
+.what-compare .cmp3__name{margin-bottom:6px;font-size:16px}
+.what-compare .cmp3__txt{font-size:13.5px;line-height:1.75}
+.what-compare .cmp-table th,.what-compare .cmp-table td{padding:12px 16px}
+@media(max-width:900px){.what-compare .cmp3{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:768px){.what-compare .cmp3{grid-template-columns:1fr}}
+@media(max-width:640px){.what-compare{margin-top:40px;padding-top:28px}.what-compare__h{font-size:18px}.what-compare__sub,.what-compare__lead{text-align:left}}
+/* ===== COMPARE-MERGE v1 END ===== */
+@media(min-width:641px){.what-compare .cmp3{grid-template-columns:repeat(3,1fr)}}
