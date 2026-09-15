@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260915f">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260915g">
 <!-- ===== JSONLD v1：画面表示内容と一致する範囲のみ（Organization の住所・ロゴ・sameAs、Person、FAQPage、Article は画面に根拠がないため未記載）。本番では URL を本番ドメインへ置換 ===== -->
 <script type="application/ld+json">
 {
@@ -269,37 +269,7 @@
            旧文：PALでは FDE が現場に入り、業務を理解したうえで、現場の言葉を技術要件へ翻訳するところから進めます。 ===== -->
       <!-- ===== V2-GAPVIZ v1 START：長文だった「リテラシーギャップ → FDE → 役割分担」を3段の図解へ再編集。
            旧文（復元用）：今回変更物流DXが止まる原因の一つは、現場とデジタルの間にあるリテラシーギャップです。現場は業務を理解していても、その課題をシステム要件に変換しにくく、技術側はシステムを理解していても、現場運用の細部までは把握しきれません。 そのため物流DXでは、業務と技術の間を翻訳し、設計・実装・運用までつなぐ役割が必要になります。PALでは、FDE（Forward Deployed Engineer）がその役割を担います。FDE（Forward Deployed Engineer）とは、業務課題を技術要件へ翻訳し、設計・実装・運用・改善までを進める役割です。 物流DXを検討する企業では、社内に専任エンジニアやDX人材を持たないケースも少なくありません。その場合でも、判断をお客さまが行い、実装・運用・改善を専門側に任せられれば物流DXは進められます。PALは、現場で安定して動き、価値を生み続けるところまでを担います。 ===== -->
-      <div class="gapviz">
-        <span class="review-label">今回変更</span>
-
-        <!-- 1段目：なぜ物流DXが止まるのか -->
-        <p class="gapviz__h">物流DXが止まる背景には、<br class="sp-only">物流現場とシステムの間に<span class="nw">ズレがあります。</span></p>
-        <div class="gapbridge">
-          <div class="gapbridge__side">
-            <p class="gapbridge__who">現場側</p>
-            <ul class="gapbridge__list">
-              <li class="is-ok">業務は分かる</li>
-              <li class="is-ok">運用課題は分かる</li>
-              <li class="is-ng">課題をシステムの言葉にしにくい</li>
-            </ul>
-          </div>
-          <div class="gapbridge__gap" aria-label="現場と技術の間にあるズレ">
-            <span class="gapbridge__arrow" aria-hidden="true">⇠</span>
-            <span class="gapbridge__label">認識の<br>ズレ</span>
-            <span class="gapbridge__arrow" aria-hidden="true">⇢</span>
-          </div>
-          <div class="gapbridge__side">
-            <p class="gapbridge__who">技術側</p>
-            <ul class="gapbridge__list">
-              <li class="is-ok">システムは分かる</li>
-              <li class="is-ok">データや仕組みは分かる</li>
-              <li class="is-ng">現場運用の細部が見えにくい</li>
-            </ul>
-          </div>
-        </div>
-
-        <!-- 2段目（FDE の流れ）・3段目（役割分担）は APPROACH セクション内の FDE 図解ブロック（V2-FDEBLOCK v1）へ移動 -->
-      </div>
+      <!-- ===== GAP-MOVE v1：ギャップ比較図（現場側／認識のズレ／技術側）は FDE 特設 v2（pages/fde-v2.html #why）へ移動。HOME は背景チップのみ。復元は git 履歴 2a3f6af ===== -->
       <!-- ===== V2-GAPVIZ v1 END ===== -->
       <!-- ===== H-02 v3：PALの提供価値（つないで終わりにせず／データ・ノウハウ・判断基準をお客さま側に残す）を
            本セクションから撤去。本セクションは「なぜ物流DXが進まないのか」という課題提示に専念し、

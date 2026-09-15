@@ -2099,3 +2099,47 @@ body.review-mode .fdesum{scroll-margin-top:132px}
 
 /* ===== FDE-PAGE v1.1：強みへの CTA ボタンは文言が長いため折り返しを許可（375px で横はみ出しが出たため .btn の nowrap を後勝ち上書き） ===== */
 .fdepage-sec .section__cta-wrap .btn{white-space:normal;max-width:100%;height:auto;line-height:1.6;text-align:center}
+
+/* ============================================================
+   ===== FDE-PAGE v2 START =====
+   特設 v2 再構成で追加した図解：定義ブロック／課題カード／役割分担（判断 ⇄ 実装）／実装の構成式。
+   既存 .gapbridge / .fdeflow / .fderole / .hub / .cycle4 / .faq-* を流用し、配色は白・ネイビー・ライトグレー・赤アクセントに統一。
+   ============================================================ */
+.fdepage-def{padding:24px 28px;border-radius:12px;background:#fff;border:1px solid var(--pal-border)}
+.fdepage-def__main{margin:0 0 16px;padding-bottom:16px;border-bottom:1px solid var(--pal-border);font-size:17px;font-weight:700;line-height:1.8;color:var(--pal-heading)}
+.fdepage-def__list{margin:0;display:grid;gap:12px}
+.fdepage-def__list>div{display:grid;grid-template-columns:10em 1fr;gap:12px;align-items:baseline}
+.fdepage-def__list dt{margin:0;font-size:13px;font-weight:700;color:var(--pal-accent)}
+.fdepage-def__list dd{margin:0;font-size:14px;line-height:1.85;color:var(--pal-text)}
+.fdepage-issues{list-style:none;margin:8px auto 24px;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;max-width:64em}
+.fdepage-issues li{padding:16px 16px 18px;border-radius:8px;background:#fff;border:1px solid var(--pal-border);border-top:3px solid var(--pal-accent)}
+.fdepage-issues b{display:block;margin-bottom:6px;font-size:15px;color:var(--pal-heading)}
+.fdepage-issues span{display:block;font-size:13px;line-height:1.7;color:var(--pal-sub)}
+.fdepage-gap{max-width:52em;margin:0 auto}
+.fdepage-note{max-width:44em;margin:18px auto 0;text-align:center;font-size:14.5px;font-weight:700;line-height:1.8;color:var(--pal-heading)}
+.fdepage-split{display:grid;grid-template-columns:1fr auto 1.6fr;align-items:stretch;gap:14px;max-width:60em;margin:8px auto 0}
+.fdepage-split__col{padding:20px 22px;border-radius:8px;background:var(--pal-bg-light);border:1px solid var(--pal-border)}
+.fdepage-split__col--pal{background:var(--pal-heading);border-color:var(--pal-heading)}
+.fdepage-split__who{margin:0;font-size:13px;font-weight:700;color:var(--pal-sub)}
+.fdepage-split__role{margin:2px 0 12px;font-size:19px;font-weight:700;color:var(--pal-heading)}
+.fdepage-split__col--pal .fdepage-split__who{color:var(--pal-blue-pale)}
+.fdepage-split__col--pal .fdepage-split__role{color:#fff}
+.fdepage-split__col--pal .splitroles__list li{background:rgba(255,255,255,.12);border-color:transparent;color:#fff}
+.fdepage-split__arrow{align-self:center;font-size:22px;color:var(--pal-blue)}
+.fdepage-stack{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:8px 10px;margin:0 auto 24px;max-width:64em}
+.fdepage-stack__item{padding:8px 14px;border-radius:8px;background:#fff;border:1px solid var(--pal-border);font-size:13.5px;font-weight:700;color:var(--pal-heading);text-align:center}
+.fdepage-stack__item--fde{background:var(--pal-heading);border-color:var(--pal-heading);color:#fff}
+.fdepage-stack__item--goal{border:2px solid var(--pal-accent);color:var(--pal-accent)}
+.fdepage-stack__op{font-size:16px;font-weight:700;color:var(--pal-blue)}
+.v2cycle--fde .cycle4__fde{margin-top:8px;padding-top:0;border-top:0}
+@media(max-width:900px){.fdepage-issues{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:640px){
+  .fdepage-def{padding:18px 16px}
+  .fdepage-def__list>div{grid-template-columns:1fr;gap:2px}
+  .fdepage-issues{grid-template-columns:1fr}
+  .fdepage-split{grid-template-columns:1fr}
+  .fdepage-split__arrow{justify-self:center;transform:rotate(90deg)}
+  .fdepage-stack{flex-direction:column;align-items:stretch}
+  .fdepage-stack__op{text-align:center}
+}
+/* ===== FDE-PAGE v2 END ===== */
