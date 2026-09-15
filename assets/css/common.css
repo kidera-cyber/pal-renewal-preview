@@ -2309,3 +2309,5 @@ body.review-mode .fdesum{scroll-margin-top:132px}
 .tier--roles .fdepage-split{margin-top:0}
 .section--soft .tier--roles .fdepage-split__col:not(.fdepage-split__col--pal){background:#fff}
 @media(max-width:640px){.tier__lead{text-align:left}}
+/* ===== TIER-ORDER v1：06 PAL の並びを 基盤→役割分担→実装フロー→サービス に変更。役割分担の直後の余白を他 tier と統一 ===== */
+.tier--roles .fdepage-split{margin-bottom:0}
