@@ -12,7 +12,7 @@
 <meta name="description" content="FDE（Forward Deployed Engineer）とは、顧客の業務課題を技術要件へ翻訳し、設計・実装・運用までをつなぐエンジニアです。物流DXで必要な理由、物流コンサル・SIerとの違い、PALが物流領域でFDE型の支援をどう実践しているかを解説します。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260915x">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260915y">
 <!-- ===== JSONLD FDE-PAGE v1：画面表示内容のみ（FAQPage は画面の FAQ と同一データから生成） ===== -->
 <script type="application/ld+json">
 {
@@ -269,7 +269,7 @@
 </section>
 
 <nav class="fdepage-toc" aria-label="このページの内容"><div class="container">
-  <a href="#what">01 定義</a><a href="#why">02 必要な理由</a><a href="#flow">03 進め方</a><a href="#value">04 価値</a><a href="#roles">05 役割分担</a><a href="#connect">06 つなぐ対象</a><a href="#services">07 PALでの実装</a><a href="#case">08 実践例</a><a href="#faq">09 よくある質問</a>
+  <a href="#what">01 定義</a><a href="#why">02 必要な理由</a><a href="#flow">03 進め方</a><a href="#value">04 価値</a><a href="#connect">05 つなぐ対象</a><a href="#services">06 PALでの実装・役割分担</a><a href="#case">07 実践例</a><a href="#faq">08 よくある質問</a>
 </div></nav>
 
 <section class="section fdepage-sec" id="what">
@@ -363,28 +363,11 @@
   </div>
 </section>
 
-<section class="section fdepage-sec" id="roles">
-  <div class="container">
-    <div class="section__head"><span class="section__eyebrow">05 / ROLES</span><h2 class="section__title">社内に専任エンジニアがいなくても、物流DXは進められます</h2>
-      <p class="section__lead">お客さまは判断に集中し、実装・運用・改善はPALのエンジニアが <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>として担います。</p>
-    </div>
-    <div class="fdepage-split">
-      <div class="fdepage-split__col">
-        <p class="fdepage-split__who">お客さま</p><p class="fdepage-split__role">判断する</p>
-        <ul class="splitroles__list"><li>方針の確認</li><li>投資判断</li><li>最終判断</li></ul>
-      </div>
-      <span class="fdepage-split__arrow" aria-hidden="true">⇄</span>
-      <div class="fdepage-split__col fdepage-split__col--pal">
-        <p class="fdepage-split__who">PAL / <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span></p><p class="fdepage-split__role">実装・運用・改善する</p>
-        <ul class="splitroles__list"><li>現場把握</li><li>業務整理</li><li>要件整理</li><li>設計</li><li>実装</li><li>運用</li><li>改善</li></ul>
-      </div>
-    </div>
-  </div>
-</section>
+<!-- ===== ROLES-MERGE v1：05 ROLES を 07 PAL（→06）の最下部 tier 4 へ統合。復元は git 履歴 e19cf98 ===== -->
 
-<section class="section section--soft fdepage-sec" id="connect">
+<section class="section fdepage-sec" id="connect">
   <div class="container">
-    <div class="section__head"><span class="section__eyebrow">06 / CONNECT</span><h2 class="section__title"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が、<br class="br-pc"><span class="nw">分断された関係者・情報・役割を</span><span class="nw">一つの実行体制へつなぐ</span></h2>
+    <div class="section__head"><span class="section__eyebrow">05 / CONNECT</span><h2 class="section__title"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が、<br class="br-pc"><span class="nw">分断された関係者・情報・役割を</span><span class="nw">一つの実行体制へつなぐ</span></h2>
       <p class="section__lead"><span class="rnew">今回変更</span>物流DXでは、経営・現場・3PL・SIer・システム・設備・データなど、複数の関係者や要素が別々に動くことがあります。<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、その間に立って情報・役割・判断材料を整理し、実装を前へ進める一つの実行体制へつなぎます。</p>
     </div>
     <!-- ===== CONNECT-RADIAL v1：縦並びのハブ図を、FDE を中心に8要素を放射状に配置する図へ変更（スマホは縦構成）。旧 .hub は git 履歴 390c6ca ===== -->
@@ -405,10 +388,10 @@
 
 <!-- ===== PROCESS-REMOVE v1：08 PROCESS（4サイクル×FDEが担うこと）を削除。4サイクルは 03 HOW に一本化。復元は git 履歴 ccb1365 ===== -->
 
-<section class="section fdepage-sec" id="services">
+<section class="section section--soft fdepage-sec" id="services">
   <!-- ===== SERVICES-TIERS v1：基盤（3カード）→ 統合（FDE のフロー図）→ サービス（小カード一覧）の3階層に整理。旧 数式風図解は git 履歴 458be28 ===== -->
   <div class="container">
-    <div class="section__head"><span class="section__eyebrow">07 / PAL</span><h2 class="section__title">物流現場・データ・技術を<span class="nw">横断して実装する</span></h2>
+    <div class="section__head"><span class="section__eyebrow">06 / PAL</span><h2 class="section__title">物流現場・データ・技術を<span class="nw">横断して実装する</span></h2>
       <p class="section__lead"><span class="rnew">今回変更</span>PALは、物流現場の運用知見、システム・サービス、現場のデータを組み合わせ、物流DXを設計・実装・運用へつなげます。</p>
     </div>
 
@@ -436,14 +419,29 @@
       <ul class="svc-minis"><li><a class="svc-mini" href="https://www.pal-style.co.jp/service/logistics-consulting/" target="_blank" rel="noopener"><span class="svc-mini__name">物流コンサルティング</span><span class="svc-mini__txt">物流DXの戦略策定・実行支援・成果創出</span></a></li><li><a class="svc-mini" href="https://www.pal-style.co.jp/service/core-first/" target="_blank" rel="noopener"><span class="svc-mini__name">Core First</span><span class="svc-mini__txt">組織の可視化・データ統合プラットフォーム</span></a></li><li><a class="svc-mini" href="https://www.pal-style.co.jp/service/dts/" target="_blank" rel="noopener"><span class="svc-mini__name">DTS</span><span class="svc-mini__txt">輸送効率化・可視化プラットフォーム</span></a></li><li><a class="svc-mini" href="https://www.pal-style.co.jp/service/mate/" target="_blank" rel="noopener"><span class="svc-mini__name">Core Mate</span><span class="svc-mini__txt">勤怠・即日・即払システム</span></a></li><li><a class="svc-mini" href="https://lp.pal-style.co.jp/core-gx/index.html" target="_blank" rel="noopener"><span class="svc-mini__name">Core GX</span><span class="svc-mini__txt">データ連携により現場最適を制御する自動搬送ロボットソリューション</span></a></li><li><a class="svc-mini" href="https://lp.pal-style.co.jp/logitec-integration/" target="_blank" rel="noopener"><span class="svc-mini__name">ロジテックインテグレーション</span><span class="svc-mini__txt">物流DXを戦略から実行まで一気通貫で支援</span></a></li><li><a class="svc-mini" href="https://www.pal-style.co.jp/service/zero/" target="_blank" rel="noopener"><span class="svc-mini__name">Core Zero</span><span class="svc-mini__txt">物流DXの初期費用をゼロにする</span></a></li></ul>
       <span class="review-inline-check">要確認：各サービスと <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の具体的な関わり方（どの工程でどう使うか）は、事実確認後に追記</span>
     </div>
+    <div class="tier tier--roles">
+      <p class="tier__h"><span class="tier__no">4</span><span class="tier__txt">社内に専任エンジニアがいなくても、物流DXは進められます</span></p>
+      <p class="tier__lead"><span class="rnew rnew--moved">移動</span>お客さまは判断に集中し、実装・運用・改善はPALのエンジニアが <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>として担います。</p>
+      <div class="fdepage-split">
+    <div class="fdepage-split__col">
+      <p class="fdepage-split__who">お客さま</p><p class="fdepage-split__role">判断する</p>
+      <ul class="splitroles__list"><li>方針の確認</li><li>投資判断</li><li>最終判断</li></ul>
+    </div>
+    <span class="fdepage-split__arrow" aria-hidden="true">⇄</span>
+    <div class="fdepage-split__col fdepage-split__col--pal">
+      <p class="fdepage-split__who">PAL / <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span></p><p class="fdepage-split__role">実装・運用・改善する</p>
+      <ul class="splitroles__list"><li>現場把握</li><li>業務整理</li><li>要件整理</li><li>設計</li><li>実装</li><li>運用</li><li>改善</li></ul>
+    </div>
+  </div>
+    </div>
   </div>
 </section>
 
-<section class="section section--soft fdepage-sec" id="case">
+<section class="section fdepage-sec" id="case">
   <!-- ===== FDE-CASE v1：社内資料 p13–14 の案件を匿名化して掲載（会社名・拠点名・人名・タスク数・期限・金額・製品固有名は不掲載）。
        いずれも進行中の取り組みで、成果数値は記載しない。旧 CASE SLOT は git 履歴 be72aa3 ===== -->
   <div class="container">
-    <div class="section__head"><span class="section__eyebrow">08 / CASE</span><h2 class="section__title">物流現場での <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>実践例</h2>
+    <div class="section__head"><span class="section__eyebrow">07 / CASE</span><h2 class="section__title">物流現場での <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>実践例</h2>
       <p class="section__lead"><span class="rnew">新規追加</span><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、課題整理だけでなく、現場ごとの条件に合わせて設計・実装・運用まで進めます。以下は、PALが物流現場で進めている取り組みの一例です。</p>
     </div>
     <ul class="fdecases">
@@ -485,9 +483,9 @@
   </div>
 </section>
 
-<section class="section fdepage-sec" id="faq">
+<section class="section section--soft fdepage-sec" id="faq">
   <div class="container container--narrow">
-    <div class="section__head"><span class="section__eyebrow">09 / FAQ</span><h2 class="section__title">よくある質問</h2></div>
+    <div class="section__head"><span class="section__eyebrow">08 / FAQ</span><h2 class="section__title">よくある質問</h2></div>
     <div class="faq-list">
         <div class="faq-item">
           <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>とは何ですか？</span></h3>
@@ -518,7 +516,7 @@
   </div>
 </section>
 
-<section class="section section--soft fdepage-sec" id="related">
+<section class="section fdepage-sec" id="related">
   <div class="container">
     <div class="section__head"><span class="section__eyebrow">NEXT</span><h2 class="section__title">なぜPALなら、物流DXを実装まで進められるのか</h2>
       <p class="section__lead"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の役割を支えるのは、物流現場での運用力、データ統合、事前検証、初期費用ゼロでの導入などの強みです。</p>

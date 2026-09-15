@@ -2303,3 +2303,9 @@ body.review-mode .fdesum{scroll-margin-top:132px}
 .tier__txt{min-width:0}
 
 /* ===== COMPARE-MERGE v1：削除済み（比較セクション撤去に伴い不要。復元は git 履歴） ===== */
+
+/* ===== ROLES-MERGE v1：06 PAL の tier 4（役割分担のまとめ）。セクション背景に応じて左カードを白地に ===== */
+.tier__lead{max-width:44em;margin:-6px auto 16px;text-align:center;font-size:14px;line-height:1.85;color:var(--pal-sub)}
+.tier--roles .fdepage-split{margin-top:0}
+.section--soft .tier--roles .fdepage-split__col:not(.fdepage-split__col--pal){background:#fff}
+@media(max-width:640px){.tier__lead{text-align:left}}
