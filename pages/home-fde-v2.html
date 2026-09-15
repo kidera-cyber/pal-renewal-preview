@@ -13,7 +13,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260915r">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260915s">
 <!-- ===== JSONLD v1：画面表示内容と一致する範囲のみ（Organization の住所・ロゴ・sameAs、Person、FAQPage、Article は画面に根拠がないため未記載）。本番では URL を本番ドメインへ置換 ===== -->
 <script type="application/ld+json">
 {
@@ -285,6 +285,7 @@
 </section>
 
 <!-- SEC5：APPROACH
+     ===== V2-APPROACH v6：FDE は入口として 定義1文＋PALでの適用1文＋特設への導線 のみに簡素化（3列図解・長文を撤去し FDE 特設 v2 へ集約）。旧 v5 は git 履歴 6339118 =====
      ===== V2-APPROACH v5：HOME 用に簡素化。導入（2文）→ FDE 3列図解 → 役割分担（簡潔）→ 3つの力（短文）→ 4サイクル予告（短文）→ 導線。
      4サイクルの正式定義文は役割ページ #cycle に掲載。HOME は予告用の短文。旧構成は git 履歴 252a678 ===== -->
 <section class="section review-changed">
@@ -292,24 +293,11 @@
   <div class="container">
     <div class="section__head">
       <h2 class="section__title">現場と技術をつなぎ、<span class="nw">物流DXを実装まで進める。</span><br><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span></h2>
-      <p class="section__lead"><span class="rnew">今回変更</span><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、顧客の業務課題を技術要件へ翻訳し、設計・実装・運用までをつなぐエンジニアです。物流DXでは、物流現場・システム・設備・データの間にズレが生まれやすく、システムを導入しても現場で使われないことがあるため、こうした「翻訳と実装」を担う役割が重要になります。PALでは、この考え方を物流領域に適用し、お客さまには方針や投資の判断を担っていただきながら、PALのエンジニアが物流DXを現場で動く形へつなげています。</p>
+      <p class="section__lead"><span class="rnew">今回変更</span><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、顧客の業務課題を技術要件へ翻訳し、設計・実装・運用までをつなぐエンジニアです。<br>PALでは、この考え方を物流DXに適用し、現場で使える仕組みへつなげています。</p>
+      <p class="home-fde-cta"><a href="./fde-v2.html" class="fde-cta-link">FDEについて詳しく見る</a></p>
     </div>
 
-    <!-- ① FDE 3列図解 -->
-    <ol class="fde3" aria-label="現場の課題から、物流DXが現場で動くまで">
-      <li class="fde3__col">
-        <p class="fde3__h">現場の課題</p>
-        <ul class="fde3__list"><li>現場の業務を理解する</li><li>課題を整理する</li></ul>
-      </li>
-      <li class="fde3__col fde3__col--fde">
-        <p class="fde3__h"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span></p>
-        <ul class="fde3__list"><li>翻訳する</li><li>設計する</li><li>実装する</li><li>運用へつなぐ</li><li>改善する</li></ul>
-      </li>
-      <li class="fde3__col fde3__col--goal">
-        <p class="fde3__h">物流DXが現場で動く</p>
-        <ul class="fde3__list"><li>実装・運用・改善が進む</li></ul>
-      </li>
-    </ol>
+    <!-- ① FDE 3列図解：V2-APPROACH v6 で撤去（FDE 特設 v2 の 03 HOW へ集約） -->
 
     <!-- ===== HOME-ROLES-TRIM v1：役割分担図（お客さま / PAL・FDE）と補足文を削除し、見出し下の本文へ統合。詳細は役割ページ。復元は git 履歴 2ace8cd ===== -->
 
@@ -319,17 +307,17 @@
       <div class="card card--filled">
         <p class="card__eyebrow">つなぐ（Integrate）</p>
         <h3 class="card__title">データ統合力</h3>
-        <p class="card__body">現場・システム・設備に分散した物流データをデータ統合とシステム連携でつなぎ、物流全体を可視化します。</p>
+        <p class="card__body">現場・物流データ・システム・設備・パートナーをつなぎ、物流全体を見える状態にします。</p>
       </div>
       <div class="card card--filled">
         <p class="card__eyebrow">現場で動かす（Enable）</p>
         <h3 class="card__title">現場実装力</h3>
-        <p class="card__body">PALのエンジニアが <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>として、業務理解から物流システムの設計・実装・運用までを一貫して進めます。</p>
+        <p class="card__body">物流DXを、現場で使える形まで実装します。</p>
       </div>
       <div class="card card--filled">
         <p class="card__eyebrow">失敗させない（De-risk）</p>
         <h3 class="card__title">段階的検証力</h3>
-        <p class="card__body">PoV（価値検証）や段階的な導入で、物流DXの投資リスクを抑えながら前へ進めます。</p>
+        <p class="card__body">PoV（価値検証）や段階的な導入で、投資リスクを抑えます。</p>
       </div>
     </div>
 
@@ -337,9 +325,9 @@
     <div class="v2cycle v2cycle--brief">
       <p class="v2cycle__head">物流DXは、<span class="nw">Design → Deploy → Operate → Evolve</span> の4サイクルで進みます</p>
       <ol class="cycle4">
-        <li class="cycle4__item"><span class="cycle4__cy"><b>Design</b><span class="cycle4__ja">設計</span></span><p class="cycle4__aim">全体を捉えて仕組みを設計する</p></li>
+        <li class="cycle4__item"><span class="cycle4__cy"><b>Design</b><span class="cycle4__ja">設計</span></span><p class="cycle4__aim">現場全体を捉え、仕組みを設計する</p></li>
         <li class="cycle4__item"><span class="cycle4__cy"><b>Deploy</b><span class="cycle4__ja">実装・導入</span></span><p class="cycle4__aim">必要な技術を現場に実装する</p></li>
-        <li class="cycle4__item"><span class="cycle4__cy"><b>Operate</b><span class="cycle4__ja">運用</span></span><p class="cycle4__aim">現場で安定して運用する</p></li>
+        <li class="cycle4__item"><span class="cycle4__cy"><b>Operate</b><span class="cycle4__ja">運用</span></span><p class="cycle4__aim">現場で安定して価値を生み出す</p></li>
         <li class="cycle4__item cycle4__item--last"><span class="cycle4__cy"><b>Evolve</b><span class="cycle4__ja">進化</span></span><p class="cycle4__aim">データや知見をもとに改善する</p></li>
       </ol>
     </div>
@@ -347,7 +335,6 @@
     <!-- ⑤ 詳細ページへの導線 -->
     <ul class="nextlinks" aria-label="さらに詳しく">
       <li><a href="./role-fde-v2.html">私たちの役割を見る</a></li>
-      <li><a href="./fde-v2.html"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>について詳しく</a></li>
       <li><a href="./reason-fde-v2.html">PALの強みを見る</a></li>
     </ul>
   </div>

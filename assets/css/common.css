@@ -2290,3 +2290,4 @@ body.review-mode .fdesum{scroll-margin-top:132px}
   .howmap__cy:not(:last-child)::after,.howmap__cy:nth-child(2)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-19px;transform:translateX(-50%)}
 }
 /* ===== HOW-OVERVIEW v2 END ===== */
+.home-fde-cta{margin:12px 0 0;text-align:center}
