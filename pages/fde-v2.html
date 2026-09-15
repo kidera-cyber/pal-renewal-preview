@@ -277,7 +277,7 @@
 </section>
 
 <nav class="fdepage-toc" aria-label="このページの内容"><div class="container">
-  <a href="#what">01 定義</a><a href="#why">02 必要な理由</a><a href="#flow">03 進め方</a><a href="#value">04 価値</a><a href="#roles">05 役割分担</a><a href="#connect">06 つなぐ対象</a><a href="#compare">07 違い</a><a href="#cycle">08 4サイクル</a><a href="#services">09 PALでの実装</a><a href="#case">10 実践例</a><a href="#faq">11 よくある質問</a>
+  <a href="#what">01 定義</a><a href="#why">02 必要な理由</a><a href="#flow">03 進め方</a><a href="#value">04 価値</a><a href="#roles">05 役割分担</a><a href="#connect">06 つなぐ対象</a><a href="#compare">07 違い</a><a href="#services">08 PALでの実装</a><a href="#case">09 実践例</a><a href="#faq">10 よくある質問</a>
 </div></nav>
 
 <section class="section fdepage-sec" id="what">
@@ -351,7 +351,7 @@
         <ol class="howmap__cys"><li class="howmap__cy"><p class="howmap__cy-en">Design</p><p class="howmap__cy-ja">設計する</p><p class="howmap__cy-txt">現場課題を整理し、実装方針を設計する</p></li><li class="howmap__cy"><p class="howmap__cy-en">Deploy</p><p class="howmap__cy-ja">実装する</p><p class="howmap__cy-txt">システムや設備を組み合わせ、現場へ実装する</p></li><li class="howmap__cy"><p class="howmap__cy-en">Operate</p><p class="howmap__cy-ja">運用へつなぐ</p><p class="howmap__cy-txt">現場で安定して使える状態を支える</p></li><li class="howmap__cy"><p class="howmap__cy-en">Evolve</p><p class="howmap__cy-ja">改善する</p><p class="howmap__cy-txt">運用で得た知見をもとに改善を重ねる</p></li></ol>
       </div>
     </div>
-    <p class="fdepage-note">現場理解から始め、翻訳を起点に、設計・実装・運用・改善までを分断させずに前に進めます。<br class="br-pc"><a href="#cycle" class="fde-cta-link">各サイクルで担うことを見る</a></p>
+    <p class="fdepage-note">現場理解から始め、翻訳を起点に、設計・実装・運用・改善までを分断させずに前に進めます。</p>
   </div>
 </section>
 
@@ -440,26 +440,11 @@
   </div>
 </section>
 
-<section class="section section--soft fdepage-sec" id="cycle">
-  <div class="container">
-    <div class="section__head"><span class="section__eyebrow">08 / PROCESS</span><h2 class="section__title"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、4サイクルをこう実行します</h2>
-      <p class="section__lead">PALが物流DXを進める Design → Deploy → Operate → Evolve の各段階で、<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が担うことを示します。</p>
-    </div>
-    <div class="v2cycle v2cycle--fde">
-      <ol class="cycle4">
-        <li class="cycle4__item"><span class="cycle4__cy"><b>Design</b><span class="cycle4__ja">設計</span></span><p class="cycle4__fde"><span class="cycle4__fde-lbl"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span> が担うこと</span>現場課題を技術要件へ翻訳し、設計に反映する</p></li>
-        <li class="cycle4__item"><span class="cycle4__cy"><b>Deploy</b><span class="cycle4__ja">実装・導入</span></span><p class="cycle4__fde"><span class="cycle4__fde-lbl"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span> が担うこと</span>サービスや既存システムを組み合わせ、実装・テストを進める</p></li>
-        <li class="cycle4__item"><span class="cycle4__cy"><b>Operate</b><span class="cycle4__ja">運用</span></span><p class="cycle4__fde"><span class="cycle4__fde-lbl"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span> が担うこと</span>運用設計と定着を支え、現場で使われる状態を保つ</p></li>
-        <li class="cycle4__item cycle4__item--last"><span class="cycle4__cy"><b>Evolve</b><span class="cycle4__ja">進化</span></span><p class="cycle4__fde"><span class="cycle4__fde-lbl"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span> が担うこと</span>データや知見を整理し、次の改善と判断につなげる</p></li>
-      </ol>
-    </div>
-    <p class="section__cta-wrap"><a href="./role-fde-v2.html#cycle" class="fde-cta-link">4サイクルの定義と統合アプローチを見る</a></p>
-  </div>
-</section>
+<!-- ===== PROCESS-REMOVE v1：08 PROCESS（4サイクル×FDEが担うこと）を削除。4サイクルは 03 HOW に一本化。復元は git 履歴 ccb1365 ===== -->
 
-<section class="section fdepage-sec" id="services">
+<section class="section section--soft fdepage-sec" id="services">
   <div class="container">
-    <div class="section__head"><span class="section__eyebrow">09 / PAL</span><h2 class="section__title">物流現場・データ・技術を<span class="nw">横断して実装する</span></h2>
+    <div class="section__head"><span class="section__eyebrow">08 / PAL</span><h2 class="section__title">物流現場・データ・技術を<span class="nw">横断して実装する</span></h2>
       <p class="section__lead"><span class="rnew">今回変更</span>PALは、物流現場の運用知見、システム・サービス、現場から得られるデータを組み合わせながら、物流DXを設計・実装・運用へつなげます。<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、これらを現場ごとに組み合わせ、実際に使える仕組みへ落とし込む役割を担います。</p>
     </div>
     <!-- ===== FDE-DOC v1：社内資料 p11「ソフト × 運用 × データ」を、競合比較の断定を避けた外部向け表現で反映 ===== -->
@@ -487,11 +472,11 @@
   </div>
 </section>
 
-<section class="section section--soft fdepage-sec" id="case">
+<section class="section fdepage-sec" id="case">
   <!-- ===== FDE-CASE v1：社内資料 p13–14 の案件を匿名化して掲載（会社名・拠点名・人名・タスク数・期限・金額・製品固有名は不掲載）。
        いずれも進行中の取り組みで、成果数値は記載しない。旧 CASE SLOT は git 履歴 be72aa3 ===== -->
   <div class="container">
-    <div class="section__head"><span class="section__eyebrow">10 / CASE</span><h2 class="section__title">物流現場での <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>実践例</h2>
+    <div class="section__head"><span class="section__eyebrow">09 / CASE</span><h2 class="section__title">物流現場での <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>実践例</h2>
       <p class="section__lead"><span class="rnew">新規追加</span><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、課題整理だけでなく、現場ごとの条件に合わせて設計・実装・運用まで進めます。以下は、PALが物流現場で進めている取り組みの一例です。</p>
     </div>
     <ul class="fdecases">
@@ -535,7 +520,7 @@
 
 <section class="section section--soft fdepage-sec" id="faq">
   <div class="container container--narrow">
-    <div class="section__head"><span class="section__eyebrow">11 / FAQ</span><h2 class="section__title">よくある質問</h2></div>
+    <div class="section__head"><span class="section__eyebrow">10 / FAQ</span><h2 class="section__title">よくある質問</h2></div>
     <div class="faq-list">
         <div class="faq-item">
           <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>とは何ですか？</span></h3>
