@@ -12,7 +12,7 @@
 <meta name="description" content="FDE（Forward Deployed Engineer）とは、顧客の業務課題を技術要件へ翻訳し、設計・実装・運用までをつなぐエンジニアです。物流DXで必要な理由、物流コンサル・SIerとの違い、PALが物流領域でFDE型の支援をどう実践しているかを解説します。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260915p">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260915q">
 <!-- ===== JSONLD FDE-PAGE v1：画面表示内容のみ（FAQPage は画面の FAQ と同一データから生成） ===== -->
 <script type="application/ld+json">
 {
@@ -326,18 +326,14 @@
 </section>
 
 <section class="section fdepage-sec" id="flow">
+  <!-- ===== HOW-OVERVIEW v1：03 を4サイクルの概要に再設計（08 PROCESS＝各段階で FDE が担う詳細）。
+       旧：価値フロー図（現場の課題を理解する→業務を整理する→翻訳する→設計する→実装する→運用へつなぐ→改善する）は 08 と重複するため撤去。git 履歴 7ddaf0a ===== -->
   <div class="container">
-    <div class="section__head"><span class="section__eyebrow">03 / HOW</span><h2 class="section__title"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が物流DXを進める流れ</h2>
-      <p class="section__lead">現場を理解するところから始め、技術要件への翻訳を起点に、設計・実装・運用・改善までを一続きで進めます。</p>
+    <div class="section__head"><span class="section__eyebrow">03 / HOW</span><h2 class="section__title"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、<span class="nw">物流DXを4サイクルで</span><span class="nw-all">前に進めます</span></h2>
+      <p class="section__lead"><span class="rnew">今回変更</span><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、現場課題を技術要件へ翻訳しながら、物流DXを Design → Deploy → Operate → Evolve の流れで前に進めます。</p>
     </div>
-    <div class="fdeflow fdepage-flow">
-      <ol class="fdeflow__pre" aria-label="理解する"><li>現場の課題を理解する</li><li>業務を整理する</li></ol>
-      <span class="fdeflow__join" aria-hidden="true">→</span>
-      <div class="fdeflow__core">
-        <p class="fdeflow__core-lbl"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の価値の中心</p>
-        <ol class="fdeflow__steps" aria-label="翻訳から改善まで"><li>翻訳する<small>技術要件へ</small></li><li>設計する</li><li>実装する</li><li>運用へつなぐ</li><li>改善する</li></ol>
-      </div>
-    </div>
+    <ol class="cyclite" aria-label="物流DXの4サイクル（概要）"><li class="cyclite__item"><p class="cyclite__en">Design<span>設計</span></p><p class="cyclite__txt">現場課題を整理し、実装方針を設計する</p></li><li class="cyclite__item"><p class="cyclite__en">Deploy<span>実装・導入</span></p><p class="cyclite__txt">システムや設備を組み合わせ、現場へ実装する</p></li><li class="cyclite__item"><p class="cyclite__en">Operate<span>運用</span></p><p class="cyclite__txt">現場で安定して使える状態を支える</p></li><li class="cyclite__item"><p class="cyclite__en">Evolve<span>進化</span></p><p class="cyclite__txt">運用で得た知見をもとに改善を重ねる</p></li></ol>
+    <p class="fdepage-note"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、この4サイクルを分断させず、設計から改善までを一貫して前に進めます。<br class="br-pc"><a href="#cycle" class="fde-cta-link">各サイクルで担うことを見る</a></p>
   </div>
 </section>
 

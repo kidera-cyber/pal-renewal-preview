@@ -2237,3 +2237,22 @@ body.review-mode .fdesum{scroll-margin-top:132px}
 @media(max-width:640px){.cmp-note{text-align:left}.cmp-table{font-size:13.5px}}
 /* ===== COMPARE-V2 v1 END ===== */
 .nw-all{white-space:nowrap}
+
+/* ============================================================
+   ===== HOW-OVERVIEW v1 START =====
+   FDE 特設 03：4サイクルの概要（08 より軽い見た目の4ボックス＋矢印）。スマホは1列。
+   ============================================================ */
+.cyclite{list-style:none;margin:8px auto 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:28px;max-width:64em;counter-reset:cyl}
+.cyclite__item{position:relative;padding:16px 18px 18px;border-radius:8px;background:#fff;border:1px solid var(--pal-border)}
+.cyclite__item:not(:last-child)::after{content:"→";position:absolute;right:-21px;top:50%;transform:translateY(-50%);font-size:16px;color:var(--pal-blue)}
+.cyclite__en{margin:0 0 6px;font-family:var(--font-en);font-size:18px;font-weight:700;color:var(--pal-heading)}
+.cyclite__en span{margin-left:8px;font-family:'Noto Sans JP',sans-serif;font-size:12px;font-weight:500;color:var(--pal-sub)}
+.cyclite__txt{margin:0;font-size:13.5px;line-height:1.75;color:var(--pal-text)}
+#flow .fdepage-note a{display:inline-block;margin-top:6px;font-size:13.5px}
+@media(max-width:900px){.cyclite{grid-template-columns:repeat(2,1fr)}.cyclite__item:nth-child(2)::after{content:none}}
+@media(max-width:640px){
+  .cyclite{grid-template-columns:1fr;gap:22px;max-width:30em}
+  .cyclite__item:not(:last-child)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-20px;transform:translateX(-50%)}
+  .cyclite__item:nth-child(2)::after{content:"↓"}
+}
+/* ===== HOW-OVERVIEW v1 END ===== */
