@@ -2147,3 +2147,31 @@ body.review-mode .fdesum{scroll-margin-top:132px}
 /* ===== FDE-HEAD-SPLIT v1：FV 見出しを「要約コピー（上段・小）＋ FDE 正式名（下段・大）」の2段に ===== */
 .phero__title-sub--lead{margin:0 0 10px;font-size:.5em}
 .phero__title-sub .nw{white-space:nowrap}
+
+/* ============================================================
+   ===== FDE-CASE v1 START =====
+   FDE 特設 v2：PALで実装する3要素（.fdepage-pillars）と匿名事例カード（.fdecases）。PC 2列×2段／スマホ1列。
+   ============================================================ */
+.fdepage-pillars{list-style:none;margin:8px auto 24px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:64em}
+.fdepage-pillars li{padding:18px 18px 20px;border-radius:8px;background:var(--pal-bg-light);border:1px solid var(--pal-border)}
+.fdepage-pillars__en{display:block;font-family:var(--font-en);font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--pal-accent)}
+.fdepage-pillars b{display:block;margin:4px 0 6px;font-size:16px;color:var(--pal-heading)}
+.fdepage-pillars li>span:last-child{display:block;font-size:13.5px;line-height:1.8;color:var(--pal-sub)}
+.fdecases{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.fdecase{display:flex;flex-direction:column;padding:22px 24px 24px;border-radius:12px;background:#fff;border:1px solid var(--pal-border)}
+.fdecase__head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px}
+.fdecase__no{font-family:var(--font-en);font-size:12px;font-weight:700;letter-spacing:.08em;color:var(--pal-accent)}
+.fdecase__status{padding:3px 10px;border-radius:9999px;border:1px solid var(--pal-heading);font-size:12px;font-weight:700;color:var(--pal-heading);white-space:nowrap}
+.fdecase__place{margin:0;font-size:13px;font-weight:700;color:var(--pal-sub)}
+.fdecase__title{margin:2px 0 14px;font-size:17px;font-weight:700;line-height:1.6;color:var(--pal-heading)}
+.fdecase__row{padding-top:10px;margin-top:10px;border-top:1px dashed var(--pal-border)}
+.fdecase__lbl{margin:0 0 4px;font-size:12px;font-weight:700;color:var(--pal-accent)}
+.fdecase__txt{margin:0;font-size:13.5px;line-height:1.85;color:var(--pal-text)}
+.fdecase__list{margin:0;padding-left:1.2em;font-size:13.5px;line-height:1.8;color:var(--pal-text)}
+.fdecase__list li+li{margin-top:2px}
+.fdecases__note{margin:16px 0 0;font-size:12.5px;line-height:1.8;color:var(--pal-sub)}
+@media(max-width:900px){.fdepage-pillars{grid-template-columns:1fr}}
+@media(max-width:768px){.fdecases{grid-template-columns:1fr}}
+@media(max-width:640px){.fdecase{padding:18px 16px 20px}.fdecase__title{font-size:16px}}
+/* ===== FDE-CASE v1 END ===== */
+.fdecase__list{list-style:disc}.fdecase__list li::marker{color:var(--pal-accent)}

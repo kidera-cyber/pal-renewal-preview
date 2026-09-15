@@ -12,7 +12,7 @@
 <meta name="description" content="FDE（Forward Deployed Engineer）とは、顧客の業務課題を技術要件へ翻訳し、設計・実装・運用までをつなぐエンジニアです。物流DXで必要な理由、物流コンサル・SIerとの違い、PALが物流領域でFDE型の支援をどう実践しているかを解説します。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260915i">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260915k">
 <!-- ===== JSONLD FDE-PAGE v1：画面表示内容のみ（FAQPage は画面の FAQ と同一データから生成） ===== -->
 <script type="application/ld+json">
 {
@@ -277,7 +277,7 @@
 </section>
 
 <nav class="fdepage-toc" aria-label="このページの内容"><div class="container">
-  <a href="#what">01 定義</a><a href="#why">02 必要な理由</a><a href="#flow">03 進め方</a><a href="#value">04 価値</a><a href="#roles">05 役割分担</a><a href="#connect">06 つなぐ対象</a><a href="#compare">07 違い</a><a href="#cycle">08 4サイクル</a><a href="#services">09 サービス</a><a href="#faq">11 よくある質問</a>
+  <a href="#what">01 定義</a><a href="#why">02 必要な理由</a><a href="#flow">03 進め方</a><a href="#value">04 価値</a><a href="#roles">05 役割分担</a><a href="#connect">06 つなぐ対象</a><a href="#compare">07 違い</a><a href="#cycle">08 4サイクル</a><a href="#services">09 PALでの実装</a><a href="#case">10 実践例</a><a href="#faq">11 よくある質問</a>
 </div></nav>
 
 <section class="section fdepage-sec" id="what">
@@ -297,31 +297,31 @@
 </section>
 
 <section class="section section--soft fdepage-sec" id="why">
+  <!-- ===== FDE-DOC v1：社内資料「FDE 組織説明および運用ビジョン資料」p4（理論上できること⇔現場で実際に出る価値のギャップ）を外部向けに反映 ===== -->
   <div class="container">
     <div class="section__head"><span class="section__eyebrow">02 / WHY</span><h2 class="section__title">なぜ物流DXで <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が必要なのか</h2>
-      <p class="section__lead">物流DXが止まる背景には、物流現場とシステムの間にあるズレがあります。立場によって業務の見え方や使う言葉が異なるため、課題が技術要件へ正しく伝わらないことがあります。</p>
+      <p class="section__lead"><span class="rnew">今回変更</span>技術やシステムは、導入しただけでは価値になりません。物流現場では、データ構造、帳票、権限、設備、レイアウト、業務フローなど、現場ごとに異なる制約があります。</p>
     </div>
     <ul class="fdepage-issues" aria-label="物流DXが止まる主な理由">
-      <li><b>現場と技術のズレ</b><span>現場課題がシステムの要件として伝わらない</span></li>
-      <li><b>システム・設備の分断</b><span>WMS・基幹システム・設備や複数ベンダーが別々に動く</span></li>
-      <li><b>データの分散</b><span>紙やExcel、拠点ごとの管理で全体が見えない</span></li>
-      <li><b>現場に定着しない</b><span>導入しても使われず、改善が続かない</span></li>
+      <li><b>実績がデータ化されていない</b><span>紙や手作業が残り、改善を考える材料がそろわない</span></li>
+      <li><b>システムと現場業務が合っていない</b><span>導入したものの、現場で使われない</span></li>
+      <li><b>設備・データ・業務がつながっていない</b><span>機器と実際の作業がかみ合わない</span></li>
+      <li><b>導入後の運用まで設計されていない</b><span>現場ごとの制約が後から見つかり、定着しない</span></li>
     </ul>
-    <!-- ===== GAP-MOVE v1：HOME 課題セクションのギャップ比較図（現場側／認識のズレ／技術側）を本ページへ移動 ===== -->
     <div class="gapbridge fdepage-gap">
       <div class="gapbridge__side">
-        <p class="gapbridge__who">現場側</p>
-        <ul class="gapbridge__list"><li class="is-ok">業務は分かる</li><li class="is-ok">運用課題は分かる</li><li class="is-ng">課題をシステムの言葉にしにくい</li></ul>
+        <p class="gapbridge__who">技術・システムの前提</p>
+        <ul class="gapbridge__list"><li class="is-ok">機能はそろっている</li><li class="is-ok">標準的な業務フローなら動く</li><li class="is-ng">現場ごとの制約までは想定しにくい</li></ul>
       </div>
-      <div class="gapbridge__gap" aria-label="現場と技術の間にあるズレ">
-        <span class="gapbridge__arrow" aria-hidden="true">⇠</span><span class="gapbridge__label">認識の<br>ズレ</span><span class="gapbridge__arrow" aria-hidden="true">⇢</span>
+      <div class="gapbridge__gap" aria-label="技術の前提と物流現場の現実の間にあるズレ">
+        <span class="gapbridge__arrow" aria-hidden="true">⇠</span><span class="gapbridge__label">前提と<br>現実の<br>ズレ</span><span class="gapbridge__arrow" aria-hidden="true">⇢</span>
       </div>
       <div class="gapbridge__side">
-        <p class="gapbridge__who">技術側</p>
-        <ul class="gapbridge__list"><li class="is-ok">システムは分かる</li><li class="is-ok">データや仕組みは分かる</li><li class="is-ng">現場運用の細部が見えにくい</li></ul>
+        <p class="gapbridge__who">物流現場の現実</p>
+        <ul class="gapbridge__list"><li class="is-ok">業務の流れは現場ごとに違う</li><li class="is-ok">帳票・権限・レイアウトも異なる</li><li class="is-ng">導入しても使われないことがある</li></ul>
       </div>
     </div>
-    <p class="fdepage-note">このズレを埋め、分散した情報をデータ統合やシステム連携でつなぐのが <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の役割です。</p>
+    <p class="fdepage-note"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、こうした現場の条件を理解し、技術を「実際に使える仕組み」へ落とし込む役割を担います。</p>
   </div>
 </section>
 
@@ -342,15 +342,16 @@
 </section>
 
 <section class="section section--soft fdepage-sec" id="value">
+  <!-- ===== FDE-DOC v1：社内資料 p6「4つの機能」（解像度を上げる→動く解を作る→翻訳する→資産化する）を外部向け表現に反映 ===== -->
   <div class="container">
     <div class="section__head"><span class="section__eyebrow">04 / VALUE</span><h2 class="section__title"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が現場で生む4つの価値</h2>
       <p class="section__lead">03の流れが「どう進めるか」だとすると、ここで示すのは、その過程で <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が生み出す価値です。</p>
     </div>
     <ol class="fderole fderole--inmap fderole--page" aria-label="FDE（Forward Deployed Engineer）が現場で生む4つの価値">
-      <li class="fderole__item"><span class="fderole__n">01</span><p class="fderole__t">課題の解像度を上げる</p><p class="fderole__d">入荷・保管・出荷・輸送などの業務やデータ、設備の制約を確認し、どこで何が止まっているのかを具体的な課題として言語化します。</p></li>
-      <li class="fderole__item"><span class="fderole__n">02</span><p class="fderole__t">その場で動く解をつくる</p><p class="fderole__d">課題を技術要件に置き換え、既存システムや設備も含めて組み合わせを設計し、現場で実際に使える仕組みとして実装します。</p></li>
-      <li class="fderole__item"><span class="fderole__n">03</span><p class="fderole__t">社内外の翻訳者になる</p><p class="fderole__d">現場担当者・経営層・システム会社・設備ベンダーなど、立場の異なる関係者の言葉をそろえ、判断と作業が同じ方向を向く状態をつくります。</p></li>
-      <li class="fderole__item"><span class="fderole__n">04</span><p class="fderole__t">知見を残す</p><p class="fderole__d">実装・運用・改善で得たデータや判断の経緯を整理し、次の改善や他拠点への展開に使える形で残します。</p></li>
+      <li class="fderole__item"><span class="fderole__n">01</span><p class="fderole__t">課題の解像度を上げる</p><p class="fderole__d">業務フロー、データ、設備、現場固有の制約まで理解し、何が物流DXを止めているのかを整理します。</p></li>
+      <li class="fderole__item"><span class="fderole__n">02</span><p class="fderole__t">現場で動く解をつくる</p><p class="fderole__d">助言だけで終わらず、システムやデータ、設備を組み合わせ、実際に現場で使える仕組みへ落とし込みます。</p></li>
+      <li class="fderole__item"><span class="fderole__n">03</span><p class="fderole__t">現場と技術を翻訳する</p><p class="fderole__d">現場の課題を技術要件へ変換し、お客さま、システム、設備、3PL、SIerなどの認識をつなぎます。</p></li>
+      <li class="fderole__item"><span class="fderole__n">04</span><p class="fderole__t">知見を次の改善へつなぐ</p><p class="fderole__d">実装・運用で得たデータや知見を整理し、次の改善や他の現場でも活用できる形へ残します。</p></li>
     </ol>
   </div>
 </section>
@@ -430,9 +431,15 @@
 
 <section class="section fdepage-sec" id="services">
   <div class="container">
-    <div class="section__head"><span class="section__eyebrow">09 / SERVICES</span><h2 class="section__title"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が<span class="nw">組み合わせるPALのサービス</span></h2>
-      <p class="section__lead"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は抽象的な役割ではなく、実際の仕組みを使って物流現場へ実装します。PALのエンジニアは、自社サービス、既存システム、設備、外部サービスを課題に合わせて組み合わせ、設計・実装・運用につなげます。</p>
+    <div class="section__head"><span class="section__eyebrow">09 / PAL</span><h2 class="section__title">物流現場・データ・技術を<span class="nw">横断して実装する</span></h2>
+      <p class="section__lead"><span class="rnew">今回変更</span>PALは、物流現場の運用知見、システム・サービス、現場から得られるデータを組み合わせながら、物流DXを設計・実装・運用へつなげます。<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、これらを現場ごとに組み合わせ、実際に使える仕組みへ落とし込む役割を担います。</p>
     </div>
+    <!-- ===== FDE-DOC v1：社内資料 p11「ソフト × 運用 × データ」を、競合比較の断定を避けた外部向け表現で反映 ===== -->
+    <ul class="fdepage-pillars" aria-label="PALで実装を進めるための3つの要素">
+      <li><span class="fdepage-pillars__en">Operations</span><b>物流現場の運用知見</b><span>物流業務の運営に携わる立場から、現場の作業や制約を理解します。</span></li>
+      <li><span class="fdepage-pillars__en">Software</span><b>システム・サービス</b><span>自社サービスと既存システム、設備、外部サービスを課題に合わせて組み合わせます。</span></li>
+      <li><span class="fdepage-pillars__en">Data</span><b>現場から得られるデータ</b><span>作業や運行の実績データをもとに、状況の把握と改善を進めます。</span></li>
+    </ul>
     <div class="fdepage-stack" aria-label="実装の構成">
       <span class="fdepage-stack__item">物流現場の課題</span><span class="fdepage-stack__op" aria-hidden="true">＋</span>
       <span class="fdepage-stack__item fdepage-stack__item--fde"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span></span><span class="fdepage-stack__op" aria-hidden="true">＋</span>
@@ -452,14 +459,49 @@
   </div>
 </section>
 
-<section class="section section--soft fdepage-sec review-only" id="case">
-  <div class="container container--narrow">
-    <div class="section__head"><span class="section__eyebrow">10 / CASE</span><h2 class="section__title">事例</h2></div>
-    <div class="fdepage-slot">
-      <p class="fdepage-slot__t">CASE SLOT（レビュー用・本番非表示）</p>
-      <p class="fdepage-slot__d">掲載する場合は「企業・業界／課題／施策／<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>・PALの関与／結果」を1セットで記載します。</p>
-      <span class="review-inline-check">要確認：事例の企業名・数値・<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の関与内容の根拠と掲載許可</span>
+<section class="section section--soft fdepage-sec" id="case">
+  <!-- ===== FDE-CASE v1：社内資料 p13–14 の案件を匿名化して掲載（会社名・拠点名・人名・タスク数・期限・金額・製品固有名は不掲載）。
+       いずれも進行中の取り組みで、成果数値は記載しない。旧 CASE SLOT は git 履歴 be72aa3 ===== -->
+  <div class="container">
+    <div class="section__head"><span class="section__eyebrow">10 / CASE</span><h2 class="section__title">物流現場での <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>実践例</h2>
+      <p class="section__lead"><span class="rnew">新規追加</span><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、課題整理だけでなく、現場ごとの条件に合わせて設計・実装・運用まで進めます。以下は、PALが物流現場で進めている取り組みの一例です。</p>
     </div>
+    <ul class="fdecases">
+      <li class="fdecase">
+        <div class="fdecase__head"><span class="fdecase__no">CASE 01</span><span class="fdecase__status">導入・実装中</span></div>
+        <p class="fdecase__place">食品物流センター</p>
+        <h3 class="fdecase__title">仕分け工程の再設計と無線DASの導入</h3>
+        <div class="fdecase__row"><p class="fdecase__lbl">課題</p><p class="fdecase__txt">既存の仕分け方法では、作業効率、誤配防止、設備のメンテナンス、レイアウト変更への対応に課題がありました。</p></div>
+        <div class="fdecase__row"><p class="fdecase__lbl"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span> の取り組み</p><ul class="fdecase__list"><li>現場の物量と作業フローを確認し、既存の仕分け方式からDAS（デジタルアソートシステム）へ切り替え</li><li>物量の多い店舗にシュートの間口を割り当てるなど、構成を見直し</li><li>有線DASから無線DASへ変更し、配線まわりのトラブルとレイアウトの制約を軽減</li></ul></div>
+        <div class="fdecase__row"><p class="fdecase__lbl">目指している状態</p><p class="fdecase__txt">誤配リスクの低減、作業効率の向上、メンテナンス負荷の軽減、レイアウト変更への柔軟な対応</p></div>
+      </li>
+      <li class="fdecase">
+        <div class="fdecase__head"><span class="fdecase__no">CASE 02</span><span class="fdecase__status">改善・機能開発中</span></div>
+        <p class="fdecase__place">食品小売企業の生鮮物流センター</p>
+        <h3 class="fdecase__title">紙中心の出荷業務をデータ化</h3>
+        <div class="fdecase__row"><p class="fdecase__lbl">課題</p><p class="fdecase__txt">出荷業務の多くが紙と手作業で運用され、作業実績をデータとして把握できていませんでした。改善策を検討するための分析材料そのものが不足していました。</p></div>
+        <div class="fdecase__row"><p class="fdecase__lbl"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span> の取り組み</p><ul class="fdecase__list"><li>コンテナラベルのQRコードを読み取り、出荷実績をデータとして取得する仕組みを設計</li><li>店舗・加工日・数量・ラベル重複のエラーチェックを追加</li><li>便単位・店舗単位の進捗や生産性をWeb上で確認できる形へ</li></ul></div>
+        <div class="fdecase__row"><p class="fdecase__lbl">設計上の特徴</p><p class="fdecase__txt">特定の1拠点専用にせず、他の拠点にも展開できる構成を前提に設計しています。</p></div>
+      </li>
+      <li class="fdecase">
+        <div class="fdecase__head"><span class="fdecase__no">CASE 03</span><span class="fdecase__status">品質改善・PoC検討中</span></div>
+        <p class="fdecase__place">冷蔵物流センター</p>
+        <h3 class="fdecase__title">入荷時の取り違えリスクを構造から見直す</h3>
+        <div class="fdecase__row"><p class="fdecase__lbl">課題</p><p class="fdecase__txt">入荷時に類似商品が同じパレットへ混載されることで、出荷時の取り違えにつながるリスクがありました。</p></div>
+        <div class="fdecase__row"><p class="fdecase__lbl"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span> の取り組み</p><ul class="fdecase__list"><li>注意喚起にとどめず、入荷から出荷までの業務フローを確認し、問題が起きる構造を整理</li><li>あわせて、カメラとAIを活用した検知・確認方法のPoC（概念実証）を検討</li></ul></div>
+        
+      </li>
+      <li class="fdecase">
+        <div class="fdecase__head"><span class="fdecase__no">CASE 04</span><span class="fdecase__status">運用・改善中</span></div>
+        <p class="fdecase__place">物流拠点</p>
+        <h3 class="fdecase__title">既存システムを現場運用に合わせて継続活用</h3>
+        <div class="fdecase__row"><p class="fdecase__lbl">課題</p><p class="fdecase__txt">業務体制の変更後も、これまで使ってきたシステムを継続して利用したいというニーズがありました。</p></div>
+        <div class="fdecase__row"><p class="fdecase__lbl"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span> の取り組み</p><ul class="fdecase__list"><li>既存環境を前提に、端末カメラでQRコードを読み取る方式を採用</li><li>工程実績を登録できるようにし、現場の運用に合わせて仕様を調整</li></ul></div>
+        <div class="fdecase__row"><p class="fdecase__lbl">設計上の特徴</p><p class="fdecase__txt">新しい仕組みに置き換えるのではなく、既存の仕組みを継続して使える形に整えています。</p></div>
+      </li>
+    </ul>
+    <p class="fdecases__note">※ 掲載している取り組みは進行中のものを含みます。「目指している状態」は取り組みの狙いであり、成果を示すものではありません。お客さまの特定につながる情報は掲載していません。</p>
+    <span class="review-inline-check">要確認：匿名事例として社外に掲載することについて、各お客さまと社内の了承</span>
   </div>
 </section>
 
