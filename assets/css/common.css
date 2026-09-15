@@ -2256,3 +2256,37 @@ body.review-mode .fdesum{scroll-margin-top:132px}
   .cyclite__item:nth-child(2)::after{content:"↓"}
 }
 /* ===== HOW-OVERVIEW v1 END ===== */
+
+/* ============================================================
+   ===== HOW-OVERVIEW v2 START =====
+   FDE 特設 03：起点（白・点線）→ 価値の中心「翻訳する」（ネイビー強調）→ ↓ → 4サイクル（薄グレー枠でまとめる）。
+   HOW-OVERVIEW v1 の .cyclite は未使用化。
+   ============================================================ */
+.howmap{max-width:64em;margin:8px auto 0;display:flex;flex-direction:column;align-items:center}
+.howmap__top{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1.2fr);align-items:stretch;gap:16px;width:100%;max-width:44em}
+.howmap__lbl{margin:0 0 8px;font-size:12px;font-weight:700;letter-spacing:.06em;color:var(--pal-sub)}
+.howmap__start{padding:16px 18px;border-radius:8px;background:#fff;border:1px dashed var(--pal-border-strong)}
+.howmap__start-list{list-style:none;margin:0;padding:0;display:grid;gap:6px}
+.howmap__start-list li{padding:7px 12px;border-radius:6px;background:var(--pal-bg-light);font-size:13.5px;font-weight:500;line-height:1.5;color:var(--pal-heading)}
+.howmap__arrow{align-self:center;font-size:22px;line-height:1;color:var(--pal-accent)}
+.howmap__arrow--d{margin:10px 0}
+.howmap__core{display:flex;flex-direction:column;justify-content:center;padding:18px 22px;border-radius:10px;background:var(--pal-heading);text-align:center}
+.howmap__core-lbl{margin:0 0 6px;font-size:12px;font-weight:700;color:var(--pal-blue-pale)}
+.howmap__core-main{margin:0;font-size:26px;font-weight:700;line-height:1.3;color:#fff}
+.howmap__core-sub{display:inline-block;margin:8px auto 0;padding:3px 12px;border-radius:9999px;background:rgba(255,255,255,.12);font-size:13px;color:#fff}
+.howmap__cycle{width:100%;padding:16px 18px 18px;border-radius:12px;background:var(--pal-bg-light);border:1px solid var(--pal-border)}
+.howmap__lbl--cycle{text-align:center}
+.howmap__cys{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:24px}
+.howmap__cy{position:relative;padding:14px 16px 16px;border-radius:8px;background:#fff;border:1px solid var(--pal-border)}
+.howmap__cy:not(:last-child)::after{content:"→";position:absolute;right:-19px;top:50%;transform:translateY(-50%);font-size:15px;color:var(--pal-blue)}
+.howmap__cy-en{margin:0;font-family:var(--font-en);font-size:17px;font-weight:700;line-height:1.3;color:var(--pal-heading)}
+.howmap__cy-ja{margin:2px 0 6px;font-size:12px;font-weight:700;color:var(--pal-accent)}
+.howmap__cy-txt{margin:0;font-size:13px;line-height:1.7;color:var(--pal-text)}
+@media(max-width:900px){.howmap__cys{grid-template-columns:repeat(2,1fr)}.howmap__cy:nth-child(2)::after{content:none}}
+@media(max-width:640px){
+  .howmap__top{grid-template-columns:1fr;gap:8px}
+  .howmap__arrow--r{transform:rotate(90deg);justify-self:center}
+  .howmap__cys{grid-template-columns:1fr;gap:20px}
+  .howmap__cy:not(:last-child)::after,.howmap__cy:nth-child(2)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-19px;transform:translateX(-50%)}
+}
+/* ===== HOW-OVERVIEW v2 END ===== */
