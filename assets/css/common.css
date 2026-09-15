@@ -2175,3 +2175,4 @@ body.review-mode .fdesum{scroll-margin-top:132px}
 @media(max-width:640px){.fdecase{padding:18px 16px 20px}.fdecase__title{font-size:16px}}
 /* ===== FDE-CASE v1 END ===== */
 .fdecase__list{list-style:disc}.fdecase__list li::marker{color:var(--pal-accent)}
+@media(max-width:640px){br.br-pc{display:none}}
