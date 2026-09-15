@@ -2079,3 +2079,23 @@ body.review-mode .review-only{display:block}
 
 /* ===== ANCHOR-OFFSET v1：review-mode ではプレビューバナー（sticky 34px）＋ヘッダー（76px）が重なるため、アンカー位置の余白を増やす ===== */
 body.review-mode .fdepage-sec,body.review-mode #fde.fdemap,body.review-mode .faq-cat{scroll-margin-top:132px}
+
+/* ============================================================
+   ===== ROLE-FDE-SUMMARY v1 START =====
+   役割v2：FDE 説明を要約＋特設への導線に簡素化したブロックと、統合による効果の独立ブロック。
+   ============================================================ */
+.role-gains{position:relative;margin:48px 0 0}
+body.review-mode .role-gains > .review-label,body.review-mode .fdesum > .review-label{position:static;display:inline-flex;margin:0 0 12px;box-shadow:none}
+.role-gains__h{margin:0 0 6px;font-size:18px;font-weight:700;color:var(--pal-heading)}
+.role-gains__d{margin:0 0 16px;font-size:14px;line-height:1.85;color:var(--pal-sub)}
+.fdesum{position:relative;margin:40px 0 0;padding:28px 32px;border-radius:12px;background:#fff;border:1px solid var(--pal-border);scroll-margin-top:96px}
+body.review-mode .fdesum{scroll-margin-top:132px}
+.fdesum__h{margin:0 0 10px;font-size:19px;font-weight:700;line-height:1.6;color:var(--pal-heading)}
+.fdesum__txt{margin:0;font-size:14px;line-height:1.95;color:var(--pal-text)}
+.fdesum__cta{margin:14px 0 0}
+@media(max-width:640px){.fdesum{padding:20px 18px}.fdesum__h{font-size:17px}}
+.gnav__sub{min-width:14em}
+/* ===== ROLE-FDE-SUMMARY v1 END ===== */
+
+/* ===== FDE-PAGE v1.1：強みへの CTA ボタンは文言が長いため折り返しを許可（375px で横はみ出しが出たため .btn の nowrap を後勝ち上書き） ===== */
+.fdepage-sec .section__cta-wrap .btn{white-space:normal;max-width:100%;height:auto;line-height:1.6;text-align:center}
