@@ -2143,3 +2143,7 @@ body.review-mode .fdesum{scroll-margin-top:132px}
   .fdepage-stack__op{text-align:center}
 }
 /* ===== FDE-PAGE v2 END ===== */
+
+/* ===== FDE-HEAD-SPLIT v1：FV 見出しを「要約コピー（上段・小）＋ FDE 正式名（下段・大）」の2段に ===== */
+.phero__title-sub--lead{margin:0 0 10px;font-size:.5em}
+.phero__title-sub .nw{white-space:nowrap}
