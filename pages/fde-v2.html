@@ -12,7 +12,7 @@
 <meta name="description" content="FDE（Forward Deployed Engineer）とは、顧客の業務課題を技術要件へ翻訳し、設計・実装・運用までをつなぐエンジニアです。物流DXで必要な理由、物流コンサル・SIerとの違い、PALが物流領域でFDE型の支援をどう実践しているかを解説します。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260915l">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260915n">
 <!-- ===== JSONLD FDE-PAGE v1：画面表示内容のみ（FAQPage は画面の FAQ と同一データから生成） ===== -->
 <script type="application/ld+json">
 {
@@ -378,17 +378,20 @@
 <section class="section section--soft fdepage-sec" id="connect">
   <div class="container">
     <div class="section__head"><span class="section__eyebrow">06 / CONNECT</span><h2 class="section__title"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が、<br class="br-pc"><span class="nw">分断された関係者・情報・役割を</span><span class="nw">一つの実行体制へつなぐ</span></h2>
-      <p class="section__lead"><span class="rnew">今回変更</span>物流DXでは、現場・3PL・SIer・システム・設備・データなど、複数の関係者や仕組みが別々に動くことがあります。<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、情報・役割・判断材料を整理し、実装を前へ進める一つの実行体制へつなぎます。</p>
+      <p class="section__lead"><span class="rnew">今回変更</span>物流DXでは、経営・現場・3PL・SIer・システム・設備・データなど、複数の関係者や要素が別々に動くことがあります。<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、その間に立って情報・役割・判断材料を整理し、実装を前へ進める一つの実行体制へつなぎます。</p>
     </div>
-    <div class="hub">
-      <ul class="hub__parties" aria-label="関係者・システム・設備"><li>経営</li><li>現場</li><li>3PL</li><li>SIer</li><li>システム</li><li>設備</li><li>輸送</li><li>データ</li></ul>
-      <span class="hub__arrow" aria-hidden="true">↓</span>
-      <div class="hub__core">
-        <p class="hub__name"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span></p>
-        <ul class="hub__acts"><li>情報を整理する</li><li>役割を整理する</li><li>判断材料をそろえる</li><li>ベンダー間を調整する</li><li>実装を前へ進める</li></ul>
+    <!-- ===== CONNECT-RADIAL v1：縦並びのハブ図を、FDE を中心に8要素を放射状に配置する図へ変更（スマホは縦構成）。旧 .hub は git 履歴 390c6ca ===== -->
+    <div class="radial">
+      <div class="radial__map">
+        <svg class="radial__lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><line x1="50" y1="50" x2="28.5" y2="86.4"/><line x1="50" y1="50" x2="8.9" y2="62.4"/><line x1="50" y1="50" x2="11.3" y2="31.8"/><line x1="50" y1="50" x2="34.3" y2="10.9"/><line x1="50" y1="50" x2="65.7" y2="10.9"/><line x1="50" y1="50" x2="88.7" y2="31.8"/><line x1="50" y1="50" x2="91.1" y2="62.4"/><line x1="50" y1="50" x2="71.5" y2="86.4"/><line class="radial__flow" x1="50" y1="50" x2="50" y2="100"/></svg>
+        <ul class="radial__nodes" aria-label="別々に動きがちな関係者・要素"><li class="radial__node" style="--x:34.3%;--y:10.9%">経営</li><li class="radial__node" style="--x:65.7%;--y:10.9%">現場</li><li class="radial__node" style="--x:88.7%;--y:31.8%">3PL</li><li class="radial__node" style="--x:91.1%;--y:62.4%">SIer</li><li class="radial__node" style="--x:71.5%;--y:86.4%">システム</li><li class="radial__node" style="--x:8.9%;--y:62.4%">設備</li><li class="radial__node" style="--x:28.5%;--y:86.4%">輸送</li><li class="radial__node" style="--x:11.3%;--y:31.8%">データ</li></ul>
+        <div class="radial__core">
+          <p class="radial__name"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span></p>
+          <ul class="radial__acts" aria-label="FDE（Forward Deployed Engineer）が担うこと"><li>情報を整理する</li><li>役割を整理する</li><li>判断材料をそろえる</li><li>ベンダー間を調整する</li><li>実装を前へ進める</li></ul>
+        </div>
       </div>
-      <span class="hub__arrow" aria-hidden="true">↓</span>
-      <p class="hub__result">一つの実行体制</p>
+      <span class="radial__arrow" aria-hidden="true">↓</span>
+      <p class="radial__result">一つの実行体制</p>
     </div>
   </div>
 </section>

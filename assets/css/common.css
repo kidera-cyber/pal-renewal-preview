@@ -2176,3 +2176,36 @@ body.review-mode .fdesum{scroll-margin-top:132px}
 /* ===== FDE-CASE v1 END ===== */
 .fdecase__list{list-style:disc}.fdecase__list li::marker{color:var(--pal-accent)}
 @media(max-width:640px){br.br-pc{display:none}}
+
+/* ============================================================
+   ===== CONNECT-RADIAL v1 START =====
+   FDE 特設 06：FDE を中心に8要素を放射状に配置し、中央から「一つの実行体制」へ流す図。
+   PC：絶対配置＋SVG 接続線／スマホ（≤640px）：チップ群 → FDE → 役割 → 一つの実行体制 の縦構成。
+   ============================================================ */
+.radial{display:flex;flex-direction:column;align-items:center;max-width:780px;margin:8px auto 0}
+.radial__map{position:relative;width:100%;aspect-ratio:16/10}
+.radial__lines{position:absolute;inset:0;width:100%;height:100%;overflow:visible}
+.radial__lines line{stroke:var(--pal-border-strong);stroke-width:1.5;stroke-dasharray:4 4;vector-effect:non-scaling-stroke}
+.radial__nodes{list-style:none;margin:0;padding:0}
+.radial__node{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);padding:7px 16px;border-radius:9999px;background:#fff;border:1px solid var(--pal-border);font-size:13.5px;font-weight:500;line-height:1.4;color:var(--pal-heading);white-space:nowrap;z-index:1}
+.radial__core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:48%;padding:18px 18px 16px;border-radius:12px;background:var(--pal-heading);text-align:center;box-shadow:0 0 0 8px var(--pal-bg-light);z-index:2}
+.radial__name{margin:0 0 10px;font-size:15px;font-weight:700;line-height:1.5;color:#fff}
+.radial__acts{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+.radial__acts li{padding:4px 10px;border-radius:9999px;background:rgba(255,255,255,.12);font-size:12px;line-height:1.5;color:#fff;white-space:nowrap}
+.radial__arrow{margin:6px 0 4px;font-size:20px;line-height:1;color:var(--pal-blue)}
+.radial__result{margin:0;padding:10px 32px;border-radius:9999px;border:2px solid var(--pal-accent);background:#fff;font-size:15px;font-weight:700;color:var(--pal-accent)}
+@media(max-width:900px){.radial__core{width:54%}.radial__acts li{font-size:12px;padding:3px 8px}}
+@media(max-width:640px){
+  .radial__map{aspect-ratio:auto;display:flex;flex-direction:column;align-items:center;gap:10px}
+  .radial__lines{display:none}
+  .radial__nodes{display:flex;flex-wrap:wrap;justify-content:center;gap:6px}
+  .radial__node{position:static;transform:none;padding:5px 12px;font-size:13px}
+  .radial__nodes::after{content:"";flex-basis:100%}
+  .radial__core{position:relative;left:auto;top:auto;transform:none;width:100%;box-shadow:none;margin-top:18px}
+  .radial__core::before{content:"↓";position:absolute;top:-24px;left:50%;transform:translateX(-50%);font-size:18px;color:var(--pal-blue)}
+  .radial__acts li{white-space:normal}
+}
+/* ===== CONNECT-RADIAL v1 END ===== */
+/* CONNECT-RADIAL v1.1：下方向を「FDE → 一つの実行体制」の流れ専用にし、実線で強調 */
+.radial__lines line.radial__flow{stroke:var(--pal-accent);stroke-width:2;stroke-dasharray:none}
+.radial__arrow{margin-top:-2px;color:var(--pal-accent)}
