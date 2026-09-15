@@ -2003,3 +2003,38 @@ body.review-mode .fdemap > .review-label{position:static;display:inline-flex;mar
 .fdecompare__row--fde dt,.fdecompare__row--fde dd{color:#fff}
 @media(max-width:640px){.fdecompare__row{grid-template-columns:1fr;gap:2px}}
 /* ===== FDE-COMPARE v1 END ===== */
+
+/* ============================================================
+   ===== FAQ-V2 v1 START =====
+   よくあるご質問 v2（pages/faq-fde-v2.html）：現行FAQの Q／A 縦並びを踏襲し、カテゴリ見出しを追加。
+   ============================================================ */
+.faq-toc{display:flex;flex-wrap:wrap;justify-content:center;gap:8px;margin:0 0 36px}
+.faq-toc a{padding:8px 16px;border-radius:9999px;border:1px solid var(--pal-border);background:#fff;font-size:13px;font-weight:700;color:var(--pal-heading)}
+.faq-toc a:hover{border-color:var(--pal-accent);color:var(--pal-accent)}
+.faq-cat{scroll-margin-top:96px}
+.faq-cat+.faq-cat{margin-top:56px}
+.faq-cat__title{margin:0 0 18px;padding-left:12px;border-left:4px solid var(--pal-accent);font-size:20px;font-weight:700;line-height:1.5;color:var(--pal-heading)}
+.faq-list{display:grid;gap:14px}
+.faq-item{padding:24px 28px;border-radius:12px;background:#fff;border:1px solid var(--pal-border)}
+.faq-q{display:flex;align-items:flex-start;gap:14px;margin:0 0 14px;font-size:17px;font-weight:700;line-height:1.6;color:var(--pal-heading)}
+.faq-q__mark,.faq-a__mark{flex:none;display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;border-radius:50%;font-family:var(--font-en);font-size:15px;font-weight:700;line-height:1}
+.faq-q__mark{background:var(--pal-heading);color:#fff}
+.faq-a{display:flex;align-items:flex-start;gap:14px;padding-top:14px;border-top:1px dashed var(--pal-border)}
+.faq-a__mark{background:#fff;border:2px solid var(--pal-accent);color:var(--pal-accent)}
+.faq-a__body{flex:1;min-width:0}
+.faq-a__lead{margin:4px 0 8px;font-size:15px;font-weight:700;line-height:1.8;color:var(--pal-heading)}
+.faq-a__txt{margin:0 0 8px;font-size:14px;line-height:1.95;color:var(--pal-text)}
+.faq-a__term{font-weight:700;color:var(--pal-heading)}
+.faq-a__more{margin:10px 0 0}
+.faq-a__more a{font-size:13px;font-weight:700;color:var(--pal-accent);text-decoration:underline;text-underline-offset:3px}
+.faq-a__more a::after{content:" →"}
+.faq-a__more a .fde-name{text-decoration:inherit}
+.faq-more .card__eyebrow{margin-bottom:4px}
+@media(max-width:640px){
+  .faq-item{padding:18px 16px}
+  .faq-q{font-size:15.5px;gap:10px}
+  .faq-a{gap:10px}
+  .faq-q__mark,.faq-a__mark{width:28px;height:28px;font-size:13px}
+  .faq-cat__title{font-size:17px}
+}
+/* ===== FAQ-V2 v1 END ===== */

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<!-- レビュー環境では常に最新を表示する（本番化時は削除可） -->
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="robots" content="noindex, nofollow">
+<title>【叩き台・新案v2】よくあるご質問｜株式会社PAL</title>
+<meta name="description" content="株式会社PALへのよくあるご質問。PALはどんな会社か、FDE（Forward Deployed Engineer）とは何か、物流DXでPALがどこまで対応するのか、SIerや物流コンサルティングとの違い、既存の3PL・SIer・WMSとの連携などにお答えします。">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260915b">
+<!-- ===== FAQ-V2 v1：現行 https://www.pal-style.co.jp/about/faq/ をベースに FDE 関連 FAQ を追加した叩き台。
+     FAQPage JSON-LD は画面に表示している Q&A のみから生成（build 時に同一データから出力）===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.pal-style.co.jp/#organization",
+      "name": "株式会社PAL",
+      "alternateName": "株式会社PAL（パル）",
+      "url": "https://www.pal-style.co.jp/",
+      "telephone": "06-6534-8998"
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://kidera-cyber.github.io/pal-renewal-preview/pages/faq-fde-v2.html",
+      "name": "よくあるご質問｜株式会社PAL",
+      "inLanguage": "ja",
+      "about": {
+        "@id": "https://www.pal-style.co.jp/#organization"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "PALはどんな会社ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "物流の「戦略」から「現場での実行」まで、一社で完結して支援する会社です。 私たちは、荷物を運ぶだけの物流会社でも、アドバイスをするだけのコンサルティング会社でもありません。描いた戦略が「絵に描いた餅」で終わらないよう、DXを“動く仕組み”として実装し、成果が出るまで責任を持って伴走するのがPALです。物流とテクノロジーを統合・融合する「ロジテックインテグレーター」として、現場・データ・テクノロジーを最適な形で実装し、お客さまの物流課題を解決します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "「ロジテックインテグレーター」とは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "物流に関わる業務・システム・設備・データ・パートナーを横断して整理し、最適な仕組みとして統合する役割です。 単なる機器導入や部分的な改善ではなく、課題を分析して最適な技術や仕組みを組み合わせることで、物流業界の課題解決につなげます。従来の物流事業者が「運ぶ力」に強みを持つのに対し、PALは「統合する力」に特化しています。戦略から実行までを一気通貫でマネジメントすることで、分離発注による意思決定の遅れや責任の曖昧さを解消します。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "情報やデータを統合することで、かえってブラックボックス化しませんか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "むしろ、関係者全員が同じ情報を共有できる「オープンな統合管理」を提供します。 PALは、3PLやシステムベンダーといった既存パートナーと協働しながら、物流DXを前に進める立場です。そのため、情報やデータを一社で囲い込むのではなく、荷主・現場・パートナーが同じデータを見て判断できる状態を重視しています。 現場データの可視化、プロセスの透明化、ボトルネックの共有を通じて、DXという共通目標に向けて推進していきます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "3PLやSIer、コンサル会社と何が違うのですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "「部分最適」ではなく「全体最適」を一社で担える点が異なります。 物流DXでは、それぞれのプレイヤーが得意とする領域が異なります。 コンサルティング会社：戦略策定や課題整理を主に担い、現場の実装や運用は別の事業者が担うことが多くあります。 SIer・マテハンメーカー：システムや機器の設計・導入を主に担い、運用の定着は別の体制で進めることが一般的です。 3PL（物流委託）：現場運用を主に担い、システム開発や経営戦略は他の事業者と分担することが多くあります。 PALはこれらの機能を社内に持ち、「戦略 → 設計 → 実装 → 運用 → 改善」まで一気通貫で担います。業者間の複雑な調整や責任の所在が曖昧になる「分離発注の弊害」を減らします。なお、職種としての FDE（Forward Deployed Engineer）とSIer・物流コンサルティングの違いは、このページの「FDE（Forward Deployed Engineer）・物流DXについて」でご説明しています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "どのようなサービスがありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "課題に合わせて、最適なサービスを組み合わせてご提案します。 主なサービスラインナップは以下の通りです。これらを単体、または組み合わせて提供します。 物流コンサルティング：戦略策定から実行支援、成果検証まで伴走します。 Core First：倉庫内のWMS・ロボット・人の作業など、あらゆるデータを統合・一元管理するプラットフォームです。 DTS：トラック輸送の荷待ち時間や積載率を可視化し、荷主と運送会社が同じデータで改善に取り組めるプラットフォームです。 Core Zero：PALが資産を持つことで、初期費用ゼロ・業務委託費のみでDXを実現するサービスです。 Core Mate：勤怠管理・即日払い・シフト管理を統合し、人材確保を支援するシステムです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "どのような実績がありますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "食品、小売、アパレル、医療など、多種多様な業界で支援実績がございます。 PALは長年にわたり、現場改善や物流DXを支援してきました。その経験を活かし、大手企業様から中堅・中小企業様まで、規模や業種を問わず支援しています。また、通信大手企業との5G活用実証実験（業界初）や、AIによるロボットアーム知能化など、業界の実験場として最先端技術のリスクを引き受ける取り組みも行っています。具体的な事例については、導入事例ページをご覧ください。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "FDE（Forward Deployed Engineer）とは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "FDE（Forward Deployed Engineer）は、顧客の業務課題を技術要件へ翻訳し、設計・実装・運用までをつなぐエンジニアです。 物流DXでは、現場・システム・設備・データの間にズレが生まれやすいため、業務を理解しながら技術へ落とし込み、実際に使える仕組みまでつなげる役割が重要になります。PALでは、この考え方を物流領域に適用しています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "物流DXで FDE（Forward Deployed Engineer）は何をするのですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "物流現場の業務や課題を整理し、システム・データ・設備・自動化などの技術要件へ変換します。 そのうえで、設計・実装・テスト・運用・改善までをつなぎ、物流DXを「導入して終わり」にせず、現場で使える状態へ進めます。物流システムを導入しても現場で定着しない、といった状況を防ぐための役割です。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "物流コンサルティングと FDE（Forward Deployed Engineer）の違いは何ですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "物流コンサルティングは主に課題整理や計画策定を担い、FDE（Forward Deployed Engineer）はその課題を技術要件へ落とし込み、設計・実装・運用までつなぎます。 物流コンサルティングは、現状分析や課題整理、戦略・改善計画の策定などを担う重要な役割です。FDE（Forward Deployed Engineer）は、そこで整理された課題をもとに、実際に現場で動く仕組みをつくる役割を担います。PALでは、物流コンサルティングと、FDE（Forward Deployed Engineer）による実装支援を組み合わせ、戦略から現場実装までをつなげています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "SIerと FDE（Forward Deployed Engineer）は何が違うのですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SIerはシステムの設計・開発・導入を担い、FDE（Forward Deployed Engineer）は現場の業務・データ・設備・運用まで横断して実装を進めます。 SIerは、システムの設計・開発・導入を担う重要なパートナーです。FDE（Forward Deployed Engineer）は、システムだけでなく物流現場の業務や運用まで理解し、現場課題を技術要件へ翻訳しながら実装を進めます。PALは、既存のSIerや3PLとも協業しながら物流DXを進めます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "FDE（Forward Deployed Engineer）は物流システムや設備の導入だけを担当するのですか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "いいえ。特定のシステムや設備を導入することだけが FDE（Forward Deployed Engineer）の役割ではありません。 現場課題を整理し、既存システムやWMS、設備、物流データなどを含めて、何をどう組み合わせるべきかを設計します。そのうえで、実装・運用・改善までをつなげます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "自社にエンジニアやDX人材がいなくても物流DXを進められますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。社内に専任のエンジニアやDX人材を持たない企業でも、物流DXを進めることは可能です。 お客さまには方針や投資に関する判断を行っていただき、PAL側で現場把握、要件整理、設計、実装、運用、改善を進めます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "どのような課題を相談できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "「何から手をつければいいか分からない」という段階からご相談可能です。 「物流DXを進めたいが、進め方が分からない」という漠然としたお悩みから、「倉庫内の生産性を上げたい」「CLO選任義務化に備えたい」といった具体的な課題まで幅広く対応します。特に、「データはあるが活用できていない」「システムを入れたのに現場が楽にならない」といった、物流現場とデジタルのズレに悩まれている企業様からのご相談を多くいただいています。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "PALは物流DXのどこまで対応しますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "現場やデータの把握から、課題整理、設計、実装、テスト、運用設計、定着、改善まで対応します。 必要に応じて、既存の3PL、SIer、設備ベンダーなどとも連携しながら、物流DXを現場で運用できる状態までつなげます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "今の3PLやSIerとの関係は維持できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。既存パートナーさまと協業する形での支援が可能です。 PALに依頼するからといって、長年お付き合いのある3PLやシステム会社との契約や取引関係を変更する必要はありません。私たちのプラットフォーム（Core First）は、既存のベンダーやシステムと連携することを前提に設計されています。 各パートナーの強みを活かしながら、全体を横断する視点やデータのつながりをPALが担うことで、より効果的にDXを進めることができます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "既存の3PLやSIerと FDE（Forward Deployed Engineer）は一緒に進められますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。FDE（Forward Deployed Engineer）は、既存の3PLやSIer、設備ベンダーの専門領域を置き換えるのではなく、その間をつなぐ役割です。 プロジェクトの中では、現場・業務・技術の間に立ち、それぞれの役割や情報を整理しながら実装を前に進めます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "既存のWMSや基幹システム、設備データも連携できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。既存の仕組みを活かしながら、物流データをつなぐことができます。 物流DXでは、新しいシステムへすべて置き換えるのではなく、既存のWMSや設備を活かしながらデータ統合やシステム連携を進めることも重要です。PALの Core First は、既存のベンダーやシステムと連携することを前提に、倉庫内のWMS・ロボット・人の作業などのデータを統合・一元管理するプラットフォームです。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "予算が少なくても相談できますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "はい。「初期費用ゼロ」で物流DXを始められます。 物流DX＝多額の初期投資、という前提そのものをPALは見直しました。 「Core Zero」では、倉庫内の物流機器・システム・人材をPALが一体で実装・保有・運用し、お客さまは月々の業務委託費のみでDX環境を利用できます。 初期投資を不要とし、経費（OpEx）として意思決定できるため、財務負担を抑えながらスピーディにDXを進められます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "成果が出るまで関わってもらえますか？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "もちろんです。「やりっぱなし」にはしません。 戦略策定やシステム導入だけで終わるのではなく、現場での運用が定着し、改善が回り始める段階を見据えて支援します。 また、事前にPoV（価値検証）を行い、ROI（投資対効果）や実現性をデータで確認したうえで段階的に進めるため、納得感を持ってプロジェクトを推進いただけます。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "何から始めればいいか分かりません。",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "まずは現状診断からスタートできます。お気軽にお問い合わせください。 具体的な要件が決まっていなくても全く問題ありません。まずはPALが現状をヒアリングし、現場やデータの状況を客観的に診断いたします。「そもそも何が課題なのか」を整理するところからお手伝いしますので、まずはお問い合わせフォームよりお声がけください。"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "ホーム",
+          "item": "https://kidera-cyber.github.io/pal-renewal-preview/pages/home-fde-v2.html"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "PALについて"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "よくあるご質問",
+          "item": "https://kidera-cyber.github.io/pal-renewal-preview/pages/faq-fde-v2.html"
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body class="review-mode">
+
+<div id="previewBanner">🛠 新案 v2（<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>・4サイクル強化）／叩き台（社内レビュー用）／ noindex ／ 本番URLではありません</div>
+
+<div class="review-legend" role="note" aria-label="レビュー用マーキングの凡例">
+  <span class="review-legend__item review-legend__item--changed">今回変更</span>
+  <span class="review-legend__item review-legend__item--added">新規追加</span>
+  <span class="review-legend__item review-legend__item--moved">移動</span>
+  <span class="review-legend__item review-legend__item--check">要確認</span>
+  <span class="review-legend__note">※ 本番化は body から <code>review-mode</code> を外すだけ</span>
+</div>
+
+<header class="gheader">
+  <div class="gheader__inner">
+    <a class="gbrand" href="./home-fde-v2.html"><span class="gbrand__mark">PAL</span><span class="gbrand__name">株式会社PAL<small>PAL Co., Ltd.</small></span></a>
+    <nav class="gnav" aria-label="グローバルナビゲーション">
+      <a href="./home-fde-v2.html">ホーム</a><div class="gnav__group is-current"><a href="./role-fde-v2.html" class="is-current" aria-haspopup="true">PALを知る</a><div class="gnav__sub" aria-label="PALを知る"><a href="./role-fde-v2.html">私たちの役割</a><a href="./reason-fde-v2.html">PALの強み</a><a href="./faq-fde-v2.html" class="is-current">よくあるご質問</a></div></div><!-- NAV-STRENGTH v1：PC ナビに「PALの強み」への導線がなかったため、PALを知る配下にサブメニューを追加 --><a href="./service.html">サービス</a>
+      <a href="#">物流DX事例</a><a href="#">会社概要</a><a href="#">物流DXコラム</a><a href="#">物流DXお役立ち資料</a>
+      <a href="#" class="gnav-cta">お問い合わせ</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="メニューを開く"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<nav class="mobile-nav" id="mobileNav">
+  <a href="./home-fde-v2.html">ホーム</a><a href="./role-fde-v2.html">私たちの役割</a><a href="./reason-fde-v2.html">PALの強み</a>  <a href="./service.html">サービス</a>
+  <a href="#" class="gnav-cta">お問い合わせ</a>
+</nav>
+
+<nav class="breadcrumb"><div class="container"><ol>
+  <li><a href="./home-fde-v2.html">ホーム</a></li><li><a href="#">PALについて</a></li><li class="current">よくあるご質問</li>
+</ol></div></nav>
+
+<section class="phero review-changed">
+  <span class="review-label">今回変更</span>
+  <div class="container phero__inner">
+    <span class="phero__eyebrow">FAQ</span>
+    <h1 class="phero__title">よくあるご質問</h1>
+    <p class="phero__sub">はじめましてPALです。<br>このページでは、私たちPALがどのような会社で、どのようにお客さまの物流課題に向き合っているのか、よくいただくご質問への回答を通じてご紹介します。<br><span class="rnew">新規追加</span>物流DXにおける <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span> の役割や、PALがどこまで対応するのかについてもお答えします。</p>
+  </div>
+</section>
+
+<section class="section review-changed">
+  <span class="review-label">今回変更</span>
+  <div class="container container--narrow">
+    <nav class="faq-toc" aria-label="質問のカテゴリ"><a href="#faq-about">PALについて</a><a href="#faq-fde"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>・物流DXについて</a><a href="#faq-support">導入・支援について</a></nav>
+    <div class="faq-cat" id="faq-about">
+      <h2 class="faq-cat__title">PALについて</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt">PALはどんな会社ですか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead">物流の「戦略」から「現場での実行」まで、一社で完結して支援する会社です。</p><p class="faq-a__txt">私たちは、荷物を運ぶだけの物流会社でも、アドバイスをするだけのコンサルティング会社でもありません。描いた戦略が「絵に描いた餅」で終わらないよう、DXを“動く仕組み”として実装し、成果が出るまで責任を持って伴走するのがPALです。物流とテクノロジーを統合・融合する「ロジテックインテグレーター」として、現場・データ・テクノロジーを最適な形で実装し、お客さまの物流課題を解決します。</p><p class="faq-a__more"><a href="./role-fde-v2.html">私たちの役割</a></p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt">「ロジテックインテグレーター」とは何ですか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead"><span class="rnew">今回変更</span>物流に関わる業務・システム・設備・データ・パートナーを横断して整理し、最適な仕組みとして統合する役割です。</p><p class="faq-a__txt">単なる機器導入や部分的な改善ではなく、課題を分析して最適な技術や仕組みを組み合わせることで、物流業界の課題解決につなげます。従来の物流事業者が「運ぶ力」に強みを持つのに対し、PALは「統合する力」に特化しています。戦略から実行までを一気通貫でマネジメントすることで、分離発注による意思決定の遅れや責任の曖昧さを解消します。</p><p class="faq-a__more"><a href="./role-fde-v2.html">私たちの役割</a></p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt">情報やデータを統合することで、かえってブラックボックス化しませんか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead">むしろ、関係者全員が同じ情報を共有できる「オープンな統合管理」を提供します。</p><p class="faq-a__txt">PALは、3PLやシステムベンダーといった既存パートナーと協働しながら、物流DXを前に進める立場です。そのため、情報やデータを一社で囲い込むのではなく、荷主・現場・パートナーが同じデータを見て判断できる状態を重視しています。</p><p class="faq-a__txt">現場データの可視化、プロセスの透明化、ボトルネックの共有を通じて、DXという共通目標に向けて推進していきます。</p><p class="faq-a__more"><a href="./role-fde-v2.html">私たちの役割</a></p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt">3PLやSIer、コンサル会社と何が違うのですか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead"><span class="rnew">今回変更</span>「部分最適」ではなく「全体最適」を一社で担える点が異なります。</p><p class="faq-a__txt">物流DXでは、それぞれのプレイヤーが得意とする領域が異なります。</p><p class="faq-a__txt"><span class="faq-a__term">コンサルティング会社</span>：戦略策定や課題整理を主に担い、現場の実装や運用は別の事業者が担うことが多くあります。<br><span class="faq-a__term">SIer・マテハンメーカー</span>：システムや機器の設計・導入を主に担い、運用の定着は別の体制で進めることが一般的です。<br><span class="faq-a__term">3PL（物流委託）</span>：現場運用を主に担い、システム開発や経営戦略は他の事業者と分担することが多くあります。</p><p class="faq-a__txt">PALはこれらの機能を社内に持ち、「戦略 → 設計 → 実装 → 運用 → 改善」まで一気通貫で担います。業者間の複雑な調整や責任の所在が曖昧になる「分離発注の弊害」を減らします。なお、職種としての <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>とSIer・物流コンサルティングの違いは、このページの「<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>・物流DXについて」でご説明しています。</p><p class="faq-a__more"><a href="./reason-fde-v2.html">PALの強み</a></p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt">どのようなサービスがありますか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead">課題に合わせて、最適なサービスを組み合わせてご提案します。</p><p class="faq-a__txt">主なサービスラインナップは以下の通りです。これらを単体、または組み合わせて提供します。</p><p class="faq-a__txt"><span class="faq-a__term">物流コンサルティング</span>：戦略策定から実行支援、成果検証まで伴走します。<br><span class="faq-a__term">Core First</span>：倉庫内のWMS・ロボット・人の作業など、あらゆるデータを統合・一元管理するプラットフォームです。<br><span class="faq-a__term">DTS</span>：トラック輸送の荷待ち時間や積載率を可視化し、荷主と運送会社が同じデータで改善に取り組めるプラットフォームです。<br><span class="faq-a__term">Core Zero</span>：PALが資産を持つことで、初期費用ゼロ・業務委託費のみでDXを実現するサービスです。<br><span class="faq-a__term">Core Mate</span>：勤怠管理・即日払い・シフト管理を統合し、人材確保を支援するシステムです。</p><p class="faq-a__more"><a href="./service.html">サービス一覧</a></p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt">どのような実績がありますか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead"><span class="rnew">今回変更</span>食品、小売、アパレル、医療など、多種多様な業界で支援実績がございます。</p><p class="faq-a__txt">PALは長年にわたり、現場改善や物流DXを支援してきました。その経験を活かし、大手企業様から中堅・中小企業様まで、規模や業種を問わず支援しています。また、通信大手企業との5G活用実証実験（業界初）や、AIによるロボットアーム知能化など、業界の実験場として最先端技術のリスクを引き受ける取り組みも行っています。具体的な事例については、導入事例ページをご覧ください。</p><p class="faq-a__more"><a href="#">導入事例・実績一覧</a></p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="faq-cat" id="faq-fde">
+      <h2 class="faq-cat__title"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>・物流DXについて</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>とは何ですか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead"><span class="rnew">新規追加</span><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、顧客の業務課題を技術要件へ翻訳し、設計・実装・運用までをつなぐエンジニアです。</p><p class="faq-a__txt">物流DXでは、現場・システム・設備・データの間にズレが生まれやすいため、業務を理解しながら技術へ落とし込み、実際に使える仕組みまでつなげる役割が重要になります。PALでは、この考え方を物流領域に適用しています。</p><p class="faq-a__more"><a href="./role-fde-v2.html#fde"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の役割を見る</a></p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt">物流DXで <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は何をするのですか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead"><span class="rnew">新規追加</span>物流現場の業務や課題を整理し、システム・データ・設備・自動化などの技術要件へ変換します。</p><p class="faq-a__txt">そのうえで、設計・実装・テスト・運用・改善までをつなぎ、物流DXを「導入して終わり」にせず、現場で使える状態へ進めます。物流システムを導入しても現場で定着しない、といった状況を防ぐための役割です。</p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt">物流コンサルティングと <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の違いは何ですか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead"><span class="rnew">新規追加</span>物流コンサルティングは主に課題整理や計画策定を担い、<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>はその課題を技術要件へ落とし込み、設計・実装・運用までつなぎます。</p><p class="faq-a__txt">物流コンサルティングは、現状分析や課題整理、戦略・改善計画の策定などを担う重要な役割です。<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、そこで整理された課題をもとに、実際に現場で動く仕組みをつくる役割を担います。PALでは、物流コンサルティングと、<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>による実装支援を組み合わせ、戦略から現場実装までをつなげています。</p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt">SIerと <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は何が違うのですか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead"><span class="rnew">新規追加</span>SIerはシステムの設計・開発・導入を担い、<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は現場の業務・データ・設備・運用まで横断して実装を進めます。</p><p class="faq-a__txt">SIerは、システムの設計・開発・導入を担う重要なパートナーです。<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、システムだけでなく物流現場の業務や運用まで理解し、現場課題を技術要件へ翻訳しながら実装を進めます。PALは、既存のSIerや3PLとも協業しながら物流DXを進めます。</p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は物流システムや設備の導入だけを担当するのですか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead"><span class="rnew">新規追加</span>いいえ。特定のシステムや設備を導入することだけが <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の役割ではありません。</p><p class="faq-a__txt">現場課題を整理し、既存システムやWMS、設備、物流データなどを含めて、何をどう組み合わせるべきかを設計します。そのうえで、実装・運用・改善までをつなげます。</p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt">自社にエンジニアやDX人材がいなくても物流DXを進められますか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead"><span class="rnew">新規追加</span>はい。社内に専任のエンジニアやDX人材を持たない企業でも、物流DXを進めることは可能です。</p><p class="faq-a__txt">お客さまには方針や投資に関する判断を行っていただき、PAL側で現場把握、要件整理、設計、実装、運用、改善を進めます。</p><p class="faq-a__more"><a href="./role-fde-v2.html">私たちの役割</a></p></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="faq-cat" id="faq-support">
+      <h2 class="faq-cat__title">導入・支援について</h2>
+      <div class="faq-list">
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt">どのような課題を相談できますか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead"><span class="rnew">今回変更</span>「何から手をつければいいか分からない」という段階からご相談可能です。</p><p class="faq-a__txt">「物流DXを進めたいが、進め方が分からない」という漠然としたお悩みから、「倉庫内の生産性を上げたい」「CLO選任義務化に備えたい」といった具体的な課題まで幅広く対応します。特に、「データはあるが活用できていない」「システムを入れたのに現場が楽にならない」といった、物流現場とデジタルのズレに悩まれている企業様からのご相談を多くいただいています。</p><p class="faq-a__more"><a href="#">課題から探す</a></p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt">PALは物流DXのどこまで対応しますか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead"><span class="rnew">新規追加</span>現場やデータの把握から、課題整理、設計、実装、テスト、運用設計、定着、改善まで対応します。</p><p class="faq-a__txt">必要に応じて、既存の3PL、SIer、設備ベンダーなどとも連携しながら、物流DXを現場で運用できる状態までつなげます。</p><p class="faq-a__more"><a href="./reason-fde-v2.html">PALの強み</a></p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt">今の3PLやSIerとの関係は維持できますか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead"><span class="rnew">今回変更</span>はい。既存パートナーさまと協業する形での支援が可能です。</p><p class="faq-a__txt">PALに依頼するからといって、長年お付き合いのある3PLやシステム会社との契約や取引関係を変更する必要はありません。私たちのプラットフォーム（Core First）は、既存のベンダーやシステムと連携することを前提に設計されています。</p><p class="faq-a__txt">各パートナーの強みを活かしながら、全体を横断する視点やデータのつながりをPALが担うことで、より効果的にDXを進めることができます。</p><p class="faq-a__more"><a href="./role-fde-v2.html">私たちの役割</a></p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt">既存の3PLやSIerと <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は一緒に進められますか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead"><span class="rnew">新規追加</span>はい。<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、既存の3PLやSIer、設備ベンダーの専門領域を置き換えるのではなく、その間をつなぐ役割です。</p><p class="faq-a__txt">プロジェクトの中では、現場・業務・技術の間に立ち、それぞれの役割や情報を整理しながら実装を前に進めます。</p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt">既存のWMSや基幹システム、設備データも連携できますか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead"><span class="rnew">新規追加</span>はい。既存の仕組みを活かしながら、物流データをつなぐことができます。</p><p class="faq-a__txt">物流DXでは、新しいシステムへすべて置き換えるのではなく、既存のWMSや設備を活かしながらデータ統合やシステム連携を進めることも重要です。PALの Core First は、既存のベンダーやシステムと連携することを前提に、倉庫内のWMS・ロボット・人の作業などのデータを統合・一元管理するプラットフォームです。</p><span class="review-inline-check">要確認：基幹システムとの連携可否・対応範囲（本回答の掲載前に確認）</span><p class="faq-a__more"><a href="https://www.pal-style.co.jp/service/core-first/" target="_blank" rel="noopener">Core First</a></p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt">予算が少なくても相談できますか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead">はい。「初期費用ゼロ」で物流DXを始められます。</p><p class="faq-a__txt">物流DX＝多額の初期投資、という前提そのものをPALは見直しました。</p><p class="faq-a__txt">「Core Zero」では、倉庫内の物流機器・システム・人材をPALが一体で実装・保有・運用し、お客さまは月々の業務委託費のみでDX環境を利用できます。</p><p class="faq-a__txt">初期投資を不要とし、経費（OpEx）として意思決定できるため、財務負担を抑えながらスピーディにDXを進められます。</p><p class="faq-a__more"><a href="https://www.pal-style.co.jp/service/core-zero/" target="_blank" rel="noopener">Core Zero</a></p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt">成果が出るまで関わってもらえますか？</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead">もちろんです。「やりっぱなし」にはしません。</p><p class="faq-a__txt">戦略策定やシステム導入だけで終わるのではなく、現場での運用が定着し、改善が回り始める段階を見据えて支援します。</p><p class="faq-a__txt">また、事前にPoV（価値検証）を行い、ROI（投資対効果）や実現性をデータで確認したうえで段階的に進めるため、納得感を持ってプロジェクトを推進いただけます。</p><p class="faq-a__more"><a href="./reason-fde-v2.html">PALの強み</a></p></div></div>
+        </div>
+        <div class="faq-item">
+          <h3 class="faq-q"><span class="faq-q__mark" aria-hidden="true">Q</span><span class="faq-q__txt">何から始めればいいか分かりません。</span></h3>
+          <div class="faq-a"><span class="faq-a__mark" aria-hidden="true">A</span><div class="faq-a__body"><p class="faq-a__lead">まずは現状診断からスタートできます。お気軽にお問い合わせください。</p><p class="faq-a__txt">具体的な要件が決まっていなくても全く問題ありません。まずはPALが現状をヒアリングし、現場やデータの状況を客観的に診断いたします。「そもそも何が課題なのか」を整理するところからお手伝いしますので、まずはお問い合わせフォームよりお声がけください。</p><p class="faq-a__more"><a href="#">お問い合わせ</a></p></div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- よりPALを知りたい方へ（現行FAQ：Strength／Our Role／Service／Company） -->
+<section class="section section--soft">
+  <div class="container">
+    <div class="section__head"><h2 class="section__title">よりPALを知りたい方へ</h2></div>
+    <div class="grid-4 faq-more">
+      <a class="card" href="./reason-fde-v2.html"><p class="card__eyebrow">Strength</p><h3 class="card__title">PALの強み</h3></a>
+      <a class="card" href="./role-fde-v2.html"><p class="card__eyebrow">Our Role</p><h3 class="card__title">私たちの役割</h3></a>
+      <a class="card" href="./service.html"><p class="card__eyebrow">Service</p><h3 class="card__title">サービス</h3></a>
+      <a class="card" href="#"><p class="card__eyebrow">Company</p><h3 class="card__title">会社概要</h3></a>
+    </div>
+  </div>
+</section>
+
+<!-- 実績数値 -->
+<section class="section">
+  <div class="container">
+    <ul class="stat-list">
+      <li><span class="stat-list__num">150<small>%</small></span><span class="stat-list__lbl">物流センターの生産性向上</span></li>
+      <li><span class="stat-list__num">0<small>円</small></span><span class="stat-list__lbl">初期投資から導入可能</span></li>
+      <li><span class="stat-list__num">30<small>%</small></span><span class="stat-list__lbl">トラック台数削減</span></li>
+      <li><span class="stat-list__num">30<small>%</small></span><span class="stat-list__lbl">作業工数削減</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 最終CTA -->
+<section class="final-cta">
+  <div class="container">
+    <h2>物流DXの専門家が、無料でご相談をお受けします。</h2>
+    <p class="final-cta__body">法改正対応や DX 推進など、よくある課題から個別のお悩みまで、どんなことでもお気軽にご相談ください。</p>
+    <a href="#" class="btn btn--red btn--lg">お問い合わせ</a>
+  </div>
+</section>
+
+<footer class="gfooter">
+  <div class="gfooter__grid">
+    <div>
+      <p class="gfooter__brand">株式会社PAL（パル）</p>
+      <p class="gfooter__desc">物流をコストから、戦略資産に。</p>
+      <p class="gfooter__tel">TEL 06-6534-8998<br><small>営業時間：平日 9:00-18:00</small></p>
+    </div>
+    <div class="gfooter__col"><h4>PALを知る</h4><ul><li><a href="./role-fde-v2.html">私たちの役割</a></li><li><a href="./reason-fde-v2.html">PALの強み</a></li><li><a href="./faq-fde-v2.html">よくあるご質問</a></li><li><a href="#">トップメッセージ</a></li><li><a href="#">ミッション・バリュー</a></li></ul></div>
+    <div class="gfooter__col"><h4>サービス</h4><ul>
+      <li><a href="https://www.pal-style.co.jp/service/logistics-consulting/">物流コンサルティング</a></li>
+      <li><a href="https://lp.pal-style.co.jp/logitec-integration/">ロジテックインテグレーション</a></li>
+      <li><a href="https://www.pal-style.co.jp/service/core-first/">Core First</a></li>
+      <li><a href="https://www.pal-style.co.jp/service/zero/">Core Zero</a></li>
+      <li><a href="https://www.pal-style.co.jp/service/mate/">Core Mate</a></li>
+      <li><a href="https://www.pal-style.co.jp/service/dts/">DTS</a></li>
+      <li><a href="https://lp.pal-style.co.jp/core-gx/index.html">Core GX</a></li>
+          </ul></div>
+    <div class="gfooter__col"><h4>情報</h4><ul><li><a href="#">会社概要</a></li><li><a href="#">物流DX事例</a></li><li><a href="#">物流DXコラム</a></li><li><a href="#">お問い合わせ</a></li></ul></div>
+  </div>
+  <div class="gfooter__bottom">
+    <ul class="gfooter__legal"><li><a href="#">プライバシーポリシー</a></li><li><a href="#">利用規約</a></li><li><a href="#">サイトマップ</a></li></ul>
+    <p>© 2026 PAL Services. All rights reserved. ／ 本ページは社内レビュー用の叩き台です</p>
+  </div>
+</footer>
+
+<script>(function(){var b=document.getElementById('menuToggle'),n=document.getElementById('mobileNav');if(b&&n){b.addEventListener('click',function(){n.classList.toggle('open');document.body.style.overflow=n.classList.contains('open')?'hidden':'';});n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('open');document.body.style.overflow='';});});}})();</script>
+</body>
+</html>

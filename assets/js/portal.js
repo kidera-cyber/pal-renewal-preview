@@ -13,7 +13,8 @@
     service:{ file: 'pages/service.html',name: 'サービス一覧' },
     'home-v2':   { file: 'pages/home-fde-v2.html',   name: '【新案v2】ホーム' },
     'role-v2':   { file: 'pages/role-fde-v2.html',   name: '【新案v2】私たちの役割' },
-    'reason-v2': { file: 'pages/reason-fde-v2.html', name: '【新案v2】PALの強み' }
+    'reason-v2': { file: 'pages/reason-fde-v2.html', name: '【新案v2】PALの強み' },
+    'faq-v2':    { file: 'pages/faq-fde-v2.html',    name: '【新案v2】よくあるご質問' }
   };
   const DEFAULT_PAGE = 'home';
 
@@ -25,7 +26,7 @@
   const bust = function (f) { return f + '?t=' + Date.now(); };
 
   /* 最終更新時刻（push のたびに自動更新される） */
-  const BUILD_STAMP = '2026-09-15 10:30';
+  const BUILD_STAMP = '2026-09-15 10:37';
 
   const frame       = document.getElementById('previewFrame');
   const openLink    = document.getElementById('openPage');

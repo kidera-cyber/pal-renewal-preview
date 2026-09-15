@@ -21,6 +21,7 @@
   .build-stamp__btn:hover{background:#F2F3F6}
   .portal-tabs__sep{align-self:center;margin:0 4px 0 10px;font-size:12px;font-weight:700;color:#CF131B;white-space:nowrap}
   .portal-tab--v2{border-style:dashed}
+  .portal-tabs__ext{align-self:center;margin-left:6px;font-size:12px;font-weight:700;color:#464A6F;white-space:nowrap;text-decoration:underline;text-underline-offset:3px}
 </style>
 </head>
 <body>
@@ -47,6 +48,9 @@
     <button class="portal-tab portal-tab--v2" role="tab" data-page="home-v2"   aria-selected="false" aria-controls="previewFrame">ホーム</button>
     <button class="portal-tab portal-tab--v2" role="tab" data-page="role-v2"   aria-selected="false" aria-controls="previewFrame">私たちの役割</button>
     <button class="portal-tab portal-tab--v2" role="tab" data-page="reason-v2" aria-selected="false" aria-controls="previewFrame">PALの強み</button>
+    <button class="portal-tab portal-tab--v2" role="tab" data-page="faq-v2" aria-selected="false" aria-controls="previewFrame">よくあるご質問</button>
+    <!-- ===== FAQ-COMPARE v1：既存FAQは本番ページのため iframe 表示せず、比較用に新しいタブで開くリンクのみ置く（本番は閲覧のみ・変更しない） ===== -->
+    <a class="portal-tabs__ext" href="https://www.pal-style.co.jp/about/faq/" target="_blank" rel="noopener noreferrer">既存FAQ（本番）↗</a>
   </nav>
   <div class="portal-header__meta">
     <span class="portal-current">現在表示中：<strong id="currentPageName">ホーム</strong></span>
@@ -72,6 +76,6 @@
   ></iframe>
 </main>
 
-<script src="assets/js/portal.js?v=20260915a" defer></script>
+<script src="assets/js/portal.js?v=20260915b" defer></script>
 </body>
 </html>
