@@ -2209,3 +2209,31 @@ body.review-mode .fdesum{scroll-margin-top:132px}
 /* CONNECT-RADIAL v1.1：下方向を「FDE → 一つの実行体制」の流れ専用にし、実線で強調 */
 .radial__lines line.radial__flow{stroke:var(--pal-accent);stroke-width:2;stroke-dasharray:none}
 .radial__arrow{margin-top:-2px;color:var(--pal-accent)}
+
+/* ============================================================
+   ===== COMPARE-V2 v1 START =====
+   FDE 特設 07：3つの要約カード＋4軸比較表（列＝役割、FDE 列を淡く強調）。スマホはカード1列＋表は枠内横スクロール。
+   ============================================================ */
+#compare .section__subcopy{margin-bottom:6px}
+.cmp3{list-style:none;margin:8px 0 24px;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.cmp3__card{padding:20px 20px 22px;border-radius:10px;background:#fff;border:1px solid var(--pal-border);border-top:3px solid var(--pal-border-strong)}
+.cmp3__card--fde{border-top-color:var(--pal-accent);background:#F7F8FC}
+.cmp3__tag{margin:0 0 6px;font-size:12px;font-weight:700;color:var(--pal-sub)}
+.cmp3__card--fde .cmp3__tag{color:var(--pal-accent)}
+.cmp3__name{margin:0 0 8px;font-size:17px;font-weight:700;line-height:1.5;color:var(--pal-heading)}
+.cmp3__txt{margin:0;font-size:14px;line-height:1.85;color:var(--pal-text)}
+.cmp-table-wrap{margin-bottom:16px}
+.cmp-table{width:100%;min-width:44em;border-collapse:collapse;font-size:14px;line-height:1.75}
+.cmp-table__cap{caption-side:top;padding:12px 16px;text-align:left;font-size:13px;font-weight:700;color:var(--pal-heading);background:var(--pal-bg-light);border-bottom:1px solid var(--pal-border)}
+.cmp-table th,.cmp-table td{padding:14px 16px;border-bottom:1px solid var(--pal-border);text-align:left;vertical-align:top;color:var(--pal-text)}
+.cmp-table thead th{font-size:13.5px;font-weight:700;color:var(--pal-heading);background:#fff;border-bottom:2px solid var(--pal-border)}
+.cmp-table tbody th{width:9em;font-size:13px;font-weight:700;color:var(--pal-sub);white-space:nowrap}
+.cmp-table tbody tr:last-child th,.cmp-table tbody tr:last-child td{border-bottom:0}
+.cmp-table .is-fde{background:#F2F4FA;box-shadow:inset 3px 0 0 var(--pal-accent)}
+.cmp-table thead th.is-fde{color:var(--pal-heading)}
+.cmp-table tbody td.is-fde{font-weight:700;color:var(--pal-heading)}
+.cmp-note{max-width:48em;margin:0 auto;text-align:center;font-size:14px;line-height:1.85;color:var(--pal-heading)}
+@media(max-width:900px){.cmp3{grid-template-columns:1fr}}
+@media(max-width:640px){.cmp-note{text-align:left}.cmp-table{font-size:13.5px}}
+/* ===== COMPARE-V2 v1 END ===== */
+.nw-all{white-space:nowrap}

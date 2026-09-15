@@ -12,7 +12,7 @@
 <meta name="description" content="FDE（Forward Deployed Engineer）とは、顧客の業務課題を技術要件へ翻訳し、設計・実装・運用までをつなぐエンジニアです。物流DXで必要な理由、物流コンサル・SIerとの違い、PALが物流領域でFDE型の支援をどう実践しているかを解説します。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260915n">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260915p">
 <!-- ===== JSONLD FDE-PAGE v1：画面表示内容のみ（FAQPage は画面の FAQ と同一データから生成） ===== -->
 <script type="application/ld+json">
 {
@@ -397,21 +397,32 @@
 </section>
 
 <section class="section fdepage-sec" id="compare">
-  <div class="container container--narrow">
-    <div class="section__head"><span class="section__eyebrow">07 / COMPARE</span><h2 class="section__title"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>と物流コンサルティング・SIerの違い</h2>
-      <p class="section__lead">いずれも物流DXに欠かせない役割です。違いは優劣ではなく、主に担う範囲にあります。</p>
+  <!-- ===== COMPARE-V2 v1：3つの要約カード＋4軸の比較表（列＝役割）に再構成。優劣ではなく主に担う範囲の違いを示す。旧表は git 履歴 01528dd ===== -->
+  <div class="container">
+    <div class="section__head"><span class="section__eyebrow">07 / COMPARE</span><h2 class="section__title"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>と<span class="nw">物流コンサルティング・</span><span class="nw-all">SIerの違い</span></h2>
+      <p class="section__subcopy">いずれも物流DXに必要な役割ですが、主に担う範囲が異なります。</p>
+      <p class="section__lead">物流DXでは、課題整理、計画策定、システム構築、現場実装、運用改善など、複数の役割が関わります。</p>
     </div>
-    <div class="fdepage-table-wrap">
-      <table class="fdepage-table">
-        <thead><tr><th scope="col">役割</th><th scope="col">主に担うこと</th><th scope="col">主に関わる段階</th></tr></thead>
+
+    <ul class="cmp3" aria-label="3つの役割の要約">
+      <li class="cmp3__card cmp3__card--fde"><p class="cmp3__tag">現場で動く状態まで進める</p><h3 class="cmp3__name"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span></h3><p class="cmp3__txt">業務課題を技術要件へ翻訳し、設計・実装・運用までをつなぐ役割。</p></li>
+      <li class="cmp3__card"><p class="cmp3__tag">何を変えるべきかを明確にする</p><h3 class="cmp3__name">物流コンサルティング</h3><p class="cmp3__txt">物流課題を整理し、構想・戦略・計画を立てる役割。</p></li>
+      <li class="cmp3__card"><p class="cmp3__tag">システムを形にする</p><h3 class="cmp3__name">SIer</h3><p class="cmp3__txt">要件に基づいて、システムを設計・開発・導入する役割。</p></li>
+    </ul>
+
+    <div class="fdepage-table-wrap cmp-table-wrap">
+      <table class="cmp-table">
+        <caption class="cmp-table__cap">4つの観点で見る違い</caption>
+        <thead><tr><th scope="col">比較項目</th><th scope="col" class="is-fde"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span></th><th scope="col">物流コンサルティング</th><th scope="col">SIer</th></tr></thead>
         <tbody>
-          <tr><th scope="row">物流コンサルティング</th><td>現状分析、課題整理、戦略・計画策定</td><td>構想・計画</td></tr>
-          <tr><th scope="row">SIer</th><td>システムの設計、開発、導入</td><td>システム設計・開発・導入</td></tr>
-          <tr class="is-fde"><th scope="row"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span></th><td>業務課題を技術要件へ翻訳し、設計・実装・運用までを横断してつなぐ</td><td>課題整理から運用・改善まで</td></tr>
+          <tr><th scope="row">主な役割</th><td class="is-fde">業務課題を技術要件へ翻訳し、設計・実装・運用までをつなぐ</td><td>現状分析、課題整理、構想策定、改善計画の立案</td><td>要件に基づくシステム設計、開発、導入</td></tr>
+          <tr><th scope="row">主に関わる段階</th><td class="is-fde">課題整理から実装・運用・改善まで</td><td>構想・戦略・計画</td><td>要件定義、設計、開発、導入</td></tr>
+          <tr><th scope="row">成果物・ゴール</th><td class="is-fde">現場で実際に使われ、改善が続く状態</td><td>改善方針、計画、提案</td><td>システムの構築・納入</td></tr>
+          <tr><th scope="row">特徴</th><td class="is-fde">現場理解と技術理解の両方を持ち、実装を前へ進める</td><td>何を変えるべきかを整理し、方向性を明確にする</td><td>システムを形にする専門性を担う</td></tr>
         </tbody>
       </table>
     </div>
-    <p class="prose">PALでは、物流コンサルティングと <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>による実装支援を組み合わせ、既存のSIerや3PLとも協業しながら物流DXを進めます。</p>
+    <p class="cmp-note">PALでは、物流コンサルティングやSIerの役割とも連携しながら、<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が現場で使われる形まで前に進めます。</p>
   </div>
 </section>
 
