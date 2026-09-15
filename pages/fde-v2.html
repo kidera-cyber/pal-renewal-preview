@@ -12,7 +12,7 @@
 <meta name="description" content="FDE（Forward Deployed Engineer）とは、顧客の業務課題を技術要件へ翻訳し、設計・実装・運用までをつなぐエンジニアです。物流DXで必要な理由、物流コンサル・SIerとの違い、PALが物流領域でFDE型の支援をどう実践しているかを解説します。">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Lato:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../assets/css/common.css?v=20260915s">
+<link rel="stylesheet" href="../assets/css/common.css?v=20260915u">
 <!-- ===== JSONLD FDE-PAGE v1：画面表示内容のみ（FAQPage は画面の FAQ と同一データから生成） ===== -->
 <script type="application/ld+json">
 {
@@ -443,32 +443,36 @@
 <!-- ===== PROCESS-REMOVE v1：08 PROCESS（4サイクル×FDEが担うこと）を削除。4サイクルは 03 HOW に一本化。復元は git 履歴 ccb1365 ===== -->
 
 <section class="section section--soft fdepage-sec" id="services">
+  <!-- ===== SERVICES-TIERS v1：基盤（3カード）→ 統合（FDE のフロー図）→ サービス（小カード一覧）の3階層に整理。旧 数式風図解は git 履歴 458be28 ===== -->
   <div class="container">
     <div class="section__head"><span class="section__eyebrow">08 / PAL</span><h2 class="section__title">物流現場・データ・技術を<span class="nw">横断して実装する</span></h2>
-      <p class="section__lead"><span class="rnew">今回変更</span>PALは、物流現場の運用知見、システム・サービス、現場から得られるデータを組み合わせながら、物流DXを設計・実装・運用へつなげます。<span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>は、これらを現場ごとに組み合わせ、実際に使える仕組みへ落とし込む役割を担います。</p>
+      <p class="section__lead"><span class="rnew">今回変更</span>PALは、物流現場の運用知見、システム・サービス、現場のデータを組み合わせ、物流DXを設計・実装・運用へつなげます。</p>
     </div>
-    <!-- ===== FDE-DOC v1：社内資料 p11「ソフト × 運用 × データ」を、競合比較の断定を避けた外部向け表現で反映 ===== -->
-    <ul class="fdepage-pillars" aria-label="PALで実装を進めるための3つの要素">
-      <li><span class="fdepage-pillars__en">Operations</span><b>物流現場の運用知見</b><span>物流業務の運営に携わる立場から、現場の作業や制約を理解します。</span></li>
-      <li><span class="fdepage-pillars__en">Software</span><b>システム・サービス</b><span>自社サービスと既存システム、設備、外部サービスを課題に合わせて組み合わせます。</span></li>
-      <li><span class="fdepage-pillars__en">Data</span><b>現場から得られるデータ</b><span>作業や運行の実績データをもとに、状況の把握と改善を進めます。</span></li>
-    </ul>
-    <div class="fdepage-stack" aria-label="実装の構成">
-      <span class="fdepage-stack__item">物流現場の課題</span><span class="fdepage-stack__op" aria-hidden="true">＋</span>
-      <span class="fdepage-stack__item fdepage-stack__item--fde"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span></span><span class="fdepage-stack__op" aria-hidden="true">＋</span>
-      <span class="fdepage-stack__item">自社サービス・既存システム・設備・外部サービス</span><span class="fdepage-stack__op" aria-hidden="true">＝</span>
-      <span class="fdepage-stack__item fdepage-stack__item--goal">現場で動く仕組み</span>
+
+    <div class="tier">
+      <p class="tier__h"><span class="tier__no">1</span><span class="tier__txt">PALのFDE型支援を支える3つの基盤</span></p>
+      <ul class="fdepage-pillars fdepage-pillars--lg" aria-label="3つの基盤">
+        <li><span class="fdepage-pillars__en">Operations</span><b>物流現場の運用知見</b><span>物流業務の運営に関わる立場から、現場の作業や制約を理解します。</span></li>
+        <li><span class="fdepage-pillars__en">Software</span><b>システム・サービス</b><span>自社サービスや既存システム、設備・外部サービスを組み合わせます。</span></li>
+        <li><span class="fdepage-pillars__en">Data</span><b>現場から得られるデータ</b><span>作業・運行などの実績データをもとに、状況把握と改善につなげます。</span></li>
+      </ul>
     </div>
-    <div class="grid-3">
-      <a class="card" href="https://www.pal-style.co.jp/service/logistics-consulting/" target="_blank" rel="noopener"><h3 class="card__title">物流コンサルティング</h3><p class="card__body-sm">物流DXの戦略策定・実行支援・成果創出</p></a>
-      <a class="card" href="https://www.pal-style.co.jp/service/core-first/" target="_blank" rel="noopener"><h3 class="card__title">Core First</h3><p class="card__body-sm">組織の可視化・データ統合プラットフォーム</p></a>
-      <a class="card" href="https://www.pal-style.co.jp/service/dts/" target="_blank" rel="noopener"><h3 class="card__title">DTS</h3><p class="card__body-sm">輸送効率化・可視化プラットフォーム</p></a>
-      <a class="card" href="https://www.pal-style.co.jp/service/mate/" target="_blank" rel="noopener"><h3 class="card__title">Core Mate</h3><p class="card__body-sm">勤怠・即日・即払システム</p></a>
-      <a class="card" href="https://lp.pal-style.co.jp/core-gx/index.html" target="_blank" rel="noopener"><h3 class="card__title">Core GX</h3><p class="card__body-sm">データ連携により現場最適を制御する自動搬送ロボットソリューション</p></a>
-      <a class="card" href="https://lp.pal-style.co.jp/logitec-integration/" target="_blank" rel="noopener"><h3 class="card__title">ロジテックインテグレーション</h3><p class="card__body-sm">物流DXを戦略から実行まで一気通貫で支援</p></a>
-      <a class="card" href="https://www.pal-style.co.jp/service/zero/" target="_blank" rel="noopener"><h3 class="card__title">Core Zero</h3><p class="card__body-sm">物流DXの初期費用をゼロにする</p></a>
+
+    <div class="tier">
+      <p class="tier__h"><span class="tier__no">2</span><span class="tier__txt"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が組み合わせて、現場で動く仕組みにする</span></p>
+      <ol class="implflow" aria-label="物流現場の課題から現場で動く仕組みまで">
+        <li class="implflow__step"><span class="implflow__t">物流現場の課題</span></li>
+        <li class="implflow__step implflow__step--fde"><span class="implflow__t"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span></span><span class="implflow__d">課題を整理し、技術要件へ翻訳する</span></li>
+        <li class="implflow__step"><span class="implflow__t">サービス・システム・設備を選定・統合</span></li>
+        <li class="implflow__step implflow__step--goal"><span class="implflow__t">現場で動く仕組み</span></li>
+      </ol>
     </div>
-    <span class="review-inline-check">要確認：各サービスと <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の具体的な関わり方（どの工程でどう使うか）は、事実確認後に追記</span>
+
+    <div class="tier">
+      <p class="tier__h"><span class="tier__no">3</span><span class="tier__txt"><span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>が組み合わせるPALのサービス</span></p>
+      <ul class="svc-minis"><li><a class="svc-mini" href="https://www.pal-style.co.jp/service/logistics-consulting/" target="_blank" rel="noopener"><span class="svc-mini__name">物流コンサルティング</span><span class="svc-mini__txt">物流DXの戦略策定・実行支援・成果創出</span></a></li><li><a class="svc-mini" href="https://www.pal-style.co.jp/service/core-first/" target="_blank" rel="noopener"><span class="svc-mini__name">Core First</span><span class="svc-mini__txt">組織の可視化・データ統合プラットフォーム</span></a></li><li><a class="svc-mini" href="https://www.pal-style.co.jp/service/dts/" target="_blank" rel="noopener"><span class="svc-mini__name">DTS</span><span class="svc-mini__txt">輸送効率化・可視化プラットフォーム</span></a></li><li><a class="svc-mini" href="https://www.pal-style.co.jp/service/mate/" target="_blank" rel="noopener"><span class="svc-mini__name">Core Mate</span><span class="svc-mini__txt">勤怠・即日・即払システム</span></a></li><li><a class="svc-mini" href="https://lp.pal-style.co.jp/core-gx/index.html" target="_blank" rel="noopener"><span class="svc-mini__name">Core GX</span><span class="svc-mini__txt">データ連携により現場最適を制御する自動搬送ロボットソリューション</span></a></li><li><a class="svc-mini" href="https://lp.pal-style.co.jp/logitec-integration/" target="_blank" rel="noopener"><span class="svc-mini__name">ロジテックインテグレーション</span><span class="svc-mini__txt">物流DXを戦略から実行まで一気通貫で支援</span></a></li><li><a class="svc-mini" href="https://www.pal-style.co.jp/service/zero/" target="_blank" rel="noopener"><span class="svc-mini__name">Core Zero</span><span class="svc-mini__txt">物流DXの初期費用をゼロにする</span></a></li></ul>
+      <span class="review-inline-check">要確認：各サービスと <span class="fde-name"><span class="fde-name__k">FDE（Forward</span> Deployed Engineer）</span>の具体的な関わり方（どの工程でどう使うか）は、事実確認後に追記</span>
+    </div>
   </div>
 </section>
 

@@ -2291,3 +2291,38 @@ body.review-mode .fdesum{scroll-margin-top:132px}
 }
 /* ===== HOW-OVERVIEW v2 END ===== */
 .home-fde-cta{margin:12px 0 0;text-align:center}
+
+/* ============================================================
+   ===== SERVICES-TIERS v1 START =====
+   FDE 特設 08：基盤（大きめ3カード）→ 統合（ネイビー中心の横フロー）→ サービス（小カード一覧）の3階層。スマホは縦構成。
+   ============================================================ */
+.tier+.tier{margin-top:36px}
+.tier__h{display:flex;align-items:center;justify-content:center;gap:10px;margin:0 0 16px;font-size:16px;font-weight:700;line-height:1.5;color:var(--pal-heading);text-align:center}
+.tier__no{flex:none;display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--pal-accent);font-family:var(--font-en);font-size:13px;color:#fff}
+.fdepage-pillars--lg{margin-bottom:0}
+.fdepage-pillars--lg li{padding:24px 24px 26px;background:#fff}
+.fdepage-pillars--lg .fdepage-pillars__en{font-size:13px}
+.fdepage-pillars--lg b{font-size:18px}
+.implflow{list-style:none;margin:0 auto;padding:0;display:grid;grid-template-columns:1fr 1.3fr 1.2fr 1fr;gap:34px;max-width:64em;align-items:stretch}
+.implflow__step{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:14px 14px;border-radius:8px;background:#fff;border:1px solid var(--pal-border);text-align:center}
+.implflow__step:not(:last-child)::after{content:"→";position:absolute;right:-25px;top:50%;transform:translateY(-50%);font-size:18px;color:var(--pal-accent)}
+.implflow__t{font-size:14px;font-weight:700;line-height:1.5;color:var(--pal-heading)}
+.implflow__d{display:block;margin-top:6px;padding:3px 10px;border-radius:9999px;background:rgba(255,255,255,.12);font-size:12px;line-height:1.5;color:#fff}
+.implflow__step--fde{background:var(--pal-heading);border-color:var(--pal-heading)}
+.implflow__step--fde .implflow__t{color:#fff}
+.implflow__step--goal{border:2px solid var(--pal-accent)}
+.implflow__step--goal .implflow__t{color:var(--pal-accent)}
+.svc-minis{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.svc-mini{display:block;height:100%;padding:12px 14px;border-radius:6px;background:#fff;border:1px solid var(--pal-border);transition:border-color .2s}
+.svc-mini:hover{border-color:var(--pal-accent)}
+.svc-mini__name{display:block;font-size:14px;font-weight:700;color:var(--pal-heading)}
+.svc-mini__txt{display:block;margin-top:3px;font-size:12px;line-height:1.6;color:var(--pal-sub)}
+@media(max-width:900px){.svc-minis{grid-template-columns:repeat(2,1fr)}.implflow{grid-template-columns:1fr 1fr;gap:34px 34px}.implflow__step:nth-child(2)::after{content:none}}
+@media(max-width:640px){
+  .tier__h{font-size:15px;text-align:left;justify-content:flex-start}
+  .implflow{grid-template-columns:1fr;gap:26px;max-width:30em}
+  .implflow__step:not(:last-child)::after,.implflow__step:nth-child(2)::after{content:"↓";right:auto;left:50%;top:auto;bottom:-24px;transform:translateX(-50%)}
+  .svc-minis{grid-template-columns:1fr}
+}
+/* ===== SERVICES-TIERS v1 END ===== */
+.tier__txt{min-width:0}
