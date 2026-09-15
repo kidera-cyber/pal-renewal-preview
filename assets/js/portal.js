@@ -25,7 +25,7 @@
   const bust = function (f) { return f + '?t=' + Date.now(); };
 
   /* 最終更新時刻（push のたびに自動更新される） */
-  const BUILD_STAMP = '2026-09-15 10:17';
+  const BUILD_STAMP = '2026-09-15 10:30';
 
   const frame       = document.getElementById('previewFrame');
   const openLink    = document.getElementById('openPage');

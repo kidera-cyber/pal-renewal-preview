@@ -1990,3 +1990,16 @@ body.review-mode .fdemap > .review-label{position:static;display:inline-flex;mar
 .gnav__sub a.is-current{color:var(--red);font-weight:700}
 .gnav__group:hover .gnav__sub,.gnav__group:focus-within .gnav__sub{display:block}
 /* ===== NAV-STRENGTH v1 END ===== */
+
+/* ============================================================
+   ===== FDE-COMPARE v1 START =====
+   役割v2「物流DXで必要とされる理由」内：物流コンサルティング／SIer／FDE の役割の違いを3行で表示。
+   ============================================================ */
+.fdecompare{margin:16px 0 0;padding:0;display:grid;gap:6px}
+.fdecompare__row{display:grid;grid-template-columns:15em 1fr;align-items:center;gap:12px;padding:10px 14px;border-radius:8px;background:var(--pal-bg-light);border:1px solid var(--pal-border)}
+.fdecompare dt{margin:0;font-size:13.5px;font-weight:700;color:var(--pal-heading)}
+.fdecompare dd{margin:0;font-size:13.5px;line-height:1.7;color:var(--pal-sub)}
+.fdecompare__row--fde{background:var(--pal-heading);border-color:var(--pal-heading)}
+.fdecompare__row--fde dt,.fdecompare__row--fde dd{color:#fff}
+@media(max-width:640px){.fdecompare__row{grid-template-columns:1fr;gap:2px}}
+/* ===== FDE-COMPARE v1 END ===== */
