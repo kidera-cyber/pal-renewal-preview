@@ -1,5 +1,7 @@
 import re,io
-SRC='/Users/2ka3kidera/Downloads/FDE導入事例｜食品製造拠点の物流DX・仕分け改善.html'
+import sys
+# 既定は最新の取り込み元。別の WP プレビュー保存 HTML を使う場合は第1引数で渡す。
+SRC=sys.argv[1] if len(sys.argv)>1 else '/Users/2ka3kidera/Downloads/FDE導入事例｜無線DASで仕分け・出荷工程を改善.html'
 DST='/Users/2ka3kidera/Desktop/pal-renewal-preview/pages/case-fde-food-logistics.html'
 orig=io.open(SRC,encoding='utf-8').read()
 s=orig
@@ -50,8 +52,8 @@ log.append(('相対パス→絶対URL',n))
 
 s=s.replace('<!DOCTYPE html>','''<!DOCTYPE html>
 <!-- ============================================================
-     社内共有用プレビュー（CASE-SHARE v1）
-     出典：www.pal-style.co.jp の WordPress 下書き（post_type=case / p=8474）を
+     社内共有用プレビュー（CASE-SHARE v2）
+     出典：www.pal-style.co.jp の WordPress 下書き（post_type=case / p=8753）を
            ブラウザ保存したもの。本番サイトには未公開。
      公開前に外したもの
        GA4(G-J9HX086VMV) / GTM(GTM-WCR7XHZW) / Microsoft Clarity / reCAPTCHA
