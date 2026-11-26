@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+<!-- ============================================================
+     社内共有用プレビュー（CORE-TIME-LP-SHARE v1）
+     出典：本番 https://www.pal-style.co.jp/core-time/ のソース一式
+           （~/Desktop/core-time、全ファイル 2026-01-20 17:22 時点）
+     PHPはGitHub Pagesで動かないため、index.php のテンプレート変数を
+     functions.php の値で解決し、静的HTMLとして出力している。
+     本文・見出し・画像・CSS・JSは一切変更していない。
+     公開前に外したもの
+       Google Tag Manager(GTM-NMBTTWS) / Google Analytics(UA-25847455-14)
+         … レビュー環境から発火して本番の計測データを汚さないため
+     加えたもの
+       robots: noindex,nofollow,noarchive,nosnippet
+       フォームリンク（3箇所）→ 本番フォームを別タブで開く
+         … form/ はPHPのメールフォームでPages上では動作しないため
+     ============================================================ -->
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+<meta charset="utf-8">
+<meta name="robots" content="noindex,nofollow,noarchive,nosnippet">
+<script type="text/javascript">
+if (navigator.userAgent.indexOf('iPad') > 0){ document.write('<meta name="viewport" content="width=1260, maximum-scale=2, user-scalable=yes">');}
+else { document.write('<meta name="viewport" content="width=640">'); }
+</script>
+<title>＜物流業界向け＞勤怠管理システム｜Core-Time（コアタイム）</title>
+<meta name="description" content="生体認証（静脈認証システム）を利用し、スタッフの出退勤をリアルタイムに監視。面倒だったスタッフのシフト入力も一元管理し、数十人から数百人規模のセンターの稼働を最適化します。それぞれの現場に合わせてカスマイズもできる物流向け生体認証勤怠管理システム「コアタイム」をご利用下さい。">
+<meta name="keywords" content="コアタイム,CoreTime,生体認証,静脈認証,勤怠管理システム">
+<meta name="format-detection" content="telephone=no">
+<meta property="og:site_name" content="＜物流業界向け＞勤怠管理システム｜Core-Time（コアタイム）">
+<meta property="og:title" content="＜物流業界向け＞勤怠管理システム｜Core-Time（コアタイム）">
+<meta property="og:type" content="website">
+<meta property="og:description" content="生体認証（静脈認証システム）を利用し、スタッフの出退勤をリアルタイムに監視。面倒だったスタッフのシフト入力も一元管理し、数十人から数百人規模のセンターの稼働を最適化します。それぞれの現場に合わせてカスマイズもできる物流向け生体認証勤怠管理システム「コアタイム」をご利用下さい。">
+<meta property="og:url" content="https://pal-style.co.jp/core-time/">
+<meta property="og:image" content="https://pal-style.co.jp/core-time/images/ogp.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@">
+<meta name="twitter:creator" content="@">
+<meta name="twitter:title" content="＜物流業界向け＞勤怠管理システム｜Core-Time（コアタイム）">
+<meta name="twitter:description" content="生体認証（静脈認証システム）を利用し、スタッフの出退勤をリアルタイムに監視。面倒だったスタッフのシフト入力も一元管理し、数十人から数百人規模のセンターの稼働を最適化します。それぞれの現場に合わせてカスマイズもできる物流向け生体認証勤怠管理システム「コアタイム」をご利用下さい。">
+<meta name="twitter:image" content="https://pal-style.co.jp/core-time/images/ogp.png">
+<meta name="theme-color" content="#FFFFFF">
+<link rel="stylesheet" href="https://fonts.googleapis.com/earlyaccess/notosansjp.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto:500,700" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/yakuhanjp@3.2.0/dist/css/yakuhanjp.min.css">
+<link href="style.css" rel="stylesheet" type="text/css">
+<link media="(min-width: 661px)" href="./css/layout_pc.css" rel="stylesheet" type="text/css">
+<link media="(max-width: 660px)" href="./css/layout_sp.css" rel="stylesheet" type="text/css">
+<link href="./css/owl.carousel.css" rel="stylesheet" type="text/css">
+<link rel="shortcut icon" href="favicon.ico">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+</head>
+<body id="index">
+<div id="fullWrap">
+    <header>
+        <div id="navWrap">
+            <h1><a href="./"><img src="./images/sp/main_logo.png" alt="Core Time"></a></h1>
+            <nav>
+                <ul class="cf">
+                    <li><a href="#overview" class="anchor"><span>特徴</span></a></li>
+                    <li><a href="#function" class="anchor"><span>機能</span></a></li>
+                    <li><a href="#customize" class="anchor"><span>カスタマイズ</span></a></li>
+                    <!--li><a href="#case" class="anchor"><span>活用事例</span></a></li-->
+                    <li><a href="#price" class="anchor"><span>料金</span></a></li>
+                    <li><a href="#qa" class="anchor"><span>Q&amp;A</span></a></li>
+                </ul>
+            </nav>
+            <p id="headLink"><a href="https://www.pal-style.co.jp/core-time/form/" target="_blank" rel="noopener noreferrer" class="linkAd toContact"><span>すぐに相談する</span></a></p>
+        </div>
+        <a id="menuBtn" href="javascript:;"><span></span><span></span><span></span></a>
+    </header>
+    <section id="main">
+        <div id="mainWrap">
+        <div id="mainCont">
+            <h1>
+                <picture>
+                    <source media="(max-width: 660px)" srcset="./images/sp/main_logo.png">
+                    <img src="./images/pc/main_logo.png" alt="Core Time">
+                </picture>
+            </h1>
+            <p id="catchCopy"><span id="l">物流現場向け 勤怠管理システム</span><span id="mainCopy"><span>『ピッ』</span>と指をおくだけで、<br>安心・ラクラク・勤怠管理</span></p>
+            <div id="mainImg">
+                <picture>
+                    <source media="(max-width: 660px)" srcset="./images/sp/top_main.png">
+                    <img src="./images/pc/top_main.png" alt="Core Time">
+                </picture>
+            </div>
+            <p id="topTxt">物流現場の勤怠管理は、<br class="sp">2020年に向かっている今でも<br class="pc">
+            70%以上もの<br class="sp">施設（拠点）でデジタル化がすすんでおらず、<br class="pc"><br class="sp">
+            現場の属人的なシフト管理などが慢性しています。<br class="pc"><br class="sp">
+            コアタイムは現場で培ったノウハウを研究し、<br class="pc"><br class="sp">
+            面倒な業務をテクノロジーで改善し<br class="pc"><br class="sp">
+            「物流センター働き方改革」を<br class="pc"><br class="sp">
+            導くことができるサービスを提供します。</p>
+            <ul id="topList">
+                <li>
+                    <figure><img src="./images/pc/top_icon01.png" width="100%" alt=""></figure>
+                    <p>生体認証の設置</p>
+                </li>
+                <li>
+                    <figure><img src="./images/pc/top_icon02.png" width="100%" alt=""></figure>
+                    <p>勤怠状況の可視化</p>
+                </li>
+                <li>
+                    <figure><img src="./images/pc/top_icon03.png" width="100%" alt=""></figure>
+                    <p>リアルタイムに売上把握</p>
+                </li>
+                <li>
+                    <figure><img src="./images/pc/top_icon04.png" width="100%" alt=""></figure>
+                    <p>物流センター最適化</p>
+                </li>
+            </ul>
+        </div>
+        </div>
+    </section>
+    <section id="overview">
+        <div class="comW">
+            <h2>Core Timeの特徴</h2>
+            <p id="ovCatch">管理業務<span>80</span>％削減</p>
+            <p id="ovTxt">タイムカードを手入力で管理し、表計算ソフトで集計分析していると膨大な時間のムダになります。<br>
+            コアタイムなら生体認証で打刻することで不正な打刻も心配なく自動で集計、管理できます。</p>
+            <ul id="ovList">
+                <li>
+                    <figure><img src="./images/pc/ov_icon01.png" width="100%" alt=""></figure>
+                    <p>勤怠状況の見える化</p>
+                </li>
+                <li>
+                    <figure><img src="./images/pc/ov_icon02.png" width="100%" alt=""></figure>
+                    <p>複数部門の一元管理</p>
+                </li>
+                <li>
+                    <figure><img src="./images/pc/ov_icon03.png" width="100%" alt=""></figure>
+                    <p>集計業務の削減</p>
+                </li>
+                <li>
+                    <figure><img src="./images/pc/ov_icon04.png" width="100%" alt=""></figure>
+                    <p>スムーズなデータ連携</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="function">
+        <div class="comW">
+            <h2>Core Timeの機能</h2>
+            <div id="funcCalCont">
+                <ul id="funcNav">
+                    <li><a href="javascript:;" data-cindex="0" class="active"><span>1</span>シフト管理</a></li>
+                    <li><a href="javascript:;" data-cindex="1"><span>2</span>スタッフ管理</a></li>
+                    <li><a href="javascript:;" data-cindex="2"><span>3</span>勤怠管理</a></li>
+                    <li><a href="javascript:;" data-cindex="3"><span>4</span>売上管理</a></li>
+                    <li><a href="javascript:;" data-cindex="4"><span>5</span>ダッシュボード</a></li>
+                    <li><a href="javascript:;" data-cindex="5"><span>6</span>生体認証 打刻機能</a></li>
+                </ul>
+                <ul id="funcList">
+                    <li><figure><img src="./images/pc/func_s_img01.jpg" alt="シフト管理"></figure></li>
+                    <li><figure><img src="./images/pc/func_s_img02.jpg" alt="スタッフ管理"></figure></li>
+                    <li><figure><img src="./images/pc/func_s_img03.jpg" alt="勤怠管理"></figure></li>
+                    <li><figure><img src="./images/pc/func_s_img04.jpg" alt="売上管理"></figure></li>
+                    <li><figure><img src="./images/pc/func_s_img05.jpg" alt="ダッシュボード"></figure></li>
+                    <li><figure><img src="./images/pc/func_s_img06.jpg" alt="生体認証 打刻機能"></figure></li>
+                </ul>
+                <div class="owlControl">
+                    <p class="prev"><a href="javascript:;"class="ah"><img src="./images/pc/arrow_left.png" alt="prev"></a></p>
+                    <p class="next"><a href="javascript:;"class="ah"><img src="./images/pc/arrow_right.png" alt="next"></a></p>
+                </div>
+                <ul id="funcDesc">
+                    <li class="active">
+                        <h3>シフト管理</h3>
+                        <p>数十人から数千人以上の規模までのスタッフシフトを管理します。全てのスタッフ希望勤務を登録し一覧で確認できます。さらに、工数日数や労働時間までも管理します。スタッフもシフトを画面から確認でき、即ペーパーレスを実現します。</p>
+                    </li>
+                    <li>
+                        <h3>スタッフ管理</h3>
+                        <p>現場で登録しているスタッフを管理します。
+                        複数の派遣事業に登録している、スタッフまでも管理しなければならないため、出勤条件だけではなく派遣登録先なども一元管理できます。</p>
+                    </li>
+                    <li>
+                        <h3>勤怠管理</h3>
+                        <p>現場の労働生産性を管理する、勤怠管理機能です。
+                        リアルタイムに勤務状況を把握でき、現場管理者は安心して、稼働状況を把握できます。
+                        監視だけではなく、勤怠レポートから次の稼働計画においても勤怠履歴からレポートも容易に作成できます。</p>
+                    </li>
+                    <li>
+                        <h3>売上管理</h3>
+                        <p>現場の生産性（売上）を可視化できます。
+                        物流センターでは稼働条件から、毎時売上と向き合っています。コアタイムでは物流センター向けに売上機能を備えているため、原価から利益までも自動で可視化しています。</p>
+                    </li>
+                    <li>
+                        <h3>ダッシュボード（複数レポートの可視化）</h3>
+                        <p>複数管理する情報を一画面で表示できる機能です。
+                        現場の管理者は生産性や出退勤状況、工数把握など膨大な情報を常に把握する必要があります。ダッシュボードではこのような情報をまとめて表示します。</p>
+                    </li>
+                    <li>
+                        <h3>生体認証 打刻機能</h3>
+                        <p>生体認証（静脈認証）にて出退勤する機能です。
+                        物流現場では数百人から数千人のスタッフか出勤します。
+                        タイムカードを使った紙の管理や、ICカードタイプなどでは、不正な打刻までは管理できません。生体認証（静脈認証尾）は本人のみを特定できる為、正確な打刻管理を実現できます。</p>
+                    </li>
+                </ul>
+                <ul id="funcNum">
+                    <li class="active"><img src="./images/pc/func_01.png" alt="01"></li>
+                    <li><img src="./images/pc/func_02.png" alt="02"></li>
+                    <li><img src="./images/pc/func_03.png" alt="03"></li>
+                    <li><img src="./images/pc/func_04.png" alt="04"></li>
+                    <li><img src="./images/pc/func_05.png" alt="05"></li>
+                    <li><img src="./images/pc/func_06.png" alt="06"></li>
+                </ul>
+            </div>
+            <section id="func01" class="fCom">
+                <h3>基本的な機能一覧</h3>
+                <ul id="func01List">
+                    <li>
+                        <figure>
+                            <picture>
+                                <source media="(max-width: 660px)" srcset="./images/sp/func_icon01.png">
+                                <img src="./images/pc/func_icon01.png" alt="">
+                            </picture>
+                        </figure>
+                        <div>
+                            <h3>生体認証</h3>
+                            <p>従業員全ての静脈を登録しシフトや勤怠を登録する装置です。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <figure>
+                            <picture>
+                                <source media="(max-width: 660px)" srcset="./images/sp/func_icon02.png">
+                                <img src="./images/pc/func_icon02.png" alt="">
+                            </picture>
+                        </figure>
+                        <div>
+                            <h3>集計管理</h3>
+                            <p>就業時間などを自動計算し出勤状況の可視化、レポート出力する機能です。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <figure>
+                            <picture>
+                                <source media="(max-width: 660px)" srcset="./images/sp/func_icon03.png">
+                                <img src="./images/pc/func_icon03.png" alt="">
+                            </picture>
+                        </figure>
+                        <div>
+                            <h3>予算管理</h3>
+                            <p>計画と実績の活動を管理し業績分析より改善策を計画できる機能です。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <figure>
+                            <picture>
+                                <source media="(max-width: 660px)" srcset="./images/sp/func_icon04.png">
+                                <img src="./images/pc/func_icon04.png" alt="">
+                            </picture>
+                        </figure>
+                        <div>
+                            <h3>外部連携</h3>
+                            <p>他のシステム（労務・給与システムなど）に連携できる機能です。</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section id="func02" class="fCom">
+                <h3>実装予定</h3>
+                <ul id="func02List">
+                    <li>有給管理機能</li>
+                    <li>状況アラート機能</li>
+                    <li>ワークフロー承認機能</li>
+                </ul>
+            </section>
+        </div>
+    </section>
+    <section id="customize">
+        <h2>オリジナルカスタマイズ</h2>
+        <p id="customCatch">各種現場に合わせた「コアタイム」の実現</p>
+        <div id="customWrap" class="comW">
+            <ul id="customList">
+                <li>
+                    <h3><span>Case.1</span>給与計算ソフトとの連携と自動化</h3>
+                    <figure></figure>
+                    <p>他社の給与計算のツールやソフトの出力と連携し、管理の抜け漏れを防ぐことを目的として対応します。</p>
+                </li>
+                <li>
+                    <h3><span>Case.2</span>有給管理や保険関係のデータ出力</h3>
+                    <figure></figure>
+                    <p>有給管理や保険関係の労務系作業においてデータ出力や機能追加の要望など</p>
+                </li>
+                <li>
+                    <h3><span>Case.3</span>ダッシュボード表示領域の拡張</h3>
+                    <figure></figure>
+                    <p>出勤時刻に出勤されていないスタッフをアラートしたい。また、一定の残業時間のスタッフをアラートしたいなどの要望など</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="operation" class="fCom">
+        <h3>運用イメージ</h3>
+        <div class="comW">
+            <div id="operCalCont">
+                <ul id="operTxtList">
+                    <li class="active">
+                        <h3><span>Step.1</span>出退勤画面をタッチ</h3>
+                        <p>タッチパネルより、<br class="sp">出勤or退勤どちらかのボタンを選択します。</p>
+                    </li>
+                    <li>
+                        <h3><span>Step.2</span>静脈認証装置に指を入れます</h3>
+                        <p>画面にて、「指をおいて下さい」と表示されますので、<br class="sp">静脈認証装置に指をいれて、出勤認証します。</p>
+                    </li>
+                    <li>
+                        <h3><span>Step.3</span>管理機能も見やすく管理</h3>
+                        <p>管理者はシフト管理もスタッフを一覧で<br class="sp">見ることができます。その他にも<br class="sp">出勤時間をガントチャートで見ることもできます。</p>
+                    </li>
+                </ul>
+                <ul id="operImgList">
+                    <li><figure><img src="./images/pc/oper_img01.jpg" alt=""></figure></li>
+                    <li><figure><img src="./images/pc/oper_img02.jpg" alt=""></figure></li>
+                    <li><figure><img src="./images/pc/oper_img03.jpg" alt=""></figure></li>
+                </ul>
+                <ul id="operNav">
+                    <li><a href="javascript:;" data-cindex="0" class="active"></a></li>
+                    <li><a href="javascript:;" data-cindex="1"></a></li>
+                    <li><a href="javascript:;" data-cindex="2"></a></li>
+                </ul>
+                <div class="owlControl">
+                    <p class="prev"><a href="javascript:;"class="ah"><img src="./images/pc/arrow_left.png" alt="prev"></a></p>
+                    <p class="next"><a href="javascript:;"class="ah"><img src="./images/pc/arrow_right.png" alt="next"></a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="price">
+        <div class="comW">
+            <h2>料金</h2>
+            <section id="priceWrap">
+                <h3><span>＼ 業界でもっとも運用費を抑えました ／</span>月額30,000円、利用者数無制限</h3>
+                <div class="cf">
+                    <section class="priceBox">
+                        <h3>基本機能</h3>
+                        <ul>
+                            <li>・生体認証</li>
+                            <li>・勤怠管理機能</li>
+                            <li>・シフト管理機能</li>
+                            <li>・売上管理機能</li>
+                            <li>・リアルタイム集計機能</li>
+                            <li>・マスタ管理機能</li>
+                            <li>・ダッシュボード</li>
+                        </ul>
+                    </section>
+                    <section class="priceBox">
+                        <h3>導入費</h3>
+                        <ul>
+                            <li>・静脈認証端末　１台～</li>
+                            <li>・導入費　35,000円〜</li>
+                            <li>・ユーザー登録　無料・無制限</li>
+                        </ul>
+                    </section>
+                    <section class="priceBox">
+                        <h3>月額利用料</h3>
+                        <ul>
+                            <li>・システム利用料　30,000円</li>
+                        </ul>
+                    </section>
+                </div>
+            </section>
+        </div>
+    </section>
+    <section id="footTxt">
+        <div class="comW">
+            <ul>
+                <li>
+                    <h3>IT導入補助金対象</h3>
+                    <p>システム導入などの費用が最大1/2になる<br>
+                    IT導入補助金の対象です</p>
+                </li>
+                <li>
+                    <h3>働き方改革</h3>
+                    <p>長時間労働や労働生産性の向上、<br>
+                    柔軟な働き方をサポートしています。</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section id="qa">
+        <div class="comW">
+            <h2>ご質問</h2>
+            <dl>
+                <dt class="cf"><span>Q</span><p>導入のながれについて</p></dt>
+                <dd class="cf"><span>A</span><p>お申し込みを頂いてから、現場の状況をお伺いし、導入時期をご案内いたします。現場の各利用状況を把握しご提案する</p></dd>
+                <dt class="cf"><span>Q</span><p>利用期間について</p></dt>
+                <dd class="cf"><span>A</span><p>ご利用期間は、「6ヶ月」単位での自動更新になります。<br>
+                ※ご利用を停止される場合は、満了日の1ヶ月前までにお客様よりお電話、または、メールにてご連絡を頂く必要があります。
+                </p></dd>
+                <dt class="cf"><span>Q</span><p>ユーザー利用者数について</p></dt>
+                <dd class="cf"><span>A</span><p>ご利用されるユーザー数は、約10～500名程度を想定しております。<br>
+                ※複数の端末や拠点へのご導入で、上記以上のご利用者数の場合、別途、ご相談頂きますようお願いします。
+                </p></dd>
+                <dt class="cf"><span>Q</span><p>利用環境について</p></dt>
+                <dd class="cf"><span>A</span><p>下記の通りになります。<br>
+                ・パソコン向けアプリケーションのため、Windows端末（OS：Windows10、CPU：Core i5、メモリ：8GB）が推奨になります。<br>
+                上記以外のスペックの場合、動作保証はいたしません。<br>
+                ・インターネット接続できる環境が推奨になりますが、本アプリケーションは、インターネットが接続できない環境下でも、ご利用可能です。<br>
+                ただし、初期導入時は、ライセンス認証等を行うため、インターネット接続ができる環境が必要となりますので、インターネット接続ができない環境で導入される場合、別途、ご相談頂きますようお願いします。</p></dd>
+            </dl>
+        </div>
+    </section>
+    <footer>
+        <div id="linkArea">
+            <div class="comW cf">
+                <div id="telWrap" class="cf">
+                    <p id="telTxt">導入支援のご相談や、システムについては<br>
+                    お問い合わせください。</p>
+                    <p id="tel">06-6534-8998</p>
+                </div>
+                <div id="linkWrap" class="cf">
+                    <p id="dlLink"><a href="https://www.pal-style.co.jp/core-time/form/?type=1" target="_blank" rel="noopener noreferrer" class="toContact"><span>資料ダウンロード</span></a></p>
+                    <p id="soudan02"><a href="https://www.pal-style.co.jp/core-time/form/" target="_blank" rel="noopener noreferrer" class="toContact"><span>導入支援に相談する</span></a></p>
+                </div>
+            </div>
+        </div>
+        <p id="pageTop"><a href="#" class="anchor ah"><span class="hd">pagetop</span></a></p>
+        <p id="copyR">&copy; 2019 PAL Co.,Ltd.</p>
+    </footer>
+</div><!--fullWrap END-->
+<div id="loading"></div>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>window.jQuery || document.write('<script src="/js/jquery.min.js"><\/script>')</script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script>window.jQuery.easing.def || document.write('<script src="/js/jquery.easing.min.js"><\/script>')</script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.index.js"></script>
+<script>
+$(function(){
+  $(".toContact").each(function(){
+    var nparam = location.search.slice(1);
+    var sep = '?';
+    var url = $(this).attr('href');
+    if(url.indexOf('?') != -1){sep='&'}
+    $(this).attr('href',url+sep+nparam);
+  });
+})
+</script>
+</body>
+</html>
