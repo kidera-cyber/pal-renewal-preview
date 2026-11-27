@@ -1022,3 +1022,25 @@ footer{
     right: 30px;
     bottom: 188px;
 }
+/* ============================================================
+   ===== CORE-TIME-SEO v1 START（SP）=====
+   ============================================================ */
+
+/* H1重複解消：旧 #navWrap > h1 と同じ指定を p.navLogo へ引き継ぐ */
+#navWrap > p.navLogo{ text-align: center; padding-top: 80px; margin-bottom: 50px; }
+
+/* 補助金カード削除でカードが1枚になるため、右マージンを打ち消す */
+#footTxt ul li:last-child{ margin-right: 0; }
+
+/* フッターの公式サイト内部リンク（新規） */
+#siteLinks{ text-align: center; margin-bottom: 16px; font-size: 20px; line-height: 2.2; }
+#siteLinks a{ color: #0088d6; text-decoration: underline; display: inline-block; margin: 0 12px; }
+
+
+/* 画像の width/height 属性は CLS 対策で付与したもの。
+   ただし元の CSS が幅だけを指定している画像（ロゴ・メインビジュアル等）では
+   height 属性が高さを固定してしまい縦横比が崩れるため、既定で height:auto に戻す。
+   #ovList img などCSSで高さを明示している画像は、詳細度でそちらが優先されるため影響しない。 */
+img[width][height]{ height: auto; }
+
+/* ===== CORE-TIME-SEO v1 END（SP）===== */

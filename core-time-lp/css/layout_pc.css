@@ -1190,3 +1190,31 @@ footer{
     right: 30px;
     bottom: 170px;
 }
+/* ============================================================
+   ===== CORE-TIME-SEO v1 START（PC）=====
+   H1の重複解消・料金/補助金削除にともなう最小限の見た目調整。
+   既存ルールは書き換えず、末尾追記の詳細度・後勝ちで上書きする。
+   ============================================================ */
+
+/* H1重複解消：ヘッダーロゴを h1 から p.navLogo へ変更したため、
+   旧 #navWrap > h1 と同じ指定を引き継ぐ（PCでは非表示） */
+#navWrap > p.navLogo{ display: none; }
+
+/* IT導入補助金カードの削除で #footTxt のカードが1枚になったため中央寄せ。
+   旧 #footTxt ul li の margin-right: 40px を打ち消す */
+#footTxt ul{ justify-content: center; }
+#footTxt ul li:last-child{ margin-right: 0; }
+
+/* フッターの公式サイト内部リンク（新規） */
+#siteLinks{ text-align: center; margin-bottom: 10px; font-size: 13px; line-height: 2; }
+#siteLinks a{ color: #0088d6; text-decoration: underline; margin: 0 14px; }
+#siteLinks a:hover{ text-decoration: none; }
+
+
+/* 画像の width/height 属性は CLS 対策で付与したもの。
+   ただし元の CSS が幅だけを指定している画像（ロゴ・メインビジュアル等）では
+   height 属性が高さを固定してしまい縦横比が崩れるため、既定で height:auto に戻す。
+   #ovList img などCSSで高さを明示している画像は、詳細度でそちらが優先されるため影響しない。 */
+img[width][height]{ height: auto; }
+
+/* ===== CORE-TIME-SEO v1 END（PC）===== */
