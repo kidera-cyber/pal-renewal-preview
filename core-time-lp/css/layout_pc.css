@@ -1201,8 +1201,11 @@ footer{
 #navWrap > p.navLogo{ display: none; }
 
 /* IT導入補助金カードの削除で #footTxt のカードが1枚になったため中央寄せ。
-   旧 #footTxt ul li の margin-right: 40px を打ち消す */
+   本番は 450px 指定の li が2枚 flex で縮んで実表示 430px になっている。
+   1枚では縮まないため、本番と同じ見た目になるよう 430px を明示し、
+   旧 #footTxt ul li の margin-right: 40px を打ち消す。 */
 #footTxt ul{ justify-content: center; }
+#footTxt ul li{ width: 430px; }
 #footTxt ul li:last-child{ margin-right: 0; }
 
 /* フッターの公式サイト内部リンク（新規） */
@@ -1216,5 +1219,6 @@ footer{
    height 属性が高さを固定してしまい縦横比が崩れるため、既定で height:auto に戻す。
    #ovList img などCSSで高さを明示している画像は、詳細度でそちらが優先されるため影響しない。 */
 img[width][height]{ height: auto; }
+
 
 /* ===== CORE-TIME-SEO v1 END（PC）===== */
